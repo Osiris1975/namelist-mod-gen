@@ -143,77 +143,77 @@
 	army_names = {
 
 		machine_defense = {
-			sequential_name = an_machine_defense
+			sequential_name = {{ an_machine_defense }}
 		}
 
 		machine_assault_1 = {
-			sequential_name = machine_assault_1
+			sequential_name = {{ an_machine_assault_1 }}
 		}
 
 		machine_assault_2 = {
-			sequential_name = machine_assault_2
+			sequential_name = {{ an_machine_assault_2 }}
 		}
 
 		machine_assault_3 = {
-			sequential_name = machine_assault_3
+			sequential_name = {{ an_machine_assault_3 }}
 		}
 
 		defense_army = {
-			sequential_name = sequential_name
+			sequential_name = {{ an_defense_army }}
 		}
 
 		assault_army = {
-			sequential_name = sequential_name
+			sequential_name = {{ an_assault_army }}
 		}
 
 		slave_army = {
-			sequential_name = slave_army
+			sequential_name = {{ an_slave_army }}
 		}
 
 		clone_army = {
-			sequential_name = clone_army
+			sequential_name = {{ an_clone_army }}
 		}
 
 		undead_army = {
-			sequential_name = undead_army
+			sequential_name = {{ an_undead_army }}
 		}
 
 		robotic_army = {
-			sequential_name = robotic_army
+			sequential_name = {{ an_robotic_army }}
 		}
 
 		robotic_defense_army = {
-			sequential_name = robotic_defense_army
+			sequential_name = {{ an_robotic_defense_army }}
 		}
 
 		psionic_army = {
-			sequential_name = psionic_army
+			sequential_name = {{ an_psionic_army }}
 		}
 
 		xenomorph_army = {
-			sequential_name = xenomorph_army
+			sequential_name = {{ an_xenomorph_army }}
 		}
 
 		gene_warrior_army = {
-			sequential_name = gene_warrior_army
+			sequential_name = {{ an_gene_warrior_army }}
 		}
 
 		occupation_army = {
-			sequential_name = occupation_army
+			sequential_name = {{ an_occupation_army }}
 		}
 
 		robotic_occupation_army = {
-			sequential_name = robotic_occupation_army
+			sequential_name = {{ an_robotic_occupation_army }}
 		}
 
 		primitive_army = {
-			sequential_name = primitive_army
+			sequential_name = {{ an_primitive_army }}
 		}
 		industrial_army = {
-			sequential_name = industrial_army
+			sequential_name = {{ an_industrial_army }}
 		}
 		postatomic_army = {
-			sequential_name = postatomic_army
+			sequential_name = {{ an_postatomic_army }}
 		}
 	}
 

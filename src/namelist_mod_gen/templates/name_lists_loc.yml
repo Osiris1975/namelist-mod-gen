@@ -1,6 +1,3 @@
 ﻿l_english:
- ####################################
- # Misc
- ####################################
- name_list_osiris_arabian:0 "Arabian Historical(ONL)"
- name_list_osiris_arabian_desc:0 " "
+ name_list_{{ namelist_author }}_{{namelist_id}}:0 "{{ namelist_title }}"
+ name_list_{{ namelist_author }}_{{ namelist_id}}_desc:0 " "

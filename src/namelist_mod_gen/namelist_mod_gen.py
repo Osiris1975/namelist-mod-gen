@@ -14,7 +14,7 @@ template_env = Environment(loader=template_loader)
 namelist_template = template_env.get_template(c.NAMELIST_TEMPLATE)
 
 
-def render(args):
+def render_namelist(args):
     namelist_dict = {key: [] for key in get_template_variables()}
     with open(args.namelist_csv, 'r') as file:
         reader = csv.DictReader(file)
@@ -33,13 +33,14 @@ def render(args):
 
 def get_template_variables():
     variables = jinja2schema.infer(Path(os.path.join(c.TEMPLATES_DIR, "namelist.txt")).read_text())
-    variables_list = ['namelist_title', 'namelist_author', 'namelist_id']
+    meta_list = ['namelist_title', 'namelist_author', 'namelist_id']
     objects = []
     for category in variables.items():
-        objects.append(category[0])
+        if category[0] not in meta_list:
+            objects.append(category[0])
     objects.sort()
-    variables_list.extend(objects)
-    return variables_list
+    meta_list.extend(objects)
+    return meta_list
 
 
 def csv_template(args):
@@ -56,16 +57,14 @@ def main():
     if args.dump_csv_template:
         csv_template(args)
     else:
-        render(args)
+        render_namelist(args)
 
 
 parser = argparse.ArgumentParser(
-    description='A tool for creating Stellaris namelists and namelist mods from a CSV file and CLI arguments',
-    usage='namelist_generator.py [NAMELIST_FILE]',
+    description='A tool for creating Stellaris namelist mods from a CSV file',
+    usage='namelist_generator.py -c [NAMELIST_FILE]',
     formatter_class=argparse.ArgumentDefaultsHelpFormatter)
 parser.add_argument('-c', '--namelist_csv', help="path to the namelist csv file", required=False)
-parser.add_argument('-n', '--name_list_title', help="Title for the namelist txt file", required=False)
-parser.add_argument('-a', '--author', help="Namelist author to add to txt file", required=False)
 parser.add_argument('-d', '--dump_csv_template', help='dump a blank csv with namelist headers with the specified name',
                     required=False)
 
