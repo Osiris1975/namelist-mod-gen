@@ -55,84 +55,84 @@ osiris_arabian = {
 	fleet_names = {
 		random_names = {
 		}
-		sequential_name = FANTASY_INCA_FLEETNAMES_ORD
+		sequential_name = ARABIAN_FLEETNAMES_ORD
 	}
 
 	###ARMIES
 	army_names = {
 	
 		machine_defense = {
-			sequential_name = FANTASY_INCA_MACHINEDEFENSE_ORD
+			sequential_name = ARABIAN_MACHINEDEFENSE_ORD
 		}
 			
 		machine_assault_1 = {
-			sequential_name = FANTASY_INCA_MACHINEASSAULT1_ORD
+			sequential_name = ARABIAN_MACHINEASSAULT1_ORD
 		}
 			
 		machine_assault_2 = {
-			sequential_name = FANTASY_INCA_MACHINEASSAULT2_ORD
+			sequential_name = ARABIAN_MACHINEASSAULT2_ORD
 		}
 			
 		machine_assault_3 = {
-			sequential_name = FANTASY_INCA_MACHINEASSAULT3_ORD
+			sequential_name = ARABIAN_MACHINEASSAULT3_ORD
 		}
 	
 		defense_army = {
-			sequential_name = FANTASY_INCA_DEFENSEARMY_ORD
+			sequential_name = ARABIAN_DEFENSEARMY_ORD
 		}
 			
 		assault_army = {
-			sequential_name = FANTASY_INCA_ASSAULTARMY_ORD
+			sequential_name = ARABIAN_ASSAULTARMY_ORD
 		}
 		
 		slave_army = {
-			sequential_name = FANTASY_INCA_SLAVEARMY_ORD
+			sequential_name = ARABIAN_SLAVEARMY_ORD
 		}
 		
 		clone_army = {
-			sequential_name = FANTASY_INCA_CLONEARMY_ORD
+			sequential_name = ARABIAN_CLONEARMY_ORD
 		}
 		
 		undead_army = {
-			sequential_name = FANTASY_INCA_UNDEADARMY_ORD
+			sequential_name = ARABIAN_UNDEADARMY_ORD
 		}
 		
 		robotic_army = {
-			sequential_name = FANTASY_INCA_ROBOTICARMY_ORD
+			sequential_name = ARABIAN_ROBOTICARMY_ORD
 		}
 		
 		robotic_defense_army = {
-			sequential_name = FANTASY_INCA_ROBOTICDEFENSEARMY_ORD
+			sequential_name = ARABIAN_ROBOTICDEFENSEARMY_ORD
 		}
 		
 		psionic_army = {
-			sequential_name = FANTASY_INCA_PSIONICARMY_ORD
+			sequential_name = ARABIAN_PSIONICARMY_ORD
 		}
 		
 		xenomorph_army = {
-			sequential_name = FANTASY_INCA_XENOMORPHARMY_ORD
+			sequential_name = ARABIAN_XENOMORPHARMY_ORD
 		}
 		
 		gene_warrior_army = {
-			sequential_name = FANTASY_INCA_GENEWARRIORARMY_ORD
+			sequential_name = ARABIAN_GENEWARRIORARMY_ORD
 		}
 		
 		occupation_army = {
-			sequential_name = FANTASY_INCA_OCCUPATIONARMY_ORD
+			sequential_name = ARABIAN_OCCUPATIONARMY_ORD
 		}
 
 		robotic_occupation_army = {
-			sequential_name = FANTASY_INCA_ROBOTICOCCUPATIONARMY_ORD
+			sequential_name = ARABIAN_ROBOTICOCCUPATIONARMY_ORD
 		}
 
 		primitive_army = {
-			sequential_name = FANTASY_INCA_PRIMITIVEARMY_SEQ
+			sequential_name = ARABIAN_PRIMITIVEARMY_SEQ
 		}
 		industrial_army = {
-			sequential_name = FANTASY_INCA_INDUSTRIALARMY_SEQ
+			sequential_name = ARABIAN_INDUSTRIALARMY_SEQ
 		}
 		postatomic_army = {
-			sequential_name = FANTASY_INCA_POSTATOMICARMY_SEQ
+			sequential_name = ARABIAN_POSTATOMICARMY_SEQ
 		}
 	}
 	
