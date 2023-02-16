@@ -8,7 +8,7 @@
 			{{ sn_corvette }}
 		}
 
-		destroyer =	{
+		destroyer = {
 			{{ sn_destroyer }}
 		}
 
@@ -27,6 +27,7 @@
 		battleship = {
 			{{ sn_battleship }}
 		}
+
 
 		frigate = {
 			{{ sn_frigate }}
@@ -100,14 +101,6 @@
 			{{ sn_construction_cruiser }}
 		}
 
-		#orbital_station = { }
-		mining_station = { }
-		research_station = { }
-		#wormhole_station = { }
-		#terraform_station = { }
-		#observation_station = { }
-		#outpost_station = {	}
-
 		transport = {
 			{{ sn_transport }}
 		}
@@ -139,81 +132,60 @@
 		}
 		sequential_name = {{ fn_fleet_designation }}
 	}
-	###ARMIES
+
 	army_names = {
-
-		machine_defense = {
-			sequential_name = an_machine_defense
-		}
-
-		machine_assault_1 = {
-			sequential_name = machine_assault_1
-		}
-
-		machine_assault_2 = {
-			sequential_name = machine_assault_2
-		}
-
-		machine_assault_3 = {
-			sequential_name = machine_assault_3
-		}
-
-		defense_army = {
-			sequential_name = sequential_name
+		generic = {
+			sequential_name = {{ an_generic_army }}
 		}
 
 		assault_army = {
-			sequential_name = sequential_name
+			sequential_name = {{ an_assault_army }}
 		}
 
-		slave_army = {
-			sequential_name = slave_army
+        slave_army = {
+			sequential_name = {{ an_slave_army }}
 		}
 
 		clone_army = {
-			sequential_name = clone_army
-		}
-
-		undead_army = {
-			sequential_name = undead_army
+			sequential_name = {{ an_clone_army }}
 		}
 
 		robotic_army = {
-			sequential_name = robotic_army
+			sequential_name = {{ an_robotic_army }}
 		}
 
 		robotic_defense_army = {
-			sequential_name = robotic_defense_army
+			sequential_name = {{ an_robotic_defense_army }}
 		}
 
 		psionic_army = {
-			sequential_name = psionic_army
+			sequential_name = {{ an_psionic_army }}
 		}
 
 		xenomorph_army = {
-			sequential_name = xenomorph_army
+			sequential_name = {{ an_beast_army }}
 		}
 
 		gene_warrior_army = {
-			sequential_name = gene_warrior_army
+			sequential_name = {{ an_xenomorph_army }}
 		}
 
 		occupation_army = {
-			sequential_name = occupation_army
+			sequential_name = {{ an_occupation_army }}
 		}
 
 		robotic_occupation_army = {
-			sequential_name = robotic_occupation_army
+			sequential_name = {{ an_robotic_occupation_army }}
 		}
 
 		primitive_army = {
-			sequential_name = primitive_army
+			sequential_name = {{ an_primitive_army }}
 		}
 		industrial_army = {
-			sequential_name = industrial_army
+			sequential_name = {{ an_industrial_army }}
 		}
 		postatomic_army = {
-			sequential_name = postatomic_army
+			sequential_name = {{ an_postatomic_army }}
 		}
 	}
 
@@ -232,7 +204,7 @@
 		}
 
 		pc_tropical = {
-			 names = {
+			names = {
 				{{ pn_tropical_planets }}
 			}
 		}
@@ -244,13 +216,13 @@
 		}
 
 		pc_continental = {
-			names = {
+			names =	{
 				{{ pn_continental_planets }}
 			}
 		}
 
 		pc_gaia = {
-			names = {
+			names =	{
 				{{ pn_gaia_planets }}
 			}
 		}
@@ -289,21 +261,21 @@
 	character_names = {
 
 		names1 = {
-			first_names_male = {
+			first_names_male = 	{
 				{{ cn_first_names_male }}
 			}
-			first_names_female = {
+			first_names_female = 	{
 				{{ cn_first_names_female }}
 			}
 			second_names = {
 				{{ cn_second_names }}
 			}
 
-			regnal_first_names_male = {
+			regnal_first_names_male = 	{
 				{{ cn_regnal_first_names_male }}
 			}
 
-			regnal_first_names_female = {
+			regnal_first_names_female = 	{
 				{{ cn_regnal_first_names_female }}
 
 			}
