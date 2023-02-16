@@ -1,0 +1,13 @@
+﻿l_braz_por:
+ MACHINE7_CANS_xxMACHINEASSAULT1_ORD:0 "$O$ Pro-Active Caretaker Squad"
+ MACHINE7_CANS_xxMACHINEDEFENSE_ORD:0 "$O$ Defensive Caretaker Squad"
+ MACHINE7_CANS_xxMACHINEASSAULT2_ORD:0 "$O$ Ultra-Active Caretaker Squad"
+ MACHINE7_CANS_xxMACHINEASSAULT3_ORD:0 "$O$ Caretaker Mega-Colossus"
+ MACHINE7_CANS_xxDEFENSEARMY_ORD:0 "$O$ Bio-Curated Defenders"
+ MACHINE7_CANS_xxASSAULTARMY_ORD:0 "$O$ Bio-Curated Caretakers"
+ MACHINE7_CANS_xxCLONEARMY_ORD:0 "$O$ Bio-Curated Clones"
+ MACHINE7_CANS_xxUNDEADARMY_ORD:0 "$O$ Mechanized Undead Force"
+ MACHINE7_CANS_xxMACHINEOCCUPATIONARMY_ORD:0 "$O$ Occupation Caretaker Squad"
+ MACHINE7_CANS_PRIMITIVEARMYxx_SEQ:0 "Primitive Army $C$"
+ MACHINE7_CANS_INDUSTRIALARMYxx_SEQ:0 "Industrial Army $C$"
+ MACHINE7_CANS_POSTATOMICARMYxx_SEQ:0 "Post-Atomic Army $C$"
