@@ -60,10 +60,10 @@ def create_mod(args):
         print(f'Ordinal namelist localization file written to {ord_loc_file}')
 
 
-def create_seq_key(key, value, id):
+def create_seq_key(key, value, author, id):
     ord = re.search(r'\$\S\$', value).group().replace('$', '')
     ord_base = "".join(key.split('_')[1:]).upper()
-    return f"{id.upper()}_{ord_base}_{c.ORD_TYPES[ord]}"
+    return f"{author.upper()}_{id.upper()}_{ord_base}_{c.ORD_TYPES[ord]}"
 
 
 def csv_to_dicts(namelist_csv):
@@ -80,7 +80,7 @@ def csv_to_dicts(namelist_csv):
     ord_dict = OrderedDict()
     for k, v in processed_dict.items():
         if "$" in v:
-            seq_key = create_seq_key(k, v, namelist_dict['namelist_id'][0])
+            seq_key = create_seq_key(k, v, namelist_dict['namelist_author'][0], namelist_dict['namelist_id'][0])
             ord_dict[seq_key] = v
             processed_dict[k] = seq_key
     return processed_dict, ord_dict
