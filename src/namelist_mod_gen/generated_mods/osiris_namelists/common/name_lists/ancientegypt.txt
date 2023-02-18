@@ -1,0 +1,315 @@
+### Ancient Egyptian (ONL)
+### Created by osiris
+
+osiris_ancientegypt = {
+	ship_names = {
+
+		corvette = {
+			"Karnak" "Dendur" "Dakka" "Kom Ombo"
+		}
+
+		destroyer =	{
+			"Selkis" "Serket"
+		}
+
+		cruiser = {
+			"Bastet" "Sia" "Neith"
+		}
+
+		StrikeCruiser = {
+			"Set"
+		}
+
+		Battlecruiser = {
+			"Anubis" "Sobek" "Sekhmet"
+		}
+
+		battleship = {
+			"Isis" "Nephthys" "Maat"
+		}
+
+		frigate = {
+			"Taffeh" "Saqqara" "Sphinx"
+		}
+
+		generic = {
+			
+		}
+
+		LightCarrier = {
+			
+		}
+
+		escortcarrier = {
+			
+		}
+
+		titan = {
+			"Amun"
+		}
+
+		colossus = {
+			"Amun-Ra"
+		}
+
+		Carrier = {
+			"Horus" "Hathor" "Menhit"
+		}
+
+		Dreadnought = {
+            "Osiris"
+		}
+
+		Superdreadnought = {
+			
+		}
+
+		Flagship = {
+			"Ra"
+		}
+
+		Headquarters = {
+			
+		}
+
+		science = {
+			"Imhotep"
+		}
+
+		ScienceCruiser = {
+			"Thoth"
+		}
+
+		explorationship = {
+			"Aker"
+		}
+
+		colonizer = {
+			"Anuket"
+		}
+
+		sponsored_colonizer = {
+		
+		}
+
+		constructor = {
+			"Ptah"
+		}
+
+		ConstructionCruiser = {
+			
+		}
+
+		#orbital_station = { }
+		mining_station = { }
+		research_station = { }
+		#wormhole_station = { }
+		#terraform_station = { }
+		#observation_station = { }
+		#outpost_station = {	}
+
+		transport = {
+			"Khonsu"
+		}
+
+		military_station_small = {
+			
+		}
+
+		military_station_medium = {
+			
+		}
+
+		military_station_large = {
+			
+		}
+
+		ion_cannon = {
+			"Gaze of Ra"
+		}
+
+		xl_cannon = {
+			"Light of Ra"
+		}
+	}
+
+	fleet_names = {
+		random_names = {
+			"Amuns Chosen" "Anhurs Arrow" "Anubiss Scourge" "Atens Light" "Atums Brilliance" "Bennus Fire" "Gebs Stone" "Hapis Deluge" "Horuss Call" "Khepris Guard" "Khnums Ram" "Khonsus Halo" "Maahess Roar" "Montus Khopesh" "Osiriss Reborn" "Ras Radiance" "Sets Wrath" "Shus Tempest" "Sobeks Bite" "Sopdus Gale" "Thoths Wisdom" "Wadjs Wave" "Amunets Heirs" "Anukets Bow" "Bastets Grace" "Hathors Splendor" "Isiss Blessed" "Maats Justice" "Menhits Thunder" "Neiths Hunt" "Satets Pioneers" "Sekhmets Guardians" "Tefnuts Typhoon" "Wadjets Hiss" "Selkiss Sting"
+		}
+		sequential_name = OSIRIS_ANCIENTEGYPT_FLEETNAMES_ORD
+	}
+	###ARMIES
+	army_names = {
+
+		machine_defense = {
+			sequential_name = 
+		}
+
+		machine_assault_1 = {
+			sequential_name = 
+		}
+
+		machine_assault_2 = {
+			sequential_name = 
+		}
+
+		machine_assault_3 = {
+			sequential_name = 
+		}
+
+		defense_army = {
+			sequential_name = 
+		}
+
+		assault_army = {
+			sequential_name = OSIRIS_ANCIENTEGYPT_ASSAULTARMY_ORD
+		}
+
+		slave_army = {
+			sequential_name = OSIRIS_ANCIENTEGYPT_SLAVEARMY_ORD
+		}
+
+		clone_army = {
+			sequential_name = OSIRIS_ANCIENTEGYPT_CLONEARMY_ORD
+		}
+
+		undead_army = {
+			sequential_name = 
+		}
+
+		robotic_army = {
+			sequential_name = OSIRIS_ANCIENTEGYPT_ROBOTICARMY_ORD
+		}
+
+		robotic_defense_army = {
+			sequential_name = OSIRIS_ANCIENTEGYPT_ROBOTICDEFENSEARMY_ORD
+		}
+
+		psionic_army = {
+			sequential_name = OSIRIS_ANCIENTEGYPT_PSIONICARMY_ORD
+		}
+
+		xenomorph_army = {
+			sequential_name = OSIRIS_ANCIENTEGYPT_XENOMORPHARMY_ORD
+		}
+
+		gene_warrior_army = {
+			sequential_name = 
+		}
+
+		occupation_army = {
+			sequential_name = OSIRIS_ANCIENTEGYPT_OCCUPATIONARMY_ORD
+		}
+
+		robotic_occupation_army = {
+			sequential_name = OSIRIS_ANCIENTEGYPT_ROBOTICOCCUPATIONARMY_ORD
+		}
+
+		primitive_army = {
+			sequential_name = OSIRIS_ANCIENTEGYPT_PRIMITIVEARMY_ORD
+		}
+		industrial_army = {
+			sequential_name = OSIRIS_ANCIENTEGYPT_INDUSTRIALARMY_ORD
+		}
+		postatomic_army = {
+			sequential_name = OSIRIS_ANCIENTEGYPT_POSTATOMICARMY_ORD
+		}
+	}
+
+	planet_names = {
+
+		generic = {
+			names = {
+				"Thebes" "Memphis" "Amarna" "Abydos" "Apis" "Setennu" "Tao" "Per-Hathor" "Kom Ombo" "Swenett" "Hieracon" "Avaris" "Tayu-djayet" "Djedet" "Edfu" "Khem" "Khasut" "Hebenu" "Qus" "Thinis" "Zau" "Pachnamunis" "Nekhen" "Shashotep" "Per-Wadjet" "Iken" "Djerty" "Herwer" "Canopus" "Shedet" "Soknopaiou Nesos" "Ipu" "Koptos" "Chenem-Waset" "Per-Atum" "Pi-Ramesses" "Naqada" "Thonis" "Heliopolis" "Per-Amun" "Naucratis" "Dendera" "Nekheb" "Sumenu" "Timinhor" "Alexandria" "Ptkheka" "Madu" "Thebes" "Djedu" "Per-Bast" "Khemenu" "Semabehdet" "Per-Sopdu" "Buhen" "Qis" "Per-Medjed" "Hermonthis" "Tepihu" "Tanis" "Asyut" "Taremu" "Saka" "Ta-senet" "Tjebu" "Seshesh" "Henen-nesut" "Hermopolis Parva" "Menouthis" "Tjaru" "Athribis" "Tamiat" "Rosetta"
+			}
+		}
+
+		pc_desert = {
+			names = {
+				
+			}
+		}
+
+		pc_tropical = {
+			 names = {
+				
+			}
+		}
+
+		pc_arid = {
+			names = {
+				
+			}
+		}
+
+		pc_continental = {
+			names = {
+				
+			}
+		}
+
+		pc_gaia = {
+			names = {
+				
+			}
+		}
+
+		pc_ocean = {
+			names = {
+				
+			}
+		}
+
+		pc_tundra = {
+			names = {
+				
+			}
+		}
+
+		pc_arctic = {
+			names = {
+				
+			}
+		}
+
+		pc_savannah = {
+			names = {
+				
+			}
+		}
+
+		pc_alpine = {
+			names = {
+				
+			}
+		}
+	}
+
+	character_names = {
+
+		names1 = {
+			first_names_male = {
+				"Akhom" "Amasis" "Amenmesse" "Amenmose" "Amennakht" "Amenophis" "Ameny" "Amun-her-khepeshef" "Amun-her-wenemef" "Ankh-ef-en-khonsu" "Ankhefensekhmet" "Ankhkherednefer" "Anpuhotep" "Apophis" "Ay" "Bakenkhonsu" "Bakenranef" "Bardiya" "Baufra" "Chephren" "Djedefhor" "Djedefptah" "Djedefre" "Djedhor" "Djedkare" "Djehutihotep" "Djoser" "Harsiese" "Heqaib" "Hordjedef" "Horemheb" "Hotepsekhemwy" "Ibi" "Idu" "Imoúthēs" "Inykhnum" "Inyotef" "Iry-Hor" "Iuseneb" "Joba" "Ka" "Kanefer" "Khabawsokar" "Khaemwaset" "Khaemweset" "Khasekhemwy" "Khensu" "Kheperkare" "Khepri" "Khueninpu" "Khufukhaf" "Koshari" "Menkaure" "Menkheperre" "Mentuherkhepeshef" "Mentuhotep" "Meriiti" "Merneptah" "Merysekhmet" "Mesen-ka" "Metjen" "Mina" "Minmose" "Nakht" "Nakhtmut" "Nakhtre" "Narmer" "Nebemakhet" "Nebmaatre" "Nefer" "Neferhotep" "Neferirkare" "Neferkasokar" "Nefermaat" "Nefer-setekh" "Nefertem" "Neheb" "Nemtinakht" "Nesubanebdjedet" "Netjeraperef" "Nikaure" "Nisuheqet" "Pa-ankh-entef" "Pachomios" "Pahemnetjer" "Pakhom" "Pamiu" "Panehesy" "Panhsj" "Paramesse" "Pareherwenemef" "Pasebakhaenniut" "Pashhur" "Pedubastis" "Peduhor" "Peftjauawybast" "Pehen-ptah" "Pehernefer" "Perneb" "Ptahhotep" "Ptahshepses" "Ptahwer" "Rahotep" "Ramses" "Ramsis" "Ranefer" "Sahure" "Sasobek" "Seb" "Sebekemhab" "Sekhemkare" "Sekhemrekhutawy" "Sekhemreshedwaset" "Senbi" "Senenmut" "Sennefer" "Senusret" "Setna" "Setne" "Shabaka" "Shepseskare" "Siamun" "Siharnedjheritef" "Smenkhkare" "Sneferu" "Sobekemsaf" "Tao" "Tefnakht" "Temhotep" "Teos" "Thamphthis" "Tutankhamun" "Tutankhaten" "Tutu" "Usercherês" "Userkare" "Wadjenes" "Wadjitefni"
+			}
+			first_names_female = {
+				"Aat" "Ahhotep" "Amenirdis" "Aneksi" "Ankhenespepi" "Ankhesenamun" "Ankhesenpaaten" "Anpuhotep" "Baketmut" "Beketamun" "Beketaten" "Benerib" "Betrest" "Bintanath" "Djedjetamen" "Djefatnebti" "Djeseretnebti" "Duathathor" "Gautseshen" "Haankhes" "Hathorhotep" "Hbnj" "Hbny" "Hekenuhedjet" "Henutmehyt" "Henutmire" "Henutsekhemu" "Henutsen" "Henuttadesh" "Henuttamehu" "Henuttaneb" "Henuttawy" "Herneith" "Hetepenamun" "Hetepheres" "Hetephernebti" "Hrere" "Inenek" "Isetemkheb" "Isetnofret" "Joba" "Kanzuie" "Khamerernebty" "Khedebneithirbinet" "Khenemetibamun" "Khenemetneferhedjet" "Khenthap" "Khufuankh" "Kiya" "Maat-hor" "Maathorneferure" "Mayet" "Mayetenaten" "Meketaten" "Menmet" "Meresamun" "Meres-nip" "Meret-isesi" "Meretseger" "Merit" "Meritamen" "Meritamun" "Meritaten" "Meritptah" "Merneith" "Meryt" "Merytkhet" "Merytmihapi" "Merytnetjer" "Merytre" "Mutemwiya" "Mutmetjennefer" "Mut-tuya" "Nakhtmut" "Nakhtneith" "Nebetah" "Nebetananash" "Nebetimmunedjem" "Nebetiunet" "Nebetnehat" "Nebettawy" "Nebty-tepites" "Nedjemmut" "Neferet" "Neferhetepes" "Neferneferuaten" "Neferneferure" "Neferthenut" "Nefertiabet" "Nefertkau" "Neferu" "Neferuaten" "Neferubity" "Neferuptah" "Neferure" "Neferusobek" "Nefretiri" "Neithhotep" "Nesitanebetashru" "Neskhons" "Netiqret" "Nimaathap" "Nitocris" "Nofret" "Nofretete" "Nubemhat" "Nubemiunu" "Nubemweskhet" "Nubhetepti" "Nubkhaes" "Nubkhesbed" "Nubwenet" "Parerenpetnefer" "Patareshnes" "Penebui" "Persenet" "Peseshet" "Ptahneferu" "Pypuy" "Qalhata" "Rekhetre" "Renesres" "Renmet-setesh" "Renpetnefer" "Satiah" "Satsobek" "Sehener" "Semat" "Senebhenas" "Senebtisi" "Seshemetka" "Sesheset" "Setepenre" "Sha-amun-en-su" "Shehiryotes" "Shepset-ipet" "Sheretnebty" "Sinuhe" "Sitamun" "Sitdjehuti" "Sithathor" "Sithathoriunet" "Sitre" "Sobekemsaf" "Sobekneferu" "Takhat" "Tati" "Tawret" "Tentamun" "Tiaa" "Tia-Sitra" "Tiye" "Tjesraperet" "Tjuyu" "Tsillah" "Tuya" "Tuya-Nebettawy" "Twosret" "Werenro" "Zathapy" "Zatipy"
+			}
+			second_names = {
+				
+			}
+
+			regnal_first_names_male = {
+				"Djoser," "Khufu," "Thutmose," "Amenhotep," "Akhenaten," "Tutankhamun," "Remesses," "Sekhemket," "Snefru," "Khafre," "Menkaure," "Mentuhotep," "Tao," "Kamose," "Ptolemy," "Inaros," "Seti,"
+			}
+
+			regnal_first_names_female = {
+				"Merneith" "Sobekneferu" "Hatshepsut" "Nefertiti" "Cleopatra" "Neferirkare" "Aya"
+
+			}
+			regnal_second_names = {
+				"Lord of Worlds" "Beloved of Ra" "The Enduring" "Sacred of Appearance" "Of the Two Ladies" "Mighty of Kas" "Divine in Appearance" "Giver of Life" "Light of Ra" "Spirit of Aten" "The Grand Architect" "Tamer of Worlds" "Utterance of Osiris" "The Fighting Hawk" "Lord of the Stars" "Osirian Protector" "Guardian of the Gods" "Blessed of Isis" "Eye of Horus"
+			}
+		}
+	}
+}
