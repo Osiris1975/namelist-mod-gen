@@ -1,5 +1,8 @@
 ﻿l_english:
- {% for item in dict_item %}{% for id, data in item.items() %}name_list_{{ data.author }}_{{data.id}}:0 "{{ data.title }}"
- name_list_{{ data.author }}_{{data.id}}_desc:0 " "  
-   {% endfor %}
+ {% for k, v in dict_item.items() %}name_list_{{ v.author }}_{{ k }}:0 "{{ v.title }}"
+ name_list_{{ v.author }}_{{ k }}_desc:0 " "
  {% endfor %}
+
+
+
+

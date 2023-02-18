@@ -10,5 +10,6 @@ MOD_OUTPUT_DIR = os.path.join(ROOT_DIR, 'generated_mods')
 ORD_TYPES = {
     "C": "SEQ",
     "O": "ORD",
-    "R": "R"
+    "R": "R",
+    "ORD": "ORD"
 }

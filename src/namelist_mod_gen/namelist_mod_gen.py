@@ -6,6 +6,7 @@ import csv
 from jinja2 import Environment, FileSystemLoader
 import jinja2schema
 import os
+import shutil
 import sys
 import re
 from pathlib import Path
@@ -22,53 +23,66 @@ def make_mod_directories(mod_name, lang):
     }
 
     for d in dirs.values():
-        if not os.path.exists(d):
-            os.makedirs(d)
+        if os.path.exists(d):
+            shutil.rmtree(d)
+        os.makedirs(d)
     return dirs
 
 
+def abs_file_paths(directory):
+    for dirpath,_,filenames in os.walk(directory):
+        for f in filenames:
+            yield os.path.abspath(os.path.join(dirpath, f))
+
+
 def create_mod(args):
-    dirs = make_mod_directories(args.mod_name, 'english')
-    nl_dict, ord_dict = csv_to_dicts(args.namelist_csv)
+    mod_dirs = make_mod_directories(args.mod_name, 'english')
+    csv_files = abs_file_paths(args.namelists)
+    namelist_info = {}
 
-    name_list_file = os.path.join(dirs["namelist"], f"{nl_dict['namelist_id']}.txt")
-    with open(name_list_file, 'w') as file:
-        namelist_template = template_env.get_template(c.NAMELIST_TEMPLATE)
-        name_list = namelist_template.render(nl_dict)
-        file.write(name_list)
-        print(f'Namelist file written to {name_list_file}')
-
-    namelist_loc_file = os.path.join(dirs["localization"], f"{nl_dict['namelist_author'].lower()}_namelist_l_english.yml")
-    with open(namelist_loc_file, 'w') as file:
-        nl_loc_template = template_env.get_template(c.LOCALIZATION_TEMPLATE)
-        nl_loc_dict = {
-            nl_dict['namelist_id']: {
-                'id': nl_dict['namelist_id'].lower(),
-                'author': nl_dict['namelist_author'].lower(),
-                'title': nl_dict['namelist_title']
-            }
+    for f in csv_files:
+        nl_dict, ord_dict = csv_to_dicts(f, args.author.lower())
+        namelist_info[nl_dict['namelist_id']] = {
+            'file': f,
+            'author': args.author,
+            'title': nl_dict['namelist_title']
         }
-        nl_loc = nl_loc_template.render(dict_item=[nl_loc_dict])
-        file.write(nl_loc)
-        print(f'Namelist localization file written to {name_list_file}')
 
-    ord_loc_file = os.path.join(dirs["localization"], f"name_list_{nl_dict['namelist_id'].upper()}_l_english.yml")
-    with open(ord_loc_file, 'w') as file:
-        ord_loc_template = template_env.get_template(c.ORD_NAMES_LOC_TEMPLATE)
-        ord_loc = ord_loc_template.render(dict_item=ord_dict)
-        file.write(ord_loc)
-        print(f'Ordinal namelist localization file written to {ord_loc_file}')
+        # Generate namelist file for each list
+        name_list_file = os.path.join(mod_dirs["namelist"], f"{nl_dict['namelist_id']}.txt")
+        with open(name_list_file, 'w') as file:
+            namelist_template = template_env.get_template(c.NAMELIST_TEMPLATE)
+            name_list = namelist_template.render(nl_dict)
+            file.write(name_list)
+            print(f'Namelist file written to {name_list_file}')
+
+        # Generate ord localization files for each name list
+        ord_loc_file = os.path.join(mod_dirs["localization"], f"name_list_{nl_dict['namelist_id'].upper()}_l_english.yml")
+        with open(ord_loc_file, 'w') as file:
+            ord_loc_template = template_env.get_template(c.ORD_NAMES_LOC_TEMPLATE)
+            ord_loc = ord_loc_template.render(dict_item=ord_dict)
+            file.write(ord_loc)
+            print(f'Ordinal namelist localization file written to {ord_loc_file}')
+
+    #generate localization file
+    namelist_loc_file = os.path.join(mod_dirs["localization"], f"{args.author.lower()}_namelist_l_english.yml")
+    nl_loc_template = template_env.get_template(c.LOCALIZATION_TEMPLATE)
+
+    with open(namelist_loc_file, 'w') as file:
+        nl_loc = nl_loc_template.render(dict_item=namelist_info)
+        file.write(nl_loc)
+        print(f'Namelist localization file written to {namelist_loc_file}')
 
 
 def create_seq_key(key, value, author, id):
-    ord = re.search(r'\$\S\$', value).group().replace('$', '')
+    ord = re.search(r'\$\S+\$', value).group().replace('$', '')
     ord_base = "".join(key.split('_')[1:]).upper()
     return f"{author.upper()}_{id.upper()}_{ord_base}_{c.ORD_TYPES[ord]}"
 
 
-def csv_to_dicts(namelist_csv):
+def csv_to_dicts(namelists, author):
     namelist_dict = {key: [] for key in get_template_variables()}
-    with open(namelist_csv, 'r') as file:
+    with open(namelists, 'r') as file:
         reader = csv.DictReader(file)
         for row in reader:
             for k, v in row.items():
@@ -80,7 +94,7 @@ def csv_to_dicts(namelist_csv):
     ord_dict = OrderedDict()
     for k, v in processed_dict.items():
         if "$" in v:
-            seq_key = create_seq_key(k, v, namelist_dict['namelist_author'][0], namelist_dict['namelist_id'][0])
+            seq_key = create_seq_key(k, v, author, namelist_dict['namelist_id'][0])
             ord_dict[seq_key] = v
             processed_dict[k] = seq_key
     return processed_dict, ord_dict
@@ -119,7 +133,8 @@ parser = argparse.ArgumentParser(
     description='A tool for creating Stellaris namelist mods from a CSV file',
     usage='namelist_generator.py -c [NAMELIST_FILE]',
     formatter_class=argparse.ArgumentDefaultsHelpFormatter)
-parser.add_argument('-c', '--namelist_csv', help="path to the namelist csv file", required=False)
+parser.add_argument('-c', '--namelists', help="path to the directory with namelist csv files", required=False)
+parser.add_argument('-a', '--author', help="mod author", required=False)
 parser.add_argument('-m', '--mod_name', help="name to use for the generated mod", required=False)
 parser.add_argument('-d', '--dump_csv_template', help='dump a blank csv with namelist headers with the specified name',
                     required=False)

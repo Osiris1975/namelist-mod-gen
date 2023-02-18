@@ -1,7 +1,7 @@
 ### {{ namelist_title }}
 ### Created by {{ namelist_author }}
 
-{{ namelist_id }} = {
+{{namelist_author}}_{{ namelist_id }} = {
 	ship_names = {
 
 		corvette = {
@@ -137,7 +137,7 @@
 		random_names = {
 			{{ fn_random_names }}
 		}
-		sequential_name = {{ fn_fleet_designation }}
+		sequential_name = {{ fn_fleet_names }}
 	}
 	###ARMIES
 	army_names = {
