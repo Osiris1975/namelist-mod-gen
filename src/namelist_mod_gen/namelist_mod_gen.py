@@ -97,6 +97,9 @@ def csv_to_dicts(namelists, author):
             seq_key = create_seq_key(k, v, author, namelist_dict['namelist_id'][0])
             ord_dict[seq_key] = v
             processed_dict[k] = seq_key
+    #TODO: stellaris doesn't allow empty second names but this is a workaround
+    if len(processed_dict['cn_second_names']) == 0:
+        processed_dict['cn_second_names'] = '\"\"'
     return processed_dict, ord_dict
 
 
