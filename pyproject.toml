@@ -6,7 +6,7 @@ build-backend = "setuptools.build_meta"
 name = "Osiris's Namelist Mod Generator"
 version = "0.0.1"
 authors = [
-  { name="Amr Abouelleil", email="amr@aaleil.com" }
+  { name="Osiris", email="amr@aaleil.com" }
 ]
 description = ""
 readme = "README.md"
@@ -18,5 +18,5 @@ classifiers = [
 ]
 
 [project.urls]
-"Homepage" = "url tbd"
-"Bug Tracker" = "url tbd"
+"Homepage" = "https://github.com/Osiris1975/namelist-mod-gen"
+"Bug Tracker" = "https://github.com/Osiris1975/namelist-mod-gen/issues"
