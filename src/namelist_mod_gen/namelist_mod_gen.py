@@ -19,7 +19,7 @@ template_env = Environment(loader=template_loader)
 def make_mod_directories(mod_name, lang):
     dirs = {
         "namelist": os.path.join(c.MOD_OUTPUT_DIR, mod_name, 'common', 'name_lists'),
-        "localization": os.path.join(c.MOD_OUTPUT_DIR, mod_name, 'localisation', lang)
+        "localization": os.path.join(c.MOD_OUTPUT_DIR, mod_name, 'localisation', lang, 'name_lists')
     }
 
     for d in dirs.values():
