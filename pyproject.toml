@@ -18,5 +18,5 @@ classifiers = [
 ]
 
 [project.urls]
-"Homepage" = "url tbd"
-"Bug Tracker" = "url tbd"
+"Homepage" = "https://github.com/Osiris1975/namelist-mod-gen"
+"Bug Tracker" = "https://github.com/Osiris1975/namelist-mod-gen/issues"
