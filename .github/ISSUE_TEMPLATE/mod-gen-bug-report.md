@@ -3,7 +3,7 @@ name: Mod Gen Bug Report
 about: 'Use this to report problems with the namelist mod generator tool. '
 title: ''
 labels: ''
-assignees: ''
+assignees: Osiris1975
 
 ---
 
