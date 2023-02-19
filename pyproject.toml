@@ -6,7 +6,7 @@ build-backend = "setuptools.build_meta"
 name = "Osiris's Namelist Mod Generator"
 version = "0.0.1"
 authors = [
-  { name="Amr Abouelleil", email="amr@aaleil.com" }
+  { name="Osiris", email="amr@aaleil.com" }
 ]
 description = ""
 readme = "README.md"
