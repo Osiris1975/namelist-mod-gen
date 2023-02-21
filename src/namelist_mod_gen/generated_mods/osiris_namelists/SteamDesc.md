@@ -1,9 +1,8 @@
 [h1]Osiris's Namelist Mod[/h1]
 
-Tired of your fleets and armies with missing names since the 3.6.0 Orion patch?
-Interested in some name lists inspired by history? 
+Tired of your fleets and armies with missing names since the 3.6.0 Orion patch? Interested in some name lists inspired by history?
 
-Then you've come to the right place! 
+Then you've come to the right place!
 
 [hr][/hr]
 [h1]About the Namelists[/h1]
@@ -17,8 +16,8 @@ Currently available namelists and their respective themes are:
 Planned or in development are:
 - [b]Medieval[/b]: Medieval weapons, cities, castles, and historical figures.
 - [b]MedModern[/b]: Hybrid between medieval weapons and modern-era everything else.
-- [b]Ancient Greek[/b]: Ancient Greek deities, cities, landmarks, pharaohs, etc...
-- [b]Ancient Roman[/b]: Ancient Roman deities, cities, landmarks, pharaohs, etc...
+- [b]Ancient Greek[/b]: Ancient Greek deities, cities, landmarks, leaders, etc...
+- [b]Ancient Roman[/b]: Ancient Roman deities, cities, landmarks, leaders, etc...
 
 For more details on the namelist themes, go to the [url=https://docs.google.com/spreadsheets/d/e/2PACX-1vSwK7tAOLRflzxfqE248c-4h7NL4CKV-Sk-VS76Jl6VmxP7N9Y98Ow7jIfoF4afgZlj7K0Mu7HlrrCV/pubhtml#]Naming Conventions Google Sheet[/url].
 
@@ -32,7 +31,7 @@ Have an idea for a namelist but don't know how to make namelist mods?
 -If you are comfortable with Python, you can create your own mod using Osiris's namelist-mod-gen tool. 
 [i]Disclaimer[/i]: it's still very new, under development, and not thoroughly tested.
 
-To get involved, head over to the mod and tool's [GitHub Issues page](https://github.com/Osiris1975/namelist-mod-gen/issues/new/choose)
+To get involved, head over to the mod and tool's [url=https://github.com/Osiris1975/namelist-mod-gen/issues/new/choose]Github Issues page[/url].
 
 
 [hr][/hr]
