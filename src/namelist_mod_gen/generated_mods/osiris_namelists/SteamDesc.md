@@ -1,7 +1,7 @@
 [h1]Osiris's Namelist Mod[/h1]
 
-Tired of your fleets and armies striking fear into their enemies with names like %SEQ% ever since the 3.6.0 patch? 
-Interested in some name lists created inspired by history but with a dash of creative flair from a 
+Tired of your fleets and armies running around with names like %SEQ% ever since the 3.6.0 patch? 
+Interested in some name lists inspired by history but with a dash of creative flair from a 
 very, very, very minor but published sci-fi author? Want to give him a pat on the back for spending way-too-many hours
 trying to figure out how to make %SEQ% go away?
 
@@ -42,12 +42,16 @@ Have an idea for a namelist but don't know how to make namelist mods?
 -If you are comfortable with Python, you can create your own mod using Osiris's namelist-mod-gen tool. 
 [i]Disclaimer[\i]: it's still very new, under development, and not thoroughly tested.
 
+To get involved, head over to the mod and tool's [GitHub Issues page](https://github.com/Osiris1975/namelist-mod-gen/issues/new/choose)
+
+
+
 [hr][/hr]
 [h1]References[/h1]
-Many thanks to the other namelist mods out there that taught me a bit on how to do this stuff:
--(Cybrxkhan's Assortment of Namelists for Stellaris)[https://steamcommunity.com/sharedfiles/filedetails/?id=682691478]
--(Civil Wars)[https://steamcommunity.com/workshop/filedetails/?id=2434790082]
--Grand US Namelists (NSC Compatible)[https://steamcommunity.com/sharedfiles/filedetails/?id=1793246834]
+In learning how to create the mod, I referenced these three mods:
+-[Cybrxkhan's Assortment of Namelists for Stellaris](https://steamcommunity.com/sharedfiles/filedetails/?id=682691478)
+-[Civil Wars](https://steamcommunity.com/workshop/filedetails/?id=2434790082)
+-[Grand US Namelists](NSC Compatible(https://steamcommunity.com/sharedfiles/filedetails/?id=1793246834)
 
 Websites referenced in generating some of these namelists are:
 -(Wikipedia)[https://www.wikipedia.org/]
