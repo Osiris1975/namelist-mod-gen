@@ -25,8 +25,6 @@ Enough about him (me). Also, this is his(mine) first mod. Be gentle...
 
 
 
-[hr][/hr]
-
 About the Namelists
 
 
@@ -62,11 +60,6 @@ For more details on the namelist themes, go here:
 Naming Conventions
 
 
-
-[hr][/hr]
-
-
-
 Get Involved
 
 
@@ -86,11 +79,6 @@ Disclaimer: it's still very new, under development, and not thoroughly tested.
 
 To get involved, head over to the mod and tool's GitHub Issues page.
 
-
-
-
-
-[hr][/hr]
 
 References
 
