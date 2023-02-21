@@ -2,13 +2,17 @@
 ### Created by osiris
 
 osiris_ancientegypt = {
+	category = ""
+	randomized = 
+	alias = 
+
 	ship_names = {
 
 		corvette = {
 			"Asti's Khopesh" "Wepset's Rage" "Kebehut's Dagger" "Dagger of Shemat-Khu" "Blade of Seblumeker" "Khesfu's Dagger" "Blade of Apis" "Hetepes-Sekhus's Dagger" "Wrath of Apis" "Blood of Buchis" "Dagger of Ta-Bijet" "Blade of Besna" "Blood of Shemat-Khu" "Blood of Serapis" "Dagger of Ahti" "Blood of Hetepes-Sekhus" "Blade of Hedetet" "Amu-Aa's Arrow" "Shesmetet's Chariot" "Taweret's Shield" "Heryshaf's Shield" "Amu-Aa's Rage" "Heryshaf's Javelin" "Fist of Wepset" "Blade of Buchis" "Dagger of Khentekhtai" "Serket's Khopesh" "Ammit's Khopesh" "Aani's Rage" "Wrath of Wepset" "Hetepes-Sekhus's Spear" "Fist of Khentekhtai" "Denwen's Chariot" "Blade of Kebehut" "Amu-Aa's Spear" "Fist of Hedetet" "Khefthernebes's Khopesh" "Serapis's Javelin" "Mehen's Vigil" "Shemat-Khu's Dagger" "Blade of Taweret" "Fist of Anat" "Fist of Seblumeker" "Anat's Chariot" "Seblumeker's Fury" "Fist of Buchis" "Blood of Ishtar" "Fist of Astarte" "Serket's Shield" "Ishtar's Spear" "Shesmetet's Spear" "Blade of Pelican" "Anat's Arrow" "Seblumeker's Shield" "Ammit's Chariot" "Ta-Bijet's Shield" "Dagger of Apesh" "Dagger of Serket" "Anhefta's Chariot" "Ishtar's Khopesh" "Apis's Arrow" "Dagger of Pelican" "Blade of Nehebu-Kau" "Apesh's Chariot" "Ahti's Vigil" "Shemat-Khu's Javelin" "Fist of Heptet" "Blade of Meretseger" "Anti's Shield" "Blade of Astarte" "Wepset's Chariot" "Baal's Chariot" "Mehen's Javelin" "Anti's Javelin" "Khefthernebes's Vigil" "Anuke's Shield" "Apep's Fury" "Nehebu-Kau's Fury" "Besna's Fury" "Blood of Astarte" "Am-heh's Javelin" "Ishtar's Vigil" "Blood of Shesmetet" "Apep's Vigil" "Anat's Javelin" "Seblumeker's Rage" "Heryshaf's Rage" "Wrath of Ishtar" "Wepwawet's Arrow" "Shentayet's Spear" "Dagger of Wepset" "Aani's Chariot" "Amu-Aa's Dagger" "Baal's Khopesh" "Buchis's Dagger" "Reshep's Shield" "Fist of Pelican" "Ishtar's Arrow" "Anhefta's Fury" "Wrath of Hedetet" "Fist of Harmachis" "Wrath of Anuke" "Blade of Apesh" "Blood of Nehebu-Kau" "Dagger of Besna" "Wrath of Apesh" "Serapis's Shield" "Pelican's Javelin" "Apesh's Javelin" "Anuke's Dagger" "Kebehut's Arrow" "Setcheh's Rage" "Dagger of Apep" "Blade of Baal" "Blood of Pelican" "Dagger of Taweret" "Wrath of Heryshaf" "Harmachis's Khopesh" "Taweret's Spear" "Wrath of Wepwawet" "Astarte's Fury" "Taweret's Khopesh" "Apep's Javelin" "Wrath of Baal" "Seblumeker's Vigil" "Apesh's Vigil" "Serket's Fury" "Kebehut's Vigil" "Anat's Spear" "Dagger of Buchis" "Shentayet's Chariot" "Dagger of Khefthernebes" "Hedetet's Spear" "Khentekhtai's Dagger" "Dagger of Anhefta" "Denwen's Javelin" "Serapis's Khopesh" "Dagger of Serapis" "Hedetet's Khopesh" "Astarte's Vigil" "Dagger of Heptet" "Baal's Dagger" "Blood of Apis" "Blade of Setcheh" "Serket's Javelin" "Setcheh's Dagger" "Blood of Reshep" "Hedetet's Dagger" "Wrath of Serket" "Wepset's Dagger" "Asti's Shield" "Pelican's Fury" "Khentekhtai's Spear" "Wepset's Vigil" "Dagger of Wepset" "Dagger of Apis" "Hedetet's Rage" "Dagger of Shentayet" "Anhefta's Dagger" "Shentayet's Dagger" "Shemat-Khu's Arrow" "Shentayet's Fury" "Fist of Serket" "Ahti's Chariot" "Anti's Fury" "Anti's Dagger" "Setcheh's Fury" "Aani's Arrow" "Wrath of Seblumeker" "Besna's Rage" "Aani's Vigil" "Asti's Javelin" "Hedetet's Shield" "Blade of Anti" "Wepset's Spear" "Heptet's Arrow" "Ishtar's Rage" "Anat's Rage" "Wrath of Meretseger" "Seblumeker's Spear" "Pelican's Vigil" "Shentayet's Javelin" "Buchis's Rage" "Reshep's Arrow" "Ahti's Shield" "Khefthernebes's Shield" "Blood of Anhefta" "Besna's Dagger" "Am-heh's Spear" "Shesmetet's Shield" "Mehen's Khopesh" "Fist of Serapis" "Wepwawet's Chariot" "Amu-Aa's Javelin" "Shentayet's Shield" "Dagger of Mehen" "Dagger of Ammit" "Apep's Khopesh" "Serapis's Vigil" "Wrath of Shemat-Khu" "Hetepes-Sekhus's Javelin" "Blood of Khefthernebes" "Setcheh's Arrow" "Blood of Wepset" "Blade of Khefthernebes" "Am-heh's Fury" "Dagger of Nehebu-Kau" "Amu-Aa's Chariot" "Ta-Bijet's Spear" "Wrath of Nehebu-Kau" "Apep's Chariot" "Khesfu's Vigil" "Blood of Ammit" "Wepwawet's Dagger" "Besna's Spear" "Aani's Shield" "Blood of Hedetet" "Heptet's Dagger" "Anuke's Javelin"
 		}
 
-		destroyer =	{
+		destroyer = {
 			"Setcheh's Chariot" "Apesh's Khopesh" "Fist of Denwen" "Reshep's Vigil" "Fist of Apesh" "Apis's Vigil" "Mehen's Arrow" "Wrath of Khentekhtai" "Blood of Harmachis" "Aani's Khopesh" "Dagger of Pelican" "Astarte's Chariot" "Blood of Anat" "Khesfu's Chariot" "Astarte's Khopesh" "Hetepes-Sekhus's Fury" "Shesmetet's Arrow" "Anhefta's Arrow" "Seblumeker's Khopesh" "Baal's Spear" "Dagger of Meretseger" "Meretseger's Arrow" "Mehen's Rage" "Blade of Reshep" "Blood of Meretseger" "Apis's Dagger" "Khesfu's Rage" "Serapis's Dagger" "Shemat-Khu's Fury" "Wepwawet's Khopesh" "Nehebu-Kau's Dagger" "Dagger of Baal" "Pelican's Dagger" "Blood of Pelican" "Khefthernebes's Dagger" "Blade of Serapis" "Blade of Shentayet" "Dagger of Hedetet" "Fist of Shesmetet" "Fist of Meretseger" "Heryshaf's Khopesh" "Wepset's Khopesh" "Pelican's Rage" "Blood of Anuke" "Khentekhtai's Vigil" "Serapis's Chariot" "Wrath of Shentayet" "Serapis's Spear" "Wrath of Harmachis" "Pelican's Shield" "Harmachis's Dagger" "Blade of Hetepes-Sekhus" "Ishtar's Chariot" "Besna's Vigil" "Anat's Shield" "Taweret's Javelin" "Blood of Setcheh" "Buchis's Arrow" "Meretseger's Khopesh" "Aani's Javelin" "Khefthernebes's Rage" "Apis's Javelin" "Kebehut's Khopesh" "Khentekhtai's Shield" "Am-heh's Arrow" "Anhefta's Shield" "Taweret's Arrow" "Wrath of Khesfu" "Ta-Bijet's Arrow" "Apep's Arrow" "Wepset's Fury" "Heryshaf's Fury" "Khesfu's Javelin" "Heptet's Vigil" "Aani's Dagger" "Denwen's Rage" "Khefthernebes's Chariot" "Aani's Fury" "Anat's Dagger" "Fist of Ammit" "Blood of Besna" "Dagger of Anat" "Heptet's Shield" "Anti's Spear" "Hetepes-Sekhus's Shield" "Asti's Arrow" "Reshep's Javelin" "Baal's Shield" "Khesfu's Fury" "Fist of Kebehut" "Shemat-Khu's Chariot" "Meretseger's Vigil" "Asti's Rage" "Shemat-Khu's Rage" "Wrath of Ammit" "Apep's Rage" "Anat's Vigil" "Astarte's Arrow" "Shemat-Khu's Vigil" "Blade of Ishtar" "Besna's Javelin" "Apep's Spear" "Setcheh's Khopesh" "Ammit's Javelin" "Taweret's Dagger" "Reshep's Khopesh" "Asti's Chariot" "Wrath of Anti" "Dagger of Kebehut" "Apis's Rage" "Anhefta's Khopesh" "Wrath of Denwen" "Hedetet's Javelin" "Meretseger's Spear" "Nehebu-Kau's Spear" "Blade of Anuke" "Wrath of Besna" "Hedetet's Arrow" "Khefthernebes's Fury" "Buchis's Vigil" "Reshep's Rage" "Ammit's Spear" "Blade of Harmachis" "Anat's Khopesh" "Buchis's Fury" "Fist of Besna" "Fist of Anhefta" "Wrath of Wepset" "Hetepes-Sekhus's Chariot" "Harmachis's Javelin" "Harmachis's Shield" "Apep's Shield" "Taweret's Rage" "Ta-Bijet's Fury" "Wepset's Javelin" "Mehen's Dagger" "Ahti's Spear" "Kebehut's Shield" "Heryshaf's Arrow" "Serket's Vigil" "Fist of Nehebu-Kau" "Seblumeker's Dagger" "Khentekhtai's Chariot" "Blood of Khesfu" "Blade of Shemat-Khu" "Serapis's Arrow" "Blade of Mehen" "Fist of Ishtar" "Buchis's Javelin" "Astarte's Spear" "Wrath of Pelican" "Mehen's Shield" "Anuke's Fury" "Nehebu-Kau's Javelin" "Shemat-Khu's Spear" "Fist of Apis" "Heptet's Chariot" "Shesmetet's Dagger" "Wrath of Apep" "Anti's Rage" "Apep's Dagger" "Aani's Spear" "Besna's Khopesh" "Ahti's Arrow" "Wrath of Heptet" "Blood of Wepwawet" "Anuke's Rage" "Baal's Arrow" "Denwen's Khopesh" "Wrath of Shesmetet" "Hetepes-Sekhus's Arrow" "Amu-Aa's Fury" "Wrath of Anhefta" "Nehebu-Kau's Khopesh" "Serket's Chariot" "Reshep's Chariot" "Blade of Ammit" "Kebehut's Rage" "Hedetet's Vigil" "Mehen's Fury" "Wrath of Reshep" "Dagger of Harmachis" "Asti's Dagger" "Nehebu-Kau's Chariot" "Blade of Anat" "Blood of Shentayet" "Denwen's Arrow" "Nehebu-Kau's Rage" "Taweret's Chariot" "Dagger of Seblumeker" "Wepwawet's Javelin" "Astarte's Javelin" "Dagger of Heryshaf" "Blood of Ahti" "Kebehut's Fury" "Besna's Arrow" "Fist of Shemat-Khu" "Blood of Kebehut" "Dagger of Reshep" "Blade of Ta-Bijet" "Anat's Fury" "Blood of Baal" "Setcheh's Vigil" "Harmachis's Arrow" "Blade of Wepset" "Blood of Apesh" "Ta-Bijet's Dagger" "Taweret's Fury" "Blade of Shesmetet" "Fist of Khefthernebes" "Khentekhtai's Arrow" "Apesh's Fury"
 		}
 
@@ -16,32 +20,8 @@ osiris_ancientegypt = {
 			"Fist of Sekhmet" "Selkis's Chariot" "Osiris's Dagger" "Sekhmet's Spear" "Osiris's Javelin" "Horus's Arrow" "Sekhmet's Fury" "Menhit's Fury" "Neith's Shield" "Fist of Maahes" "Amon's Javelin" "Blood of Selkis" "Neith's Khopesh" "Menhit's Spear" "Menhit's Chariot" "Fist of Ra" "Blade of Amon" "Blood of Menhit" "Montu's Dagger" "Blood of Montu" "Dagger of Montu" "Blade of Amon-Ra" "Ra's Shield" "Osiris's Shield" "Maahes's Fury" "Selkis's Vigil" "Ra's Vigil" "Sobek's Javelin" "Maahes's Dagger" "Blade of Osiris" "Aten's Khopesh" "Sobek's Khopesh" "Selkis's Spear" "Aten's Arrow" "Fist of Montu" "Anubis's Arrow" "Dagger of Neith" "Amon's Khopesh" "Blood of Hetemit" "Montu's Javelin" "Amon's Arrow" "Sekhmet's Chariot" "Neith's Arrow" "Anubis's Dagger" "Dagger of Osiris" "Fist of Anhur" "Dagger of Hetemit" "Bastet's Dagger" "Fist of Bastet" "Aten's Shield" "Montu's Shield" "Blade of Hetemit" "Anubis's Shield" "Montu's Khopesh" "Set's Rage" "Set's Fury" "Aten's Fury" "Dagger of Selkis" "Amon's Chariot" "Sekhmet's Vigil" "Montu's Rage" "Blade of Horus" "Dagger of Aten" "Bastet's Shield" "Horus's Fury" "Blade of Bastet" "Amon-Ra's Shield" "Sobek's Shield" "Aten's Vigil" "Ra's Fury" "Aten's Spear" "Blood of Horus" "Hetemit's Spear" "Maahes's Rage" "Neith's Chariot" "Montu's Arrow" "Sobek's Vigil" "Dagger of Sobek" "Blade of Set" "Selkis's Javelin" "Wrath of Anhur" "Horus's Vigil" "Anhur's Khopesh" "Blade of Aten" "Wrath of Maahes" "Blade of Selkis" "Blood of Anubis" "Hetemit's Fury"
 		}
 
-		StrikeCruiser = {
-			"Menhit's Shield" "Horus's Khopesh" "Bastet's Fury" "Menhit's Vigil" "Anhur's Arrow" "Fist of Amon" "Blood of Sobek" "Set's Vigil" "Amon-Ra's Chariot" "Blade of Maahes" "Bastet's Rage" "Bastet's Khopesh" "Set's Shield" "Ra's Rage" "Horus's Dagger" "Blade of Anubis" "Selkis's Rage" "Sobek's Rage" "Dagger of Horus" "Menhit's Dagger" "Anubis's Vigil" "Menhit's Arrow" "Maahes's Spear" "Menhit's Rage" "Wrath of Aten" "Blood of Set" "Dagger of Anubis" "Dagger of Sekhmet" "Sobek's Dagger" "Selkis's Arrow" "Anhur's Spear" "Blade of Anhur" "Maahes's Shield" "Blade of Menhit" "Osiris's Vigil" "Set's Dagger" "Anhur's Dagger" "Amon-Ra's Khopesh" "Bastet's Chariot" "Aten's Rage" "Amon's Dagger" "Blood of Neith" "Hetemit's Khopesh" "Set's Arrow" "Anubis's Spear" "Anhur's Chariot" "Blood of Ra" "Blade of Montu" "Anhur's Shield" "Osiris's Spear" "Anhur's Javelin" "Fist of Set" "Hetemit's Chariot" "Horus's Javelin" "Wrath of Hetemit" "Amon's Rage" "Blood of Maahes" "Ra's Arrow" "Maahes's Arrow" "Aten's Chariot" "Set's Spear" "Sekhmet's Arrow" "Wrath of Horus" "Dagger of Ra" "Wrath of Osiris" "Dagger of Anhur" "Hetemit's Arrow" "Anubis's Khopesh" "Blood of Bastet" "Sekhmet's Khopesh" "Wrath of Sekhmet" "Anubis's Javelin" "Fist of Hetemit" "Amon-Ra's Arrow" "Wrath of Menhit" "Hetemit's Dagger" "Ra's Dagger" "Sekhmet's Rage" "Selkis's Khopesh" "Sobek's Chariot" "Dagger of Menhit" "Wrath of Amon" "Wrath of Sobek" "Anubis's Chariot" "Selkis's Fury" "Selkis's Dagger" "Wrath of Set" "Fist of Neith" "Neith's Vigil" "Amon-Ra's Fury" "Sekhmet's Shield"
-		}
-
-		Battlecruiser = {
-			"Dagger of Bastet" "Menhit's Javelin" "Montu's Vigil" "Hetemit's Vigil" "Hetemit's Rage" "Ra's Spear" "Maahes's Chariot" "Sekhmet's Javelin" "Neith's Rage" "Menhit's Khopesh" "Montu's Spear" "Neith's Spear" "Amon's Vigil" "Wrath of Selkis" "Wrath of Neith" "Sobek's Fury" "Anubis's Rage" "Fist of Selkis" "Fist of Aten" "Amon-Ra's Dagger" "Hetemit's Shield" "Sobek's Arrow" "Fist of Amon-Ra" "Blood of Sekhmet" "Amon-Ra's Javelin" "Horus's Shield" "Set's Khopesh" "Set's Javelin" "Fist of Sobek" "Aten's Dagger" "Dagger of Set" "Neith's Javelin" "Bastet's Javelin" "Dagger of Amon" "Blade of Sekhmet" "Anubis's Fury" "Amon-Ra's Rage" "Osiris's Chariot" "Amon's Spear" "Ra's Javelin" "Osiris's Rage" "Sobek's Spear" "Blood of Amon" "Maahes's Khopesh" "Anhur's Vigil" "Ra's Chariot" "Bastet's Arrow" "Blade of Ra" "Osiris's Fury" "Fist of Horus" "Anhur's Rage" "Amon's Fury" "Osiris's Arrow" "Wrath of Amon-Ra" "Blood of Anhur" "Wrath of Ra" "Horus's Spear" "Neith's Fury" "Osiris's Khopesh" "Bastet's Vigil" "Maahes's Vigil" "Maahes's Javelin" "Wrath of Anubis" "Hetemit's Javelin" "Blade of Sobek" "Dagger of Maahes" "Amon's Shield" "Fist of Osiris" "Wrath of Montu" "Horus's Rage" "Selkis's Shield" "Dagger of Amon-Ra" "Blade of Neith" "Fist of Menhit" "Blood of Osiris" "Anhur's Fury" "Montu's Chariot" "Fist of Anubis" "Neith's Dagger" "Sekhmet's Dagger" "Blood of Amon-Ra" "Set's Chariot" "Montu's Fury" "Amon-Ra's Spear" "Blood of Aten" "Horus's Chariot" "Wrath of Bastet" "Amon-Ra's Vigil" "Bastet's Spear" "Aten's Javelin" "Ra's Khopesh"
-		}
-
 		battleship = {
 			"Serket" "Ammit" "Anubis" "Heptet" "Ta-Bijet" "Hetepes-Sekhus" "Pelican" "Bastet"
-		}
-
-		frigate = {
-			"Anuke's Spear" "Wepwawet's Spear" "Pelican's Spear" "Meretseger's Shield" "Blade of Heryshaf" "Baal's Rage" "Blade of Apep" "Wrath of Serapis" "Meretseger's Fury" "Ammit's Arrow" "Khentekhtai's Khopesh" "Meretseger's Dagger" "Apis's Khopesh" "Shesmetet's Javelin" "Fist of Setcheh" "Asti's Vigil" "Blood of Heryshaf" "Wrath of Astarte" "Shesmetet's Rage" "Hetepes-Sekhus's Rage" "Blade of Anhefta" "Khesfu's Shield" "Wrath of Pelican" "Denwen's Shield" "Apesh's Arrow" "Harmachis's Rage" "Blood of Ta-Bijet" "Wepset's Arrow" "Apis's Chariot" "Blood of Mehen" "Pelican's Khopesh" "Fist of Reshep" "Heryshaf's Spear" "Amu-Aa's Khopesh" "Nehebu-Kau's Shield" "Wrath of Setcheh" "Shentayet's Vigil" "Harmachis's Vigil" "Shesmetet's Khopesh" "Khentekhtai's Rage" "Dagger of Hetepes-Sekhus" "Wrath of Taweret" "Fist of Wepset" "Blade of Wepset" "Dagger of Khesfu" "Anuke's Chariot" "Khentekhtai's Fury" "Setcheh's Javelin" "Wepset's Shield" "Blood of Heptet" "Fist of Mehen" "Fist of Hetepes-Sekhus" "Wrath of Anat" "Hetepes-Sekhus's Vigil" "Apesh's Spear" "Blade of Ahti" "Ta-Bijet's Chariot" "Ta-Bijet's Khopesh" "Baal's Fury" "Ishtar's Javelin" "Blade of Denwen" "Blade of Khentekhtai" "Khefthernebes's Arrow" "Reshep's Dagger" "Amu-Aa's Shield" "Dagger of Astarte" "Anuke's Arrow" "Hetepes-Sekhus's Khopesh" "Fist of Ta-Bijet" "Heptet's Rage" "Dagger of Shesmetet" "Fist of Anti" "Blood of Anti" "Serket's Spear" "Kebehut's Chariot" "Khentekhtai's Javelin" "Anhefta's Vigil" "Khefthernebes's Spear" "Anuke's Vigil" "Meretseger's Javelin" "Heryshaf's Chariot" "Blade of Heptet" "Apesh's Rage" "Astarte's Dagger" "Am-heh's Dagger" "Denwen's Vigil" "Fist of Ahti" "Blood of Khentekhtai" "Wepwawet's Shield" "Anhefta's Rage" "Am-heh's Chariot" "Am-heh's Khopesh" "Blood of Denwen" "Nehebu-Kau's Arrow" "Am-heh's Vigil" "Ishtar's Dagger" "Buchis's Chariot" "Blade of Pelican" "Anhefta's Spear" "Besna's Chariot" "Meretseger's Chariot" "Dagger of Setcheh" "Wrath of Kebehut" "Denwen's Fury" "Wepwawet's Rage" "Khesfu's Spear" "Apesh's Dagger" "Harmachis's Fury" "Astarte's Shield" "Khesfu's Arrow" "Kebehut's Javelin" "Blood of Wepset" "Setcheh's Spear" "Wrath of Khefthernebes" "Khefthernebes's Javelin" "Blade of Khesfu" "Fist of Apep" "Pelican's Chariot" "Ta-Bijet's Vigil" "Fist of Khesfu" "Wrath of Mehen" "Ahti's Rage" "Anhefta's Javelin" "Blood of Apep" "Fist of Anuke" "Dagger of Anuke" "Baal's Javelin" "Blade of Wepwawet" "Buchis's Shield" "Ammit's Dagger" "Shentayet's Rage" "Fist of Heryshaf" "Amu-Aa's Vigil" "Wrath of Ta-Bijet" "Meretseger's Rage" "Apis's Shield" "Fist of Wepwawet" "Mehen's Chariot" "Ta-Bijet's Javelin" "Apesh's Shield" "Am-heh's Rage" "Serket's Arrow" "Anti's Vigil" "Hedetet's Fury" "Shesmetet's Fury" "Fist of Shentayet" "Harmachis's Chariot" "Anuke's Khopesh" "Serket's Dagger" "Blood of Taweret" "Buchis's Khopesh" "Serapis's Rage" "Heptet's Khopesh" "Apis's Spear" "Shesmetet's Vigil" "Heryshaf's Dagger" "Asti's Spear" "Khesfu's Khopesh" "Wepwawet's Vigil" "Harmachis's Spear" "Anti's Chariot" "Am-heh's Shield" "Ahti's Khopesh" "Shemat-Khu's Khopesh" "Reshep's Fury" "Fist of Baal" "Dagger of Ishtar" "Ahti's Fury" "Mehen's Spear" "Hedetet's Chariot" "Wrath of Buchis" "Setcheh's Shield" "Blood of Serket" "Baal's Vigil" "Wrath of Hetepes-Sekhus" "Dagger of Wepwawet" "Anti's Khopesh" "Heptet's Fury" "Nehebu-Kau's Vigil" "Shentayet's Arrow" "Serket's Rage" "Heptet's Spear" "Pelican's Arrow" "Seblumeker's Arrow" "Blade of Serket" "Kebehut's Spear" "Shentayet's Khopesh" "Ahti's Dagger" "Serapis's Fury" "Seblumeker's Chariot" "Ahti's Javelin" "Seblumeker's Javelin" "Ammit's Vigil" "Ishtar's Fury" "Wrath of Ahti" "Denwen's Spear" "Reshep's Spear" "Ammit's Rage" "Ammit's Shield" "Wepwawet's Fury" "Blood of Seblumeker" "Apis's Fury" "Heryshaf's Vigil" "Heptet's Javelin" "Ammit's Fury" "Buchis's Spear" "Fist of Taweret" "Dagger of Anti" "Ta-Bijet's Rage" "Astarte's Rage" "Ishtar's Shield" "Besna's Shield" "Dagger of Denwen" "Fist of Pelican" "Shemat-Khu's Shield" "Denwen's Dagger" "Anti's Arrow" "Taweret's Vigil" "Asti's Fury"
-		}
-
-		generic = {
-			"Abu" "Ra-ateni" "Asclepius" "Mehit" "Unut" "Āpesh" "Panebtawy" "Yam" "Baal" "Heru-Khu" "Thermuthis" "Meret" "Heret-Kau" "Ihy" "Nebt-Mat" "An-tcher-f" "Tjenmyt" "Heptet" "Sebiumeker" "Nebethetepet" "Amathaunta" "Anhefta" "Sopdet" "Jupiter-Amun" "Nefertari" "Meretseger" "Qetesh" "An-a-f" "Sepa" "Tutu" "Wepset" "Iw" "Amenhotep" "Apep" "Min" "Uneg/Weneg" "Fetket" "Khesfu" "Besna" "Peteese" "Kebehut" "Amenhotep I" "Nebt-Shat" "Shenty" "Ash" "Sah" "Khenti-qerer" "Imhotep" "Raet-Tawy" "Sefkhet-Abwy" "Hedetet" "Babi" "Mafdet" "Mnevis" "Neferhotep" "Nehmetawy" "Hu" "Werethekau" "Dua" "Sesenet-Khu" "Ba-Ra" "Heryshaf" "Hert-sefu-s" "Seret" "Hert-Nemmat-Set" "Shentayet" "Astennu" "Ammit" "Sekhemus" "Pesi" "Sekhat-Hor" "Sepṭu" "Thmei" "Temet" "Taweret" "Shesmetet" "Shed" "Heru-pa-kaut" "Mestȧ" "Iabet" "Nebt-Shefshefet" "Menhit" "Esna" "Hery-sha-duat" "Banebdjedet" "Sait" "Kherty" "Tenenet" "Pelican" "Meskhenet" "Astarte" "Wepwawet" "Ani" "Arensnuphis" "Ta-Sent-Nefert" "Aati" "Heka" "Hert-ketit-s" "Usit" "Ṭuamutef" "Qerhet" "Pihor" "Anat" "Gengen Wer" "An-hetep-f" "Serket" "Wenenu" "An-mut-f" "Ptah-hotep" "Renpet" "Ahti" "Nefertum" "Tayt" "Shemat-Khu" "Ishtar" "Matit" "Ba'alat Gebal" "Heset" "Temtith" "Setcheh" "Sed" "Fa" "Nefer Hor" "Petbe" "Sepes" "Ipy" "Renenet" "Harmachis" "Apedemak" "Dedun" "Anit" "Sehith" "Nebt-Khu" "Amn" "Qebui" "Female" "Am-heh" "Apet" "Rekhit" "Nakith" "Seker" "Seshat" "Naunet" "Iah" "Ta-Bitjet" "Hapy-Wet" "Reshep" "Shehbui" "Mandulis" "Swenet" "Tafner" "Khefthernebes" "Mehet-Weret" "Tjenenyet" "Ba-Pef" "Heneb" "Sopd" "Harsomtus" "Iusaaset" "Rā-Ḥerakhty" "Serapis" "Bes" "Denwen" "Khentekhtai" "Nehebu-Kau" "Ḥapy" "Sekhet-Metu" "Setem" "Hetepes-Sekhus" "Dionysus-Osiris" "Henkhisesui" "Andjety" "Qererti" "Anti" "Shezmu" "Khenti-Amenti" "Ba" "Seta-Ta" "Amu-Aa" "Hardedef" "Nebt-Ankhiu" "Kagemni" "Qebeḥsenuf" "Mehen" "Themath" "Kneph" "Ken" "Buchis" "Apis" "Anuke" "Sebeg" "Aani" "Sia" "Iat" "Hatmehit" "Haurun" "Nebt-Setau" "Djebuty" "Ha" "Perit" "Djefa" "Maahes" "Pakhet" "Tefnut" "Wadjet" "Selkis" "Nun" "Kek" "Nephthys" "Aker" "Bennu" "Geb" "Hapi" "Khepri" "Khonsu" "Neper" "Nemty" "Shu" "Sopdu" "Wadj-wer" "Bat" "Tatenen"
-		}
-
-		LightCarrier = {
-			
-		}
-
-		escortcarrier = {
-			"Hetepes-Sekhus" "Ishtar" "Anuke" "Hedetet" "Ta-Bijet" "Meretseger" "Anat" "Ammit" "Shemat-Khu" "Serket" "Taweret" "Taweret" "Ishtar" "Heptet" "Anat" "Besna" "Astarte" "Khefthernebes" "Hedetet" "Hetepes-Sekhus" "Ammit" "Ta-Bijet" "Anuke" "Pelican" "Kebehut" "Shemat-Khu" "Astarte" "Kebehut" "Wepset" "Ahti" "Anhefta" "Shesmetet" "Heptet" "Shentayet" "Khefthernebes" "Shentayet" "Anhefta" "Meretseger" "Pelican" "Serket" "Wepset" "Ahti" "Besna" "Shesmetet"
 		}
 
 		titan = {
@@ -52,36 +32,12 @@ osiris_ancientegypt = {
 			"Amon-Ra"
 		}
 
-		Carrier = {
-			"Sekhmet" "Neith" "Sobek" "Astarte" "Horus" "Hedetet" "Kebehut" "Anhefta" "Shemat-Khu" "Ishtar" "Besna" "Meretseger" "Khefthernebes"
+		juggernaut = {
+			"Amon" "Ra"
 		}
 
-		Dreadnought = {
-            "Set" "Selkis" "Anuke" "Anat" "Wepset" "Shesmetet" "Amon" "Ahti"
-		}
-
-		Superdreadnought = {
-			
-		}
-
-		Flagship = {
-			"Osiris"
-		}
-
-		Headquarters = {
-			
-		}
-
-		science = {
-			"Thoth's Brilliance" "Thoth's Light" "Spirit of Thoth" "Thoth's Genius" "Imhotep's Light" "Eye of Imhotep" "Hand of Thoth" "Spirit of Imhotep" "Hand of Imhotep" "Imhotep's Genius" "Imhotep's Brilliance" "Eye of Thoth"
-		}
-
-		ScienceCruiser = {
-			"Hand of Imhotep" "Thoth's Light" "Spirit of Thoth" "Imhotep's Genius" "Spirit of Imhotep" "Hand of Thoth" "Eye of Thoth" "Imhotep's Brilliance" "Thoth's Genius" "Imhotep's Light" "Eye of Imhotep" "Thoth's Brilliance"
-		}
-
-		explorationship = {
-			"Thoth's Reach" "Thoth's Discovery" "Revelation of Khonsu" "Khonsu's Secret" "Khonsu's Yearning" "Thoth's Utterance" "Khonsu's Pioneer" "Khonsu's Prophecy" "Thoth's Prophecy" "Khonsu's Reach" "Revelation of Thoth" "Thoth's Secret" "Khonsu's Utterance" "Thoth's Horizon" "Khonsu's Horizion"
+		constructor = {
+			"Renenutet's Plow" "Hand of Atum" "Breath of Nepit" "Hand of Ptah" "Nefertum's Creation" "Bennu's Blessing" "Ptah's Fortitude" "Ptah's Vision" "Ptah's Vigor" "Ptah's Will"
 		}
 
 		colonizer = {
@@ -92,21 +48,9 @@ osiris_ancientegypt = {
 		
 		}
 
-		constructor = {
-			"Renenutet's Plow" "Hand of Atum" "Breath of Nepit" "Hand of Ptah" "Nefertum's Creation" "Bennu's Blessing" "Ptah's Fortitude" "Ptah's Vision" "Ptah's Vigor" "Ptah's Will"
+		science = {
+			"Thoth's Brilliance" "Thoth's Light" "Spirit of Thoth" "Thoth's Genius" "Imhotep's Light" "Eye of Imhotep" "Hand of Thoth" "Spirit of Imhotep" "Hand of Imhotep" "Imhotep's Genius" "Imhotep's Brilliance" "Eye of Thoth"
 		}
-
-		ConstructionCruiser = {
-			"Ptah's Vigor" "Breath of Nepit" "Renenutet's Plow" "Ptah's Vision" "Hand of Atum" "Nefertum's Creation" "Ptah's Fortitude" "Bennu's Blessing" "Ptah's Will" "Hand of Ptah"
-		}
-
-		#orbital_station = { }
-		mining_station = { }
-		research_station = { }
-		#wormhole_station = { }
-		#terraform_station = { }
-		#observation_station = { }
-		#outpost_station = {	}
 
 		transport = {
 			"Khonsu's Chariot" "Hand of Khonsu" "Breath of Khonsu" "Khonsu's Will" "Khonsu's Steed" "Spirit of Khonsu"
@@ -139,7 +83,7 @@ osiris_ancientegypt = {
 		}
 		sequential_name = OSIRIS_ANCIENTEGYPT_FLEETNAMES_ORD
 	}
-	###ARMIES
+
 	army_names = {
 
 		machine_defense = {
@@ -284,6 +228,7 @@ osiris_ancientegypt = {
 				
 			}
 		}
+
 	}
 
 	character_names = {

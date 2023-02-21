@@ -2,13 +2,17 @@
 ### Created by osiris
 
 osiris_arabian = {
+	category = ""
+	randomized = 
+	alias = 
+
 	ship_names = {
 
 		corvette = {
 			"Scimitar" "Shamsir" "Acinaces" "Kilij" "Pulwar" "Talwar" "Yataghan" "Khanjar" "Kard"
 		}
 
-		destroyer =	{
+		destroyer = {
 			"Iqbal" "Jinnah" "Massoud" "Tipu" "Murad" "Abbas" "Malik Ambar" "Niazi" "Bairam Khan"
 		}
 
@@ -16,32 +20,8 @@ osiris_arabian = {
 			"Mamluk" "Assad" "Zengid" "Fatima" "Zaid ibn Ali" "al-Saud" "Ghazi"
 		}
 
-		StrikeCruiser = {
-			"Al-Rashid" "Al-Amin" "Al-Wathiq" "Al-Munastir" "Al-Qahir" "Al-Radi"
-		}
-
-		Battlecruiser = {
-			"Ibrahim" "al-Mansur" "al-Mahdi" "Al-Hadi"
-		}
-
 		battleship = {
 			"Al-Walid" "Sulayman" "Abd al-Aziz" "Hisham" "Saladin"
-		}
-
-		frigate = {
-			"Scimitar" "Shamsir" "Acinaces" "Kilij" "Pulwar" "Talwar" "Yataghan" "Khanjar" "Kard"
-		}
-
-		generic = {
-			
-		}
-
-		LightCarrier = {
-			
-		}
-
-		escortcarrier = {
-			
 		}
 
 		titan = {
@@ -52,36 +32,12 @@ osiris_arabian = {
 			"Ghisha" "Eimlaq" "Dakhm" "Kabir"
 		}
 
-		Carrier = {
-			"Muawiyah" "Yazid" "Marwan" "Abd al-Malik"
-		}
-
-		Dreadnought = {
-            "Abu Bakr" "Umar" "Uthman" "Ali"
-		}
-
-		Superdreadnought = {
+		juggernaut = {
 			
 		}
 
-		Flagship = {
-			"Rashidun"
-		}
-
-		Headquarters = {
-			
-		}
-
-		science = {
-			"Al-Farabi" "Al-Battani " "Ibn Sina" "Al-Khwarizmi" "Omar Khayyam" "Al-Razi" "Ibn Haiyan" "Al-Kindi " "Al-Haytham" "Ibn Zuhr" "Ibn Khaldun" "Al-Baitar" "Zewail" "Zoghbi" "Yaghi" "El-Baz" "Atala" "El-Sayed" "Belkaid" "Zaki Pasha" "Barakat" "Gamal" "Katabi" "Said" "Al-Sabbah" "Amin" "Hadid"
-		}
-
-		ScienceCruiser = {
-			"Al-Farabi" "Al-Battani " "Ibn Sina" "Al-Khwarizmi" "Omar Khayyam" "Al-Razi" "Ibn Haiyan" "Al-Kindi " "Al-Haytham" "Ibn Zuhr" "Ibn Khaldun" "Al-Baitar" "Zewail" "Zoghbi" "Yaghi" "El-Baz" "Atala" "El-Sayed" "Belkaid" "Zaki Pasha" "Barakat" "Gamal" "Katabi" "Said" "Al-Sabbah" "Amin" "Hadid"
-		}
-
-		explorationship = {
-			"Al-Farabi" "Al-Battani " "Ibn Sina" "Al-Khwarizmi" "Omar Khayyam" "Al-Razi" "Ibn Haiyan" "Al-Kindi " "Al-Haytham" "Ibn Zuhr" "Ibn Khaldun" "Al-Baitar" "Zewail" "Zoghbi" "Yaghi" "El-Baz" "Atala" "El-Sayed" "Belkaid" "Zaki Pasha" "Barakat" "Gamal" "Katabi" "Said" "Al-Sabbah" "Amin" "Hadid"
+		constructor = {
+			"Sahara" "Sinai" "Toubkai" "Sawda"
 		}
 
 		colonizer = {
@@ -92,21 +48,9 @@ osiris_arabian = {
 		
 		}
 
-		constructor = {
-			"Sahara" "Sinai" "Toubkai" "Sawda"
+		science = {
+			"Al-Farabi" "Al-Battani " "Ibn Sina" "Al-Khwarizmi" "Omar Khayyam" "Al-Razi" "Ibn Haiyan" "Al-Kindi " "Al-Haytham" "Ibn Zuhr" "Ibn Khaldun" "Al-Baitar" "Zewail" "Zoghbi" "Yaghi" "El-Baz" "Atala" "El-Sayed" "Belkaid" "Zaki Pasha" "Barakat" "Gamal" "Katabi" "Said" "Al-Sabbah" "Amin" "Hadid"
 		}
-
-		ConstructionCruiser = {
-			"Sahara" "Sinai" "Toubkai" "Sawda" "Ayachi" "Afella" "Azurki" "Angour"
-		}
-
-		#orbital_station = { }
-		mining_station = { }
-		research_station = { }
-		#wormhole_station = { }
-		#terraform_station = { }
-		#observation_station = { }
-		#outpost_station = {	}
 
 		transport = {
 			"Ayachi" "Afella" "Azurki" "Angour"
@@ -139,7 +83,7 @@ osiris_arabian = {
 		}
 		sequential_name = OSIRIS_ARABIAN_FLEETNAMES_ORD
 	}
-	###ARMIES
+
 	army_names = {
 
 		machine_defense = {
@@ -284,6 +228,7 @@ osiris_arabian = {
 				
 			}
 		}
+
 	}
 
 	character_names = {

@@ -2,13 +2,17 @@
 ### Created by osiris
 
 osiris_devtest = {
+	category = ""
+	randomized = 
+	alias = 
+
 	ship_names = {
 
 		corvette = {
 			"sn_corvette"
 		}
 
-		destroyer =	{
+		destroyer = {
 			"sn_destroyer"
 		}
 
@@ -16,32 +20,8 @@ osiris_devtest = {
 			"sn_cruiser"
 		}
 
-		StrikeCruiser = {
-			"sn_striker_cruiser"
-		}
-
-		Battlecruiser = {
-			"sn_battle_cruiser"
-		}
-
 		battleship = {
 			"sn_battleship"
-		}
-
-		frigate = {
-			"sn_frigate"
-		}
-
-		generic = {
-			"sn_generic"
-		}
-
-		LightCarrier = {
-			"sn_light_carrier"
-		}
-
-		escortcarrier = {
-			"sn_escort_carrier"
 		}
 
 		titan = {
@@ -52,36 +32,12 @@ osiris_devtest = {
 			"sn_colossus"
 		}
 
-		Carrier = {
-			"sn_carrier"
+		juggernaut = {
+			
 		}
 
-		Dreadnought = {
-            "sn_dreadnought"
-		}
-
-		Superdreadnought = {
-			"sn_superdreadnought"
-		}
-
-		Flagship = {
-			"sn_flagship"
-		}
-
-		Headquarters = {
-			"sn_headquarters"
-		}
-
-		science = {
-			"sn_science"
-		}
-
-		ScienceCruiser = {
-			"sn_science_cruiser"
-		}
-
-		explorationship = {
-			"sn_exploration_ship"
+		constructor = {
+			"sn_constructor"
 		}
 
 		colonizer = {
@@ -92,21 +48,9 @@ osiris_devtest = {
 		"sn_sponsored_colonizer"
 		}
 
-		constructor = {
-			"sn_constructor"
+		science = {
+			"sn_science"
 		}
-
-		ConstructionCruiser = {
-			"sn_construction_cruiser"
-		}
-
-		#orbital_station = { }
-		mining_station = { }
-		research_station = { }
-		#wormhole_station = { }
-		#terraform_station = { }
-		#observation_station = { }
-		#outpost_station = {	}
 
 		transport = {
 			"sn_transport"
@@ -139,7 +83,7 @@ osiris_devtest = {
 		}
 		sequential_name = OSIRIS_DEVTEST_FLEETNAMES_ORD
 	}
-	###ARMIES
+
 	army_names = {
 
 		machine_defense = {
@@ -284,6 +228,7 @@ osiris_devtest = {
 				"pn_alpine_planets"
 			}
 		}
+
 	}
 
 	character_names = {
