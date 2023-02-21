@@ -31,6 +31,8 @@ For more details on the namelist themes, go here:
 
 [Naming Conventions](https://docs.google.com/spreadsheets/d/e/2PACX-1vSwK7tAOLRflzxfqE248c-4h7NL4CKV-Sk-VS76Jl6VmxP7N9Y98Ow7jIfoF4afgZlj7K0Mu7HlrrCV/pubhtml#)
 
+[hr][/hr]
+
 [h1]Get Involved[/h1]
 
 Have an idea for a namelist but don't know how to make namelist mods? 
@@ -40,7 +42,7 @@ Have an idea for a namelist but don't know how to make namelist mods?
 -If you are comfortable with Python, you can create your own mod using Osiris's namelist-mod-gen tool. 
 [i]Disclaimer[\i]: it's still very new, under development, and not thoroughly tested.
 
-
+[hr][/hr]
 [h1]References[/h1]
 Many thanks to the other namelist mods out there that taught me a bit on how to do this stuff:
 -(Cybrxkhan's Assortment of Namelists for Stellaris)[https://steamcommunity.com/sharedfiles/filedetails/?id=682691478]
