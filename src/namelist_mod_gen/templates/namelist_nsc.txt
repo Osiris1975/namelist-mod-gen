@@ -2,6 +2,9 @@
 ### Created by {{ namelist_author }}
 
 {{namelist_author}}_{{ namelist_id }} = {
+	category = "Humanoid"
+	randomized = no
+	alias = "Human"
 
 	ship_names = {
 
@@ -17,8 +20,32 @@
 			{{ sn_cruiser }}
 		}
 
+		StrikeCruiser = {
+			{{ sn_striker_cruiser }}
+		}
+
+		Battlecruiser = {
+			{{ sn_battle_cruiser }}
+		}
+
 		battleship = {
 			{{ sn_battleship }}
+		}
+
+		frigate = {
+			{{ sn_frigate }}
+		}
+
+		generic = {
+			{{ sn_generic }}
+		}
+
+		LightCarrier = {
+			{{ sn_light_carrier }}
+		}
+
+		escortcarrier = {
+			{{ sn_escort_carrier }}
 		}
 
 		titan = {
@@ -29,12 +56,36 @@
 			{{ sn_colossus }}
 		}
 
-		juggernaut = {
-			{{ sn_juggernaut }}
+		Carrier = {
+			{{ sn_carrier }}
 		}
 
-		constructor = {
-			{{ sn_constructor }}
+		Dreadnought = {
+            {{ sn_dreadnought }}
+		}
+
+		Superdreadnought = {
+			{{ sn_superdreadnought }}
+		}
+
+		Flagship = {
+			{{ sn_flagship }}
+		}
+
+		Headquarters = {
+			{{ sn_headquarters }}
+		}
+
+		science = {
+			{{ sn_science }}
+		}
+
+		ScienceCruiser = {
+			{{ sn_science_cruiser }}
+		}
+
+		explorationship = {
+			{{ sn_exploration_ship }}
 		}
 
 		colonizer = {
@@ -45,9 +96,21 @@
 		{{ sn_sponsored_colonizer }}
 		}
 
-		science = {
-			{{ sn_science }}
+		constructor = {
+			{{ sn_constructor }}
 		}
+
+		ConstructionCruiser = {
+			{{ sn_construction_cruiser }}
+		}
+
+		#orbital_station = { }
+		mining_station = { }
+		research_station = { }
+		#wormhole_station = { }
+		#terraform_station = { }
+		#observation_station = { }
+		#outpost_station = {	}
 
 		transport = {
 			{{ sn_transport }}
@@ -80,7 +143,7 @@
 		}
 		sequential_name = {{ fn_fleet_names }}
 	}
-
+	###ARMIES
 	army_names = {
 
 		machine_defense = {
@@ -225,7 +288,6 @@
 				{{ pn_alpine_planets }}
 			}
 		}
-
 	}
 
 	character_names = {
