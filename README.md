@@ -9,7 +9,7 @@ lifting. See the Issues and Limitations section below for what it can't do for y
 
 ## Contributing Namelists to Osiris's Mod
 
-The easiest way to contribute a namelist to the mod is to fill out the github issues for submitting namelists here:
+The easiest way to contribute a namelist to the mod is to fill out the github issue for submitting namelists here:
 
 [Osiris's Namelist Mod Contribution](https://github.com/Osiris1975/namelist-mod-gen/issues/new?assignees=Osiris1975&labels=contribution&template=osiris-s-namelist-contribution.md&title=)
 
@@ -18,11 +18,22 @@ The easiest way to contribute a namelist to the mod is to fill out the github is
 Disclaimer: This tool is still under active development and extremely raw. The pace of development and improvements
 will be dictated by interest outside of the author's usage.
 
-## Installing Python
+### Features
+
+* Creates namelists from one or more CSV files and produces a single mod for all the namelists. 
+* Has resolved the %SEQ% issue introduced with Stellaris 3.6.0
+* Write a blank csv template to fill out.
+
+### Planned Features
+
+* NSC Support
+* Write a CSV from a given namelist text file. 
+
+### Installing Python
 
 The tool is written in Python and therefore requires Python on your computer. See the [Python Getting Started Page](https://www.python.org/about/gettingstarted/).
 
-## Running the Tool
+### Running the Tool
 
 ``` 
 usage: namelist_generator.py -c [NAMELIST_FILE]
@@ -42,9 +53,17 @@ options:
 
 ```
 
-## Issues and Limitations
+## Current Limitations and Issues
+
+These are the known limitations and issues. Some may be addressed in the future.
+
+* Does not create .mod files, you will have to do this yourself.
+* Only creates English localization files.
+* Hasn't been tested with sequential names other than $ORD$ yet. 
+
 
 For issues, visit the [issues page](https://github.com/Osiris1975/namelist-mod-gen/issues) in this repository.
+
 
 
 ## Getting Help 
