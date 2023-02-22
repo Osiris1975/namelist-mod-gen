@@ -1,4 +1,4 @@
-# Osiris's Namelist Mod Generator and Osiris's Namelist Mod
+# Osiris's Namelist Mod Generator & Osiris's Namelist Mod
 
 This repository encompasses work to create a Stellaris namelist mod generator tool to facilitate the creation of 
 Stellaris namelists and includes the first mod created with this too, Osiris's Namelist Mod.
@@ -50,5 +50,5 @@ For issues, visit the [issues page](https://github.com/Osiris1975/namelist-mod-g
 ## Getting Help 
 
 The best way is to [create an issue](https://github.com/Osiris1975/namelist-mod-gen/issues). You can also reach out
-to the author on Steam. 
+to [Osiris on Steam](https://steamcommunity.com/profiles/76561198007264573/). 
 
