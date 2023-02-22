@@ -1,4 +1,4 @@
-version="V1.0.0"
+version="V1.1.0"
 tags={
 	"Species"
 	"Leaders"
@@ -7,12 +7,8 @@ tags={
 	"Namelists"
 	"Name lists"
 	"Names"
-	"Ancient Egypt"
 	"Historical"
 	"Osiris"
-	"Arabian"
-	"Astronomy"
-	"Science"
 }
 name="Osiris's Namelists for Stellaris"
 picture="thumbnail.png"
