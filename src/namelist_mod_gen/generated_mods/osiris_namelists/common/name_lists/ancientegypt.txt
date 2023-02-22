@@ -2,9 +2,6 @@
 ### Created by osiris
 
 osiris_ancientegypt = {
-	category = ""
-	randomized = 
-	alias = 
 
 	ship_names = {
 
@@ -69,11 +66,11 @@ osiris_ancientegypt = {
 		}
 
 		ion_cannon = {
-			"Gaze of Ra"
+			"Light of Ra"
 		}
 
 		xl_cannon = {
-			"Light of Ra"
+			"Blinding Light of Ra"
 		}
 	}
 
@@ -249,7 +246,7 @@ osiris_ancientegypt = {
 			}
 
 			regnal_first_names_female = {
-				"Merneith" "Sobekneferu" "Hatshepsut" "Nefertiti" "Cleopatra" "Neferirkare" "Aya"
+				"Merneith," "Sobekneferu," "Hatshepsut" "Nefertiti," "Cleopatra," "Neferirkare," "Aya,"
 
 			}
 			regnal_second_names = {

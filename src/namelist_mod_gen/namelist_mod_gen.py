@@ -31,7 +31,7 @@ def make_mod_directories(mod_name, lang):
 
 
 def abs_file_paths(directory):
-    for dirpath,_,filenames in os.walk(directory):
+    for dirpath, _, filenames in os.walk(directory):
         for f in filenames:
             yield os.path.abspath(os.path.join(dirpath, f))
 
@@ -58,14 +58,15 @@ def create_mod(args):
             print(f'Namelist file written to {name_list_file}')
 
         # Generate ord localization files for each name list
-        ord_loc_file = os.path.join(mod_dirs["localization"], f"name_list_{nl_dict['namelist_id'].upper()}_l_english.yml")
+        ord_loc_file = os.path.join(mod_dirs["localization"],
+                                    f"name_list_{nl_dict['namelist_id'].upper()}_l_english.yml")
         with open(ord_loc_file, 'w') as file:
             ord_loc_template = template_env.get_template(c.ORD_NAMES_LOC_TEMPLATE)
             ord_loc = ord_loc_template.render(dict_item=ord_dict)
             file.write(ord_loc)
             print(f'Ordinal namelist localization file written to {ord_loc_file}')
 
-    #generate localization file
+    # generate localization file
     namelist_loc_file = os.path.join(mod_dirs["localization"], f"{args.author.lower()}_namelist_l_english.yml")
     nl_loc_template = template_env.get_template(c.LOCALIZATION_TEMPLATE)
 
@@ -98,7 +99,7 @@ def csv_to_dicts(namelists, author):
             seq_key = create_seq_key(k, v, author, namelist_dict['namelist_id'][0])
             ord_dict[seq_key] = v
             processed_dict[k] = seq_key
-    #TODO: stellaris doesn't allow empty second names but this is a workaround
+    # TODO: stellaris doesn't allow empty second names but this is a workaround
     if len(processed_dict['cn_second_names']) == 0:
         processed_dict['cn_second_names'] = '\"\"'
     return processed_dict, ord_dict

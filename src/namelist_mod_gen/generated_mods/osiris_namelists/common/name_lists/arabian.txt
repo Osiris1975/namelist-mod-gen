@@ -2,9 +2,6 @@
 ### Created by osiris
 
 osiris_arabian = {
-	category = ""
-	randomized = 
-	alias = 
 
 	ship_names = {
 
@@ -17,7 +14,7 @@ osiris_arabian = {
 		}
 
 		cruiser = {
-			"Mamluk" "Assad" "Zengid" "Fatima" "Zaid ibn Ali" "al-Saud" "Ghazi"
+			"Mamluk" "Assad" "Zengid" "Fatima" "Zaid ibn Ali" "al-Saud" "Ghazi" "Ibrahim" "al-Mansur" "al-Mahdi" "Al-Hadi" "Al-Rashid" "Al-Amin" "Al-Wathiq" "Al-Munastir" "Al-Qahir" "Al-Radi"
 		}
 
 		battleship = {
