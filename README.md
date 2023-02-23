@@ -76,7 +76,7 @@ to [Osiris on Steam](https://steamcommunity.com/profiles/76561198007264573/).
 ***Q: %SEQ Is showing up in my fleet and/or army names when I provide sequential names.*** 
 
 A: Stellaris now expects namelists to use key value pairs that connect tne namelist in the `common` directory with
-the associated yml file in the `localization` directory. This can happen for multiple reasons:
+the associated yml file in the `localization` directory. If it fails to find the value associated with the key, it will display %SEQ%. This can happen for multiple reasons:
 - The localization file with the key value pairs doesn't exist.
 - The localization file is not in the correct directory (`<mod_root>/localisation/english/name_lists`).
 - The keys in the namelist txt file don't match the keys in the localization file.
