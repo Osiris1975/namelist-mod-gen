@@ -3,7 +3,7 @@
 import argparse
 import constants as c
 import csv
-import glob
+import io
 from jinja2 import Environment, FileSystemLoader
 import jinja2schema
 import os
@@ -51,7 +51,7 @@ def create_mod(args):
 
         # Generate namelist file for each list
         name_list_file = os.path.join(mod_dirs["namelist"], f"{nl_dict['namelist_id']}.txt")
-        with open(name_list_file, 'w') as file:
+        with io.open(name_list_file, 'w', encoding='utf-8-sig') as file:
             namelist_template = template_env.get_template(c.NAMELIST_TEMPLATE)
             name_list = namelist_template.render(nl_dict)
             file.write(name_list)
@@ -60,7 +60,7 @@ def create_mod(args):
         # Generate ord localization files for each name list
         ord_loc_file = os.path.join(mod_dirs["localization"],
                                     f"name_list_{nl_dict['namelist_id'].upper()}_l_english.yml")
-        with open(ord_loc_file, 'w') as file:
+        with io.open(ord_loc_file, 'w', encoding='utf-8-sig') as file:
             ord_loc_template = template_env.get_template(c.ORD_NAMES_LOC_TEMPLATE)
             ord_loc = ord_loc_template.render(dict_item=ord_dict)
             file.write(ord_loc)
@@ -70,7 +70,7 @@ def create_mod(args):
     namelist_loc_file = os.path.join(mod_dirs["localization"], f"{args.author.lower()}_namelist_l_english.yml")
     nl_loc_template = template_env.get_template(c.LOCALIZATION_TEMPLATE)
 
-    with open(namelist_loc_file, 'w') as file:
+    with io.open(namelist_loc_file, 'w', encoding='utf-8') as file:
         nl_loc = nl_loc_template.render(dict_item=namelist_info)
         file.write(nl_loc)
         print(f'Namelist localization file written to {namelist_loc_file}')

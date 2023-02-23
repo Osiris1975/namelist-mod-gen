@@ -1,4 +1,4 @@
-### Ancient Egyptian (ONL)
+﻿### Ancient Egyptian (ONL)
 ### Created by osiris
 
 osiris_ancientegypt = {

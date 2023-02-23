@@ -1,0 +1,17 @@
+version="V1.1.1"
+tags={
+	"Species"
+	"Leaders"
+	"Spaceships"
+	"Gameplay"
+	"Namelists"
+	"Name lists"
+	"Names"
+	"Historical"
+	"Osiris"
+}
+name="Osiris's Namelists for Stellaris"
+picture="thumbnail.png"
+supported_version="3.6.1"
+path="E:/Documents/Paradox Interactive/Stellaris/mod/osiris_namelists_stellaris"
+remote_file_id="2936596940"

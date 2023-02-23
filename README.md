@@ -71,3 +71,23 @@ For issues, visit the [issues page](https://github.com/Osiris1975/namelist-mod-g
 The best way is to [create an issue](https://github.com/Osiris1975/namelist-mod-gen/issues). You can also reach out
 to [Osiris on Steam](https://steamcommunity.com/profiles/76561198007264573/). 
 
+## Troubleshooting Tips for Name Lists
+
+***Q: %SEQ Is showing up in my fleet and/or army names when I provide sequential names.*** 
+
+A: Stellaris now expects namelists to use key value pairs that connect tne namelist in the `common` directory with
+the associated yml file in the `localization` directory. This can happen for multiple reasons:
+- The localization file with the key value pairs doesn't exist.
+- The localization file is not in the correct directory (`<mod_root>/localisation/english/name_lists`).
+- The keys in the namelist txt file don't match the keys in the localization file.
+- The values in the localization file don't use supported sequence keys.
+- The namelist and namelist localization file were NOT saved as UTF with BOM-8 encoding 
+(Osiris's Namelist Mod Generator does this for you, but it can be done with Notepad++ as well from the encoding menu)
+
+For a working example see the [Osiris's namelist mod files]().
+
+***Q: My namelist title doesn't show up in the namelist picker when creating my empire, but instead shows up as `namelist_XXXX`***
+
+A: This can also happen for multiple reasons related to Stellaris not finding or processing the file:
+- The localization file isn't in the correct directory.
+- You HAVE saved the file as UTF with BOM-8 encoding. Apparently the namelist picker in Stellaris does not like BOM-8.

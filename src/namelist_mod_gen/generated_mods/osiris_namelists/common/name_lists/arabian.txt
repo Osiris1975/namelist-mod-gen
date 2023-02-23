@@ -1,4 +1,4 @@
-### Arabian (ONL)
+﻿### Arabian (ONL)
 ### Created by osiris
 
 osiris_arabian = {
