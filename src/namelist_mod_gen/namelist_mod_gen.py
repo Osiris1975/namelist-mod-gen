@@ -85,6 +85,7 @@ def create_seq_key(key, value, author, id):
 def csv_to_dicts(namelists, author):
     namelist_dict = {key: [] for key in get_template_variables()}
     with open(namelists, 'r') as file:
+        print(namelists)
         reader = csv.DictReader(file)
         for row in reader:
             for k, v in row.items():
