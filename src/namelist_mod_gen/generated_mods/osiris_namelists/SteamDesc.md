@@ -1,23 +1,33 @@
-[h1]Osiris's Namelist Mod[/h1]
+[h1]Osiris's Namelist Mod V2.0.0[/h1]
 
-Tired of your fleets and armies with missing names dues to hte %SEQ% bug since the 3.6.0 Orion patch? Interested in some name lists inspired by history?
+Tired of your fleets and armies with missing names dues to hte %SEQ% bug since the 3.6.0 Orion patch? Want to get your space Ancient Egyptian or Ancient Greek on in full namified glory? 
+
+For the more modern pallete, Osiris has namelists to suit as well. 
+
+Curious what a namelist generated completely by [b]ChatGPT[/b] would look like? 
 
 Then you've come to the right place!
 
 [hr][/hr]
 [h1]About the Namelists[/h1]
 
-Currently available namelists and their respective themes are:
+The currently available namelists and their respective themes are as follows (use the link below for full details on themes):
 
-- [b]Ancient Egyptian[/b]: Ancient Egyptian deities, cities, landmarks, pharaohs, etc...
+- [b]American[/b]: American presidents, military leaders, landmarks, real fighter jets and naval vessels, and cities. 
+- [b]Ancient Egyptian[/b]: Ancient Egyptian deities, cities, landmarks, pharaohs, and weaponry.
+- [b]Ancient Greek[/b]: Ancient Greek deities, cities, landmarks, leaders and weaponry
 - [b]Arabian[/b]: Modern and medieval Arabian cities, landmarks and leaders using transliterated terminology.
 - [b]AstroSci[/b]: Planets, constellations, cities, scientific principles, Nobel laureates.
+- [b]ChatGPT[/b]: Names that ChatGPT generated when asked to generate cool sci-fi names for things. Cringy or cool? You decide!
+- [b]Medieval[/b]: Medieval weapons, cities, castles, knights and historical figures.
+- [b]Natural World[/b]: Names based on weather, animals and geological features of the natural world.
+- [b]Western Alliance[/b]: Names based on heads-of-state, landmarks, cities, and real warplanes and naval vessels from the Western Hemisphere and Western Europe.
+
 
 Planned or in development are:
-- [b]Medieval[/b]: Medieval weapons, cities, castles, and historical figures.
-- [b]MedModern[/b]: Hybrid between medieval weapons and modern-era everything else.
-- [b]Ancient Greek[/b]: Ancient Greek deities, cities, landmarks, leaders, etc...
-- [b]Ancient Roman[/b]: Ancient Roman deities, cities, landmarks, leaders, etc...
+- [b]Ancient Roman[/b]: Like the greeks, but with Roman words.
+- [b]MedModern[/b]: Hybrid between ship names from the Medieval namelist and UNE human names for everything else.
+- [b]NatModern[/b]: Hybrid between ship names from the Natural World namelist and UNE human names for everything else.
 
 For more details on the namelist themes, go here:
 
@@ -54,3 +64,4 @@ In learning how to create the mod, I referenced these three mods:
 Websites referenced in generating some of these namelists are:
 - [u][url=https://www.wikipedia.org]Wikipedia[/url][/u].
 - [u][url=https://www.behindthename.com/]Behind the Name[/url][/u]
+- [u][url=https://chat.openai.com/chat]ChatGPT[/url][/u]
