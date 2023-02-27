@@ -9,14 +9,17 @@ Then you've come to the right place!
 
 Currently available namelists and their respective themes are:
 
+- [b]American[/b]: Presidents, Military leaders, states & cities, present and past warplanes, etc...
 - [b]Ancient Egyptian[/b]: Ancient Egyptian deities, cities, landmarks, pharaohs, etc...
+- [b]Ancient Greek[/b]: Ancient Greek deities, cities, landmarks, leaders, etc...
 - [b]Arabian[/b]: Modern and medieval Arabian cities, landmarks and leaders using transliterated terminology.
 - [b]AstroSci[/b]: Planets, constellations, cities, scientific principles, Nobel laureates.
+- [b]Medieval[/b]: Medieval weapons, cities, castles, and historical figures.
+- [b]Natural World[/b]: Names based on weather, animals and geological features of the natural world.
 
 Planned or in development are:
 - [b]Medieval[/b]: Medieval weapons, cities, castles, and historical figures.
 - [b]MedModern[/b]: Hybrid between medieval weapons and modern-era everything else.
-- [b]Ancient Greek[/b]: Ancient Greek deities, cities, landmarks, leaders, etc...
 - [b]Ancient Roman[/b]: Ancient Roman deities, cities, landmarks, leaders, etc...
 
 For more details on the namelist themes, go here:
@@ -54,3 +57,4 @@ In learning how to create the mod, I referenced these three mods:
 Websites referenced in generating some of these namelists are:
 - [u][url=https://www.wikipedia.org]Wikipedia[/url][/u].
 - [u][url=https://www.behindthename.com/]Behind the Name[/url][/u]
+- [u][url=https://chat.openai.com/chat]ChatGPT[/url][/u]

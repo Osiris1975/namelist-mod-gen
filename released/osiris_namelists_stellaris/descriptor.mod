@@ -1,4 +1,4 @@
-version="V1.1.1"
+version="V2.0.0"
 tags={
 	"Species"
 	"Leaders"

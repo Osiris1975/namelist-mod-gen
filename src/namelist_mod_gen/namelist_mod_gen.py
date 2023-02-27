@@ -42,6 +42,8 @@ def create_mod(args):
     namelist_info = {}
 
     for f in csv_files:
+        if 'DS_Store' in f:
+            continue
         nl_dict, ord_dict = csv_to_dicts(f, args.author.lower())
         namelist_info[nl_dict['namelist_id']] = {
             'file': f,

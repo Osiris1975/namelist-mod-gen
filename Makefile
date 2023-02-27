@@ -13,3 +13,4 @@ build_osiris:
 clean:
 	rm -f deployables/osiris_namelists.zip
 
+release: clean build_osiris mod_deployable
