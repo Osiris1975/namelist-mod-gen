@@ -16,19 +16,30 @@
 		cruiser = {
 			{{ sn_cruiser }}
 		}
-
+		StrikeCruiser = {
+			{{ sn_strike_cruiser }}
+		}
+		Battlecruiser = {
+			{{ sn_battle_cruiser }}
+		}
 		battleship = {
 			{{ sn_battleship }}
 		}
-
+		Carrier = {
+			{{ sn_carrier }}
+		}
+		Dreadnought = {
+			{{ sn_dreadnought }}
+		}
 		titan = {
 			{{ sn_titan }}
 		}
-
+		Flagship = {
+			{{ sn_flagship }}
+		}
 		colossus = {
 			{{ sn_colossus }}
 		}
-
 		juggernaut = {
 			{{ sn_juggernaut }}
 		}
@@ -36,19 +47,18 @@
 		constructor = {
 			{{ sn_constructor }}
 		}
-
 		colonizer = {
 			{{ sn_colonizer }}
 		}
-
 		sponsored_colonizer = {
 		{{ sn_sponsored_colonizer }}
 		}
-
 		science = {
 			{{ sn_science }}
 		}
-
+		explorationship = {
+			{{ sn_exploration_ship }}
+		}
 		transport = {
 			{{ sn_transport }}
 		}
