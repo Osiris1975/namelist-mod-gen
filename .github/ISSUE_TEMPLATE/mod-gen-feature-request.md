@@ -1,6 +1,6 @@
 ---
 name: Mod Gen Feature Request
-about: Suggest a feature to be added to the mod gen tool
+about: Suggest a new namelist or changes to existing ones
 title: Mod Gen Feature Request
 labels: ''
 assignees: ''
