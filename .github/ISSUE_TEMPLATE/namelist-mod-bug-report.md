@@ -1,5 +1,5 @@
 ---
-name: Osiris's Namelist Mod Bug Report
+name: Namelist Mod Bug Report
 about: Report here for problems related to Osiris's Namelist Mod
 title: ''
 labels: ''
