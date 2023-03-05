@@ -1,0 +1,267 @@
+### Arabian (ONL)
+### Created by osiris
+
+osiris_arabian = {
+
+	ship_names = {
+
+		corvette = {
+			"Qutaybah ibn Muslim" "Mohammed Dib" "Niazi" "Iqbal" "Bairam Khan" "Zaid ibn Ali" "Abdulrahman al-Sudais" "Nizar Qabbani" "Maysun bint Bahdal" "Abdullah ibn Umar" "Abbas" "Fatima" "Al-Rashid" "Ibrahim" "Amr ibn al-Aas" "Zengid" "Ibrahim al-Yaziji" "al-Saud" "Abdelkader El Djezairi" "Farouk al-Sharaa" "Abdullah al-Qasemi" "Tipu" "Saad Zaghloul" "Ali ibn Husayn" "Hassan al-Banna" "Malik Ambar" "Assad" "Al-Amin" "Ghazi" "Jinnah" "Hala Sultan" "Al-Hadi" "al-Mansur" "Abd al-Rahman ibn Awf" "Al-Radi" "Anas ibn Malik" "Muadh ibn Jabal" "al-Mahdi" "Muhammad Naguib" "Al-Wathiq" "Malik ibn Nuwayrah" "Uqba ibn Nafi" "Ismail al-Azhari" "Dhat al-Himma" "Al-Munastir" "Massoud" "Murad" "Mamluk" "Al-Qahir" "Faisal bin Abdulaziz Al Saud" "Abdullah ibn Masud"
+		}
+
+		destroyer = {
+			"Iqbal" "Jinnah" "Massoud" "Tipu" "Murad" "Abbas" "Malik Ambar" "Niazi" "Bairam Khan" "Amr ibn al-Aas" "Abd al-Rahman ibn Awf" "Qutaybah ibn Muslim" "Malik ibn Nuwayrah" "Uqba ibn Nafi" "Dhat al-Himma" "Maysun bint Bahdal" "Abdullah ibn Masud" "Anas ibn Malik" "Abdullah ibn Umar" "Muadh ibn Jabal" "Hassan al-Banna" "Abdullah al-Qasemi" "Ibrahim al-Yaziji" "Ismail al-Azhari" "Abdelkader El Djezairi" "Saad Zaghloul" "Faisal bin Abdulaziz Al Saud" "Muhammad Naguib" "Ali ibn Husayn" "Abdulrahman al-Sudais" "Hala Sultan" "Farouk al-Sharaa" "Mohammed Dib" "Nizar Qabbani" "Mamluk" "Assad" "Zengid" "Fatima" "Zaid ibn Ali" "al-Saud" "Ghazi" "Ibrahim" "al-Mansur" "al-Mahdi" "Al-Hadi" "Al-Rashid" "Al-Amin" "Al-Wathiq" "Al-Munastir" "Al-Qahir" "Al-Radi"
+		}
+
+		cruiser = {
+			"Nasser" "Sadat" "Mubarak" "El-Sisi" "Farouk" "Al Saud" "Bin Salman" "Al Maktoum" "Al Nahyan" "Al Khalifa" "Talal" "Abdullah" "al-Assad" "Hassan II" "Mohammed VI" "Ben Ali" "Marzouki" "Essebsi" "Saied" "Aoun" "Al Thani" "Al-Sabah" "Al-Ahmad" "Al-Khalid" "Al-Bashir" "Al-Mirghani" "Al-Turabi" "Al-Burhan" "Al-Karim Khalili" "Al-Banna" "Al-Hariri" "Al-Solh" "Al-Kazemi" "Al-Maliki" "Al-Abadi" "Al-Jaafari" "Al-Hakim" "Al-Sistani" "Al-Amiri" "Al-Mahdi" "Al-Sadr" "Al-Houthi" "Al-Sabri" "Al-Zubaidi" "Al-Mahjoub" "Al-Sharif" "Al-Bakr" "Al-Jubouri" "Al-Allawi" "Al-Tamimi" "Al-Zarqawi" "Al-Jubeir" "Al-Rashid" "Al-Rashidi" "Al-Muqrin" "Al-Shehri" "Al-Faisal" "Al-Kassim" "Al-Qahtani" "Al-Majid" "Al-Mutlaq" "Al-Sumaidaie" "Al-Bahar" "Al-Farhan" "Al-Quraishi" "Al-Hamdani" "Al-Jumaili" "Al-Ani" "Al-Jaffal" "Al-Hamid" "Al-Douri" "Al-Mashhadani" "Al-Shishani" "Al-Rawi" "Al-Kubaisi" "Al-Kubaisy" "Al-Samarrai" "Al-Rubaie" "Al-Shammari" "Al-Dulaimi" "Al-Shibli" "Al-Masri" "Al-Mansouri" "Al-Haddad" "Al-Qadri" "Al-Timimi" "Al-Qaddafi" "Al-Megrahi" "Al-Assad" "Al-Hassan" "Al-Sisi" "Al-Hadi" "Al-Mansour" "Al-Malik" "Al-Sharif" "Al-Mughrabi" "Al-Habib" "Al-Azm" "Al-Habashi"
+		}
+		StrikeCruiser = {
+			
+		}
+		Battlecruiser = {
+			"Al-Malik" "Al-Ahmad" "Al-Majid" "Al-Mahdi" "Al-Muqrin" "Al-Hassan" "Al-Masri" "Al-Hariri" "Al-Habashi" "Al-Tamimi" "Al-Farhan" "Al-Qahtani" "Al-Faisal" "Marzouki" "Aoun" "Al-Solh" "Bin Salman" "Al-Assad" "Abdullah" "Al-Abadi" "al-Assad" "Al-Amiri" "Al-Rubaie" "Al-Houthi" "Al-Jubeir" "Al-Jubouri" "Al-Burhan" "Al-Zubaidi" "Al-Quraishi" "Sadat" "Al-Sabah" "Al Saud" "Al Thani" "Farouk" "El-Sisi" "Al-Zarqawi" "Al-Qadri" "Al-Bahar" "Mubarak" "Talal" "Al-Sharif" "Al-Mutlaq" "Al-Jumaili" "Al-Karim Khalili" "Al-Maliki" "Al-Kassim" "Al-Shishani" "Al-Hadi" "Al-Azm" "Al-Mirghani" "Al-Shammari" "Al-Mansouri" "Al-Turabi" "Al-Sistani" "Mohammed VI" "Al-Hamid" "Al-Kubaisi" "Al-Rashid" "Nasser" "Essebsi" "Al-Mughrabi" "Al-Ani" "Ben Ali" "Al-Jaafari" "Al-Shibli" "Al-Sadr" "Al-Bashir" "Al Khalifa" "Al-Banna" "Saïed" "Al-Kazemi" "Al-Rawi" "Al-Sharif" "Al Nahyan" "Al-Sumaidaie" "Al-Dulaimi" "Al-Samarrai" "Al-Sisi" "Al-Kubaisy" "Al-Khalid" "Al-Mahjoub" "Al-Shehri" "Al-Rashidi" "Al-Megrahi" "Al-Bakr" "Al-Sabri" "Al-Qaddafi" "Al-Haddad" "Al Maktoum" "Al-Jaffal" "Al-Allawi" "Hassan II" "Al-Mansour" "Al-Hamdani" "Al-Douri" "Al-Hakim" "Al-Mashhadani" "Al-Timimi" "Gaddafi" "Al-Habib"
+		}
+		battleship = {
+			"Al-Mustansir" "Al-Mu'tazz Billah" "Al-Zahir" "Al-Hadi" "Al-Muktafi Billah" "Al-Nasir Muhammad" "Al-Mutawakkil" "Harun al-Rashid" "Al-Malik al-Nasir" "Al-Saffah" "Al-Muwaffaq al-Shirazi" "Al-Qadir Billah" "Al-Mu'tadid Billah II" "Al-Muntasir" "Al-Mutawakkil III" "Al-Mansur" "Al-Mushtaq" "Al-Mustanjid Billah" "Al-Qadir" "Al-Mutawakkil II" "Al-Mustakfi" "Al-Nasir" "Al-Qa'im" "Al-Mutawakkil al-Jallab" "Al-Ma'mun" "Al-Mustanjid Billah IV" "Al-Mu'tadhir" "Al-Mu'tadid" "Abd al-Aziz" "Al-Mustarshid" "Al-Mu'tamid Billah" "Al-Muqallad" "Al-Mu'tazz" "Al-Muwaffaq" "Al-Muqtadir Billah" "Al-Qaim bi-Amr Allah" "Al-Rashidun" "Al-Mustazhir Billah II" "Al-Musta'sim" "Al-Mustadi" "Al-Walid" "Al-Muntasir Billah" "Uthman ibn Affan" "Al-Mustarshid Billah II" "Al-Musta'in Billah III" "Al-Muwaffaq al-Din Allah" "Al-Muqtafi Billah II" "Al-Mu'ayyad" "Al-Mustadi Billah" "Al-Musta'in Billah" "Ali ibn Abi Talib" "Al-Mansur Billah" "Saladin" "Al-Muqtafi Billah" "Al-Muqtafi" "Al-Mustanjid Billah III" "Al-Mustanjid" "Al-Mu'tamid bin Abbad" "Al-Muktafi" "Al-Muqtadir" "Al-Mutadid Billah" "Sulayman" "Al-Mu'tamid" "Al-Muqtadir" "Abu Bakr" "Al-Musta'in" "Al-Mutadid Billah II" "Al-Mustazhir Billah" "Al-Mu'tasim" "Al-Mu'tasim Billah" "Abd al-Malik ibn Marwan" "Al-Nasir al-Haqq" "Muawiyah I" "Al-Mutawakkil I" "Al-Mu'tamid Abu'l-Abbas" "Al-Nasir al-Dawla" "Umar ibn al-Khattab" "Al-Muzaffar" "Al-Mutawakkil al-Mawsili" "Al-Mustazhir" "Al-Mahdi" "Hisham" "Al-Mu'tadid Billah III" "Al-Musta'in Billah II" "Al-Nasir li-Din Allah"
+		}
+		Carrier = {
+			"Al-Mutadid Billah" "Al-Mu'tadhir" "Al-Muqtafi" "Umar ibn al-Khattab" "Al-Mustarshid Billah II" "Al-Muntasir" "Uthman ibn Affan" "Al-Muqallad" "Al-Mustakfi" "Al-Mustazhir" "Al-Nasir al-Haqq" "Al-Mustazhir Billah II" "Ali ibn Abi Talib" "Al-Mu'tamid" "Al-Mu'tadid Billah II" "Al-Mustanjid Billah" "Al-Qadir Billah" "Al-Hadi" "Hisham" "Al-Walid" "Al-Mushtaq" "Al-Mustadi Billah" "Al-Qaim bi-Amr Allah" "Al-Mustazhir Billah" "Al-Muqtadir Billah" "Al-Muntasir Billah" "Al-Mu'tazz" "Al-Muwaffaq al-Shirazi" "Al-Mu'tasim Billah" "Al-Mu'tazz Billah" "Al-Nasir" "Al-Mutawakkil al-Mawsili" "Saladin" "Al-Mustanjid" "Al-Mutawakkil" "Abd al-Aziz" "Al-Musta'sim" "Al-Nasir al-Dawla" "Al-Mahdi" "Al-Mutawakkil II" "Al-Mustanjid Billah IV" "Al-Musta'in" "Al-Rashidun" "Al-Mu'tadid" "Al-Qadir" "Al-Nasir Muhammad" "Al-Muktafi Billah" "Abd al-Malik ibn Marwan" "Al-Mutawakkil I" "Al-Mustanjid Billah III" "Al-Musta'in Billah II" "Al-Muktafi" "Al-Ma'mun" "Al-Mustansir" "Al-Mu'tamid bin Abbad" "Al-Malik al-Nasir" "Al-Mu'ayyad" "Al-Muwaffaq" "Al-Mutawakkil al-Jallab" "Al-Mustadi" "Abu Bakr" "Sulayman" "Al-Mu'tasim" "Al-Mustarshid" "Al-Mansur Billah" "Al-Mutawakkil III" "Al-Muqtadir" "Al-Saffah" "Al-Mu'tamid Billah" "Al-Muwaffaq al-Din Allah" "Al-Qa'im" "Muawiyah I" "Al-Musta'in Billah" "Al-Mu'tadid Billah III" "Al-Muzaffar" "Al-Mutadid Billah II" "Al-Muqtafi Billah" "Al-Muqtadir" "Harun al-Rashid" "Al-Musta'in Billah III" "Al-Mu'tamid Abu'l-Abbas" "Al-Zahir" "Al-Nasir li-Din Allah" "Al-Muqtafi Billah II" "Al-Mansur"
+		}
+		Dreadnought = {
+			"Al-Mustadi Billah" "Al-Mutawakkil al-Mawsili" "Al-Mu'tasim Billah" "Al-Muktafi" "Umar ibn al-Khattab" "Al-Mu'tamid Billah" "Al-Muqtadir" "Al-Mustanjid Billah" "Al-Qadir Billah" "Al-Mu'tadhir" "Al-Nasir Muhammad" "Al-Musta'sim" "Al-Mutadid Billah" "Al-Rashidun" "Al-Mustakfi" "Al-Muqtadir Billah" "Abd al-Aziz" "Al-Walid" "Al-Mu'ayyad" "Al-Mutawakkil II" "Muawiyah I" "Al-Mustazhir Billah II" "Al-Muwaffaq al-Din Allah" "Ali ibn Abi Talib" "Al-Mu'tadid" "Al-Mansur Billah" "Al-Qadir" "Al-Mustazhir" "Saladin" "Al-Muqtafi Billah" "Al-Mutawakkil al-Jallab" "Al-Mustadi" "Al-Mustarshid Billah II" "Al-Muqtadir" "Al-Mustarshid" "Al-Mu'tamid bin Abbad" "Al-Mansur" "Al-Zahir" "Al-Musta'in Billah II" "Al-Muwaffaq" "Al-Mustanjid Billah IV" "Al-Nasir li-Din Allah" "Hisham" "Al-Muntasir Billah" "Al-Muzaffar" "Abu Bakr" "Al-Musta'in Billah" "Al-Mustazhir Billah" "Al-Ma'mun" "Al-Musta'in Billah III" "Al-Mustansir" "Al-Mutawakkil" "Al-Mushtaq" "Al-Mustanjid" "Al-Malik al-Nasir" "Al-Qa'im" "Uthman ibn Affan" "Al-Muwaffaq al-Shirazi" "Al-Hadi" "Al-Muqallad" "Al-Muqtafi Billah II" "Al-Mu'tamid" "Al-Mutadid Billah II" "Al-Nasir al-Haqq" "Al-Musta'in" "Al-Mahdi" "Al-Mutawakkil I" "Al-Muntasir" "Al-Saffah" "Al-Muktafi Billah" "Al-Muqtafi" "Al-Mu'tasim" "Al-Mu'tadid Billah II" "Al-Mu'tazz" "Al-Mutawakkil III" "Al-Nasir al-Dawla" "Harun al-Rashid" "Sulayman" "Al-Mu'tadid Billah III" "Al-Mu'tamid Abu'l-Abbas" "Al-Mustanjid Billah III" "Abd al-Malik ibn Marwan" "Al-Mu'tazz Billah" "Al-Qaim bi-Amr Allah" "Al-Nasir"
+		}
+		titan = {
+			"Al-Mustansir" "Al-Mu'tazz Billah" "Al-Zahir" "Al-Hadi" "Al-Muktafi Billah" "Al-Nasir Muhammad" "Al-Mutawakkil" "Harun al-Rashid" "Al-Malik al-Nasir" "Al-Saffah" "Al-Muwaffaq al-Shirazi" "Al-Qadir Billah" "Al-Mu'tadid Billah II" "Al-Muntasir" "Al-Mutawakkil III" "Al-Mansur" "Al-Mushtaq" "Al-Mustanjid Billah" "Al-Qadir" "Al-Mutawakkil II" "Al-Mustakfi" "Al-Nasir" "Al-Qa'im" "Al-Mutawakkil al-Jallab" "Al-Ma'mun" "Al-Mustanjid Billah IV" "Al-Mu'tadhir" "Al-Mu'tadid" "Abd al-Aziz" "Al-Mustarshid" "Al-Mu'tamid Billah" "Al-Muqallad" "Al-Mu'tazz" "Al-Muwaffaq" "Al-Muqtadir Billah" "Al-Qaim bi-Amr Allah" "Al-Rashidun" "Al-Mustazhir Billah II" "Al-Musta'sim" "Al-Mustadi" "Al-Walid" "Al-Muntasir Billah" "Uthman ibn Affan" "Al-Mustarshid Billah II" "Al-Musta'in Billah III" "Al-Muwaffaq al-Din Allah" "Al-Muqtafi Billah II" "Al-Mu'ayyad" "Al-Mustadi Billah" "Al-Musta'in Billah" "Ali ibn Abi Talib" "Al-Mansur Billah" "Saladin" "Al-Muqtafi Billah" "Al-Muqtafi" "Al-Mustanjid Billah III" "Al-Mustanjid" "Al-Mu'tamid bin Abbad" "Al-Muktafi" "Al-Muqtadir" "Al-Mutadid Billah" "Sulayman" "Al-Mu'tamid" "Al-Muqtadir" "Abu Bakr" "Al-Musta'in" "Al-Mutadid Billah II" "Al-Mustazhir Billah" "Al-Mu'tasim" "Al-Mu'tasim Billah" "Abd al-Malik ibn Marwan" "Al-Nasir al-Haqq" "Muawiyah I" "Al-Mutawakkil I" "Al-Mu'tamid Abu'l-Abbas" "Al-Nasir al-Dawla" "Umar ibn al-Khattab" "Al-Muzaffar" "Al-Mutawakkil al-Mawsili" "Al-Mustazhir" "Al-Mahdi" "Hisham" "Al-Mu'tadid Billah III" "Al-Musta'in Billah II" "Al-Nasir li-Din Allah"
+		}
+		Flagship = {
+			"Saladin" "Abbasid" "Fatimid" "Ayyubid" "Mamluk" "Almohad" "Almoravid" "Rashidun" "Tulunid" "Idrisid" "Samanid" "Tahirid" "Saffarid" "Buyid" "Ghaznavid" "Seljuk" "Ottoman" "Ummayed"
+		}
+		colossus = {
+			"Ayyubid" "Ghaznavid" "Fatimid" "Umayyad" "Buyid" "Seljuk" "Tulunid" "Abbasid" "Samanid" "Ottoman" "Almoravid" "Rashidun" "Idrisid" "Almohad" "Saffarid" "Mamluk" "Tahirid"
+		}
+		juggernaut = {
+			"Mamluk" "Tulunid" "Ayyubid" "Abbasid" "Ghaznavid" "Buyid" "Rashidun" "Umayyad" "Almoravid" "Idrisid" "Seljuk" "Ottoman" "Samanid" "Fatimid" "Saffarid" "Almohad" "Tahirid"
+		}
+
+		constructor = {
+			"Sahara" "Sinai" "Toubkai" "Sawda" "Negev" "Dasht-e Lut" "Nafud Desert" "Rub al-Khali" "Dasht-e Kavir" "Atlas" "Ararat" "Hermon" "Lebanon" "Damavand" "Taurus" "Al-Hajjar"
+		}
+		colonizer = {
+			"Nile" "Euphrates" "Tigris" "Litani" "Orontes" "Yarmouk" "Diyali" "Al-Mukhaizna" "Al-Batinah" "Jordan" "Khabur" "Karun" "Shatt al-Arab" "Wadi Rum" "Wadi Mujib" "Zarqa" "Seybouse" "Chelif" "Moulouya" "Draa" "Sous" "Guir" "Senegal"
+		}
+		sponsored_colonizer = {
+		"Yarmouk" "Wadi Rum" "Karun" "Draa" "Sous" "Guir" "Al-Batinah" "Diyali" "Zarqa" "Wadi Mujib" "Shatt al-Arab" "Orontes" "Al-Mukhaizna" "Moulouya" "Litani" "Euphrates" "Khabur" "Senegal" "Chelif" "Tigris" "Nile" "Seybouse" "Jordan"
+		}
+		science = {
+			"Al-Farabi" "Al-Battani " "Ibn Sina" "Al-Khwarizmi" "Omar Khayyam" "Al-Razi" "Ibn Haiyan" "Al-Kindi " "Al-Haytham" "Ibn Zuhr" "Ibn Khaldun" "Al-Baitar" "Zewail" "Zoghbi" "Yaghi" "El-Baz" "Atala" "El-Sayed" "Belkaid" "Zaki Pasha" "Barakat" "Gamal" "Katabi" "Said" "Al-Sabbah" "Amin" "Hadid"
+		}
+		explorationship = {
+			"Al-Farabi" "Al-Battani " "Ibn Sina" "Al-Khwarizmi" "Omar Khayyam" "Al-Razi" "Ibn Haiyan" "Al-Kindi " "Al-Haytham" "Ibn Zuhr" "Ibn Khaldun" "Al-Baitar" "Zewail" "Zoghbi" "Yaghi" "El-Baz" "Atala" "El-Sayed" "Belkaid" "Zaki Pasha" "Barakat" "Gamal" "Katabi" "Said" "Al-Sabbah" "Amin" "Hadid"
+		}
+		transport = {
+			"Bucephalus" "Al Khamsa" "Mameluke" "Zayd" "Sotamm" "Shuwaiman Al Baher" "Nafada" "Hujjah" "Moniet El Nefous" "Ansata Ibn Halima" "Marbat" "Desert Orchid" "El Sindh" "Aziz" "Farana" "Serenity Sonbolah" "Alcazar" "Shammar" "Wahzan" "Raseem" "Al-Marah Radames" "Jadaan" "Al-Marah Que Sera Sera" "Mansoura" "Gai-Adventure" "Tallaab Al-Kahal" "Al-Marah Lord Sheikh" "DB Thee Vision" "Saklawi Jadrane" "Ibn Galal V" "Al-Marah Canadius" "Amber Satin" "Sir Wm. Robert" "Saida Al-Salam" "Bint Ameera" "Simeon Sharav" "Al-Sabah Ibn Moniet" "RA Hot Every Nite" "Shaikh Al Badi" "Deseo" "Bint Gulida" "Rayyan Al Khalediah" "Hamasa Ibn Saker" "Aarouss El Nil" "Omdah Al Khalidiyah" "Al Rayyan" "El Din" "Zaraq" "Dhaawy" "El Zahraa" "Dahmah Shahwan" "Kaisoon" "Abu Farwa" "Om El Arab" "Ansata Selman" "Hadban Enzahi" "Ferzon" "Al-Marah Horatio" "Ghazal Al Shaqab" "Farouk" "Barq" "Wiking" "Al-Sayyed" "Fadjur" "Ruminaja Ali" "El Shaklan" "The Minstril" "Padrons Psyche" "Bey Shah" "El Halimaar" "Gai Parada" "El Hadiyah" "El Moraduke" "Mishaal HP" "Aseel Al Shaqab" "El Dorada" "Ruminaja Bahjat" "Nariadni" "Thee Desperado" "Ibn Hafiza" "Imperial Al Kamar" "Enzo" "Edam" "Shadaa Al Doha" "Halim Shah I" "Samirah Nile Moon" "Wadi Al Shaqab" "Maysoun" "Ansata Nile Echo" "Gharib" "Laheeb Al Nasser" "Adhem" "Shahir" "Amir Al Shaqab" "Alidaar" "Rho-Shannon" "Faraa Al Shaqab"
+		}
+
+		military_station_small = {
+			"Markaz Easkariun"
+		}
+
+		military_station_medium = {
+			"Mahatat Easkaria"
+		}
+
+		military_station_large = {
+			"Qaleat Easkaria"
+		}
+
+		ion_cannon = {
+			"Midfae"
+		}
+
+		xl_cannon = {
+			"Midfae Kabir"
+		}
+	}
+
+	fleet_names = {
+		random_names = {
+			
+		}
+		sequential_name = OSIRIS_ARABIAN_FLEETNAMES_ORD
+	}
+
+	army_names = {
+
+		machine_defense = {
+			sequential_name = OSIRIS_ARABIAN_MACHINEDEFENSE_ORD
+		}
+
+		machine_assault_1 = {
+			sequential_name = OSIRIS_ARABIAN_MACHINEASSAULT1_ORD
+		}
+
+		machine_assault_2 = {
+			sequential_name = OSIRIS_ARABIAN_MACHINEASSAULT2_ORD
+		}
+
+		machine_assault_3 = {
+			sequential_name = OSIRIS_ARABIAN_MACHINEASSAULT3_ORD
+		}
+
+		defense_army = {
+			sequential_name = OSIRIS_ARABIAN_DEFENSEARMY_ORD
+		}
+
+		assault_army = {
+			sequential_name = OSIRIS_ARABIAN_ASSAULTARMY_ORD
+		}
+
+		slave_army = {
+			sequential_name = OSIRIS_ARABIAN_SLAVEARMY_ORD
+		}
+
+		clone_army = {
+			sequential_name = OSIRIS_ARABIAN_CLONEARMY_ORD
+		}
+
+		undead_army = {
+			sequential_name = OSIRIS_ARABIAN_UNDEADARMY_ORD
+		}
+
+		robotic_army = {
+			sequential_name = OSIRIS_ARABIAN_ROBOTICARMY_ORD
+		}
+
+		robotic_defense_army = {
+			sequential_name = OSIRIS_ARABIAN_ROBOTICDEFENSEARMY_ORD
+		}
+
+		psionic_army = {
+			sequential_name = OSIRIS_ARABIAN_PSIONICARMY_ORD
+		}
+
+		xenomorph_army = {
+			sequential_name = OSIRIS_ARABIAN_XENOMORPHARMY_ORD
+		}
+
+		gene_warrior_army = {
+			sequential_name = OSIRIS_ARABIAN_GENEWARRIORARMY_ORD
+		}
+
+		occupation_army = {
+			sequential_name = OSIRIS_ARABIAN_OCCUPATIONARMY_ORD
+		}
+
+		robotic_occupation_army = {
+			sequential_name = OSIRIS_ARABIAN_ROBOTICOCCUPATIONARMY_ORD
+		}
+
+		primitive_army = {
+			sequential_name = OSIRIS_ARABIAN_PRIMITIVEARMY_ORD
+		}
+		industrial_army = {
+			sequential_name = OSIRIS_ARABIAN_INDUSTRIALARMY_ORD
+		}
+		postatomic_army = {
+			sequential_name = OSIRIS_ARABIAN_POSTATOMICARMY_ORD
+		}
+	}
+
+	planet_names = {
+
+		generic = {
+			names = {
+				"Cairo" "Baghdad" "Riyadh" "Alexandria" "Dubai" "Jeddah" "Basrah" "Giza" "Sanaa" "Beirut" "Mosul" "Aleppo" "Damascus" "Sharjah" "Amman" "Ras Bayrut" "Sultanah" "Erbil" "Muscat" "Zarqa" "Homs" "Dammam" "As-Sulaymaniyah" "Al-Ahmadi" "Al-Hudaydah" "Taiz" "Abu Dhabi" "Kirkuk" "Aden" "Port Said" "Taif" "Ajman City" "Suez" "Najaf" "Hamah" "Tabuk" "Karbala" "Al-Mahallah al Kubra" "East Jerusalem" "Al-Kharj" "Luxor" "Asyut" "Al-Mansurah" "Gaza" "Tanta" "Nasiriyah" "Buraydah" "Khamis Mushait" "Ras Al-Khaimah City" "Doha" "Latakia" "Al-Amarah" "Ad Diwaniyah" "Al-Kut" "Irbid" "Al-Fayyum" "Al-Hufuf" "Al-Mubarraz" "Al-Hillah" "Zagazig" "Ismailia" "Dihok" "Ramadi" "Ar Rayyan" "Hafar Al-Batin" "Russeifa" "Kafr ad Dawwar" "Hail" "Najran" "Mukalla" "Musaffah" "Deir ez-Zor" "Aswan" "Seeb" "Al-Jubayl" "Qina" "Ibb" "Halwan" "Tripoli" "Damanhur" "Al-Minya" "Abha" "Idku" "Sohag" "Yanbu" "Al-Fallujah" "Bani Suwayf" "Shibin al Kawm" "Wadi as Sir" "Ar Raqqah" "Khan Yunis" "Jabalya" "Banha" "Khobar" "Hawalli"
+			}
+		}
+
+		pc_desert = {
+			names = {
+				
+			}
+		}
+
+		pc_tropical = {
+			 names = {
+				
+			}
+		}
+
+		pc_arid = {
+			names = {
+				
+			}
+		}
+
+		pc_continental = {
+			names = {
+				
+			}
+		}
+
+		pc_gaia = {
+			names = {
+				
+			}
+		}
+
+		pc_ocean = {
+			names = {
+				
+			}
+		}
+
+		pc_tundra = {
+			names = {
+				
+			}
+		}
+
+		pc_arctic = {
+			names = {
+				
+			}
+		}
+
+		pc_savannah = {
+			names = {
+				
+			}
+		}
+
+		pc_alpine = {
+			names = {
+				
+			}
+		}
+
+	}
+
+	character_names = {
+
+		names1 = {
+			first_names_male = {
+				"Abbas" "Abdul" "Abid" "Abu Hurayrah" "Adam" "Adeem" "Adib" "Adil" "Adnan" "Afif" "Ahmed" "Ahsan" "Ajmal" "Akeem" "Aladdin" "Ali" "Alim" "Amer" "Amin" "Amir" "Amr" "Anwar" "Aqeel" "Asad" "Ashraf" "Ayman" "Aziz" "Azmi" "Badr" "Bahjat" "Bakri" "Bashir" "Bilal" "Burhan" "Dawoud" "Deen" "Ehsan" "Fadel" "Fadir" "Faheem" "Faisal" "Faiz" "Farid" "Fayez" "Fazli" "Fikri" "Ghassan" "Ghiath" "Habib" "Hadi" "Hafeez" "Hakim" "Halim" "Hamza" "Hani" "Harun" "Hashem" "Hassan" "Hatem" "Haydar" "Hazem" "Hisham" "Hussein" "Ibrahim" "Idrees" "Iqbal" "Iyad" "Ja’far" "Jalal" "Jaleel" "Jamal" "Jawad" "Jubair" "Kamal" "Kareem" "Kazem" "Khaled" "Khalil" "Louay" "Mahdi" "Mahmud" "Majid" "Malik" "Mansour" "Marwan" "Mohammed" "Mounir" "Muhannad" "Mustafa" "Nabil" "Nadeem" "Naeem" "Naji" "Najib" "Naseem" "Nasir" "Nasser" "Odai" "Omar" "Othman" "Qadir" "Qasim" "Rabi’" "Raed" "Rahim" "Rami" "Rasheed" "Rayan" "Sa’id" "Saad" "Salah" "Salim" "Salman" "Sami" "Sayf" "Shadi" "Shafiq" "Suheil" "Suleiman" "Taher" "Tahsin" "Talal" "Tareq" "Tawfiq" "Wafi" "Waheed" "Waleed" "Yahya" "Yaseen" "Yasser" "Yunus" "Yusef" "Zaid" "Zakariah" "Zaki" "Zayn"
+			}
+			first_names_female = {
+				"Aaliyah" "Adara" "Afja" "Aifa" "Ainaz" "Aisha" "Aliyna" "Alizha" "Amal" "Amani" "Amina" "Amira" "Ansa" "Arwa" "Arzu" "Asma" "Ata" "Aya" "Ayma" "Azah" "Azeena" "Azina" "Bahati" "Basma" "Bayan" "Bushra" "Cala" "Dalal" "Dalia" "Dalila" "Dana" "Dania" "Dareen" "Dina" "Duaa" "Dusya" "Eira" "Elizha" "Eshma" "Fairouz" "Fana" "Farah" "Farida" "Fasha" "Fatima" "Fenal" "Fiza" "Gamila" "Habiba" "Hala" "Halima" "Hanifa" "Hawa" "Heba" "Heela" "Here" "Hiba" "Hisana" "Hiza" "Hosneara" "Hrida" "Hyra" "Ibtisam" "Iman" "Ishq" "Iyka" "Jafna" "Jamilah" "Jana" "Jude" "Jumanah" "Karima" "Kasra" "Khadija" "Khalida" "Khawla" "Kyra" "Laia" "Laila" "Lana" "Lara" "Latifa" "Lazina" "Leen" "Lela" "Lina" "Lira" "Loulia" "Maha" "Malak" "Malika" "Marwa" "Marya" "Maryam" "Maya" "Maysoon" "Mia" "Mishfah" "Mona" "Muna" "Munira" "Munya" "Nabila" "Nada" "Nadia" "Nadine" "Nagia" "Nahla" "Naila" "Naima" "Najat" "Nasira" "Nawal" "Neha" "Nesrine" "Neziha" "Nihal" "Nisa" "Nour" "Noya" "Nuha" "Nura" "Oma" "Pari" "Qadira" "Qamar" "Qistina" "Rabia" "Rahima" "Raja" "Rana" "Rani" "Rania" "Rashida" "Reem" "Refa" "Ria" "Rihanna" "Risha" "Ruba" "Rufi" "Ruhena" "Ruqayya" "Sabah" "Safiyah" "Sahar" "Saida" "Sajida" "Sakina" "Salma" "Samar" "Samira" "Sarah" "Sazwa" "Shahd" "Shakira" "Shamairah" "Shams" "Sherine" "Shiqa" "Soha" "Suda" "Sumayya" "Syha" "Tahira" "Taj" "Tala" "Tamanna" "Tamara" "Tara" "Tasnim" "These" "Tia" "Umm" "Urfi" "Wafaa" "Yanisha" "Yara" "Yasmin" "Yazrin" "Yumna" "Yusra" "Zada" "Zara" "Zayn" "Zaynab" "Zeina" "Zubina" "Zuma" "Zumena"
+			}
+			second_names = {
+				"Abadi" "Abboud" "Abdallah" "Ahmad" "Ali" "Almasi" "Amari" "Amin" "Antar" "Antoun" "Arian" "Asfour" "Asghar" "Asker" "Aswad" "Atiyeh" "Attia" "Awad" "Ayad" "Aziz" "Ba" "Baba" "Badawi" "Baghdadi" "Bahar" "Bakir" "Basara" "Bashar" "Baz" "Bilal" "Bishara" "Bitar" "Botros" "Boulos" "Boutros" "Burhan" "Cham" "Dagher" "Daher" "Darwish" "Dawoud" "Deeb" "Ebeid" "Essa" "Fadel" "Faez" "Faheem" "Faizan" "Fakhoury" "Farhat" "Farouq" "Farsi" "Fasih" "Fasil" "Fayed" "Gaddafi" "Ganem" "Ganim" "Gerges" "Ghannam" "Ghazali" "Ghazawwi" "Ghulam" "Guirguis" "Habib" "Hadad" "Haddad" "Hadi" "Hadid" "Hafeez" "Haik" "Hajjar" "Hakim" "Hakimi" "Halabi" "Hamdi" "Hanania" "Handal" "Harb" "Hariri" "Hashim" "Hasnawi" "Hatem" "Hijazi" "Hussein" "Ibrahim" "Iqbal" "Irfan" "Isa" "Ismat" "Issa" "Issawi" "Jabal" "Jabir" "Jalal" "Jameel" "Jawahir" "Jaziri" "Kader" "Kalb" "Kanaan" "Karim" "Kashif" "Kassab" "Kassis" "Kattan" "Kazem" "Khalid" "Khouri" "Khoury" "Kouri" "Koury" "Laghmani" "Maalouf" "Maamoun" "Mahmud" "Maloof" "Malouf" "Maroun" "Marwan" "Masih" "Mifsud" "Mikhail" "Moghadam" "Mohammed" "Morcos" "Mufti" "Mughrabi" "Mustafa" "Nabih" "Nader" "Nagi" "Nahas" "Nahdi" "Naifeh" "Najdi" "Najjar" "Najm" "Naser" "Nassar" "Nazari" "Noor" "Osman" "Qadir" "Qasim" "Quraishi" "Qureshi" "Rafiq" "Rahal" "Rahim" "Rajab" "Ramzan" "Ramzi" "Rashid" "Reza" "Sabbag" "Sabbagh" "Sader" "Safar" "Sahabi" "Said" "Sajjad" "Salib" "Saliba" "Samaha" "Saqqaf" "Sarraf" "Sayegh" "Seif" "Shadid" "Shalhoub" "Shammas" "Shamon" "Shamoon" "Shamoun" "Shariq" "Sleiman" "Tahan" "Taleb" "Tannous" "Tawfiq" "Toma" "Wahed" "Yasin" "Yusuf" "Zaman"
+			}
+
+			regnal_first_names_male = {
+				"Abd ar-Rahman" "Ali" "Ali" "Hamad" "Harun" "Hassan" "Hisham" "Hussein" "Ibrahim" "Ismail" "Issa" "Khalid" "Khalid" "Marwan" "Mohammed" "Muawiya" "Musa" "Said" "Salah" "Saqr" "Sulayman" "Sultan" "Umar" "Uthman" "Yahya" "Yazid"
+			}
+
+			regnal_first_names_female = {
+				"Aisha" "Fatima" "Hafsah" "Juwayriyyah" "Khadijah" "Mariah" "Maymunah" "Rayhanah" "Ruqayya" "Safiyyah" "Sawdah" "Umm al-Masakin" "Umm Habibah" "Umm Kulthum" "Umm Salameh" "Zaynab"
+
+			}
+			regnal_second_names = {
+				"al-Adid" "al-Adil I" "al-Aziz" "al-Aziz Ghiyath al-Din" "al-Aziz Zahir al-Din Tughtigin" "al-Afdal" "al-Amin" "al-Amir" "al-Ashraf" "al-Din Ayubbi" "al-Faiz" "al-Fadl" "al-Hadi" "al-Hafiz" "al-Hakim" "al-Kamil" "al-Mamun" "al-Mahdi" "al-Mansur" "al-Masud Salah al-Din" "al-Muazzam" "al-Muizz" "al-Mutadid" "al-Mutamid" "al-Mutasim" "al-Mutazz" "al-Muhtadi" "al-Muktafi" "al-Muntasir" "al-Muqtadi" "al-Muqtadir" "al-Muqtafi" "al-Mustain" "al-Mustali" "al-Mustasim" "al-Mustadi" "al-Mustakfi" "al-Mustanjid" "al-Mustansir" "al-Mustansir" "al-Mustarshid" "al-Mustazhir" "al-Mutawakkil" "al-Muti" "al-Muttaqi" "al-Muzaffar Sulayman" "al-Nasir" "al-Nasir Ayyub" "al-Nasir Salah al-Din Daud" "al-Nasir Salah al-Din II" "al-Qaim" "al-Qaim" "al-Qaim" "al-Qadir" "al-Qahir" "al-Radi" "al-Rashid" "al-Saffah" "al-Salih Ayyub" "al-Tai" "al-Walid I" "al-Wathiq" "al-Zafir" "al-Zahir"
+			}
+		}
+	}
+}
