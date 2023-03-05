@@ -9,6 +9,7 @@ import jinja2schema
 import os
 import shutil
 import sys
+import translators as ts
 import re
 from pathlib import Path
 from collections import OrderedDict
@@ -37,7 +38,7 @@ def abs_file_paths(directory):
 
 
 def create_mod(args):
-    mod_dirs = make_mod_directories(args.mod_name, 'english')
+    mod_dirs = make_mod_directories(args.mod_name, c.LANGUAGES[args.lcode])
     csv_files = abs_file_paths(args.namelists)
     namelist_info = {}
 
@@ -61,7 +62,7 @@ def create_mod(args):
 
         # Generate ord localization files for each name list
         ord_loc_file = os.path.join(mod_dirs["localization"],
-                                    f"name_list_{nl_dict['namelist_id'].upper()}_l_english.yml")
+                                    f"name_list_{nl_dict['namelist_id'].upper()}_l_{c.LANGUAGES[args.lcode]}.yml")
         with io.open(ord_loc_file, 'w', encoding='utf-8-sig') as file:
             ord_loc_template = template_env.get_template(c.ORD_NAMES_LOC_TEMPLATE)
             ord_loc = ord_loc_template.render(dict_item=ord_dict)
@@ -69,7 +70,8 @@ def create_mod(args):
             print(f'Ordinal namelist localization file written to {ord_loc_file}')
 
     # generate localization file
-    namelist_loc_file = os.path.join(mod_dirs["localization"], f"{args.author.lower()}_namelist_l_english.yml")
+    namelist_loc_file = os.path.join(mod_dirs["localization"],
+                                     f"{args.author.lower()}_namelist_l_{c.LANGUAGES[args.lcode]}.yml")
     nl_loc_template = template_env.get_template(c.LOCALIZATION_TEMPLATE)
 
     with io.open(namelist_loc_file, 'w', encoding='utf-8') as file:
@@ -134,7 +136,9 @@ def main():
     if args.dump_csv_template:
         csv_template(args)
     else:
-        create_mod(args)
+        for lcode in c.LANGUAGES.keys():
+            args.lcode = lcode
+            create_mod(args)
 
 
 parser = argparse.ArgumentParser(
