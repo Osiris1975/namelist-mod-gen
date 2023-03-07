@@ -1,0 +1,267 @@
+﻿### Medieval (ONL)
+### Created by osiris
+
+osiris_medieval = {
+
+	ship_names = {
+
+		corvette = {
+			"Katti" "Bolas" "Machete" "Sickle" "Epee" "Saif" "Shamshir" "Partisan" "Gauntlet" "Tegha" "Kastane" "Javelin" "Kilij" "Flail" "Nunchaku" "Shashka" "Spadroon" "Takoba" "Zafar" "Battle Axe" "Mahera" "Cleaver" "Lochaber" "Katar" "Cestus" "Qama" "Wakizashi" "Voulge" "Sabre" "Chokuto" "Flyssa" "Kampilan" "Pata" "Whip" "Spatha" "Kwame" "Kama" "Tomahawk" "Dagger" "Hammer" "Falchion" "Siangham" "Cinquedea" "Tanto" "Slingshot" "Hwando" "Gazza" "Francisca" "Tabar" "Estoc" "Urumi" "Talwar" "Sap" "Dha" "Dart" "Shotel" "Yatagan" "Dao" "Pala" "Jian" "Kora" "Rapier" "Sai" "Kris" "Karabela" "Dussack" "Smatchet" "Xiphos" "Scimitar" "Shuriken" "Kirpan" "Bastard Sword" "Bardiche" "Longsword" "Maduvu" "Baselard" "Chakram" "Broadsword" "Kindjal" "Bec de Corbin" "Hunga Munga" "Tuck" "Bhuj" "Hatchet" "Club" "Firangi" "Seax" "Tekko" "Jamadhar" "Churi" "Short Sword" "Kard" "Tulwar" "Fauchard" "Flamberge" "Waraxe" "Spetum" "Cutlass" "Kukri" "Shamsir" "Kpinga" "Nihang" "Dirk" "Takouba" "Kaskara" "Spear" "Morningstar" "Main Gauche" "Espada" "Qaddara" "Nimcha" "Sanjak" "Gladius" "Mace" "Zulfiqar" "Khopesh" "Ida"
+		}
+
+		destroyer = {
+			"Bardiche" "Baselard" "Bastard Sword" "Battle Axe" "Bec de Corbin" "Bhuj" "Bolas" "Broadsword" "Cestus" "Chakram" "Chokuto" "Churi" "Cinquedea" "Cleaver" "Club" "Cutlass" "Dagger" "Dao" "Dart" "Dha" "Dirk" "Dussack" "Epee" "Espada" "Estoc" "Falchion" "Fauchard" "Firangi" "Flail" "Flamberge" "Flyssa" "Francisca" "Gauntlet" "Gazza" "Gladius" "Hammer" "Hatchet" "Hunga Munga" "Hwando" "Ida" "Jamadhar" "Javelin" "Jian" "Kama" "Kampilan" "Karabela" "Kard" "Kaskara" "Kastane" "Katar" "Katti" "Khopesh" "Kilij" "Kindjal" "Kirpan" "Kora" "Kpinga" "Kris" "Kukri" "Kwame" "Lochaber" "Longsword" "Mace" "Machete" "Maduvu" "Mahera" "Main Gauche" "Morningstar" "Nihang" "Nimcha" "Nunchaku" "Pala" "Partisan" "Pata" "Qaddara" "Qama" "Rapier" "Sabre" "Sai" "Saif" "Sanjak" "Sap" "Scimitar" "Seax" "Shamshir" "Shamsir" "Shashka" "Short Sword" "Shotel" "Shuriken" "Siangham" "Sickle" "Slingshot" "Smatchet" "Spadroon" "Spatha" "Spear" "Spetum" "Tabar" "Takoba" "Takouba" "Talwar" "Tanto" "Tegha" "Tekko" "Tomahawk" "Tuck" "Tulwar" "Urumi" "Voulge" "Wakizashi" "Waraxe" "Whip" "Xiphos" "Yatagan" "Zafar" "Zulfiqar"
+		}
+
+		cruiser = {
+			"Katana" "Spetum" "Kusarigama" "Lance" "Sallet" "Tuck" "Pike" "Romphaia" "Tachi" "Tizona" "Zweihander" "Sickle" "Woldo" "Brownbill" "Partisan" "Halberd" "Sashka" "Longspear" "Godendag" "Claymore" "Brandistock" "Greatsword" "Faix" "Zulfiqar" "Moro Kris" "Zweilhander" "Urghosh" "Hache-gueule" "Katzbalger" "Lochaber" "Swordstaff" "Trident" "Shotel" "Zhua" "Langmesser" "Thracian pick" "Zwiepiken" "Longbow" "Nagamaki" "Warhammer" "Blunderbuss" "Great Axe" "Tonbogiri" "War Hammer" "Kampilan" "Ranseur" "Soliferrum" "Voulge" "War Scythe" "Pata" "Fokos" "Tabarzin" "Arquebus" "Murgleys" "War Sword" "Naginata" "Poleaxe" "Wodao" "Pavise" "Yari" "Kriegsmesser" "Zanbato" "Warclub" "Guisarme" "Greatclub" "Zhanmadao" "Dadao" "Tepoztopilli" "Arbalest" "Longsword" "Spear" "Almogavar" "Shashqua" "Nodachi" "Mangonel" "Cinquedea" "Chauve Souris" "Spontoon" "Gisarme" "Makila" "Zweihammer" "Greataxe" "Mace" "Pollaxe" "Harpoon" "Nandao" "Tongi" "Datanuki" "Billhook" "Glaive" "Warscythe" "War Staff" "Harlott" "Crossbow" "Bardiche" "Scythe" "Lucerne"
+		}
+		StrikeCruiser = {
+			
+		}
+		Battlecruiser = {
+			"Godendag" "Zweilhander" "Langmesser" "Bardiche" "War Hammer" "Greatsword" "Shotel" "Naginata" "Chauve Souris" "Zhua" "Woldo" "Tabarzin" "Tuck" "Tongi" "Hache-gueule" "Shashqua" "Spear" "Claymore" "Mace" "Pollaxe" "Blunderbuss" "Longspear" "Spontoon" "Thracian pick" "Nagamaki" "Wodao" "Tepoztopilli" "Warscythe" "Gisarme" "Tizona" "Pike" "Longbow" "War Sword" "Zhanmadao" "Almogavar" "Halberd" "Mangonel" "Pavise" "Poleaxe" "Sallet" "Fokos" "Soliferrum" "Murgleys" "Katzbalger" "Zanbato" "Ranseur" "Urghosh" "Zweihammer" "Lochaber" "Glaive" "Moro Kris" "Harpoon" "Arbalest" "Longsword" "Brandistock" "Lucerne" "Yari" "Pata" "Billhook" "Zulfiqar" "Tachi" "Spetum" "Warclub" "Datanuki" "Great Axe" "Partisan" "Nodachi" "Faix" "Harlott" "Crossbow" "Katana" "Swordstaff" "Greataxe" "Kusarigama" "Sashka" "Greatclub" "Voulge" "War Staff" "Nandao" "Lance" "War Scythe" "Zwiepiken" "Guisarme" "Zweihander" "Kampilan" "Tonbogiri" "Arquebus" "Romphaia" "Dadao" "Sickle" "Kriegsmesser" "Makila" "Warhammer" "Scythe" "Cinquedea" "Brownbill" "Trident"
+		}
+		battleship = {
+			"William de la Pole" "Gawain" "Gareth" "Percival" "Robert de Beaumont" "Gaheris" "Geraint" "Owain" "Lancelot" "Vasco da Gama" "El Cid" "Alfonso " "Marshal" "William de Warenne" "Bertrand du Guesclin" "Juan de la Cosa" "Beowulf" "Hugh de Lacy" "Bartolomeu Dias" "Tor" "Pellinore" "Tristan" "Baldwin I" "Bors" "Hawkwood" "Yvain" "Joan of Arc" "Joanot Martorell" "Brian Boru" "Afonso de Paiva" "Iwein" "Hernán Cortés" "Étienne de Vignolles" "Lamorak" "Galahad" "Godfrey " "Bedevere" "Kay" "Arturo Prat" "William Wallace" "Baldwin IV " "Francisco Pizarro" "Francisco " "Erec" "Humphrey" "Mordred" "Jean de Dunois" "El Cid"
+		}
+		Carrier = {
+			"Joanot Martorell" "Jean de Dunois" "Hugh de Lacy" "Arturo Prat" "William de la Pole" "Tristan" "Percival" "Bedevere" "Hawkwood" "Brian Boru" "El Cid" "Bertrand du Guesclin" "Baldwin IV " "Étienne de Vignolles" "Lamorak" "Gaheris" "Kay" "Gawain" "Robert de Beaumont" "Erec" "Francisco Pizarro" "Alfonso " "Afonso de Paiva" "Hernán Cortés" "Francisco " "Gareth" "Tor" "Lancelot" "Owain" "Iwein" "Vasco da Gama" "William Wallace" "Baldwin I" "William de Warenne" "Marshal" "Juan de la Cosa" "Beowulf" "Mordred" "Bors" "Bartolomeu Dias" "Pellinore" "Galahad" "Humphrey" "El Cid" "Godfrey " "Joan of Arc" "Geraint" "Yvain"
+		}
+		Dreadnought = {
+			"Baldwin I" "Tor" "Alfonso " "William de Warenne" "El Cid" "Tristan" "Iwein" "Brian Boru" "Gaheris" "Hugh de Lacy" "Bertrand du Guesclin" "Beowulf" "Owain" "Geraint" "Jean de Dunois" "Étienne de Vignolles" "Arturo Prat" "Robert de Beaumont" "Joanot Martorell" "Pellinore" "Vasco da Gama" "Juan de la Cosa" "Francisco Pizarro" "Joan of Arc" "Afonso de Paiva" "Gareth" "Humphrey" "Bedevere" "Hernán Cortés" "Lamorak" "William Wallace" "Hawkwood" "William de la Pole" "Gawain" "Erec" "Bors" "Mordred" "Kay" "Percival" "Bartolomeu Dias" "Godfrey " "Yvain" "Francisco " "Baldwin IV " "Galahad" "Marshal" "El Cid" "Lancelot"
+		}
+		titan = {
+			"Beowulf" "Lancelot" "Lamorak" "Tristan" "Godfrey " "Mordred" "William Wallace" "Kay" "Marshal" "Humphrey" "Geraint" "Galahad" "Erec" "Bertrand du Guesclin" "Pellinore" "William de Warenne" "Joanot Martorell" "Juan de la Cosa" "Iwein" "Afonso de Paiva" "Bors" "El Cid" "Owain" "Gawain" "Gareth" "Hugh de Lacy" "Hawkwood" "Hernán Cortés" "William de la Pole" "Percival" "Tor" "Francisco " "Alfonso " "Robert de Beaumont" "Joan of Arc" "Jean de Dunois" "Bedevere" "Bartolomeu Dias" "Yvain" "Brian Boru" "El Cid" "Baldwin IV " "Étienne de Vignolles" "Gaheris" "Francisco Pizarro" "Baldwin I" "Vasco da Gama" "Arturo Prat"
+		}
+		Flagship = {
+			"William" "Hardrada" "Saladin" "Suleiman" "Arthur " "Edward" "Ivan" "Gustav" "Charlemagne" "Barbossa" "Lionheart"
+		}
+		colossus = {
+			"Arthur " "Saladin" "Lionheart" "Charlemagne" "Ivan" "Barbossa" "Suleiman" "Gustav" "Hardrada" "Edward" "William"
+		}
+		juggernaut = {
+			"Arthur " "Saladin" "William" "Hardrada" "Suleiman" "Lionheart" "Gustav" "Charlemagne" "Ivan" "Barbossa" "Edward"
+		}
+
+		constructor = {
+			"Filippo Brunelleschi" "Leonardo da Vinci" "Robert de Luzarches" "Villard de Honnecourt" "Al-Farghani" "Peter Parler" "Giovanni di Simone" "Bertrand du Guesclin" "Andrea Pisano" "Gerard of Cremona"
+		}
+		colonizer = {
+			"Marco Polo" "Columbus" "Vasco da Gama" "Ibn Battuta" "rikson" "Zheng He" "Cabot" "Vespucci" "Prince Henry" "Cabral" "Verrazzano" "Diaz" "James Cook" "Pizarro" "Cortez" "Magellan" "Ponce de Leon" "Corte-Real" "Cabeza de Vaca"
+		}
+		sponsored_colonizer = {
+		"Marco Polo" "Verrazzano" "James Cook" "Zheng He" "Prince Henry" "Pizarro" "Ibn Battuta" "Cabeza de Vaca" "Erikson" "Cortez" "Columbus" "Ponce de Leon" "Cabral" "Vasco da Gama" "Vespucci" "Cabot" "Corte-Real" "Diaz" "Magellan"
+		}
+		science = {
+			"Adelard" "Al-Biruni" "Al-Farabi" "Al-Khwarizmi" "Al-Razi" "Alhazen" "Aquinas" "Avicenna" "Buridan" "Grosseteste" "Jabir ibn Hayyan" "Khayyam" "Magnus" "Oresme" "Scotus" "Theodoric"
+		}
+		explorationship = {
+			"Prince Henry" "Cortez" "Pizarro" "Ponce de Leon" "Erikson" "Vespucci" "Ibn Battuta" "Diaz" "Cabral" "Magellan" "Vasco da Gama" "Columbus" "James Cook" "Cabot" "Marco Polo" "Zheng He" "Verrazzano" "Corte-Real" "Cabeza de Vaca"
+		}
+		transport = {
+			"Vasco da Gama" "Ibn Battuta" "Erikson" "Cabral" "Cabeza de Vaca" "Vespucci" "Ponce de Leon" "Prince Henry" "Zheng He" "Magellan" "Marco Polo" "Diaz" "Cortez" "James Cook" "Cabot" "Corte-Real" "Columbus" "Pizarro" "Verrazzano"
+		}
+
+		military_station_small = {
+			"Bulwark"
+		}
+
+		military_station_medium = {
+			"Bastion"
+		}
+
+		military_station_large = {
+			"Citadel"
+		}
+
+		ion_cannon = {
+			"Ballista" "Mangonel" "Catapult" "Scorpio" "Trebuchet" "Springald" "Helepolis" "Sambuca" "Onager"
+		}
+
+		xl_cannon = {
+			"Scorpio" "Helepolis" "Springald" "Trebuchet" "Ballista" "Sambuca" "Onager" "Mangonel" "Catapult"
+		}
+	}
+
+	fleet_names = {
+		random_names = {
+			
+		}
+		sequential_name = OSIRIS_MEDIEVAL_FLEETNAMES_ORD
+	}
+
+	army_names = {
+
+		machine_defense = {
+			sequential_name = OSIRIS_MEDIEVAL_MACHINEDEFENSE_ORD
+		}
+
+		machine_assault_1 = {
+			sequential_name = OSIRIS_MEDIEVAL_MACHINEASSAULT1_ORD
+		}
+
+		machine_assault_2 = {
+			sequential_name = OSIRIS_MEDIEVAL_MACHINEASSAULT2_ORD
+		}
+
+		machine_assault_3 = {
+			sequential_name = OSIRIS_MEDIEVAL_MACHINEASSAULT3_ORD
+		}
+
+		defense_army = {
+			sequential_name = OSIRIS_MEDIEVAL_DEFENSEARMY_ORD
+		}
+
+		assault_army = {
+			sequential_name = OSIRIS_MEDIEVAL_ASSAULTARMY_ORD
+		}
+
+		slave_army = {
+			sequential_name = OSIRIS_MEDIEVAL_SLAVEARMY_ORD
+		}
+
+		clone_army = {
+			sequential_name = OSIRIS_MEDIEVAL_CLONEARMY_ORD
+		}
+
+		undead_army = {
+			sequential_name = OSIRIS_MEDIEVAL_UNDEADARMY_ORD
+		}
+
+		robotic_army = {
+			sequential_name = OSIRIS_MEDIEVAL_ROBOTICARMY_ORD
+		}
+
+		robotic_defense_army = {
+			sequential_name = OSIRIS_MEDIEVAL_ROBOTICDEFENSEARMY_ORD
+		}
+
+		psionic_army = {
+			sequential_name = OSIRIS_MEDIEVAL_PSIONICARMY_ORD
+		}
+
+		xenomorph_army = {
+			sequential_name = OSIRIS_MEDIEVAL_XENOMORPHARMY_ORD
+		}
+
+		gene_warrior_army = {
+			sequential_name = OSIRIS_MEDIEVAL_GENEWARRIORARMY_ORD
+		}
+
+		occupation_army = {
+			sequential_name = OSIRIS_MEDIEVAL_OCCUPATIONARMY_ORD
+		}
+
+		robotic_occupation_army = {
+			sequential_name = OSIRIS_MEDIEVAL_ROBOTICOCCUPATIONARMY_ORD
+		}
+
+		primitive_army = {
+			sequential_name = OSIRIS_MEDIEVAL_PRIMITIVEARMY_ORD
+		}
+		industrial_army = {
+			sequential_name = OSIRIS_MEDIEVAL_INDUSTRIALARMY_ORD
+		}
+		postatomic_army = {
+			sequential_name = OSIRIS_MEDIEVAL_POSTATOMICARMY_ORD
+		}
+	}
+
+	planet_names = {
+
+		generic = {
+			names = {
+				
+			}
+		}
+
+		pc_desert = {
+			names = {
+				"Siwa Oasis" "Qasr Al-Nil" "Bam" "El Badi" "Rostamabad Qal'eh" "Ait-Ben-Haddou" "Shali" "Al-Rahma" "Dar al-Makhzen" "Tafilelt" "Dar al-Kutub al-Misriyya" "Kumbhalgarh" "Tighmert Ksar" "Dar Tifnit" "Al-Abbasi" "Bahla Oasis" "Deir el-Medina" "Zafra" "M'Hamid El Ghizlane Ksar" "Karim Khan" "Laferrière" "Taourirt" "Glaoui" "Timimoun" "Tizourgane" "Tamegroute Zaouia" "Dar al-Handasah" "Ouled Soltane" "Congrès" "Rayen" "Karakorum " "Hulbuk" "El Djem Amphitheatre" "Gara Medouar" "Nestor" "Mehrangarh" "Ben Youssef Madrasa" "El Kef" "Shirvanshahs"
+			}
+		}
+
+		pc_tropical = {
+			 names = {
+				"Sigiriya" "Kangla " "Morro de Sao Paulo" "Fasil Ghebbi" "Osaka " "Nizwa " "Aguada " "Mehrangarh" "Pena " "Royal  of Kandy" "Chambord" "Alhambra" "Takeda " "Belur Math" "Bat" "Rambagh " "Umaid Bhawan " "Itaipava " "Monte" "Sam Poh Tong" "Bogd Khan " "San Marcos" "San Jose" "Belem " "Shaniwar Wada" "Chapultepec" "Nijo " "Lamanai" "Malbork " "San Felipe de Barajas" "Amber " "Himeji " "Brimstone Hill" "Amberd" "Braganca " "Puri Jagannath" "Miramar " "Miramare "
+			}
+		}
+
+		pc_arid = {
+			names = {
+				"Alhambra" "Shali" "Alcazaba" "Ait Benhaddou" "Qal'at al-Bahrain" "Krak des Chevaliers" "Alamut" "Beau" "Bou Inania Madrasa" "Takeda" "Karak" "Rabad of Hilat" "Soltaniyeh" "Anarkali's Tomb" "Dar al-Makhzen" "Aljaferia" "Almuñécar" "Beiteddine" "El Kef" "Ribat of Monastir" "Sousse Ribat" "Abode of Chaos" "Golconda" "Kalyana" "Kumbhalgarh" "Mehrangarh" "Ranthambore" "Jaisalmer" "Taragarh" "Bhangarh" "Chittorgarh" "Junagarh" "Rohtas" "Bahla" "Nakhl" "Al Zubarah" "Zafra" "Tafilalet" "Xorazm Gate" "Rostamabad"
+			}
+		}
+
+		pc_continental = {
+			names = {
+				"Frasers" "Pena" "Regaleira" "Larnach" "Lochleven" "Glamis" "Shugborough" "Warwick" "Rothenburg" "Dunblane" "Kronborg" "Branwen's" "Bodiam" "Kalemegdan" "Ljubljana" "Dunster" "Fasil" "Urquhart" "Prague" "Comlongon" "Caernarfon" "Carcassonne" "Peles" "Dunvegan" "Culross" "Peterborough" "Stirling" "Kilkenny" "Egeskov" "Himeji" "Gravensteen" "Culzean" "Conisbrough" "Yester" "Windsor" "Vajdahunyad" "Osaka" "Vaduz"
+			}
+		}
+
+		pc_gaia = {
+			names = {
+				"Versailles" "Schönbrunn" "Chambord" "Neuschwanstein" "Hampton Court" "Topkapi" "El Escorial" "Blenheim" "Alhambra" "Windsor" "Peterhof" "Himeji" "Pena" "Sanssouci" "Catherine" "Mir" "Edinburgh" "Amber" "Prague" "Bodiam"
+			}
+		}
+
+		pc_ocean = {
+			names = {
+				"Château d'If" "Conwy" "Cornet" "Craigievar" "Crusader" "Criccieth" "Culzean" "Dunnottar" "Eilean Donan" "Fasil Ghebbi" " Lovrijenac" " Rinella" "Frederiksborg" "Frederiksø" "Herrenchiemsee" "Hohensalzburg" "Holy Island" "Ios" "Kastelholm" "Kizkalesi" "Kronborg" "Krusenstiernska" "Lindisfarne" "Marmaris" "Mont Saint-Michel" "Neuschwanstein" "Olavinlinna" "Orava" "Peles" "Pena" "Rhodos" "Saaremaa" "San Nicola" "Santa Catalina" "Suomenlinna" "Söderarm" "Trakai" "Usedom" "Vadstena" "Visingsö"
+			}
+		}
+
+		pc_tundra = {
+			names = {
+				"Turaida" "Oreshek" "Vyborg" "Kuusisto" "Korela" "Tvrz" "Vysehrad" "Vysoke Myto" "Vysebrod" "Trosky" "Zvikov" "Loket" "Spilberk" "Kozlov" "Marienburg" "Narva" "Ivangorod" "Gdov" "Koporye" "Alnarp" "Kastelholm" "Raseborg" "Hämeenlinna" "Raasepori" "Lappeenranta" "Olavinlinna" "Harma" "Kajaani" "Viipuri" "Olomouc" "Hradec" "Vratislavice" "Karlštejn" "Žinkovy" "Kaunas" "Trakai" "Raudondvaris" "Norviliškės" "Khotyn" "Kiev Pechersk Lavra"
+			}
+		}
+
+		pc_arctic = {
+			names = {
+				"Vyborg" "Trosky" "Gdov" "Marienburg" "Loket" "Viipuri" "Lappeenranta" "Kiev Pechersk Lavra" "Kozlov" "Kastelholm" "Hradec" "Norviliškės" "Spilberk" "Raudondvaris" "Raasepori" "Zvikov" "Koporye" "Korela" "Kaunas" "Khotyn" "Olavinlinna" "Tvrz" "Ivangorod" "Trakai" "Alnarp" "Harma" "Vysebrod" "Turaida" "Olomouc" "Žinkovy" "Narva" "Vysehrad" "Karlštejn" "Kuusisto" "Hämeenlinna" "Vysoke Myto" "Raseborg" "Oreshek" "Kajaani" "Vratislavice"
+			}
+		}
+
+		pc_savannah = {
+			names = {
+				
+			}
+		}
+
+		pc_alpine = {
+			names = {
+				"Roncolo" "Miramare" "Burg Hohenzollern" "Beseno" "Malcesine" "Hohensalzburg" "Grande" "Hohenschwangau" "Pontebba" "Tures" "Brescia" "Brunico" "Mauterndorf" "Scipione" "Feldkirch" "Hrad Veveri" "Hochosterwitz" "Gropparello" "Gruyères" "Festung Hohentwiel" "Werfen" "Bellinzona" "Stenico" "Montebello" "Veste Coburg" "Chillon" "Marostica" "Arco" "Sirmione" "Fenis" "Gorizia" "Runkelstein" "Duino" "Valer" "Rothenburg ob der Tauber" "Avio" "Burg Rötteln" "Hohenwerfen" "Trento" "Sabbionara d'Avio"
+			}
+		}
+
+	}
+
+	character_names = {
+
+		names1 = {
+			first_names_male = {
+				"Nicholas" "Geoffrey" "Humphrey" "Everard" "Eudes" "Arnold" "Dietrich" "John" "Philip" "William" "Robert" "Baldwin" "Godfrey" "Alexander" "Bartholomew" "Hubert" "Randal" "Brian" "Alan" "Gilbert" "Peter" "Reynold" "Elias" "Bertrand" "Richard" "Raymond" "Roger" "Gervais" "Henry" "Edward" "Hugh" "Simon" "Walter" "Osbert" "Joscelin" "Louis" "Guy" "Gilbertus" "Andrew" "Thomas" "Thibaut" "Godwin" "Miles" "Rogerius" "Adam" "Richardis" "Amaury" "David" "Stephen" "Reginald"
+			}
+			first_names_female = {
+				"Honoria" "Mirabelle" "Giselle" "Philippa" "Lavinia" "Beatrice" "Eudora" "Edith" "Hester" "Sabine" "Audra" "Rhiannon" "Arabel" "Elvina" "Margery" "Constance" "Adela" "Seraphina" "Matilda" "Gertrude" "Cecily" "Rosamund" "Sybil" "Agatha" "Heloise" "Emmeline" "Juliana" "Isabella" "Katherine" "Rowena" "Alys" "Aveline" "Ysabel" "Fae" "Joan" "Sibyl" "Elena" "Felicity" "Faye" "Maud" "Imogen" "Guinevere" "Judith" "Brigitte" "Clarissa" "Amabel" "Elinor" "Emmaline" "Anabel" "Dorothea"
+			}
+			second_names = {
+				"Potter" "Sadler" "Clark" "Webster" "Bailey" "Wright" "Farmer" "Capper" "Burgess" "Mason" "Fisher" "Freeman" "Hunter" "Harper" "Palmer" "Tanner" "Shepherd" "Faulkner" "Wainwright" "Thatcher" "Cooper" "Spencer" "Cooper" "Foley" "Slater" "Chandler" "Carpenter" "Sawyer" "Mason" "Fuller" "Bower" "Drummer" "Hatcher" "Tailor" "Gardener" "Knight" "Turner" "Cutler" "Cook" "Fletcher" "Sawyer" "Carter" "Miller" "Mercer" "Smith" "Barker" "Collier" "Fowler" "Barlow" "Brewer"
+			}
+
+			regnal_first_names_male = {
+				"William" "Richard" "Henry" "Edward" "John" "Philip" "Louis" "Charles" "Ferdinand" "James" "Robert" "Otto" "Frederick" "Alfonso" "Ivan" "Eric" "Alexander" "Leif" "Sigurd" "Harald"
+			}
+
+			regnal_first_names_female = {
+				"Matilda" "Eleanor" "Isabella" "Catherine" "Elizabeth" "Margaret" "Mary" "Joan" "Blanche" "Philippa" "Anne" "Christina" "Beatrice" "Sancha" "Berengaria" "Constance" "Urraca" "Melisende" "Adeliza" "Gisela"
+
+			}
+			regnal_second_names = {
+				"Plantagenet" "Capet" "Habsburg" "Valois" "Tudor" "Bourbon" "Hohenzollern" "Hohenstaufen" "Angevin" "Welf" "Nassau" "Guelph" "Normandy" "Ascania" "Arpad" "Carolingian" "Hohenlohe" "Salian" "Hohenstaufen" "Ottonian" "Babenberg" "Wessex" "Bonaparte" "Wittelsbach" "Piast" "Merovingian" "Hohenzollern-Sigmaringen" "Palaiologos" "Hanover"
+			}
+		}
+	}
+}
