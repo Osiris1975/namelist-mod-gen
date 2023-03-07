@@ -31,3 +31,25 @@ ORD_TYPES = {
 #  OSIRIS_DEVTEST_XENOMORPHARMY:0 "$ORD$ an_xenomorph_army"
 #  OSIRIS_DEVTEST_FLEETNAMES:0 "$ORD$ Fleet"
 # ]
+LANGUAGES = {
+    'en': 'english',
+    'pt': 'braz_por',
+    'fr': 'french',
+    'de': 'german',
+    'pl': 'polish',
+    'ru': 'russian',
+    'es': 'spanish',
+    'zh-Hans': 'simp_chinese',
+    'ja': 'japanese',
+    'ko': 'korean'
+}
+
+NOTITLE_FIELDS = [
+    'namelist_title', 'namelist_author', 'namelist_id'
+]
+
+NO_TRANSLATE_FIELD_FRAGMENTS = [
+    '_author', '_id', '_army', 'an_machine', 'fn_fleet'
+]
+
+CHUNK_SIZE = 4000
