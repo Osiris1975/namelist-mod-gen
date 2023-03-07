@@ -1,0 +1,267 @@
+﻿### "Médiéval (Onl)"
+### Created by "Osiris"
+
+"Osiris"_medieval = {
+
+	ship_names = {
+
+		corvette = {
+			"Kati" "Balle" "Machette" "Epée" "Epée" "Saïf" "Shamchir" "Partisan" "Gantelet" "Tegha" "Châtaigne" "Chevalet" "Kilij" "Fête" "Nunchaku" "Chachka" "Spadron " "Takoba" "Safar" "Hache de combat" "Mahera" "Couperet" "Lochaber" "Quatar" "Ceste" "Qama" "Wakizashi" "Recherché" "Connaissance" "Chokuto" "Flyssa" "Épée" "Pata" "Whip" "Spatha" "Kwame" "Kama" "Tomahawk" "Poignard" "Hammer" "Falcon" "Siangham" "Five" "Tanto" "Fronde" "Hwando" "Gazza" "Francisca" "Tabar" Stock" "Ourumi" "Talwar" "Seve" "Dha" "Arrow" "Hotel" "Yatagan" "Dao" "Pala" "Jian" "Cora" "Rapière" "Saï" "Chris" "Karabela" "Dusack" "Smatchet" " " Xiphos " " Cimetière " " Shuriken " " Kirpan " " Épée Bâtarde " " Bardiche " " Épée Longue " " Maduvu " " Baller " " Chakra " " Sabre " " Kindjal " " Bec de Corbin " " Hunga Munga " " Tuck " " Bhuj" "Axe" "Clubs" "Firangi" "Seax" "Tekko" "Jamâdhar" "Son" "Épée Courte" "Carte" "Tuwar" "Fauchard" "Flamberge" "Hache de Guerre" "Spetum" "Attention" " Kokri" "Kpinga" "Nihang" "Dirk" "Tacouba" "Kaskara" Lance" "Étoile du matin" "Main gauche" "Épée" "Qaddara" "Nimcha" "Sandjak" "Glaive" "Masse" "Zulfiqar Khopesh" "Ida"
+		}
+
+		destroyer = {
+			"Bardiche" "Baler" "Battle Axe" "Corbin's Beak" "Bhuj" "Ball" "Sabre" "Basket" "Chakra" "Chokuto" "Churi" "Cinquede" "Couperet" "Clubs" "Cute" "Poignard" "Dao" "Flèche" "Dha" "Dirk" "Dusack" "Epée" "Epée" "Stock" "Fauchon" "Fauchard" "Firangi" "Fleau" "Flamberge" "Flyssa" "Francisca" "Gantelet" "Gazza" " "Glaive" "Marteau" "Hachette" "Hunga Munga" "Hwando" "Ida" "Jamâdhar" "Bijou" "Jian" "Lit" "Epée" "Carrabela" "Carte" "Kaskara" "Châtaignier" "Quatar" "Kati" "Khopesh" "Kilij" "Kindjal" "Kirpan" "Cora" "Kpinga" "Chris" "Kokri" "Kwame" "Lochaber" "Épée longue" "Masse" "Machete" Maduvu" "Mahera" "Main gauche " "Étoile du matin" "Nihang" "Nimcha" "Nunchaku" "Pala" "Partisan" "Pata" "Qaddara" "Qama" "Rapière" "Saber" "Saï" "Saif" "Sandjak" "Seve" "Cimetière" "Seax" "Shamchir" "Chamsir Chachka" "Épée courte" "Hôtel" "Shuriken" "Siangham" "Fronde" "Smatchet" "Spadron" "Spatha" "Lance" "Spetum" "Tabar" "Takoba" "Tacouba" "Talwar" "Tanto" "Tegha" "Tekko" "Tomahawk" "Tuck" "Tuwar" "Ourumi" "Volted" "Wakizashi" "Hache de guerre" "Shout" "Xiphos" "Yatagan" "Zafar" "Zulfiqar"
+		}
+
+		cruiser = {
+			"Katana" "Spetum" "Kusarigama" "Lance" "Sallet" "Tuck" "Brochet" "Romphaia" "Tachi" "Zones" "Tweihander" "Faucille" "Woldo" "Bec Brun" "Partisan" "Hallebarde" "Sashka" "Lance Longue" "Goendag" "Claymore" "Brandistock" "Espadon" "Faix" "Zulfiqar" "Frère Kris" "Concessionnaire" "Urgosh" "Tête De Hache" "Katzbalger" "Lochaber" "Bâton D'Épée" "Trident" "Hôtel" "Zhua" "Langmesser" "Pioche Thrace" "Zwiepiken" "Arc Long" "Nagamaki" "Marteau De Guerre" "Tromblon" "Grande Hache" "Tonbogiri" "Marteau De Guerre" "Épée" "Rancher" "Solifère" "Voulgé" "Faux De Guerre" "Niveau" "Focus" "Tabarzine" "Arquebuse" "Murgleys" "Épée De Guerre" "Naginata" "Hache D'Hast" "Wodao" "Pavois" "Yari" "Foires De Guerre" "Zanbato" "Club De Guerre" "Guisarme" "Grandclub" "Zhanmadao" "Dadao" "Tepoztopilli" "Arbalest" "Épée Longue" "Lance" "Almogávar" "Shashqua" "Nodachi" "Mangonneau" "Cinquède" "Souris Chauve" "Sponton" "Gisarme" "Sang" "Marteau" "Grande Hache" "Masse" "Pollaxe" "Harpon" "Nandao" "Tongis" "Datanuki" "Serpe" "Glaive" "Faux De Guerre" "Bâton De Guerre" "Prostituée" "Arbalète" "Bardiche" "Faux" "Luzerne"
+		}
+		StrikeCruiser = {
+			""
+		}
+		Battlecruiser = {
+			"Goendag" "Concessionnaire" "Langmesser" "Bardiche" "Marteau De Guerre" "Espadon" "Hôtel" "Naginata" "Souris Chauve" "Zhua" "Woldo" "Tabarzine" "Tuck" "Tongis" "Tête De Hache" "Shashqua" "Lance" "Claymore" "Masse" "Pollaxe" "Tromblon" "Lance Longue" "Sponton" "Pioche Thrace" "Nagamaki" "Wodao" "Tepoztopilli" "Faux De Guerre" "Gisarme" "Zones" "Brochet" "Arc Long" "Épée De Guerre" "Zhanmadao" "Almogávar" "Hallebarde" "Mangonneau" "Pavois" "Hache D'Hast" "Sallet" "Focus" "Solifère" "Murgleys" "Katzbalger" "Zanbato" "Rancher" "Urgosh" "Marteau" "Lochaber" "Glaive" "Frère Kris" "Harpon" "Arbalest" "Épée Longue" "Brandistock" "Lucerne" "Yari" "Niveau" "Serpe" "Zulfiqar" "Tachi" "Spetum" "Club De Guerre" "Datanuki" "Grande Hache" "Partisan" "Nodachi" "Faix" "Prostituée" "Arbalète" "Katana" "Bâton D'Épée" "Grande Hache" "Kusarigama" "Sashka" "Grandclub" "Voulgé" "Bâton De Guerre" "Nandao" "Lance" "Faux De Guerre" "Zwiepiken" "Guisarme" "Tweihander" "Épée" "Tonbogiri" "Arquebuse" "Romphaia" "Dadao" "Faucille" "Foires De Guerre" "Sang" "Marteau De Guerre" "Faux" "Cinquède" "Bec Brun" "Trident"
+		}
+		battleship = {
+			"Guillaume De La Pôle" "Gauvain" "Gareth" "Perceval" "Robert De Beaumont" "Gahéris" "Géraint" "Wain" "Lancelot" "Vasco De Gama" "Le Cid" "Alphonse" "Maréchal" "Guillaume De Warenne" "Bertrand Du Guesclin" "Juan De La Cosa" "Beowulf" "Hugues De Lacy" "Bartolomé Dias" "Thor" "Pellinore" "Tristan" "Baudouin Ier" "Bors" "Hawkwood" "Yvan" "Jeanne D'Arc" "Joanot Martorell" "Brian Boro" "Afonso De Paiva" "Iwein" "Hernan Cortés" "Étienne De Vignolles" "Lamorak" "Galahad" "Godfrey" "Bedevere" "Kay" "Arturo Prat" "Guillaume Wallace" "Baudouin Iv" "Francisco Pizarro" "François" "Erec" "Humphrey" "Mordred" "Jean De Dunois" "Cid"
+		}
+		Carrier = {
+			"Joanot Martorell" "Jean De Dunois" "Hugues De Lacy" "Arturo Prat" "Guillaume De La Pôle" "Tristan" "Perceval" "Bedevere" "Hawkwood" "Brian Boro" "Le Cid" "Bertrand Du Guesclin" "Baudouin Iv" "Étienne De Vignolles" "Lamorak" "Gahéris" "Kay" "Gauvain" "Robert De Beaumont" "Erec" "Francisco Pizarro" "Alphonse" "Afonso De Paiva" "Hernan Cortés" "François" "Gareth" "Thor" "Lancelot" "Wain" "Iwein" "Vasco De Gama" "Guillaume Wallace" "Baudouin Ier" "Guillaume De Warenne" "Maréchal" "Juan De La Cosa" "Beowulf" "Mordred" "Bors" "Bartolomé Dias" "Pellinore" "Galahad" "Humphrey" "Le Cid" "Godfrey" "Jeanne D'Arc" "Géraint" "Yvain"
+		}
+		Dreadnought = {
+			"Baudouin Ier" "Thor" "Alphonse" "Guillaume De Warenne" "Le Cid" "Tristan" "Iwein" "Brian Boro" "Gahéris" "Hugues De Lacy" "Bertrand Du Guesclin" "Beowulf" "Wain" "Géraint" "Jean De Dunois" "Étienne De Vignolles" "Arturo Prat" "Robert De Beaumont" "Joanot Martorell" "Pellinore" "Vasco De Gama" "Juan De La Cosa" "Francisco Pizarro" "Jeanne D'Arc" "Afonso De Paiva" "Gareth" "Humphrey" "Bedevere" "Hernan Cortés" "Lamorak" "Guillaume Wallace" "Hawkwood" "Guillaume De La Pôle" "Gauvain" "Erec" "Bors" "Mordred" "Kay" "Perceval" "Bartolomé Dias" "Godfrey" "Yvan" "François" "Baudouin Iv" "Galahad" "Maréchal" "Le Cid" "Lancelot"
+		}
+		titan = {
+			"Beowulf" "Lancelot" "Lamorak" "Tristan" "Godfrey" "Mordred" "Guillaume Wallace" "Kay" "Maréchal" "Humphrey" "Géraint" "Galahad" "Erec" "Bertrand Du Guesclin" "Pellinore" "Guillaume De Warenne" "Joanot Martorell" "Juan De La Cosa" "Iwein" "Afonso De Paiva" "Bors" "Le Cid" "Wain" "Gauvain" "Gareth" "Hugues De Lacy" "Hawkwood" "Hernan Cortés" "Guillaume De La Pôle" "Perceval" "Thor" "François" "Alphonse" "Robert De Beaumont" "Jeanne D'Arc" "Jean De Dunois" "Bedevere" "Bartolomé Dias" "Yvan" "Brian Boro" "Le Cid" "Baudouin Iv" "Étienne De Vignolles" "Gahéris" "Francisco Pizarro" "Baudouin Ier" "Vasco De Gama" "Arturo Prat"
+		}
+		Flagship = {
+			"Guillaume" "Hardrade" "Saladin" "Soliman" "Arthur" "Edouard" "Ivan" "Gustave" "Charlemagne" "À Barbosa" "Cœur De Lion"
+		}
+		colossus = {
+			"Arthur" "Saladin" "Cœur De Lion" "Charlemagne" "Ivan" "À Barbosa" "Soliman" "Gustave" "Hardrade" "Edouard" "William"
+		}
+		juggernaut = {
+			"Arthur" "Saladin" "Guillaume" "Hardrade" "Soliman" "Cœur De Lion" "Gustave" "Charlemagne" "Ivan" "À Barbosa" "Edouard"
+		}
+
+		constructor = {
+			"Philippe Brunelleschi Léonard De Vinci" "Robert De Luzarches" "Villard De Honnecourt" "Al Farghani" "Pierre Parler" "Jean De Simon Bertrand Du Guesclin" "Andréa Pisano Gérard De Crémone"
+		}
+		colonizer = {
+			"Marco Polo" "Colomb" "Vasco De Gama" "Ibn Battouta" "Rikson" "Zheng He" "Cabot" "Vespucci" "Prince Henri" "Cabral" "Verrazzano" "Díaz" "James Cook" "Pizarro" " Cortez" "Magellan" "Ponce De Léon" "Cour-Royale" "Tête De Vache"
+		}
+		sponsored_colonizer = {
+		"Marco Polo" "Verrazzano" "James Cook" "Zheng He" "Prince Henri" "Pizarro" "Ibn Battouta" "Tête De Vache" "Erikson" "Cortez" "Colomb" "Ponce De Léon" "Cabral" "Vasco De Gama" "Vespucci" "Cabot" "Cour-Royale" "Diaz" "Magellan"
+		}
+		science = {
+			"Adélard" "Al-Biruni" "Al Farabi" "Al-Khwarizmi" "Al-Razi" "Alhazen" "Thomas D'Aquin" "Avicenne" "Bouridan" "Grosseteste" "Jabir Ibn Hayyan" "Khayam" "Magnus "Oresme" "Ecossais" "Théodoric"
+		}
+		explorationship = {
+			"Prince Henri" "Cortez" "Pizarro" "Ponce De Léon" "Erikson" "Vespucci" "Ibn Battouta" "Díaz" "Cabral" "Magellan" "Vasco De Gama" "Colomb" "James Cook" "Cabot" " Marco Polo" "Zheng He" "Verrazzano" "Cour-Royale" "Tête De Vache"
+		}
+		transport = {
+			"Vasco De Gama" "Ibn Battouta" "Erikson" "Cabral" "Tête De Vache" "Vespucci" "Ponce De Léon" "Prince Henri" "Zheng He" "Magellan" "Marco Polo" "Díaz" "Cortez" " James Cook" "Cabot" "Cour-Royale" "Colomb" "Pizarro" "Verrazzano"
+		}
+
+		military_station_small = {
+			"Rempart"
+		}
+
+		military_station_medium = {
+			"Bastion"
+		}
+
+		military_station_large = {
+			"Citadelle"
+		}
+
+		ion_cannon = {
+			"Baliste" "Mangonneau" "Catapulte" "Scorpion" "Trébuchet" "Springald" "Hellépolis" "Sureau" "Onagre"
+		}
+
+		xl_cannon = {
+			"Scorpion" "Hellépolis" "Springald" "Trébuchet" "Baliste" "Sureau" "Onagre" "Mangonneau" "Catapulte"
+		}
+	}
+
+	fleet_names = {
+		random_names = {
+			""
+		}
+		sequential_name = "Osiris_Medieval_Fleetnames_Ord"
+	}
+
+	army_names = {
+
+		machine_defense = {
+			sequential_name = "Osiris_Medieval_Machinedefense_Ord"
+		}
+
+		machine_assault_1 = {
+			sequential_name = "Osiris_Medieval_Machineassault1_Ord"
+		}
+
+		machine_assault_2 = {
+			sequential_name = "Osiris_Medieval_Machineassault2_Ord"
+		}
+
+		machine_assault_3 = {
+			sequential_name = "Osiris_Medieval_Machineassault3_Ord"
+		}
+
+		defense_army = {
+			sequential_name = "Osiris_Medieval_Defensearmy_Ord"
+		}
+
+		assault_army = {
+			sequential_name = "Osiris_Medieval_Assaultarmy_Ord"
+		}
+
+		slave_army = {
+			sequential_name = "Osiris_Medieval_Slavearmy_Ord"
+		}
+
+		clone_army = {
+			sequential_name = "Osiris_Medieval_Clonearmy_Ord"
+		}
+
+		undead_army = {
+			sequential_name = "Osiris_Medieval_Undeadarmy_Ord"
+		}
+
+		robotic_army = {
+			sequential_name = "Osiris_Medieval_Roboticarmy_Ord"
+		}
+
+		robotic_defense_army = {
+			sequential_name = "Osiris_Medieval_Roboticdefensearmy_Ord"
+		}
+
+		psionic_army = {
+			sequential_name = "Osiris_Medieval_Psionicarmy_Ord"
+		}
+
+		xenomorph_army = {
+			sequential_name = "Osiris_Medieval_Xenomorpharmy_Ord"
+		}
+
+		gene_warrior_army = {
+			sequential_name = "Osiris_Medieval_Genewarriorarmy_Ord"
+		}
+
+		occupation_army = {
+			sequential_name = "Osiris_Medieval_Occupationarmy_Ord"
+		}
+
+		robotic_occupation_army = {
+			sequential_name = "Osiris_Medieval_Roboticoccupationarmy_Ord"
+		}
+
+		primitive_army = {
+			sequential_name = "Osiris_Medieval_Primitivearmy_Ord"
+		}
+		industrial_army = {
+			sequential_name = "Osiris_Medieval_Industrialarmy_Ord"
+		}
+		postatomic_army = {
+			sequential_name = "Osiris_Medieval_Postatomicarmy_Ord"
+		}
+	}
+
+	planet_names = {
+
+		generic = {
+			names = {
+				""
+			}
+		}
+
+		pc_desert = {
+			names = {
+				"Oasis De Siwa" "Qasr Al-Nil" "Boum" "El Badi" "Rostamabad Qal'Eh" "Aït-Ben-Haddou" "Chali" "Al-Rahma" "Dar Al-Makhzen" "Tafilelt" "Dar Al-Kutub Al-Misriyya" "Kumbhalgarh" "Ksar Serré" "Dar Tifnit" "Al-Abbasi" "Oasis De Bahla" "Deir El-Médineh" "Zafra" "Ksar M'Hamid El Ghizlane" "Karim Khan" " Laferrière "Taourirt" "Glaou" "Timimoun" "Tizourgane" "Tamegroute Zaouia" "Dar Al-Handasah" "Ouled Soltane" "Congrès" "Rayon" "Karakorum" "Hulbuk" "Amphithéâtre El Djem" "Gara Medouar" " Nestor "Meherangarh" "Medersa Ben Youssef" "Le Kef" "Shirvanshahs"
+			}
+		}
+
+		pc_tropical = {
+			 names = {
+				"Sigiriya" "Kangla" "Morro De São Paulo" "Fasil Ghebbi" "Osaka" "Nizwa" "Aguada" "Meherangarh" "Péna" "Royale De Kandy" "Chambord" "Alhambra" "Takeda" "Belur Math" " Chauve-Souris" "Rambagh" "Umaïd Bhawan" "Itaipava" "Monte" "Sam Poh Tong" "Bogd Khan" "Saint-Marc" "San José" "Belém" "Shaniwar Wada" "Chapultepec" "Nijo" "Lamanaï " "Malbork" "San Felipe De Barajas" "Ambre" "Himeji" "Colline De Soufre" "Ambre" "Bragance" "Puri Jagannath" "Miramar" "Miramare"
+			}
+		}
+
+		pc_arid = {
+			names = {
+				"Alhambra" "Chali" "Alcazaba" "Aït Benhaddou" "Qal'At Al-Bahreïn" "Krak Des Chevaliers" "Alamout" "Beau" "Médersa Bou Inania" "Takeda" "Karak" "Rabad De Hilat" "Soltaniyeh " " "Tombe D'Anarkali" "Dar Al-Makhzen" "Aljaféria" "Almuñécar" "Beiteddine" "Le Kef" "Ribat De Monastir" "Ribat De Sousse" "Demeure Du Chaos" "Golconde" "Kalyana" "Kumbhalgarh " "Meherangarh" "Ranthambore" "Jaisalmer" "Targarh" "Bhangarh" "Chitorgarh" "Junagarh" "Rohtas" "Baha" "Nakhl" "Al Zubarah" "Zafra" "Tafilalet" "Porte Xorazm" "Rostamabad"
+			}
+		}
+
+		pc_continental = {
+			names = {
+				"Frasers" "Péna" "Régaleira" "Larnach" "Locleven" "Glamis" "Shugborough" "Warwick" "Rothenburg" "Dunblane" "Kronborg" "De Branwen" "Bodiam" "Kalemegdan" "Ljubljana" "Dunster" " Fail" "Urquhart" "Prague" "Comlongon" "Caernarfon" "Carcassonne" "Peles" "Dunvégan" "Culros" "Peterborough" "Stirling" "Kilkenny" "Egeskov" "Himeji" "Gravensteen" "Culzéan" "Conisbrough" "Ici" "Windsor" "Vajdahunyad" "Osaka" "Vaduz"
+			}
+		}
+
+		pc_gaia = {
+			names = {
+				"Versailles" "Schönbrunn" "Chambord" "Neuschwanstein" "Cour De Hampton" "Topkapi" "L'Escurial" "Blenheim" "Alhambra" "Windsor" "Peterhof" "Himeji" "Péna" "Sans Souci" "Catherine" "Moi" "Édimbourg" "Ambre Gris" "Prague" "Bodiam"
+			}
+		}
+
+		pc_ocean = {
+			names = {
+				"Château d'If" "Conwy" "Cornet" "Craigievar" "Croisé" "Criccieth" "Culzéan" "Dunnottar" "Eilean Donan" "Fasil Ghebbi" "Lovrijenac" "Rinelle" "Frederiksborg" "Frederiksø" "Lac Herrenchiem " "Hohensalzbourg" "Île Sainte" "Ios" "Châteauholm" "Votre Kizkale" "Kronborg" "Krusenstiernska" "Lindisfarne" "Marmaris" "Mont Saint Michel" "Neuschwanstein" "Olavinlinna" "Écureuil" "Peles" "Péna" "Rhodes" "Saaremaa" "Saint-Nicolas" "Sainte Catalina" "Suomenlinna" "Söderarm" "Trakai" "Usé" "Vadstena" "Visingsö"
+			}
+		}
+
+		pc_tundra = {
+			names = {
+				"Turaida" "Orechek" "Vyborg" "Kuusisto" "Corée" "Tvrz" "Vysehrad" "Vysoké Myto" "Vysébrod" "Trosky" "Zvikov" "Loquet" "Spilberg" "Kozlov Marienburg" "Narva" "Ivangorod" "Gdov" "Koporié" "Alnarp" "Châteauholm" "Raseborg" "Hameenlinna" "Raasepori" "Lappeenranta" "Olavinlinna" "Harma" "Kajaani" "Viipuri" "Olomouc" "Hradec" "Vratislavice" "Karlstejn" "Žinkovy " "Kaunas" "Trakai" "Raudondvaris" "Norviliškės" "Khotin" "Laure De Petchersk De Kiev"
+			}
+		}
+
+		pc_arctic = {
+			names = {
+				"Vyborg" "Trosky" "Gdov" "Marienburg" "Loquet" "Viipuri" "Lappeenranta" "Laure De Petchersk De Kiev" "Kozlov Châteauholm" "Hradec" "Norviliškės" "Spilberg" "Raudondvaris" "Raasepori" "Zvikov" "Koporié" "Corée" "Kaunas" "Khotin" "Olavinlinna" "Tvrz" "Ivangorod" "Trakai" "Alnarp" "Harma" "Vysébrod" "Turaida" "Olomouc" "Žinkovy" "Narva" "Vysehrad" "Karlstejn " "Kuusisto" "Hameenlinna" "Vysoké Myto" "Raseborg" "Orechek" "Kajaani" "Vratislavice"
+			}
+		}
+
+		pc_savannah = {
+			names = {
+				""
+			}
+		}
+
+		pc_alpine = {
+			names = {
+				"Roncolo" "Miramare" "Burg Hohenzollern" "Besène" "Malcesine" "Hohensalzburg" "Genial" "Hohenschwangau" "Pontebba" "Tures" "Brescia" "Brunico" "Mauterndorf" "Scipion" "Feldkirch" "Hrad Veveri" "Hochosterwitz" "Gropparello" "Gruyères" "Forteresse Hohentwiel" "Werfen" "Bellinzone" "Sténique" "Montbello" "Porte Cobourg" "Chillon" "Marostica" "Arc" "Sirmione" "Fénis" "Gorizia" "Runkelstein" "Duino" "Valer" "Rothenburg Ob Der Tauber" "Aéronautique" "Burg Rötteln" "Hohenwerfen" "Trente" "Sabbionara D'Avio"
+			}
+		}
+
+	}
+
+	character_names = {
+
+		names1 = {
+			first_names_male = {
+				"Nicolas" "Geoffroy" "Humphrey" "Éverard" "Eude" "Arnold" "Dietrich" "Jean" "Philippe" "Guillaume" "Robert" "Baudouin" "Godefroy" "Alexandre" "Barthélemy" "Hubert" "Randal " " "Brian" "Alain" "Gilbert" "Pierre" "Reynold" "Élias" "Bertrand" "Richard" "Raymond" "Roger" "Gervais" "Henri" "Edouard" "Hugues" "Simon" "Walter" "Osbert" "Jocelin" "Louis" "Gars" "Gilbertus" "André" "Thomas" "Thibault" "Godvin" "Milles" "Rogerius" "Adam" "Richardis" "Amaury" "David" "Étienne" "Réginald "
+			}
+			first_names_female = {
+				"Honoria" "Mirabelle" "Gisèle" "Philippa" "Lavinie" "Béatrice" "Eudora" "Édith" "Hester" "Sabine" "Audra" "Rhiannon" "Arabe" "Elvine" "Marge" "Constance" "Adèle" "Séraphine" "Mathilde" "Gertrude" "Cécile" "Rosamund" "Sybille" "Agathe" "Héloïse" "Emmeline" "Julienne" "Isabelle" "Catherine" "Rowena" "Alys" "Avéline" "Ysabel" "Fae" "Jeanne" "Sibylle" "Hélène" "Félicité" "Fay" "Maud" "Imogène" "Guenièvre" "Judith" "Brigitte" "Clarisse" "Ambel" "Élinor" "Emmaline" "Anabelle" "Dorothée"
+			}
+			second_names = {
+				"Potier" "Sadler" "Clark" "Webster" "Baily" "Wright" "Agriculteur" "Boucheuse" "Bourgeois" "Maçon" "Pêcheur" "Homme Libre" "Chasseur" "Harpiste" "Palmier" "Tanneur" "Berger" "Faulkner" "Wainright" "Thatcher" "Tonnelier" "Spencer" "Tonnelier" "Foley" "Slater" "Chandler" "Charpentier" "Scieur" "Maçon" "Plus Complet" "Tonnelle" "Batteur" "Éclosoir" "Tailleur" "Jardinier" "Chevalier" "Tourneur" "Coutelier" "Cuisinier" "Fletcher" "Scieur" "Carter" "Meunier" "Mercier" "Forgeron" "Aboyeur" "Collier" "Oiseau" "Barlow" "Brasseur"
+			}
+
+			regnal_first_names_male = {
+				"Guillaume" "Richard" "Henri" "Edouard" "Jean" "Philippe" "Louis" "Charles" "Ferdinand" "Jacques" "Robert" "Otto" "Frédéric" "Alphonse" "Ivan" "Éric" "Alexandre" "Leif" "Sigurd" "Harald"
+			}
+
+			regnal_first_names_female = {
+				"Mathilde" "Aliénor" "Isabelle" "Catherine" "Elisabeth" "Marguerite" "Marie" "Jeanne" "Blanche" "Philippa" "Anne" "Christine" "Béatrice" "Sanche" "Bérengère" "Constance" "Urraca" "Mélisende" "Adeliza" "Gisèle"
+
+			}
+			regnal_second_names = {
+				"Plantagenêt" "Capet" "Habsbourg" "Valois" "Tudor" "Bourbon" "Hohenzollern" "Hohenstaufen" "Angevin" "Welf" "Nassau" "Guelph" "Normandie" "Ascania" "Arpad" "Carolingien" "Hohenlohe " "Salien" "Hohenstaufen" "Ottonia" "Babenberg" "Wessex" "Bonaparte" "Wittelsbach" "Piast" "Merovingia" "Hohenzollern-Sigmaringen" "Paléologues" "Hanovre"
+			}
+		}
+	}
+}

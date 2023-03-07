@@ -1,0 +1,267 @@
+﻿### "Américain (Onl)"
+### Created by "Osiris"
+
+"Osiris"_american = {
+
+	ship_names = {
+
+		corvette = {
+			"Super Frelon" "Wayne E. Meyer" "Veuve Noire" "Gratte-Ciel" "Vaudou" "Hellcat" "Les Sullivans" "Maître Du Ciel" "Tigre" "Ticonderoga" "Libellule" "Bois Belleau" "Enfant" "Col" "Curtis Wilbur" "Raphaël Peralta" "Busard" "Gardien" "Chattanooga" "Teinte" "Yorktown" "Kobané" "Gérald R. Ford" "Coup De Foudre Ii" "Jean Finn" "Victoria" "Mitchell" "Poissonnerie" "Falloujah" "Halsey" "Antiétam" "Sampson" "Carney" "Vindicateur" "Stockdale" "Dewey" "Bruit" "Skywatch" "Feu D'Étoile" "O'Kane" "Thomas Hudner" "Aigle" "Ravages" "Arleigh Burke" "Chaton Faucon" "Chat Sauvage" "Merle Noir" "Golfe De Leyte" "Mustang" "Higgin" "Gary" "Ingraham" "Liberté" "Albatros" "Puma" "Skyhawk" "Starlifter" "Tach" "Bobcat" "Dragon" "Stockdale" "Panthère" "Décatur" "Mossoul" "Zumwalt" "Michel Murphy" "Cobra" "Samuel B. Roberts" "Scout" "Texane" "Golfe De Leyte" "Oie Sauvage" "Zumwalt" "Spotsylvanie" "Farragut" "Amérique" "Hercule" "Spruce" "Faucon" "Buena Vista" "Château-Thierry" "Corsaire" "Momson" "Banshee" "Baie Mobile" "Maçon" "Viking" "Foudre" "Maraudeur" "Arleigh Burke" "Plongeur De L'Enfer" "Intrépide" "Shiloh" "Iwo Jima" "Antiétam" "Vigilante" "Kaufmann" "Howard" "Caribous" "Décatur" "Sabre" "Barry" "Pierreson" "Nitze" "Tikrit" "Staggerwing" "Rôdeur" "Lenah H. Sutcliffe Higbee" "Lancier" "Port Froid" "Bronco" "Boone" "Location" "Lassen" "Fredericksburg" "Lancastre" "Étoile Filante" "John S. Mccain" "Mcinerney" "Oliver Hazard Perry" "Chat" "Sauvage" "Frelon" "À Mi-Chemin" "Jean-Paul Jones" "Mogadiscio" "Ruben James" "Combattant De La Liberté" "Stethem" "Spruce" "Appomattox" "Guêpe" "Enfant" "Pacificateur" "Salle John L." "Voie Aérienne" "Truxtune" "Mc Faul" "Okinawa" "Croisé" "Rapace" "Stratoforteresse" "Khé Sanh" "Carr" "Super Sabre" "États-Unis" "Intrus" "Chippewa" "Liberté" "Faucon Combattant" "Faucon De Guerre" "Mohawk" "Dévastateur" "Gridley" "Stratotanker" "Chapultepec" "Stuka" "Nicolas" "Chafé" "Bainbridge" "Milius" "Raqqa" "Guerrier Céleste" "Guadalcanal" "Victoria" "Paul F.Foster" "Arthur W. Radford" "Fureur" "Indépendance" "Cyclone" "Cerro Gordo" "Boutique" "Chef De Tonnerre" "Skytrain" "Faucon Marin" "Envahisseur" "Forrest Sherman" "Tora-Bora" "Préble" "Réservoir De Chosin" "Fantôme Ii" "Coquin" "Pierreson" "Wadworth" "Kiowa" "Talon" "Constellation" "Balbuzard Pêcheur" "Marjah" "Entreprise" "Porteur" "Chosin" "Puma" "La Mer De Corail" "Michel Monsoor" "Pie-Grièche" "Corbeau" "Luciole" "Mahon" "Mustin" "William P. Lawrence" "Huey" "Gettysburg" "Hadith" "Démon" "Fou De Bassan" "Sampson" "Constitution" "Kirkouk" "Chasseur D'Étoiles" "Spruce" "Spartiate" "Ingraham" "Radford" "Invincible" "Chickamauga" "Meuse-Argonne" "Fitzgerald" "Apache" "Dague Delta" "Libérateur" "Engoulevent" "Zumwalt" "Tippecanoe" "Saint Mihiel" "Stéret" "Phacochère" "Porteur" "Littoral" "Fletcher" "Sinjar" "Périmètre De Pusan ​​" "Sentinelle" "Cyclone" "Pinckney" "Coup De Foudre" "Argus" "Hamburger Colline" "Martin-Pêcheur" "Saratoga" "Benfold" "Nimitz" "Higgin" "Moustique" "Rayon Céleste" "Skyraider" "Colline Du Bunker" "Chat D'Ours" "Santiago De Cuba" "Faucon Noir" "Fantôme" "Baie De Manille" "Baïji"
+		}
+
+		destroyer = {
+			"Talon" "Gérald R. Ford" "Truxtune" "Furie" "Fantôme Ii" "Sentinelle" "Vindicateur" "Victoria" "Ticonderoga" "Pacificateur" "Enfant" "Combattant De La Liberté" "Jean Finn" "Sampson" "Littoral" "Luciole" "Albatros" "Rôdeur" "William P. Lawrence" "Benfold" "Chaton Faucon" "Mahon" "Chat D'Ours" "Lancastre" "Merle Noir" "Hercule" "Paul F.Foster" "Corsaire" "Pie-Grièche" "Gridley" "Radford" "Spartiate" "Boone" "Décatur" "Ticonderoga" "Chat Sauvage" "Milius" "Stratotanker" "Chasseur D'Étoiles" "Stockdale" "Maraudeur" "Mcinerney" "Mc Faul" "Sabre" "États-Unis" "Ingraham" "Carney" "Bainbridge" "Busard" "Dewey" "Charles F.Adams" "Pinckney" "Coup De Foudre Ii" "Zumwalt" "Moustique" "Balbuzard Pêcheur" "Indépendance" "Viking" "Mohawk" "Engoulevent" "Spruce" "Belknap" "Staggerwing" "Arthur W. Radford" "Californie" "O'Kane" "Pierreson" "Raphaël Peralta" "Caribous" "Maître Du Ciel" "Foudre" "Sauvage" "Mahon" "Intrus" "Corbeau" "Poissonnerie" "Skyraider" "Chat" "Farragut" "Huey" "Ruben James" "Étoile Filante" "Gardien" "Banshee" "Allen M. Sumner" "Dévastateur" "Coquin" "Bruit" "Feu D'Étoile" "Skytrain" "Mèches" "Baie Mobile" "Liberté" "Libérateur" "Antiétam" "Higgin" "Bobcat" "Wadworth" "Zumwalt" "Entreprise" "Cyclone" "Engrenage" "Veuve Noire" "Constitution" "Location" "Amérique" "Faucon Marin" "Spruce" "Jean Finn" "Plongeur De L'Enfer" "Porteur" "Chafé" "Tach" "Wayne E. Meyer" "Curtis Wilbur" "Zumwalt" "Apache" "Gary" "Rapace" "Phacochère" "Puma" "Bronco" "Frelon" "John S. Mccain" "Vigilante" "Skyhawk" "Libellule" "Aigle" "Enfant" "Les Sullivan" "Arleigh Burke" "Scout" "Gridley" "Voie Aérienne" "Guêpe" "Oie Sauvage" "Forrest Sherman" "Momson" "Coontz" "Starlifter" "Gratte-Ciel" "Faucon" "Arleigh Burke" "Stéret" "Spruce" "Porteur" "Farragut" "Fitzgerald" "Virginie" "Michel Monsoor" "Faucon De Guerre" "Ravages" "Rayon Céleste" "Intrépide" "Mitscher" "Chef De Tonnerre" "Sampson" "Croisé" "Higgin" "Kiowa" "Nitze" "Porteur" "Super Sabre" "Boutique" "Envahisseur" "Démon" "Dague Delta" "Cyclone" "Tigre" "Thomas Hudner" "Lenah H. Sutcliffe Higbee" "Sampson" "Pierreson" "Stratoforteresse" "Décatur" "Michel Murphy" "Col" "Fou De Bassan" "Clémson" "Mustang" "Nimitz" "Kaufmann" "Faucon Noir" "Ingraham" "Dragon" "Forrest Sherman" "Constellation" "Texane" "Liberté" "Lassen" "Enfant" "Léa" "Chosin" "Maçon" "Nicolas" "Barry" "Samuel B. Roberts" "Argus" "Arleigh Burke" "Stuka" "Spruce" "Oliver Hazard Perry" "Coup De Foudre" "Faucon Combattant" "Mustin" "Puma" "Vaudou" "Tucker" "Hellcat" "Salle John L." "Carr" "Guerrier Céleste" "Mitchell" "Stethem" "Paul Ignace" "Fantôme" "Skywatch" "Super Frelon" "Fletcher" "Préble" "Panthère" "Zumwalt" "Cobra" "Halsey" "Stockdale" "Golfe De Leyte" "Howard" "Martin-Pêcheur" "Lancier" "Jean-Paul Jones" "Invincible"
+		}
+
+		cruiser = {
+			"Bradley" "Dewey" "Pershing" "Abram" "Spruce" "Mccrystal" "Powell" "Ridgway" "Lee" "Arnold" "Subvention" "Milley" "Sheridan" "Farragut" "Westmoreland" "Matti" "Clark " "Odierno" "Le May" "Roi" "Pétraeus" "Shermann" "Schwarzkopf" "Patton" "Mac Arthur" "Francs" "Johnstone" "Meade" "Dunford" "Halsey" "Eichelberger" "Nimitz"
+		}
+		StrikeCruiser = {
+			""
+		}
+		Battlecruiser = {
+			"Patton" "Mac Arthur" "Nimitz" "Halsey" "Bradley" "Arnold" "Pershing" "Lee" "Subvention" "Shermann" "Johnstone" "Sheridan" "Meade" "Farragut" "Dewey" "Roi" " Spruce" "Clark" "Eichelberger" "Le May" "Ridgway" "Westmoreland" "Abram" "Schwarzkopf" "Powell" "Francs" "Mccrystal" "Pétraeus" "Odierno" "Matti" "Dunford" "Milley"
+		}
+		battleship = {
+			"Washington" "Adam" "Jefferson" "Madison" "Monroë" "Jackson" "Van Buren" "Harrisson" "Tyler" "Polk" "Taylor" "Fillmore" "Percer" "Buchanan" "Lincoln" "Johnson" " Subvention" "Hayes" "Garfield" "Arthur" "Cleveland" "Mckinley" "Roosevelt" "Taft" "Wilson" "Harding" "Coolide" "Aspirateur" "Truman" "Eisenhower" "Kennedy" "Nexon" "Ford" "Carter" "Reagan" "Buisson" "Clinton"
+		}
+		Carrier = {
+			"Carter" "Wilson" "Taylor" "Lincoln" "Nexon" "Adam" "Polk" "Fillmore" "Clinton" "Jefferson" "Tyler" "Kennedy" "Percer" "Jackson" "Arthur" "Washington" "Eisenhower " "Aspirateur" "Monroë" "Reagan" "Madison" "Buchanan" "Van Buren" "Hayes" "Mckinley" "Buisson" "Taft" "Truman" "Garfield" "Coolide" "Harding" "Johnson" "Roosevelt" "Subvention" "Cleveland" "Ford" "Harrisson"
+		}
+		Dreadnought = {
+			"Percer" "Polk" "Subvention" "Tyler" "Hayes" "Buisson" "Fillmore" "Arthur" "Coolide" "Van Buren" "Johnson" "Monroë" "Carter" "Washington" "Wilson" "Eisenhower" " Buchanan" "Lincoln" "Ford" "Roosevelt" "Aspirateur" "Madison" "Kennedy" "Adam" "Jefferson" "Jackson" "Garfield" "Taylor" "Nexon" "Clinton" "Harding" "Harrisson" "Cleveland" "Mckinley" "Reagan" "Truman" "Taft"
+		}
+		titan = {
+			"Reagan" "Clinton" "Percer" "Jefferson" "Arthur" "Buisson" "Washington" "Aspirateur" "Johnson" "Harrisson" "Lincoln" "Jackson" "Nexon" "Carter" "Hayes" "Wilson" "Tyler " " Polk " " Truman " " Taylor " " Garfield " " Adam " " Taft " " Van Buren " " Madison " " Harding " " Roosevelt " " Buchanan " " Ford " " McKinley " " Cleveland " " Fillmore " " Coolide " "Monroë" "Kennedy" "Subvention" "Eisenhower"
+		}
+		Flagship = {
+			"Blackburn" "Bonne" "Foraker" "Saint Elie" "Denali"
+		}
+		colossus = {
+			"Denali" "Saint Elie" "Foraker" "Bonne" "Blackburn"
+		}
+		juggernaut = {
+			"Foraker" "Blackburn" "Denali" "Saint Elie" "Bonne"
+		}
+
+		constructor = {
+			"Mojave" "Sanoran" "Alvor" "Sables Blancs" "Roche Noire" "Chihuahua" "Sanford" "Churchill" "Boulanger" "Bonne"
+		}
+		colonizer = {
+			"Iliamna" "Tahoe" "Tête Plate" "Sainte-Claire" "Ontario" "Pontchartrain" "Érié" "Champlain" "Hurons" "Supérieur" "Michigan" "Tête D'Orignal"
+		}
+		sponsored_colonizer = {
+		"Pomme" "Microsoft" "Alphabet" "Méta" "Tesla" "Dmla" "Nvidia" "Intel" "Version" "Oracle" "Netflix"
+		}
+		science = {
+			"Newton" "Cric" "Watson" "Qui Fuit" "Tesla" "Kepler" "Colportage" "Pasteur" "Hubble" "Einstein" "Galilée" "Oppenheimer" "Bohr" "Feynmann" "Sagan" "Curié" "Franklin" "Maxwell" "Édison" "Darwin"
+		}
+		explorationship = {
+			"Meriwether Lewis" "Guillaume Clark" "John Wesley Powell" "Daniel Boone" "Robert Peary" "Ernest Shackleton" "Ferdinand Magellan" "Richard E. Byrd" "John Muir" "Charles Lindberg"
+		}
+		transport = {
+			"Expédition"
+		}
+
+		military_station_small = {
+			"Poste De Combat"
+		}
+
+		military_station_medium = {
+			"Fort"
+		}
+
+		military_station_large = {
+			"Base"
+		}
+
+		ion_cannon = {
+			"Paladin"
+		}
+
+		xl_cannon = {
+			"Croisé"
+		}
+	}
+
+	fleet_names = {
+		random_names = {
+			""
+		}
+		sequential_name = "Osiris_American_Fleetnames_Ord"
+	}
+
+	army_names = {
+
+		machine_defense = {
+			sequential_name = "Osiris_American_Machinedefense_Ord"
+		}
+
+		machine_assault_1 = {
+			sequential_name = "Osiris_American_Machineassault1_Ord"
+		}
+
+		machine_assault_2 = {
+			sequential_name = "Osiris_American_Machineassault2_Ord"
+		}
+
+		machine_assault_3 = {
+			sequential_name = "Osiris_American_Machineassault3_Ord"
+		}
+
+		defense_army = {
+			sequential_name = "Osiris_American_Defensearmy_Ord"
+		}
+
+		assault_army = {
+			sequential_name = "Osiris_American_Assaultarmy_Ord"
+		}
+
+		slave_army = {
+			sequential_name = "Osiris_American_Slavearmy_Ord"
+		}
+
+		clone_army = {
+			sequential_name = "Osiris_American_Clonearmy_Ord"
+		}
+
+		undead_army = {
+			sequential_name = "Osiris_American_Undeadarmy_Ord"
+		}
+
+		robotic_army = {
+			sequential_name = "Osiris_American_Roboticarmy_Ord"
+		}
+
+		robotic_defense_army = {
+			sequential_name = "Osiris_American_Roboticdefensearmy_Ord"
+		}
+
+		psionic_army = {
+			sequential_name = "Osiris_American_Psionicarmy_Ord"
+		}
+
+		xenomorph_army = {
+			sequential_name = "Osiris_American_Xenomorpharmy_Ord"
+		}
+
+		gene_warrior_army = {
+			sequential_name = "Osiris_American_Genewarriorarmy_Ord"
+		}
+
+		occupation_army = {
+			sequential_name = "Osiris_American_Occupationarmy_Ord"
+		}
+
+		robotic_occupation_army = {
+			sequential_name = "Osiris_American_Roboticoccupationarmy_Ord"
+		}
+
+		primitive_army = {
+			sequential_name = "Osiris_American_Primitivearmy_Ord"
+		}
+		industrial_army = {
+			sequential_name = "Osiris_American_Industrialarmy_Ord"
+		}
+		postatomic_army = {
+			sequential_name = "Osiris_American_Postatomicarmy_Ord"
+		}
+	}
+
+	planet_names = {
+
+		generic = {
+			names = {
+				"Auguste" "Topeka" "Huntington" "Concorde" "Charleston" "Bismarck" "Douvres" "Montrose" "Dubuque" "Alamogordo" "Montpellier" "Indianapolis" "Colombie" "Providence" "Tallahassee" "Lincoln" "Cheyenne" " "Jackson" "Mouillage" "Montgomery"
+			}
+		}
+
+		pc_desert = {
+			names = {
+				"Phénix" "Las Vegas" "Tuson" "El Paso" "Mésa" "Chandler" "Scottdale" "Glendal" "Henderson" "Gilbert" "Surprise" "Péoria" "Yuma" "La Quinta" "Ville Cathédrale" "Buckeye" "Grande Maison" "Victorville" "Lancastre" "Palmdale"
+			}
+		}
+
+		pc_tropical = {
+			 names = {
+				"Saint-Jean" "Houston" "Miami" "Tampa" "San-Antonio" "La Nouvelle-Orléans" "Orlando" "Jacksonville" "Charlotte Amélie" "Village De Saint-Domingue" "Saint-Jean Capistrano" "Saint Louis Croix" "Saint Jean Baptiste" "Saint-Pierre" "Higuey" "San-Fernando" "Saint-Germain" "Véga Bas" "Mayaguez" "Caroline"
+			}
+		}
+
+		pc_arid = {
+			names = {
+				"Phénix" "Tuson" "Las-Vegas" "Albuquerque" "El Paso" "Tableau" "Chandler" "Scottdale" "Glendale" "Henderson" "Temp" "Gilbert" "Surprise" "Péoria" "Yuma" "Avondale" "Goodyear" "Buckeye" "Grande Maison" "Saint Bernardin"
+			}
+		}
+
+		pc_continental = {
+			names = {
+				"New-York" "Los Angeles" "Chicago" "Houston" "Philadelphie" "San-Antonio" "San Diego" "Dallas" "San José" "Austin" "Jacksonville" "Fort Worth" "Colomb" "San Fransisco " "Charlotte" "Indianapolis" "Seattle" "Denver" "Washington" "Boston"
+			}
+		}
+
+		pc_gaia = {
+			names = {
+				"Yellowstone" "Yosémite" "Sion" "Acadie" "Glacier" "Canyon De Bryce" "Arches" "Arbre De Josué" "Olympique" "Grand Téton" "Canyonlands" "Séquoia" "Séquoia" "Everglades" "Denali" "Shenandoah" "Grand Virage" "Baie Des Glaciers" "Haleakala" "Saguaro"
+			}
+		}
+
+		pc_ocean = {
+			names = {
+				"Honolulu" "Saint-Pétersbourg" "Hialeah" "Port Sainte-Lucie" "Galveston" "Grand" "Ferme" "Titusville" "Merritt" "Marathon" "Islamorada" "Côtes De Miami" "Baie De Palmetto" "Clé De Virginie" "Pinède" "Key Biscayne" "Pignons De Corail" "Port De Bal" "Côté Surf" "Port De La Baie"
+			}
+		}
+
+		pc_tundra = {
+			names = {
+				""
+			}
+		}
+
+		pc_arctic = {
+			names = {
+				"Mouillage" "Fairbanks" "Juneau" "Rivière Aigle" "Wasilla" "Palmier" "Ketchikan" "Kodiak" "Béthel" "Homère" "Sitka" "Kenaï" "Soldotna" "Pôle Nord" "Utqiagvík" "Valdez" "Seward" "Nikski" "Collège" "Cordoue"
+			}
+		}
+
+		pc_savannah = {
+			names = {
+				"Wichita" "Omaha" "Toulouse" "Kansas City" "Minnéapolis" "Saint-Paul" "Lincoln" "Chutes Sioux" "Des Moines" "Fargo" "Grande Prairie" "Springfield" "Topeka" "Chutes De Wichita" "Bismarck" "Rapides Des Cèdres" "Waterloo" "Amès" "Fargo" "Rochester"
+			}
+		}
+
+		pc_alpine = {
+			names = {
+				"Nouveau Denver" "Seattle" "Portland" "Ville De Sel" "Las Vegas" "Sources Du Colorado" "Boisé" "Spokane" "Aurore" "Fort Collins" "Vancouver" "Eugène" "Bellevue" "Réno" "Salem" "Pocatello" "Facturations" "Oden" "Missoula" "Hélène"
+			}
+		}
+
+	}
+
+	character_names = {
+
+		names1 = {
+			first_names_male = {
+				"Derrick" "Chris" "Qassim" "Cadre" "Terrence" "Adahy" "Christophe" "Félix" "Pratique" "Élie" "Paul" "Maurice" "Orlando" "Kasa" "Minal" "Tristan" "Ken " "Imran" "Joseph" "Aaron" "Girish" "Samuel" "Rodrigue" "Cameron" "Paul" "Akour" "Oscar" "Hassan" "Edouard" "Basim" "Simon" "César" "Ryan" " Makaïo" "Salvador" "Av" "Douglas" "Atoul" "Denis" "Dév" "Aponivi" "Edvin" "Serge" "Jeffrey" "Askuwheteau" "Chosovi" "Ignace" "Avonaco" "Antoine" "Mohan" « Javon » « Deandré » « Roger » « Atius » « Raj » « Lenmana » « Hector » « Jarell » « Kichan » « Devon » « Aaryen » « Keokuk » « Chogan » « Charles » « Javier » « Dheeraj » « Manuel " "Gonzalo" "José" "Jamar" "Nicolas" "Léon" "Antoine" "Thomas" "Lion" "Éric" "Kolby" "Guillaume" "Liam" "Sami" "Aida" "Ben" "Nilesh" " Anil" "Ernesto" "Amol" "Dylan" "Jeff" "Daniel" "Adarsh" "Travis" "Pierre" "Facture" "Nasser" "Chankoowashtay" "Indice" "Andy" "Mickey Mouse" "Lomasi" "Marcus " "Chaton" "Donovan" "Raymond" "Catori" "Gaurav" "Lamer" "Hamza" "Hritik" "Omar" "Nina" "Haloke" "Rahul" "Hiamovi" "Augustin" "Anirudh" ​​"Mazen" "Amar" "Don" "Rahim" "Diégo" "Karim" "Pierre" "Kangée" "Ashok" "Émir" "Daquan" "Arthur" "Éthan" "Ali" "Grand-Père" "Kenyan" "Jagdish" "Pays" "Steven" "Sébastien" "Ramón" "Alfredo" "Zacharie" "Sean" "Delsine" "Jordanie" "Jermaine" "Chaitanya" "Josh" "Kajika" "Robert" "Galilée" "Jean" "Rodney" "Ferdinand" "Koush" "Jean" "Néel" "Aravind" "Gabriel" "Brian" "Jamal" "Dereck" "Olivier" "Malik" "Jason" "Terrell " " Rachid " " Alexandre " " Tarek " " Edouard " " Álvaro " " Gilberto " " Marque " " Alawa " " Brandon " " Jalal " " Jimmy " " Dhrûv " " Bilal " " Georges " " Armando " " Logane " " Isaïe" "Rajeev" "Michel" "Kévin" "Kenneth" "Benito" "Henri" "Philippe" "Jonathan" "Ivan" "Abi" "Jésus" "Rakech" "Carmélo" "Mario" "Raphaël" "Alexandre" "André" "Caleb" "Vincent" "Jacques" "Ismaël" "Anouar" "Yagou" "Honovi" "Chrétien" "Dékanawida" "Dwayne" "Damien" "François" "Kiona" "Hania" "Treyvon" "Joseph " "Darnel" "Richard" "Ibrahim" "Étienne" "Laurent" "Justine" "Victor" "Nascha" "André" "Patrick" "Carlos" "Amman" "Ankit" "Thomas" "André" "Jitendra" "Matthieu" "Tyler" "David" "Mustapha" "Louis" "Yousef" "Etchemin" "Isi" "Jaï" "Rashad" "Montrell" "Réginald " " "Aarav" "Lance" "Étienne" "Benjamin" "Léonard" "Khalid" "Jerry" "Franck" "Jorge" "Alphonse" "Mukesh" "Robert" "Demarcus" "Naveen" "Joaquín" "Anand" "Juillet" "Alain" "Oscéole" "Michel" "Eugène" "Inole" "Marquis" "Deshawn" "Kelvin" "Alberto" "Tchétan" "Arjun" "Nestor" "Jérémie" "Jack" "Malik" "Lucas " "Jérémie" "Nikhil" "Xavier" "Bhouvan" "Jevon" "Philippe" "Aleckcheahoosh" "Shaw" "Chenoa" "Kemé" "Théodore" "Café" "Fayçal" "Cholène" "Jacques" "Darchan" " Nitine" " "Citlali" "Ayana" "Kitchi" "Henri" "Aditya" "Tyrel" "Pranav" "Miwok" "Nathaniel" "Guillaume" "Manique" "Jayant" "Alexandre" "Deepack" "Christophe" "Chépi " "Maya" "Josué" "Timothée" "Ricardo" "Adam" "Gérard" "Cendré" "Énola" "Scott" "Keith" "Adolphe" "Hotah" "Aiden" "Harrisson"
+			}
+			first_names_female = {
+				"Shania" "Isabelle" "Tara" "Theresa" "Leshaw" "Lulu" "Julienne" "Michigan" "Beyoncé" "Sweet" "Zara" "Chahrazad" "Dakota" "Aditi" "Kiane" "Haruka" "Raelyn " "Inès" "Radhika" "Brianne" "Cheyenne" "Jade" "Rania" "Rosalinde" "Awentie" "Rubis" "Chanel" "Ebony" "Stella" "Sunki" "Mariam" "Aria" "Nisha" Victoria " "Sierra" "Carla" "Kaori" "Misaki" "Chie" "Mei" "Helen" "Grace" "Penelope" "Amy" "Kaylee" "Isabelle" "Naomi" "Baily" "Madison" "Sara" Carmen , Camille, Akanksha, Zainab, Leila, Kajal, Sia, Abigail, Ray, Nathalie, Liliane, Alexis, Ayana, Caroline, Eliane, Tallulah, Addison " "Leah" "Evelyne" "Star" "Eyes" "Myriam" "Tama " "Shirine" "Ava" "Lila" "Aziza" "Amélie" "Diamond" "Samantha" "Ariane" "Arielle" "Chloe" Skylar" "Faith" "Sequoia" "Emeri" "Ayana" "Valentine" "Oliver " "Avery" "Ayumi" "Mahaska" "Khadija" "Danika" "Oliver" "Aïko" "Kayla" "Hitomi" "Maya" "Jasmine" "Alana" "Latoya" "Rhea" "Amber" "Noriko" " Makayla" "Geneviève" "Yoco" "Halima" "Elijah" "Emily" "Dalila" Anna, Gaby, Miyuki, Megane, Esha, Julia, Anouchka, Pria, Halona, ​​​​Arts, Fatima, Kimimela, Autumn, Anne, Kyla, Catherine, Koumiko, "Neha" "Samira" "Jada" "Aicha" "Charlotte " "Winona" "Grace" "Khushi" "Harpiste" "Aliyah" "Lupita" "Joséphine" "Reagan" "Anjali" "Kavya" "Morgane" "Gloria Claire "Piper" "Jazmin" "Sadi" "Lucie" " Amira" "Peyton" "Tesse" "Chilah" "Rylee" "Noisette" "Emilie" "Hannah" "Kaya" "Yasmine" "Devika" Onawa" "Mia" "Gabrielle" "Talia" "Sophia" "Cachemire" " Keiko" "Lucie" "Sel" "Angelina Jolie" "Elu" "Kaitlyn" "Kimiko" "Sophie" "Saira" "Yumi" "Nia" "Ai" "Jeanne" "Marisol" "Gauri" "Gisele" "Marie " "Mira" "Hikari" "Chilali" "Sérénité" "Salma" "Justaucorps" "Ashanti" "Nadia" "Nora" "Nour" Pilier" "Poja" "Audrey" "Rachel" "Aishwarya" "Mariah" "Elisabeth " "Akira" "Bella" "Aubrey" "Sophie" "Malila" "Emma" "Alisha" "Aliénor" "Kennedy" "Elle" "Ishani" "Lier" "Nova" "Quinn" "Violet" "Brooke" " Hope" "Ciara" "Sakura" "Conchita" "Jamila" "Monique" "Scarlette" "Emi" "Rina" "Lys" "Trinity" "Selena Gomez" "Josie" "Tala" "Soraya" "Anis" "Zoe" "Hope" "Diane" "Layla - Je n'ai pas peur (vidéo musicale officielle) "
+			}
+			second_names = {
+				"Abdelaziz" "Adam" "Ahmed" "Ahuja" "Al-Bashir" "Al Fayed" "Al-Hussein" "Al-Masri" "Al-Saoud" "Al-Zahrani" "Ali" "Álvarez" "Anderson" "Aôki" "Badaoui" "Boulanger" "Banques" "Barajas" "Aboyeur" "Barnes" "Begay" "Cloche" "Bennett" "Bhatnagar" "Noir" "Ours Noir" "Oiseau Bleu" "Marron" "Ours Brun" "Cabrera" "Caddo" "Campbell" "Carter" "Château" "Chakraborti" "Chéri" "Chen" "Cheyenne" "Chippewa" "Choi" "Clark" "Nuage" "Cochise" "Cohen" "Collins" "Tonnelier" "Pied D'Oie" "Croix" "Das" "Davis" "Cerf" "Deschene" "Díaz" "Biche" "Couteau Émoussé" "Aigle" "Edward" "El-Amin" "Wapiti" "Ellis" "Evans" "Faroqi" "Fernández" "Pêcheur" "Pêcheur" "Flores" "Franklin" "García" "Gardien" "Géronimo" "Ghani" "Fantôme" "Gomez" "Gonzalez" "Graham" "Loup Gris" "Vert" "Guerrero" "Gutiérrez" "Hadad" "Salle" "Hamilton" "Harris" "Hernandez" "Colline" "Hollande" "Hu" "Huang" "Hugues" "Hussein" "Ingramme" "Iyer" "Jabari" "Jackson" "Jacob" "Jaïn" "Jacques" "Jenkins" "Jiménez" "Johnson" "Jones" "Kang" "Kapoor" "Kelly" "Khalifa" "Kim" "Roi" "Chevalier" "Lal" "Lee" "Lewis" "Li" "Lin" "Liu" "Longue" "López" "Malik" "Martine" "Martinez" "Maçon" "Matthieu" "Mcmillan" "Médine" "Mehra" "Mitchell" "Moraux" "Moreno" "Murphy" "Naïr" "Nasser" "Nelson" "Nguyen" "Omar" "Ortiz" "Parker" "Patel" "Patel" "Pérez" "Phillips" "Powell" "Qureshi" "Rahman" "Raj" "Ramírez" "Reyes" "Richardson" "Rivera" "Robinson" "Rodríguez" "Romero" "Ross" "Ruiz" "Dit" "Sanchez" "Singh" "Thakur" "Uday" "Varma" "Yadav" "Zaman"
+			}
+
+			regnal_first_names_male = {
+				""
+			}
+
+			regnal_first_names_female = {
+				""
+
+			}
+			regnal_second_names = {
+				""
+			}
+		}
+	}
+}

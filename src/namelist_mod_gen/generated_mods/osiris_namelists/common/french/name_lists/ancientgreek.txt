@@ -1,0 +1,267 @@
+﻿### "Grec Ancien (Onl)"
+### Created by "Osiris"
+
+"Osiris"_ancientgreek = {
+
+	ship_names = {
+
+		corvette = {
+			"Téléphone D'Harmony" "Calchas" "Ulysse" "Souffle D'Adrestia" "Némée" "Cadmus" "Voix D'Alala" "Dague D'Enyo" "Veillée D'Antéros" "Monture D'Enyo" "Esprit D'Amour" "Commande De Nike" "Sarissa De Makhai" "Nike" "Échémus" "Vision De Nike" "Philoctète" "Voix De Kydoimos" "Promakhos" "Doru De Nike" "Agapénor" "Volonté D'Harmonie" "Voix D'Eris" "Lance D'Alala" "Pélée" "Sarisse D'Eris" "Vigile De Deimos" "Commandement D'Alala" "Parole D'Eris" "Monture De Deimos" "Main De Phobos" "Sarisse D'Alala" "Épée De Deimos" "Esprit Du Bien" "Veillée D'Adrestia" "Monture D'Alala" "Discorde" "L'Épée De Phobos" "Les Copies De Makhai" "L'Épée De Makhai" "Persée" "Volonté D'Alala" "Le Javelot De Nike" "Iolaos" "Adresse" "Main De Makhai" "Javelot D'Eris" "Astacus" "Nike" "Char De Makhai" "Bouclier D'Eris" "Poing D'Adrestia" "Loxies" "Veillée De Kydoimos" "Souffle D'Harmonie" "Cénéus" "L'Épée De Nike" "Javelot D'Enyo" "Main D'Adrestia" "Vision De Makhaï" "Iphitus" "Commandement De L'Harmonie" "Elatus" "Doru De Makhai" "Androgène" "Le Poing De Nike" "Soteria" "Char D'Antéros" "Copie De Nike" "Flèches" "Esprit D'Antéros" "Athéna Nike" "Épopée" "La Colère De Nike" "Asclépios" "Haplon D'Adrestia" "Lance D'Adrestia" "Commande D'Addressia" "Aristée" "Doru De Deimos" "Cycnus" "Veillée De L'Harmonie" "Char D'Eris" "Sarissa De Kydoimos" "Main De L'Harmonie" "Rage De Makhai" "Sarisse De Phobos" "Diomède" "Courage De L'Harmonie" "Bouclier De Makhai" "Voix D'Antéros" "Héraclès" "Achille" "Souffle De Deimos" "Déméter Érinys" "Main De Nike" "Almos" "Pronoïa" "Thanatos" "Phobos" "Philémon" "Esprit De Makhai" "Dague D'Antéros" "Poing D'Alala" "Icare" "Porus" "Ajax" "Metus" "Volonté D'Adrestia" "Bouclier De L'Harmonie" "Iphiclès" "Aïas" "Flèche De Makhai" "Épée D'Harmonie" "Dague De Makhai" "Lance De Deimos" "Lance De L'Harmonie" "Enyale" "Laodocus" "Main D'Alala" "Esprit D'Harmonie" "Doru D'Enyo" "Kakia" "Téléphone De Makhai" "Dague De Kydoimos" "Phonoi" "Flèche De Nike" "Veillée D'Alala" "Xiphon De Deimos" "Doru D'Eris" "Javelot De Makhai" "Poing D'Eris" "Xiphon D'Antéros" "Flèche D'Harmonie" "Le Chariot De Nike" "Haplon De Phobos" "Courage D'Enyo" "Dinlas" "Javelot D'Antéros" "Myrmidon" "Commandement De Makhai" "Rage De Kydoimos" "Déucalion" "Char De Deimos" "Léontée" "Anicet" "Esprit D'Adrestia" "Actéon" "Sarisse D'Antéros" "Démoléon" "Proixis" "Déiphobe" "Haplon D'Enyo" "Volonté D'Harmonie" "Rage De Deimos" "Parole D'Harmonie" "Vision Du Bien" "Vision De Deimos" "Échetlus" "Oileus" "Commande D'Antéros" "La Colère D'Enyo" "Lance De Makhai" "Haplon De Deimos" "Mélampus" "Lycomède" "Vigile De Nike" "Iasus" "Capaneus" "Frappe De Makhai" "Thrasos" "Épée D'Alala" "La Colère D'Eris" "Xiphon De Nike" "Commande D'Enyo" "Corythus" "Flèche D'Adrestia" "Ascalaphus" "Bourgeons" "Dédale" "Bouclier D'Adrestia" "Eurytion" "Makhaï" "Char De Phobos" "Souffle D'Alala" "Vision D'Alala" "Dague De Phobos" "Patrocle" "Harmonie" "Haplon D'Antéros" "Grève De Phobos" "Lysse" "Rage D'Harmonie" "Mot De Phobos" "Commande De Phobos" "Monture D'Harmonie" "Mot De L'Anteros" "Les Copies D'Eris" "Nomos" "Dague De Deimos" "Poing D'Harmonie" "Dryops" "Grève De Kydoimos" "Javelot D'Adrestia" "Astérion" "Parole Des Autres" "Mécistée" "Char D'Alala" "Jason" "Testament De Kydoimos" "Courage D'Eris" "Énée" "Flèche D'Antéros" "Dolos" "La Grève D'Adrestia" "Voix D'Adrestia" "Bouclier De Phobos" "Ialmenus" "Vue De Phobos" "Frappe D'Eris" "Mot De Deimos" "Haplon De Makhai" "Volonté De Phobos" "Monture D'Eris" "Cébrions" "Poing D'Antéros" "Monture De Nike" "Idas" "Alastor" "Courage De Deimos" "Parole D'Adrestia" "Orphée" "Palioxis" "Vision D'Éris" "Doru De Kydoimos" "Frappe D'Enyo" "Souffle De Nike" "La Colère De Phobos" "Esprit De Phobos" "Dague D'Eris" "Praxis" "Volonté De Nike" "Frappe D'Antéros" "Kydoimos" "L'Épée D'Eris" "Poing De Kydoimos" "Thésée" "Gorgophone" "Poignard De Nike" "Disons" "Volonté De Phobos" "Main D'Antéros" "Volonté De Makhai" "Méléagre" "Ptochéie" "Char D'Enyo" "La Colère D'Adrestia""Téléphone D'Adrestia" "Bouclier D'Antéros" "Main De Deimos" "Souffle Du Bien" "Courage D'Antéros" "Testament D'Adrestia" "Promaque" "Souffle D'Eris" "Alke" "Ker" "Testament De Kydoimos" "Lance De Kydoimos" "Souffle D'Antéros" "Voix D'Enyo" "Déimos" "Doru De Phobos" "Lance D'Enyo" "Doru D'Adrestia" "La Grève De Nike" "Géréniaus" "Flèche De Phobos" "Dague D'Adrestia" "Taraxippe" "Éionée" "La Colère D'Alala" "Javelot De Phobos" "Lance D'Antéros" "Monture D'Anteros" "Poing De Phobos" "Oenomaus" "Tryphon" "Flèche De Deimos" "Monture De Makhai" "Hylas" "Vision D'Antéros" "Lance De Nike" "Manies" "Sarisse D'Adrestia" "Bouclier De Nike" "Esprit De Nike" "Kydoimos" "Enyo" "Sarissa D'Enyo" "Xiphon D'Eris" "Monture De Phobos" "Doru D'Alala" "Char D'Adrestia" "Peitho" "Bouclier D'Enyo" "Bellérophon" "Haplon D'Eris" "Iphiclus" "Doru D'Harmonia" "Char D'Harmonia" "Javelot D'Alala" "Javelot D'Harmonia" "Iolcos" "Monture D'Adrestia" "Proixis" "Poing De Makhai" "Eurypyle" "Ennomus" "Main D'Enyo" "Veillée D'Enyo" "Courage De Kydoimos" "Parole De Makhai" "Voix De Nike" "Commande De Deimos" "Épée" "Asclépios" "Volonté De Nike" "Xuthus" "Bouclier De Deimos" "Kopis De Kydoimos" "Volonté De Deimos" "Castor" "Flèche D'Eris" "Momus" "Courage De Phobos" "Esprit D'Eris" "Éris" "Courage De Nike" "Chloris" "Phobos" "Volonté D'Eris" "Haplon De Kydoimos" "Amphitryon" "Kopis D'Harmonia" "Poing De Deimos" "Homados" "Peitharchie" "Grève De Deimos" "Lance De Phobos" "Amphiaraus" "Mopsus" "Épée D'Adrestia" "Kopis De Deimos" "Souffle De Phobos" "Éryx" "Commande D'Eris" "Main D'Eris" "Ancée" "Oizys" "Nestor" "Xiphon De Kydoimos" "Polémos" "Lampades" "Volonté D'Enyo" "Esprit De Kydoimos" "Polynice" "Souffle De Makhai" "Haplon De Nike" "Stix" "Xiphon D'Enyo" "Doru D'Antéros" "Antiloque" "Bouclier De Kydoimos" "Veillée D'Eris" "Vision D'Harmonie" "Zéthus" "Heimdal" "Hybris" "Monture De Kydoimos" "Xiphon D'Alala" "Phème" "Palamède" "Litae" "Digue" "Voix De Phobos" "Voix De Makhai" "Dague D'Alala" "Parole D'Enyo" "Volonté D'Eris" "Javelot De Deimos" "Kopis D'Antéros" "Vision De Kydoimos" "Kopis De Phobos" "Ioke" "Main De Kydoimos" "Iapis" "Bouclier D'Alala" "Javelot De Kydoimos" "Atalante" "Mot De Kydoimos" "Kopis D'Adrestia" "Volonté D'Alala" "Clytius" "Courage De Makhai" "Courage D'Alala" "Éris" "Évandre" "Agamemnon" "Courage D'Adrestia" "Veillée De Phobos" "Aristée" "Hormé" "Cybèle" "Vision D'Adrestia" "Soteria" "Chrysippe" "Ménélas" "Épée D'Antéros" "Adraste" "Souffle De Kydoimos" "Autolycus" "Palioxis" "Sarisse De Deimos" "Épée De Kydoimos" "Veillée De Makhai" "Volonté De Makhai" "Euryale" "Testament De Deimos" "Lance D'Eris" "Flèche D'Alala" "Moros" "Phénix" "Zélos" "Esprit De Deimos" "Grève D'Harmonia" "Volonté D'Antéros" "Flèche D'Enyo" "Alala" "Kopis D'Enyo" "Glaucus" "Hécate" "Haplon D'Harmonia" "Pallas" "Calliope" "Biais" "Kopis D'Alala" "Voix De Deimos" "Palioxis" "Télamon" "Rage D'Antéros" "Xiphon De Phobos" "La Grève D'Alala" "Commandement De Kydoimos" "Dague D'Harmonia" "Volonté D'Enyo" "Nirée" "Sarissa De Nike" "Bia" "Haplon D'Alala" "Kydoimos" "Glaucos" "Flèche De Kydoimos" "Char De Kydoimos" "Antéros" "Hector" "Volonté D'Antéros" "Voix D'Harmonie" "Tydeus" "Mot De Nike" "Sarisse D'Harmonia" "Poing D'Enyo" "Tlépolème" "L'Épée D'Enyo"
+		}
+
+		destroyer = {
+			"Téléphone D'Harmony" "Calchas" "Ulysse" "Souffle D'Adrestia" "Némée" "Cadmus" "Voix D'Alala" "Dague D'Enyo" "Veillée D'Antéros" "Monture D'Enyo" "Esprit D'Amour" "Commande De Nike" "Sarissa De Makhai" "Nike" "Échémus" "Vision De Nike" "Philoctète" "Voix De Kydoimos" "Promakhos" "Doru De Nike" "Agapénor" "Volonté D'Harmonie" "Voix D'Eris" "Lance D'Alala" "Pélée" "Sarisse D'Eris" "Vigile De Deimos" "Commandement D'Alala" "Parole D'Eris" "Monture De Deimos" "Main De Phobos" "Sarisse D'Alala" "Épée De Deimos" "Esprit Du Bien" "Veillée D'Adrestia" "Monture D'Alala" "Discorde" "L'Épée De Phobos" "Les Copies De Makhai" "L'Épée De Makhai" "Persée" "Volonté D'Alala" "Le Javelot De Nike" "Iolaos" "Adresse" "Main De Makhai" "Javelot D'Eris" "Astacus" "Nike" "Char De Makhai" "Bouclier D'Eris" "Poing D'Adrestia" "Loxies" "Veillée De Kydoimos" "Souffle D'Harmonie" "Cénéus" "L'Épée De Nike" "Javelot D'Enyo" "Main D'Adrestia" "Vision De Makhaï" "Iphitus" "Commandement De L'Harmonie" "Elatus" "Doru De Makhai" "Androgène" "Le Poing De Nike" "Soteria" "Char D'Antéros" "Copie De Nike" "Flèches" "Esprit D'Antéros" "Athéna Nike" "Épopée" "La Colère De Nike" "Asclépios" "Haplon D'Adrestia" "Lance D'Adrestia" "Commande D'Addressia" "Aristée" "Doru De Deimos" "Cycnus" "Veillée De L'Harmonie" "Char D'Eris" "Sarissa De Kydoimos" "Main De L'Harmonie" "Rage De Makhai" "Sarisse De Phobos" "Diomède" "Courage De L'Harmonie" "Bouclier De Makhai" "Voix D'Antéros" "Héraclès" "Achille" "Souffle De Deimos" "Déméter Érinys" "Main De Nike" "Almos" "Pronoïa" "Thanatos" "Phobos" "Philémon" "Esprit De Makhai" "Dague D'Antéros" "Poing D'Alala" "Icare" "Porus" "Ajax" "Metus" "Volonté D'Adrestia" "Bouclier De L'Harmonie" "Iphiclès" "Aïas" "Flèche De Makhai" "Épée D'Harmonie" "Dague De Makhai" "Lance De Deimos" "Lance De L'Harmonie" "Enyale" "Laodocus" "Main D'Alala" "Esprit D'Harmonie" "Doru D'Enyo" "Kakia" "Téléphone De Makhai" "Dague De Kydoimos" "Phonoi" "Flèche De Nike" "Veillée D'Alala" "Xiphon De Deimos" "Doru D'Eris" "Javelot De Makhai" "Poing D'Eris" "Xiphon D'Antéros" "Flèche D'Harmonie" "Le Chariot De Nike" "Haplon De Phobos" "Courage D'Enyo" "Dinlas" "Javelot D'Antéros" "Myrmidon" "Commandement De Makhai" "Rage De Kydoimos" "Déucalion" "Char De Deimos" "Léontée" "Anicet" "Esprit D'Adrestia" "Actéon" "Sarisse D'Antéros" "Démoléon" "Proixis" "Déiphobe" "Haplon D'Enyo" "Volonté D'Harmonie" "Rage De Deimos" "Parole D'Harmonie" "Vision Du Bien" "Vision De Deimos" "Échetlus" "Oileus" "Commande D'Antéros" "La Colère D'Enyo" "Lance De Makhai" "Haplon De Deimos" "Mélampus" "Lycomède" "Vigile De Nike" "Iasus" "Capaneus" "Frappe De Makhai" "Thrasos" "Épée D'Alala" "La Colère D'Eris" "Xiphon De Nike" "Commande D'Enyo" "Corythus" "Flèche D'Adrestia" "Ascalaphus" "Bourgeons" "Dédale" "Bouclier D'Adrestia" "Eurytion" "Makhaï" "Char De Phobos" "Souffle D'Alala" "Vision D'Alala" "Dague De Phobos" "Patrocle" "Harmonie" "Haplon D'Antéros" "Grève De Phobos" "Lysse" "Rage D'Harmonie" "Mot De Phobos" "Commande De Phobos" "Monture D'Harmonie" "Mot De L'Anteros" "Les Copies D'Eris" "Nomos" "Dague De Deimos" "Poing D'Harmonie" "Dryops" "Grève De Kydoimos" "Javelot D'Adrestia" "Astérion" "Parole Des Autres" "Mécistée" "Char D'Alala" "Jason" "Testament De Kydoimos" "Courage D'Eris" "Énée" "Flèche D'Antéros" "Dolos" "La Grève D'Adrestia" "Voix D'Adrestia" "Bouclier De Phobos" "Ialmenus" "Vue De Phobos" "Frappe D'Eris" "Mot De Deimos" "Haplon De Makhai" "Volonté De Phobos" "Monture D'Eris" "Cébrions" "Poing D'Antéros" "Monture De Nike" "Idas" "Alastor" "Courage De Deimos" "Parole D'Adrestia" "Orphée" "Palioxis" "Vision D'Éris" "Doru De Kydoimos" "Frappe D'Enyo" "Souffle De Nike" "La Colère De Phobos" "Esprit De Phobos" "Dague D'Eris" "Praxis" "Volonté De Nike" "Frappe D'Antéros" "Kydoimos" "L'Épée D'Eris" "Poing De Kydoimos" "Thésée" "Gorgophone" "Poignard De Nike" "Disons" "Volonté De Phobos" "Main D'Antéros" "Volonté De Makhai" "Méléagre" "Ptochéie" "Char D'Enyo" "La Colère D'Adrestia""Téléphone D'Adrestia" "Bouclier D'Antéros" "Main De Deimos" "Souffle Du Bien" "Courage D'Antéros" "Testament D'Adrestia" "Promaque" "Souffle D'Eris" "Alke" "Ker" "Testament De Kydoimos" "Lance De Kydoimos" "Souffle D'Antéros" "Voix D'Enyo" "Déimos" "Doru De Phobos" "Lance D'Enyo" "Doru D'Adrestia" "La Grève De Nike" "Géréniaus" "Flèche De Phobos" "Dague D'Adrestia" "Taraxippe" "Éionée" "La Colère D'Alala" "Javelot De Phobos" "Lance D'Antéros" "Monture D'Anteros" "Poing De Phobos" "Oenomaus" "Tryphon" "Flèche De Deimos" "Monture De Makhai" "Hylas" "Vision D'Antéros" "Lance De Nike" "Manies" "Sarisse D'Adrestia" "Bouclier De Nike" "Esprit De Nike" "Kydoimos" "Enyo" "Sarissa D'Enyo" "Xiphon D'Eris" "Monture De Phobos" "Doru D'Alala" "Char D'Adrestia" "Peitho" "Bouclier D'Enyo" "Bellérophon" "Haplon D'Eris" "Iphiclus" "Doru D'Harmonia" "Char D'Harmonia" "Javelot D'Alala" "Javelot D'Harmonia" "Iolcos" "Monture D'Adrestia" "Proixis" "Poing De Makhai" "Eurypyle" "Ennomus" "Main D'Enyo" "Veillée D'Enyo" "Courage De Kydoimos" "Parole De Makhai" "Voix De Nike" "Commande De Deimos" "Épée" "Asclépios" "Volonté De Nike" "Xuthus" "Bouclier De Deimos" "Kopis De Kydoimos" "Volonté De Deimos" "Castor" "Flèche D'Eris" "Momus" "Courage De Phobos" "Esprit D'Eris" "Éris" "Courage De Nike" "Chloris" "Phobos" "Volonté D'Eris" "Haplon De Kydoimos" "Amphitryon" "Kopis D'Harmonia" "Poing De Deimos" "Homados" "Peitharchia" "Grève De Deimos" "Lance De Phobos" "Amphiaraus" "Mopsus" "Épée D'Adrestia" "Kopis De Deimos" "Souffle De Phobos" "Éryx" "Commande D'Eris" "Main D'Eris" "Ancée" "Oizys" "Nestor" "Xiphon De Kydoimos" "Polémos" "Lampades" "Volonté D'Enyo" "Esprit De Kydoimos" "Polynice" "Souffle De Makhai" "Haplon De Nike" "Stix" "Xiphon D'Enyo" "Doru D'Antéros" "Antiloque" "Bouclier De Kydoimos" "Veillée D'Eris" "Vision D'Harmonie" "Zéthus" "Heimdal" "Hybris" "Monture De Kydoimos" "Xiphon D'Alala" "Phème" "Palamède" "Litae" "Digue" "Voix De Phobos" "Voix De Makhai" "Dague D'Alala" "Parole D'Enyo" "Volonté D'Eris" "Javelot De Deimos" "Kopis D'Antéros" "Vision De Kydoimos" "Kopis De Phobos" "Ioke" "Main De Kydoimos" "Iapis" "Bouclier D'Alala" "Javelot De Kydoimos" "Atalante" "Mot De Kydoimos" "Kopis D'Adrestia" "Volonté D'Alala" "Clytius" "Courage De Makhai" "Courage D'Alala" "Éris" "Évandre" "Agamemnon" "Courage D'Adrestia" "Veillée De Phobos" "Aristée" "Hormé" "Cybèle" "Vision D'Adrestia" "Soteria" "Chrysippe" "Ménélas" "Épée D'Antéros" "Adraste" "Souffle De Kydoimos" "Autolycus" "Palioxis" "Sarisse De Deimos" "Épée De Kydoimos" "Veillée De Makhai" "Volonté De Makhai" "Euryale" "Testament De Deimos" "Lance D'Eris" "Flèche D'Alala" "Moros" "Phénix" "Zélos" "Esprit De Deimos" "Grève D'Harmonia" "Volonté D'Antéros" "Flèche D'Enyo" "Alala" "Kopis D'Enyo" "Glaucus" "Hécate" "Haplon D'Harmonia" "Pallas" "Calliope" "Biais" "Kopis D'Alala" "Voix De Deimos" "Palioxis" "Télamon" "Rage D'Antéros" "Xiphon De Phobos" "La Grève D'Alala" "Commandement De Kydoimos" "Dague D'Harmonia" "Volonté D'Enyo" "Nirée" "Sarissa De Nike" "Bia" "Haplon D'Alala" "Kydoimos" "Glaucos" "Flèche De Kydoimos" "Char De Kydoimos" "Antéros" "Hector" "Volonté D'Antéros" "Voix D'Harmonie" "Tydeus" "Mot De Nike" "Sarisse D'Harmonia" "Poing D'Enyo" "Tlépolème" "L'Épée D'Enyo"
+		}
+
+		cruiser = {
+			"Voix D'Hermès" "Volonté D'Hestia" "Dague De Dionysos" "Monture De Dionysos" "Monture D'Athéna" "Esprit D'Arès" "La Colère D'Hermès" "Esprit De Déméter" "La Grève D'Hestia" "Sarisse D'Aphrodite" "Testament D'Artémis" "Bouclier D'Athéna" "Poing D'Hermès" "Veillée D'Hestia" "Esprit D'Hermès" "Voix D'Héra" "Dague D'Aphrodite" "Vision D'Héphaïstos" "Vision De Déméter" "Rage De Dionysos" "Sarisse D'Athéna" "La Colère D'Artémis" "Flèche D'Héphaïstos" "Épée De Déméter" "Javelot D'Hermès" "Sarisse D'Artémis" "Javelot De Dionysos" "Poing D'Héphaïstos" "Veillée D'Hermès" "L'Épée D'Hestia" "La Colère D'Ares" "Commandement De Dionysos" "Xiphon D'Hermès" "Lance D'Artémis" "Xiphon D'Artémis" "Haplon D'Hestia" "Volonté D'Hermès" "Main D'Artémis" "Vision D'Hermès" "Javelot D'Héra" "Souffle D'Aphrodite" "Volonté D'Héra" "Testament D'Arès" "Testament D'Hermès" "Doru D'Arès" "Lance D'Hermès" "Main D'Athéna" "Vision D'Hestia" "Parole D'Artémis" "Dague D'Apollon" "L'Épée D'Artémis" "Poing D'Artémis" "Char De Déméter" "Dague D'Héphaïstos" "Commandement D'Héphaïstos" "Bouclier D'Hestia" "Doru D'Héphaïstos" "Volonté De Dionysos" "Esprit D'Aphrodite" "L'Épée D'Hermès" "Courage D'Aphrodite" "Xiphon D'Héra" "Flèche D'Apollon" "Souffle D'Héra" "Main D'Hermès" "Xiphon D'Héphaïstos" "Commande D'Hermès" "Dague D'Hestia" "Kopis D'Artémis" "La Monture D'Hermès" "Doru D'Héra" "Monture D'Héra" "Main D'Héphaïstos" "Bouclier D'Artémis" "L'Épée D'Athéna" "Esprit D'Héphaïstos" "Main D'Arès" "Souffle D'Héphaïstos" "Commande D'Apollon" "La Colère De Déméter" "Flèche D'Hermès" "Parole D'Hermès" "Rage D'Athéna" "Commandement D'Aphrodite" "Char D'Aphrodite" "Commande D'Hestia" "Volonté D'Athéna" "Parole D'Arès" "Haplon D'Ares" "Monture D'Apollon" "Souffle De Dionysos" "Javelot D'Apollon" "Volonté D'Apollon" "Commandement D'Héra" "Kopis D'Athéna" "Lance D'Apollon" "Monture D'Arès" "Voix D'Hestia" "Grève D'Hermès" "Vision D'Artémis" "Vision De Dionysos" "Dague D'Athéna" "Courage D'Héphaïstos" "Voix D'Apollon" "Flèche D'Hestia" "Xiphon De Déméter" "Esprit D'Artémis" "Kopis De Dionysos" "Courage De Dionysos" "Voix De Dionysos" "Veillée D'Apollon" "Sarisse De Dionysos" "Bouclier De Dionysos" "Parole D'Aphrodite" "Courage D'Hestia" "Haplon D'Aphrodite" "Char D'Apollon" "Main D'Apollon" "Courage D'Artémis" "Poing D'Arès" "Bouclier De Déméter" "Poing De Dionysos" "Lance D'Aphrodite" "Veillée D'Athéna" "Kopis D'Hestia" "Poing D'Aphrodite" "Haplon De Dionysos" "Parole D'Hestia" "Main De Dionysos" "Lance D'Athéna" "Char D'Athéna" "Veillée D'Héra" "Javelot D'Hestia" "Javelot D'Artémis" "Courage D'Athéna" "Esprit D'Hestia" "Javelot De Déméter" "Doru De Déméter" "Kopis D'Arès" "Kopis D'Héphaïstos" "Parole De Déméter" "Kopis D'Apollon" "Voix D'Héphaïstos" "Poignard D'Hermès" "Kopis De Déméter" "Parole D'Apollon" "Souffle D'Artémis" "Poing D'Apollon" "Bouclier D'Apollon" "Souffle D'Hermès" "Veillée De Dionysos" "Souffle D'Athéna" "Lance D'Hestia" "Parole De Dionysos" "Volonté D'Héphaïstos" "Testament D'Héphaïstos" "La Colère D'Hestia" "Char D'Ares" "La Colère D'Héra" "Vision D'Athéna" "L'Épée D'Apollon" "Courage D'Arès" "Bouclier D'Arès" "Doru D'Apollon" "Sarisse D'Arès" "Lance D'Arès" "Dague De Déméter" "L'Épée D'Arès" "Main D'Hestia" "Dague D'Artémis" "Veillée De Déméter" "L'Épée D'Héra" "Esprit De Dionysos" "Haplon D'Apollon" "Volonté D'Aphrodite" "Javelot D'Arès" "Sarisse D'Hermès" "Flèche De Dionysos" "Bouclier D'Héra" "Vision D'Héra" "Xiphon D'Athéna" "Épée D'Héphaïstos" "Rage D'Héphaïstos" "Voix D'Aphrodite" "Xiphon De Dionysos" "Testament D'Héra" "Haplon D'Artémis" "Char D'Artémis" "Vision D'Arès" "Veillée D'Héphaïstos" "Frappe D'Apollon" "Xiphon D'Hestia" "Frappe D'Héra" "Esprit D'Héra" "Poing De Déméter" "Veillée D'Ares" "Flèche D'Aphrodite" "Courage D'Apollon" "Kopis D'Héra" "Dague D'Ares" "Commande D'Artémis" "Esprit D'Athéna" "Main D'Héra" "Doru D'Aphrodite" "Volonté De Dionysos" "Dague D'Héra" "Doru D'Hestia" "Courage D'Héra" "Sarisse D'Héra" "Char D'Hermès" "Vision D'Aphrodite" "Frappe D'Héphaïstos" "Voix D'Artémis" "L'Épée D'Aphrodite" "Parole D'Héra" "Doru D'Athéna" "Commande D'Ares" "Monture De Déméter" "Volonté D'Artémis" "Athéna'S Flèche" "Lance D'Héra" "Veillée D'Aphrodite" "Sarisse De Déméter" "Testament De Déméter" "Voix D'Athéna" "La Grève De Dionysos" "Veillée D'Artémis" "Monture D'Artémis" "Main D'Aphrodite" "Xiphon D'Arès" "Char D'Héphaïstos" "Javelot D'Aphrodite" "Char De Dionysos" "Volonté D'Athéna" "Souffle D'Arès" "Monture D'Aphrodite" "Flèche De Déméter" "Bouclier D'Héphaïstos" "Haplon D'Héphaïstos" "Sarisse D'Hestia" "Xiphon D'Aphrodite" "Lance De Déméter" "Doru D'Artémis" "Flèche D'Héra" "Javelot D'Athéna" "Souffle De Déméter" "Lance D'Héphaïstos" "Sarisse D'Héphaïstos" "Souffle D'Hestia" "Flèche D'Artémis" "Poing D'Hestia" "Xiphon D'Apollon" "Volonté D'Apollon" "Doru D'Hermès" "Haplon D'Hermès" "L'Épée De Dionysos" "Poing D'Héra" "Monture D'Hestia" "Frappe D'Aphrodite" "Monture D'Héphaïstos" "Kopis D'Aphrodite" "Volonté De Déméter" "Courage De Déméter" "Volonté D'Arès" "Commande D'Athéna" "Testament D'Hestia" "Voix D'Arès" "La Grève D'Athéna" "Vision D'Apollon" "La Colère D'Apollon" "Char D'Héra" "Voix De Déméter" "Grève De Déméter" "Haplon D'Athéna" "Esprit D'Apollon" "Poing D'Athéna" "Main De Déméter" "Parole D'Athéna" "Courage D'Hermès" "Sarisse D'Apollon" "La Colère D'Aphrodite" "Bouclier D'Aphrodite" "Char D'Hestia" "Commande De Déméter" "Kopis D'Hermès" "Lance De Dionysos" "Testament D'Aphrodite" "Souffle D'Apollon" "Frappe D'Artémis" "Grève D'Arès" "Flèche D'Arès" "Haplon De Déméter" "Doru De Dionysos" "Javelot D'Héphaïstos" "Parole D'Héphaïstos" "Bouclier D'Hermès" "Haplon D'Héra"
+		}
+		StrikeCruiser = {
+			""
+		}
+		Battlecruiser = {
+			"Volonté De Dionysos" "Lance De Dionysos" "Courage D'Hestia" "Flèche D'Hermès" "Testament D'Hermès" "Parole De Déméter" "Poing D'Aphrodite" "Vision D'Arès" "La Colère D'Artémis" "Lance D'Artémis" "Commande D'Hermès" "Bouclier D'Héra" "Sarisse D'Héphaïstos" "Voix De Déméter" "Dague D'Héphaïstos" "Xiphon De Déméter" "Souffle D'Aphrodite" "Char D'Hermès" "Volonté D'Athéna" "Volonté D'Héphaïstos" "Esprit D'Hestia" "Bouclier De Dionysos" "Épée De Déméter" "Souffle D'Hermès" "Lance D'Arès" "Xiphon D'Hermès" "Commandement D'Héra" "Commande D'Artémis" "Xiphon D'Héra" "Esprit D'Athéna" "Voix D'Hermès" "Monture De Déméter" "Volonté D'Arès" "Doru D'Héra" "Sarisse D'Héra" "Haplon D'Hermès" "Kopis D'Apollon" "Veillée D'Apollon" "Flèche D'Apollon" "Veillée D'Ares" "Souffle De Déméter" "Veillée D'Artémis" "Dague D'Arès" "Vision D'Athéna" "Commandement D'Aphrodite" "Kopis D'Aphrodite" "Voix D'Héphaïstos" "Bouclier D'Aphrodite" "Haplon D'Héphaïstos" "Veillée D'Hermès" "Javelot D'Aphrodite" "Courage De Dionysos" "L'Épée D'Athéna" "Vision D'Hestia" "Lance D'Apollon" "Javelot D'Apollon" "Épée D'Héphaïstos" "Doru D'Hestia" "Commande D'Athéna" "Char D'Hestia" "Vision D'Aphrodite" "Testament D'Artémis" "Char D'Héra" "Monture D'Héphaïstos" "Sarisse D'Hestia" "Main D'Aphrodite" "Javelot D'Hestia" "Souffle D'Arès" "Xiphon D'Aphrodite" "Poing D'Héra" "Testament D'Hestia" "Flèche D'Héra" "Doru D'Héphaïstos" "Haplon D'Arès" "Lance D'Héra" "Vision D'Hermès" "Kopis D'Héra" "Lance D'Athéna" "Voix D'Aphrodite" "L'Épée D'Héra" "Esprit D'Héra" "Vision D'Héphaïstos" "Bouclier D'Hermès" "Parole D'Artémis" "Poing D'Athéna" "Volonté D'Héra" "Courage D'Apollon" "Commandement De Dionysos" "Xiphon D'Apollon" "Souffle D'Apollon" "Commande D'Arès" "Parole D'Athéna" "Javelot D'Artémis" "Flèche D'Héphaïstos" "Souffle D'Artémis" "Monture D'Hestia" "Grève De Déméter" "Main D'Héphaïstos" "Parole D'Héphaïstos" "Doru D'Apollon" "Flèche De Dionysos" "Esprit D'Apollon" "Sarisse D'Hermès" "Testament D'Héra" "Sarisse D'Arès" "Poing D'Héphaïstos" "Courage D'Artémis" "Commandement D'Héphaïstos" "Voix D'Hestia" "Poignard D'Hermès" "Bouclier D'Hestia" "Main D'Arès" "La Monture D'Hermès" "Vision De Dionysos" "Veillée D'Héphaïstos" "Kopis D'Hermès" "Vision D'Artémis" "Xiphon D'Artémis" "Haplon D'Athéna" "Doru D'Aphrodite" "Xiphon D'Héphaïstos" "Commande De Déméter" "Doru D'Artémis" "Lance D'Hermès" "Char D'Athéna" "Esprit D'Héphaïstos" "Voix D'Athéna" "Flèche De Déméter" "Frappe D'Héra" "Main D'Hermès" "Esprit D'Arès" "Veillée De Dionysos" "L'Épée D'Aphrodite" "Poing D'Apollon" "Testament D'Aphrodite" "Monture D'Aphrodite" "Javelot D'Hermès" "Bouclier De Déméter" "Veillée De Déméter" "Main D'Athéna" "Vision D'Apollon" "Haplon D'Apollon" "Volonté D'Apollon" "Flèche D'Aphrodite" "Doru D'Ares" "Char D'Artémis" "Parole D'Aphrodite" "Lance D'Héphaïstos" "Volonté De Dionysos" "Volonté De Déméter" "La Colère D'Aphrodite" "Esprit D'Hermès" "Xiphon D'Hestia" "Monture D'Arès" "Javelot D'Athéna" "Main D'Apollon" "Voix D'Apollon" "Rage De Dionysos" "Dague D'Aphrodite" "Kopis D'Arès" "Veillée D'Athéna" "L'Épée De Dionysos" "Monture D'Athéna" "Courage De Déméter" "La Colère D'Héra" "Dague De Déméter" "Parole D'Héra" "Kopis D'Artémis" "Voix D'Arès" "L'Épée D'Artémis" "Sarisse D'Aphrodite" "Testament D'Héphaïstos" "La Grève D'Athéna" "Voix D'Héra" "La Grève D'Hestia" "Vision D'Héra" "La Colère De Déméter" "Monture D'Apollon" "Flèche D'Arès" "Char D'Arès" "Courage D'Héphaïstos" "Sarisse De Déméter" "Doru De Dionysos" "Volonté D'Athéna" "Vision De Déméter" "Testament D'Arès" "La Colère D'Hermès" "Dague D'Hestia" "Esprit De Dionysos" "Rage D'Athéna" "Char De Dionysos" "Doru D'Hermès" "Volonté D'Hermès" "Dague D'Apollon" "Poing De Dionysos" "Flèche D'Athéna" "Volonté D'Artémis" "Kopis De Déméter" "L'Épée D'Ares" "Bouclier D'Apollon" "Rage D'Héphaïstos" "Esprit De Déméter" "Poing D'Hermès" "Frappe D'Artémis" "Kopis D'Hestia" "Sarisse D'Apollon" "Bouclier D'Athéna" "Kopis De Dionysos" "La Colère D'Hestia" "L'Épée D'Hestia" "Flèche D'Artémis" "Char De Déméter" "Courage D'Aphrodite" "Javelot D'Arès" "La Colère D'Apollon" "Esprit D'Aphrodite" "Haplon D'Artémis" "Flèche D'Hestia" "Souffle De Hestia" "Courage D'Arès" "Main De Déméter" "Monture D'Artémis" "Poing D'Hestia" "Char D'Héphaïstos" "Parole D'Apollon" "Haplon D'Aphrodite" "Bouclier D'Arès" "Char D'Aphrodite" "Testament De Déméter" "Dague D'Héra" "Volonté D'Hestia" "Bouclier D'Héphaïstos" "Volonté D'Aphrodite" "Poing De Déméter" "Grève D'Hermès" "Dague D'Athéna" "Bouclier D'Artémis" "Main D'Hestia" "Veillée D'Aphrodite" "Xiphon D'Arès" "Veillée D'Hestia" "Javelot D'Héra" "Xiphon De Dionysos" "Sarisse De Dionysos" "Volonté D'Apollon" "Frappe D'Aphrodite" "Veillée D'Héra" "Kopis D'Héphaïstos" "Voix D'Artémis" "Parole De Dionysos" "Voix De Dionysos" "Souffle D'Héra" "Commande D'Hestia" "Souffle D'Héphaïstos" "Haplon D'Héra" "Lance De Déméter" "Lance D'Aphrodite" "Parole D'Hestia" "Courage D'Athéna" "Dague D'Artémis" "Poing D'Artémis" "Haplon D'Hestia" "Char D'Apollon" "Esprit D'Artémis" "Xiphon D'Athéna" "Frappe D'Apollon" "Parole D'Hermès" "Main D'Artémis" "Doru De Déméter" "Main D'Héra" "Javelot D'Héphaïstos" "Grève D'Arès" "Javelot De Déméter" "Sarisse D'Artémis" "Haplon De Dionysos" "Haplon De Déméter" "Main De Dionysos" "Commande D'Apollon" "Lance D'Hestia" "L'Épée D'Hermès" "Frappe D'Héphaïstos" "Courage D'Hermès" "Parole D'Arès" "La Colère D'Ares" "Poing D'Arès" "Dague De Dionysos" "Sarisse D'Athéna" "L'Épée D'Apollon" "Monture De Dionysos" "Javelot De Dionysos" "Kopis D'Athéna" "Monture D'Héra" "Courage D'Héra" "Doru D'Athéna" "Souffle D'Athéna" "La Grève De Dionysos" "Souffle De Dionysos"
+		}
+		battleship = {
+			"Dionysos" "Héra" "Hestia" "Déméter" "Athéna" "Apollon" "Artémis" "Arès" "Aphrodite" "Héphaïstos" "Hermès"
+		}
+		Carrier = {
+			"Héphaïstos" "Hestia" "Athéna" "Déméter" "Dionysos" "Héra" "Apollon" "Arès" "Hermès" "Aphrodite" "Artémis"
+		}
+		Dreadnought = {
+			"Dionysos" "Héra" "Hestia" "Déméter" "Athéna" "Apollon" "Artémis" "Arès" "Aphrodite" "Héphaïstos" "Hermès"
+		}
+		titan = {
+			"Dionysos" "Héra" "Hestia" "Déméter" "Athéna" "Apollon" "Artémis" "Arès" "Aphrodite" "Héphaïstos" "Hermès"
+		}
+		Flagship = {
+			"Poséidon" "Zeus" "Enfers"
+		}
+		colossus = {
+			"Zeus" "Poséidon" "Enfers"
+		}
+		juggernaut = {
+			"Hadès" "Poséidon" "Zeus"
+		}
+
+		constructor = {
+			"Héphaïstos" "Dédale" "Épée" "Érechthée Icare" "Métis" "Palamède" "Poséidon Talos" "Tantale"
+		}
+		colonizer = {
+			"Hestia" "Eunomie" "Borée" "Déméter" "Hermès" "Amphictyonis" "Hécate" "Nike" "Casserole" "Triptolème"
+		}
+		sponsored_colonizer = {
+		"Hestia" "Eunomie" "Borée" "Déméter" "Hermès" "Amphictyonis" "Hécate" "Nike" "Casserole" "Triptolème"
+		}
+		science = {
+			"Eileithye" "Aristée" "Hécate" "Prométhée" "Métis" "Hélios" "Mnémosyne" "Asclépios" "Ananke" "Thot"
+		}
+		explorationship = {
+			"Casserole" "Hécate" "Perséphone" "Hermès Trismégiste" "Déméter" "Éole" "Vous Serez" "Protée" "Circé" "Charybde"
+		}
+		transport = {
+			"Trirème"
+		}
+
+		military_station_small = {
+			"Phrourion"
+		}
+
+		military_station_medium = {
+			"Stratégie"
+		}
+
+		military_station_large = {
+			"Acropole"
+		}
+
+		ion_cannon = {
+			"L'Éclair De Zeus"
+		}
+
+		xl_cannon = {
+			"La Foudre De Zeus"
+		}
+	}
+
+	fleet_names = {
+		random_names = {
+			""
+		}
+		sequential_name = "Osiris_Ancientgreek_Fleetnames_R"
+	}
+
+	army_names = {
+
+		machine_defense = {
+			sequential_name = "Osiris_Ancientgreek_Machinedefense_R"
+		}
+
+		machine_assault_1 = {
+			sequential_name = "Osiris_Ancientgreek_Machineassault1_R"
+		}
+
+		machine_assault_2 = {
+			sequential_name = "Osiris_Ancientgreek_Machineassault2_R"
+		}
+
+		machine_assault_3 = {
+			sequential_name = "Osiris_Ancientgreek_Machineassault3_R"
+		}
+
+		defense_army = {
+			sequential_name = "Osiris_Ancientgreek_Defensearmy_R"
+		}
+
+		assault_army = {
+			sequential_name = "Osiris_Ancientgreek_Assaultarmy_R"
+		}
+
+		slave_army = {
+			sequential_name = "Osiris_Ancientgreek_Slavearmy_R"
+		}
+
+		clone_army = {
+			sequential_name = "Osiris_Ancientgreek_Clonearmy_R"
+		}
+
+		undead_army = {
+			sequential_name = "Osiris_Ancientgreek_Undeadarmy_R"
+		}
+
+		robotic_army = {
+			sequential_name = "Osiris_Ancientgreek_Roboticarmy_R"
+		}
+
+		robotic_defense_army = {
+			sequential_name = "Osiris_Ancientgreek_Roboticdefensearmy_R"
+		}
+
+		psionic_army = {
+			sequential_name = "Osiris_Ancientgreek_Psionicarmy_R"
+		}
+
+		xenomorph_army = {
+			sequential_name = "Osiris_Ancientgreek_Xenomorpharmy_R"
+		}
+
+		gene_warrior_army = {
+			sequential_name = "Osiris_Ancientgreek_Genewarriorarmy_R"
+		}
+
+		occupation_army = {
+			sequential_name = "Osiris_Ancientgreek_Occupationarmy_R"
+		}
+
+		robotic_occupation_army = {
+			sequential_name = "Osiris_Ancientgreek_Roboticoccupationarmy_R"
+		}
+
+		primitive_army = {
+			sequential_name = "Osiris_Ancientgreek_Primitivearmy_R"
+		}
+		industrial_army = {
+			sequential_name = "Osiris_Ancientgreek_Industrialarmy_R"
+		}
+		postatomic_army = {
+			sequential_name = "Osiris_Ancientgreek_Postatomicarmy_R"
+		}
+	}
+
+	planet_names = {
+
+		generic = {
+			names = {
+				"Athènes" "Sparte" "Corinthe" "Syracuse" "Égine" "Rhodes" "Argus" "Érétrie" "Élis" "Abdera" "Abdos" "Acanthe" "Acharna" "Égium" "Âge" "Amphipolis" "Andros" "Pucerons" "Apollonie" "Âne" "Rôti" "Brauron" "Byzance" "Chalcédoine" "Calydon" "Caryste" "Chalcis" "Cnide" "Cyme" "Cythère" "Décélée" "Delphes" "Démétrias" "Didymes" "Dodone" "Centime" "Éleusis" "Éphèse" "Érythrée" "Gortyne" "Gortys" "Halicarnasse" "Héraclée" "Hermione" "Ialyse" "Iasus" "Ithaque" "Sac À Dos" "Larissa" "Un Lièvre" "Lindus" "Locres" "Mantinée" "Marathon" "Marseille" "Mégalopole" "Mégare" "Messène" "Méthone" "Milet" "Mylase" "Myndus" "Mytilène" "Naupactus" "Nicopolis" "Nyssa" "Oenoé" "Olbia" "Olympiques" "Olynthe" "Orée" "Orope" "Pagase" "Pandosie" "Paros" "Pères" "Pergame" "Périnthus" "Phalère" "Phare" "Phères" "Phlios" "Phocée" "Pirée" "Platées" "Potidée" "Ptélée" "Pydne" "Pylos" "Rhamnos" "Rhypes" "Salami" "Le Même" "Sélinonte" "Seste" "Sicyon" "Stagire" "Stymphale" "Tanagra" "Couverture Théos" "Bain" "Bain" "Comédiens" "Thorique" "Thyroïde" "Thyrie" "Trachis" "Troie" "Zacynthus"
+			}
+		}
+
+		pc_desert = {
+			names = {
+				""
+			}
+		}
+
+		pc_tropical = {
+			 names = {
+				""
+			}
+		}
+
+		pc_arid = {
+			names = {
+				""
+			}
+		}
+
+		pc_continental = {
+			names = {
+				""
+			}
+		}
+
+		pc_gaia = {
+			names = {
+				""
+			}
+		}
+
+		pc_ocean = {
+			names = {
+				""
+			}
+		}
+
+		pc_tundra = {
+			names = {
+				""
+			}
+		}
+
+		pc_arctic = {
+			names = {
+				""
+			}
+		}
+
+		pc_savannah = {
+			names = {
+				""
+			}
+		}
+
+		pc_alpine = {
+			names = {
+				""
+			}
+		}
+
+	}
+
+	character_names = {
+
+		names1 = {
+			first_names_male = {
+				"Hermès" "Éaque" "Thétis" "Éros" "Atlas" "Tycho" "Kit" "Ercole" "Christophe" "Agamemnon Philoctète" "Sébastien" "Jason" "Ératosthène" "Damien" "Géryon" "Basilic" "Asclépios" "Avant" "Pélée" "Hippocrate" "Œdipe" "Ménélas" "Pancrace" "Amphion" "Chrysippe" "Lysandre" "Alexandre Alkaios" "Clio" "Cadmus" "Antéros" "Kay Héraclès" "Turanus" "Antée" "Oreias" "Anaxagore" "Miltiades" "Mélanippe" "Hippocampe" "Armistice" "Damien" "Glaucus" "Arès" "Tyndare" "Cronos" "Iolaos" "Hypno" "Lyncée" "Plutarque Alexandre Achille Ulysse Aristée" "Alistaire" "Joren" "Grigor" "Démétrius" "Alastair" "Atti" "Damoclès" "Scamandre" "Alcibiade" "Dédale" "Hippolyte" "Charon" "Stephenson" "Platon" "Jacinthe" "Endymion" "Périclès" "Euryale" "Vasyklo" "Icare" "Chiron" "Évas Tim" "Alexis" "Laertes" "Darius" "Personnel" "Amphiaraus" "Théodore" "Pierre" "Dimitri" "Hadès" "Hector" "Ammon" "Achats" "Sapho" "Alik" "Orphée" "Kipr" "Bellérophon" "Ambroise" "Galien" "Dragon" "Solon" "Androclès" "Diogène" "Érysichthon" "Thésée Zénon" "Dorien" "Épiméthée" "Énée" "Philon" "Euphème" "Apollon" "Aristophane" "Démocrite" "Persée" "Polydectes" "Alastor" "Taidgh" "Jules Apollon" "Nestor" "Vasileios" "Homère" "Euclide" "Ajax" "Castor" "Four" "Sophocle" "Pythagore" "Jocaste" "Dioclès" "Xanthus" "Kozma" "Adonis" "Aristote" "Pausanias" "Démon" "Palamède" "Dionysos" "Procuste" "Kristalyne" "Socrate" "Clisthène" "Damaskenos" "Philippe" "Philémon" "Dardanus" "Héphaïstos" "Pandareos" "Triptolème" "Ellis" "Aristarque"
+			}
+			first_names_female = {
+				"Agathe" "Aglaé" "Agne" "Alceste" "Aléthéa Althée" "Amalthée" "Amer" "Anaxandre" "Andromaque" "Andromède" "Anthéa" "Antigone" "Apollonie" "Arété" "Ariane" "Artémisia" "Aspasie" "Athanase" "Athéna" "Atalante" "Athéna" "Atropos" "Briséis" "Brynhildr" "Calliope" "Calypso" "Cassandre" "Chélidoine" "Chlore" "Chrysanthème" "Clio" "Clymène" "Clytemnestre" "Damaris" "Daphné" "Déjanire" "Démétrius Dion" "Doris" "Écho" "Eirène" "Électre" "Éléni" "Elpis" "Émilie" "Enyo" "Eux" "Eudora" "Eudoxie" "Eumélie" "Euphémie Eurydice" "Euryklée" "Galien" "Galinthie" "Harmonie" "Hécate" "Hédon" "Hestia" "Hippolyte" "Ianthe" "Joie" "Iphigénie" "Irène" "Ismène" "Jocaste" "Calliope" "Kassandre" "Koré" "Lampétie" "Léda" "Leucothée" "Limnorie" "Liriope" "Lyre" "Maya" "Médée" "Mégare" "Mélia" "Mélina" "Mnéme" "Myrrhe Nausicaa" "Némésis Nike" "Nyx" "Oenone" "Oinone" "Oreithyie" "Pandore" "Pénélope" "Perséphone" "Phèdre" "Philémon" "Philie" "Philomèle" "Phoebé" "Polymnie" "Pomone" "Proserpine" "Psyché" "Rhéa" "Roxane" "Séléné" "Parfois" "Sophronie" "Sybille" "Thalie" "Thétis" "Tyché" "Uranie" "Vasiliki" "Vesta" "Wilon" "Xanthe" "Xanthippe" "Zénobie Zéphyrine" "Zara"
+			}
+			second_names = {
+				"Milionis" "Chatzikonstantinou" "Eleftheriou" "Fragkos" "Kyrou" "Karachaliou" "Oikonomido" "Baros" "Békiaris" "Lynard" "Argyris" "Papantoniou" "Tsakonas" "Pepe" "Valaque" "Christou" "Sagone" " " "Balaban" "Daskalákis" "Argyropoulou" "Giannis" "Contos" "Karagiorgos" "Vasileiadis" "Mavropoulos" "Harris" "Alexopoulos" "Markopoulos" "Kontos" "Prend" "Michel" "Alexopoulou" "Vasil" "Kontogianni" "Mallios" "Sarri" "Athanas" "Pétridis" "Papanastiae" "Christopoulos" "Emmanouilidou" "Mavros" "Arvanitaki" "Pavlidis" "Maragkos" "Dimakis" "Konstantopoulos" "Georgiou" "Karampela" "Kaloudi " "Kalogéropoulos" "Varelas" "Barbéris" "Vergos" "Economiques" "Kamber" "Voulgarakis" "Roumélioti" "Moschos" "Zafeiri" "Barbas" "Papazoglou" "Ziakas" "Roumélioti" "Kourti" "Stavropoulos" " Pavlis" " "Antoniade" "Tsakirides" "Ziogaz" "Nicoli" "Michou" "Christopoulos" "Christodoulopoulos" "Lappa" "Karagkounis" "Andréopoulos" "Sotiropoulou Propithèques" "Dimopoulos" "Paulos" "Thomas" "Exarchos" " Skiadas" "Paschalidou" "Kitso " "Tzima" "Tzortzi" "Galatas" "Kapsali"
+			}
+
+			regnal_first_names_male = {
+				"Asclépiodote" "Lycomède" "Périr Cimon" "Anaxagore" "Chrysippe" "Agésilas" "Iphicrate" "Alexandre Pausanias" "Cléomène" "Mithridate" "Philippe" "Aristomaque" "Antigone" "Thémistocle" "Décomposé" "Épaminondas" "Ptolémée" "Euphaes" "Attale" "Léonidas" "Cassandre" "Persée" "Nous Pouvons" "Thrasybule" "Diomède" "Léotychida" "Pélopidas" "Denys Xerxès" "Périandre" "Lachares" "Agathocle" "Nicomède" "Gorgidas" "Archélaos" "Zopyre" "Hérode" "Aristodème" "Eumène" "Aristippe" "Démétrius" "Lysimaque" "Séleucus" "Aristée" "Autolycus" "Mélanthe" "Hipparque"
+			}
+
+			regnal_first_names_female = {
+				"Georgine" "Thelma Pythodoride" "Cérès" "Théodora Érasme" "Roxane" "Olympias" "Eldora" "Agrippine" "Laodicée" "Pharnace" "Karine" "Calli" "Majorité" "Zénobie Pélagie" "Maîtres" "Phila Varvara" "Élodie" "Arsinoé" "Appoline Adoniya" "Lysandre" "Dionne" "Caeneus" "Bérénice Katia" "Orie" "Glaphyre" "Ptolémée" "Aimer Stratonique" "Xylone" "Rhodogue" "Dire" "Lizann" "Damaris" "Julia" "Coraline" "Cléopâtre Calypso" "Mélissa" "Presque" "Malte" "Eurydice" "Catriona"
+
+			}
+			regnal_second_names = {
+				"Zeus" "Héra" "Poséidon" "Déméter" "Athéna" "Apollon" "Artémis" "Arès" "Aphrodite" "Héphaïstos" "Hermès" "Dionysos" "Hestia" "Perséphone" "Hadès" "Éros" "Iris" "Nike" "Hélios" "Séléné"
+			}
+		}
+	}
+}

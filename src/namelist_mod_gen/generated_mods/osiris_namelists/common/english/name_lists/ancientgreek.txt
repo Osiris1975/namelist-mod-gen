@@ -1,0 +1,267 @@
+﻿### "Ancient Greek (Onl)"
+### Created by "Osiris"
+
+"Osiris"_ancientgreek = {
+
+	ship_names = {
+
+		corvette = {
+			"Harmonia'S Xiphon" "Calchas" "Odysseus" "Breath Of Adrestia" "Nemea" "Cadmus" "Voice Of Alala" "Enyo'S Dagger" "Anteros'S Vigil" "Enyo'S Steed" "Spirit Of Alala" "Nike'S Command" "Makhai'S Sarissa" "Nike" "Echemus" "Vision Of Nike" "Philoctetes" "Voice Of Kydoimos" "Promakhos" "Nike'S Doru" "Agapenor" "Harmonia'S Will" "Voice Of Eris" "Alala'S Spear" "Peleus" "Eris'S Sarissa" "Deimos'S Vigil" "Alala'S Command" "Word Of Eris" "Deimos'S Steed" "Hand Of Phobos" "Alala'S Sarissa" "Deimos'S Sword" "Spirit Of Enyo" "Adrestia'S Vigil" "Alala'S Steed" "Discordia" "Phobos'S Sword" "Makhai'S Kopis" "Makhai'S Sword" "Perseus" "Will Of Alala" "Nike'S Javelin" "Iolaus" "Adrestia" "Hand Of Makhai" "Eris'S Javelin" "Astacus" "Nike" "Makhai'S Chariot" "Eris'S Shield" "Adrestia'S Fist" "Loxias" "Kydoimos'S Vigil" "Breath Of Harmonia" "Ceneus" "Nike'S Sword" "Enyo'S Javelin" "Hand Of Adrestia" "Vision Of Makhai" "Iphitus" "Harmonia'S Command" "Elatus" "Makhai'S Doru" "Androgeus" "Nike'S Fist" "Soteria" "Anteros'S Chariot" "Nike'S Kopis" "Augeas" "Spirit Of Anteros" "Athena Nike" "Epopeus" "Nike'S Rage" "Asclepius" "Adrestia'S Haplon" "Adrestia'S Spear" "Adrestia'S Command" "Aristaeus" "Deimos'S Doru" "Cycnus" "Harmonia'S Vigil" "Eris'S Chariot" "Kydoimos'S Sarissa" "Hand Of Harmonia" "Makhai'S Rage" "Phobos'S Sarissa" "Diomedes" "Harmonia'S Courage" "Makhai'S Shield" "Voice Of Anteros" "Heracles" "Achilles" "Breath Of Deimos" "Demeter Erinys" "Hand Of Nike" "Almos" "Pronoia" "Thanatos" "Phobos" "Philemon" "Spirit Of Makhai" "Anteros'S Dagger" "Alala'S Fist" "Icarus" "Porus" "Ajax" "Metus" "Will Of Adrestia" "Harmonia'S Shield" "Iphicles" "Aias" "Makhai'S Arrow" "Harmonia'S Sword" "Makhai'S Dagger" "Deimos'S Spear" "Harmonia'S Spear" "Enyalius" "Laodocus" "Hand Of Alala" "Spirit Of Harmonia" "Enyo'S Doru" "Kakia" "Makhai'S Xiphon" "Kydoimos'S Dagger" "Phonoi" "Nike'S Arrow" "Alala'S Vigil" "Deimos'S Xiphon" "Eris'S Doru" "Makhai'S Javelin" "Eris'S Fist" "Anteros'S Xiphon" "Harmonia'S Arrow" "Nike'S Chariot" "Phobos'S Haplon" "Enyo'S Courage" "Dinlas" "Anteros'S Javelin" "Myrmidon" "Makhai'S Command" "Kydoimos'S Rage" "Deucalion" "Deimos'S Chariot" "Leonteus" "Anicetus" "Spirit Of Adrestia" "Actaeon" "Anteros'S Sarissa" "Demoleon" "Proioxis" "Deiphobus" "Enyo'S Haplon" "Will Of Harmonia" "Deimos'S Rage" "Word Of Harmonia" "Vision Of Enyo" "Vision Of Deimos" "Echetlus" "Oileus" "Anteros'S Command" "Enyo'S Rage" "Makhai'S Spear" "Deimos'S Haplon" "Melampus" "Lycomedes" "Nike'S Vigil" "Iasus" "Capaneus" "Makhai'S Strike" "Thrasos" "Alala'S Sword" "Eris'S Rage" "Nike'S Xiphon" "Enyo'S Command" "Corythus" "Adrestia'S Arrow" "Ascalaphus" "Broteas" "Daedalus" "Adrestia'S Shield" "Eurytion" "Makhai" "Phobos'S Chariot" "Breath Of Alala" "Vision Of Alala" "Phobos'S Dagger" "Patroclus" "Harmonia" "Anteros'S Haplon" "Phobos'S Strike" "Lyssa" "Harmonia'S Rage" "Word Of Phobos" "Phobos'S Command" "Harmonia'S Steed" "Word Of Anteros" "Eris'S Kopis" "Nomos" "Deimos'S Dagger" "Harmonia'S Fist" "Dryops" "Kydoimos'S Strike" "Adrestia'S Javelin" "Asterion" "Word Of Alala" "Mecisteus" "Alala'S Chariot" "Jason" "Kydoimos'S Will" "Eris'S Courage" "Aeneas" "Anteros'S Arrow" "Dolos" "Adrestia'S Strike" "Voice Of Adrestia" "Phobos'S Shield" "Ialmenus" "Vision Of Phobos" "Eris'S Strike" "Word Of Deimos" "Makhai'S Haplon" "Will Of Phobos" "Eris'S Steed" "Cebriones" "Anteros'S Fist" "Nike'S Steed" "Idas" "Alastor" "Deimos'S Courage" "Word Of Adrestia" "Orpheus" "Palioxis" "Vision Of Eris" "Kydoimos'S Doru" "Enyo'S Strike" "Breath Of Nike" "Phobos'S Rage" "Spirit Of Phobos" "Eris'S Dagger" "Praxidice" "Will Of Nike" "Anteros'S Strike" "Kydoimos" "Eris'S Sword" "Kydoimos'S Fist" "Theseus" "Gorgophone" "Nike'S Dagger" "Deimos" "Phobos'S Will" "Hand Of Anteros" "Makhai'S Will" "Meleager" "Ptocheia" "Enyo'S Chariot" "Adrestia'S Rage" "Adrestia'S Xiphon" "Anteros'S Shield" "Hand Of Deimos" "Breath Of Enyo" "Anteros'S Courage" "Adrestia'S Will" "Promachus" "Breath Of Eris" "Alke" "Ker" "Will Of Kydoimos" "Kydoimos'S Spear" "Breath Of Anteros" "Voice Of Enyo" "Deimos" "Phobos'S Doru" "Enyo'S Spear" "Adrestia'S Doru" "Nike'S Strike" "Gereniaus" "Phobos'S Arrow" "Adrestia'S Dagger" "Taraxippus" "Eioneus" "Alala'S Rage" "Phobos'S Javelin" "Anteros'S Spear" "Anteros'S Steed" "Phobos'S Fist" "Oenomaus" "Tryphon" "Deimos'S Arrow" "Makhai'S Steed" "Hylas" "Vision Of Anteros" "Nike'S Spear" "Maniae" "Adrestia'S Sarissa" "Nike'S Shield" "Spirit Of Nike" "Kydoimos" "Enyo" "Enyo'S Sarissa" "Eris'S Xiphon" "Phobos'S Steed" "Alala'S Doru" "Adrestia'S Chariot" "Peitho" "Enyo'S Shield" "Bellerophon" "Eris'S Haplon" "Iphiclus" "Harmonia'S Doru" "Harmonia'S Chariot" "Alala'S Javelin" "Harmonia'S Javelin" "Iolcus" "Adrestia'S Steed" "Proioxis" "Makhai'S Fist" "Eurypylus" "Ennomus" "Hand Of Enyo" "Enyo'S Vigil" "Kydoimos'S Courage" "Word Of Makhai" "Voice Of Nike" "Deimos'S Command" "Epeius" "Asclepius" "Nike'S Will" "Xuthus" "Deimos'S Shield" "Kydoimos'S Kopis" "Will Of Deimos" "Castor" "Eris'S Arrow" "Momus" "Phobos'S Courage" "Spirit Of Eris" "Eris" "Nike'S Courage" "Chloris" "Phobos" "Will Of Eris" "Kydoimos'S Haplon" "Amphitryon" "Harmonia'S Kopis" "Deimos'S Fist" "Homados" "Peitharchia" "Deimos'S Strike" "Phobos'S Spear" "Amphiaraus" "Mopsus" "Adrestia'S Sword" "Deimos'S Kopis" "Breath Of Phobos" "Eryx" "Eris'S Command" "Hand Of Eris" "Ancaeus" "Oizys" "Nestor" "Kydoimos'S Xiphon" "Polemos" "Lampades" "Enyo'S Will" "Spirit Of Kydoimos" "Polynices" "Breath Of Makhai" "Nike'S Haplon" "Styx" "Enyo'S Xiphon" "Anteros'S Doru" "Antilochus" "Kydoimos'S Shield" "Eris'S Vigil" "Vision Of Harmonia" "Zethus" "Heimdall" "Hybris" "Kydoimos'S Steed" "Alala'S Xiphon" "Pheme" "Palamedes" "Litae" "Dike" "Voice Of Phobos" "Voice Of Makhai" "Alala'S Dagger" "Word Of Enyo" "Eris'S Will" "Deimos'S Javelin" "Anteros'S Kopis" "Vision Of Kydoimos" "Phobos'S Kopis" "Ioke" "Hand Of Kydoimos" "Iapis" "Alala'S Shield" "Kydoimos'S Javelin" "Atalanta" "Word Of Kydoimos" "Adrestia'S Kopis" "Alala'S Will" "Clytius" "Makhai'S Courage" "Alala'S Courage" "Eris" "Evander" "Agamemnon" "Adrestia'S Courage" "Phobos'S Vigil" "Aristaeus" "Horme" "Cybele" "Vision Of Adrestia" "Soteria" "Chrysippus" "Menelaus" "Anteros'S Sword" "Adrastus" "Breath Of Kydoimos" "Autolycus" "Palioxis" "Deimos'S Sarissa" "Kydoimos'S Sword" "Makhai'S Vigil" "Will Of Makhai" "Euryalus" "Deimos'S Will" "Eris'S Spear" "Alala'S Arrow" "Moros" "Phoenix" "Zelos" "Spirit Of Deimos" "Harmonia'S Strike" "Anteros'S Will" "Enyo'S Arrow" "Alala" "Enyo'S Kopis" "Glaucus" "Hecate" "Harmonia'S Haplon" "Pallas" "Calliope" "Bias" "Alala'S Kopis" "Voice Of Deimos" "Palioxis" "Telamon" "Anteros'S Rage" "Phobos'S Xiphon" "Alala'S Strike" "Kydoimos'S Command" "Harmonia'S Dagger" "Will Of Enyo" "Nireus" "Nike'S Sarissa" "Bia" "Alala'S Haplon" "Kydoimos" "Glaukos" "Kydoimos'S Arrow" "Kydoimos'S Chariot" "Anteros" "Hector" "Will Of Anteros" "Voice Of Harmonia" "Tydeus" "Word Of Nike" "Harmonia'S Sarissa" "Enyo'S Fist" "Tlepolemus" "Enyo'S Sword"
+		}
+
+		destroyer = {
+			"Harmonia'S Xiphon" "Calchas" "Odysseus" "Breath Of Adrestia" "Nemea" "Cadmus" "Voice Of Alala" "Enyo'S Dagger" "Anteros'S Vigil" "Enyo'S Steed" "Spirit Of Alala" "Nike'S Command" "Makhai'S Sarissa" "Nike" "Echemus" "Vision Of Nike" "Philoctetes" "Voice Of Kydoimos" "Promakhos" "Nike'S Doru" "Agapenor" "Harmonia'S Will" "Voice Of Eris" "Alala'S Spear" "Peleus" "Eris'S Sarissa" "Deimos'S Vigil" "Alala'S Command" "Word Of Eris" "Deimos'S Steed" "Hand Of Phobos" "Alala'S Sarissa" "Deimos'S Sword" "Spirit Of Enyo" "Adrestia'S Vigil" "Alala'S Steed" "Discordia" "Phobos'S Sword" "Makhai'S Kopis" "Makhai'S Sword" "Perseus" "Will Of Alala" "Nike'S Javelin" "Iolaus" "Adrestia" "Hand Of Makhai" "Eris'S Javelin" "Astacus" "Nike" "Makhai'S Chariot" "Eris'S Shield" "Adrestia'S Fist" "Loxias" "Kydoimos'S Vigil" "Breath Of Harmonia" "Ceneus" "Nike'S Sword" "Enyo'S Javelin" "Hand Of Adrestia" "Vision Of Makhai" "Iphitus" "Harmonia'S Command" "Elatus" "Makhai'S Doru" "Androgeus" "Nike'S Fist" "Soteria" "Anteros'S Chariot" "Nike'S Kopis" "Augeas" "Spirit Of Anteros" "Athena Nike" "Epopeus" "Nike'S Rage" "Asclepius" "Adrestia'S Haplon" "Adrestia'S Spear" "Adrestia'S Command" "Aristaeus" "Deimos'S Doru" "Cycnus" "Harmonia'S Vigil" "Eris'S Chariot" "Kydoimos'S Sarissa" "Hand Of Harmonia" "Makhai'S Rage" "Phobos'S Sarissa" "Diomedes" "Harmonia'S Courage" "Makhai'S Shield" "Voice Of Anteros" "Heracles" "Achilles" "Breath Of Deimos" "Demeter Erinys" "Hand Of Nike" "Almos" "Pronoia" "Thanatos" "Phobos" "Philemon" "Spirit Of Makhai" "Anteros'S Dagger" "Alala'S Fist" "Icarus" "Porus" "Ajax" "Metus" "Will Of Adrestia" "Harmonia'S Shield" "Iphicles" "Aias" "Makhai'S Arrow" "Harmonia'S Sword" "Makhai'S Dagger" "Deimos'S Spear" "Harmonia'S Spear" "Enyalius" "Laodocus" "Hand Of Alala" "Spirit Of Harmonia" "Enyo'S Doru" "Kakia" "Makhai'S Xiphon" "Kydoimos'S Dagger" "Phonoi" "Nike'S Arrow" "Alala'S Vigil" "Deimos'S Xiphon" "Eris'S Doru" "Makhai'S Javelin" "Eris'S Fist" "Anteros'S Xiphon" "Harmonia'S Arrow" "Nike'S Chariot" "Phobos'S Haplon" "Enyo'S Courage" "Dinlas" "Anteros'S Javelin" "Myrmidon" "Makhai'S Command" "Kydoimos'S Rage" "Deucalion" "Deimos'S Chariot" "Leonteus" "Anicetus" "Spirit Of Adrestia" "Actaeon" "Anteros'S Sarissa" "Demoleon" "Proioxis" "Deiphobus" "Enyo'S Haplon" "Will Of Harmonia" "Deimos'S Rage" "Word Of Harmonia" "Vision Of Enyo" "Vision Of Deimos" "Echetlus" "Oileus" "Anteros'S Command" "Enyo'S Rage" "Makhai'S Spear" "Deimos'S Haplon" "Melampus" "Lycomedes" "Nike'S Vigil" "Iasus" "Capaneus" "Makhai'S Strike" "Thrasos" "Alala'S Sword" "Eris'S Rage" "Nike'S Xiphon" "Enyo'S Command" "Corythus" "Adrestia'S Arrow" "Ascalaphus" "Broteas" "Daedalus" "Adrestia'S Shield" "Eurytion" "Makhai" "Phobos'S Chariot" "Breath Of Alala" "Vision Of Alala" "Phobos'S Dagger" "Patroclus" "Harmonia" "Anteros'S Haplon" "Phobos'S Strike" "Lyssa" "Harmonia'S Rage" "Word Of Phobos" "Phobos'S Command" "Harmonia'S Steed" "Word Of Anteros" "Eris'S Kopis" "Nomos" "Deimos'S Dagger" "Harmonia'S Fist" "Dryops" "Kydoimos'S Strike" "Adrestia'S Javelin" "Asterion" "Word Of Alala" "Mecisteus" "Alala'S Chariot" "Jason" "Kydoimos'S Will" "Eris'S Courage" "Aeneas" "Anteros'S Arrow" "Dolos" "Adrestia'S Strike" "Voice Of Adrestia" "Phobos'S Shield" "Ialmenus" "Vision Of Phobos" "Eris'S Strike" "Word Of Deimos" "Makhai'S Haplon" "Will Of Phobos" "Eris'S Steed" "Cebriones" "Anteros'S Fist" "Nike'S Steed" "Idas" "Alastor" "Deimos'S Courage" "Word Of Adrestia" "Orpheus" "Palioxis" "Vision Of Eris" "Kydoimos'S Doru" "Enyo'S Strike" "Breath Of Nike" "Phobos'S Rage" "Spirit Of Phobos" "Eris'S Dagger" "Praxidice" "Will Of Nike" "Anteros'S Strike" "Kydoimos" "Eris'S Sword" "Kydoimos'S Fist" "Theseus" "Gorgophone" "Nike'S Dagger" "Deimos" "Phobos'S Will" "Hand Of Anteros" "Makhai'S Will" "Meleager" "Ptocheia" "Enyo'S Chariot" "Adrestia'S Rage" "Adrestia'S Xiphon" "Anteros'S Shield" "Hand Of Deimos" "Breath Of Enyo" "Anteros'S Courage" "Adrestia'S Will" "Promachus" "Breath Of Eris" "Alke" "Ker" "Will Of Kydoimos" "Kydoimos'S Spear" "Breath Of Anteros" "Voice Of Enyo" "Deimos" "Phobos'S Doru" "Enyo'S Spear" "Adrestia'S Doru" "Nike'S Strike" "Gereniaus" "Phobos'S Arrow" "Adrestia'S Dagger" "Taraxippus" "Eioneus" "Alala'S Rage" "Phobos'S Javelin" "Anteros'S Spear" "Anteros'S Steed" "Phobos'S Fist" "Oenomaus" "Tryphon" "Deimos'S Arrow" "Makhai'S Steed" "Hylas" "Vision Of Anteros" "Nike'S Spear" "Maniae" "Adrestia'S Sarissa" "Nike'S Shield" "Spirit Of Nike" "Kydoimos" "Enyo" "Enyo'S Sarissa" "Eris'S Xiphon" "Phobos'S Steed" "Alala'S Doru" "Adrestia'S Chariot" "Peitho" "Enyo'S Shield" "Bellerophon" "Eris'S Haplon" "Iphiclus" "Harmonia'S Doru" "Harmonia'S Chariot" "Alala'S Javelin" "Harmonia'S Javelin" "Iolcus" "Adrestia'S Steed" "Proioxis" "Makhai'S Fist" "Eurypylus" "Ennomus" "Hand Of Enyo" "Enyo'S Vigil" "Kydoimos'S Courage" "Word Of Makhai" "Voice Of Nike" "Deimos'S Command" "Epeius" "Asclepius" "Nike'S Will" "Xuthus" "Deimos'S Shield" "Kydoimos'S Kopis" "Will Of Deimos" "Castor" "Eris'S Arrow" "Momus" "Phobos'S Courage" "Spirit Of Eris" "Eris" "Nike'S Courage" "Chloris" "Phobos" "Will Of Eris" "Kydoimos'S Haplon" "Amphitryon" "Harmonia'S Kopis" "Deimos'S Fist" "Homados" "Peitharchia" "Deimos'S Strike" "Phobos'S Spear" "Amphiaraus" "Mopsus" "Adrestia'S Sword" "Deimos'S Kopis" "Breath Of Phobos" "Eryx" "Eris'S Command" "Hand Of Eris" "Ancaeus" "Oizys" "Nestor" "Kydoimos'S Xiphon" "Polemos" "Lampades" "Enyo'S Will" "Spirit Of Kydoimos" "Polynices" "Breath Of Makhai" "Nike'S Haplon" "Styx" "Enyo'S Xiphon" "Anteros'S Doru" "Antilochus" "Kydoimos'S Shield" "Eris'S Vigil" "Vision Of Harmonia" "Zethus" "Heimdall" "Hybris" "Kydoimos'S Steed" "Alala'S Xiphon" "Pheme" "Palamedes" "Litae" "Dike" "Voice Of Phobos" "Voice Of Makhai" "Alala'S Dagger" "Word Of Enyo" "Eris'S Will" "Deimos'S Javelin" "Anteros'S Kopis" "Vision Of Kydoimos" "Phobos'S Kopis" "Ioke" "Hand Of Kydoimos" "Iapis" "Alala'S Shield" "Kydoimos'S Javelin" "Atalanta" "Word Of Kydoimos" "Adrestia'S Kopis" "Alala'S Will" "Clytius" "Makhai'S Courage" "Alala'S Courage" "Eris" "Evander" "Agamemnon" "Adrestia'S Courage" "Phobos'S Vigil" "Aristaeus" "Horme" "Cybele" "Vision Of Adrestia" "Soteria" "Chrysippus" "Menelaus" "Anteros'S Sword" "Adrastus" "Breath Of Kydoimos" "Autolycus" "Palioxis" "Deimos'S Sarissa" "Kydoimos'S Sword" "Makhai'S Vigil" "Will Of Makhai" "Euryalus" "Deimos'S Will" "Eris'S Spear" "Alala'S Arrow" "Moros" "Phoenix" "Zelos" "Spirit Of Deimos" "Harmonia'S Strike" "Anteros'S Will" "Enyo'S Arrow" "Alala" "Enyo'S Kopis" "Glaucus" "Hecate" "Harmonia'S Haplon" "Pallas" "Calliope" "Bias" "Alala'S Kopis" "Voice Of Deimos" "Palioxis" "Telamon" "Anteros'S Rage" "Phobos'S Xiphon" "Alala'S Strike" "Kydoimos'S Command" "Harmonia'S Dagger" "Will Of Enyo" "Nireus" "Nike'S Sarissa" "Bia" "Alala'S Haplon" "Kydoimos" "Glaukos" "Kydoimos'S Arrow" "Kydoimos'S Chariot" "Anteros" "Hector" "Will Of Anteros" "Voice Of Harmonia" "Tydeus" "Word Of Nike" "Harmonia'S Sarissa" "Enyo'S Fist" "Tlepolemus" "Enyo'S Sword"
+		}
+
+		cruiser = {
+			"Voice Of Hermes" "Will Of Hestia" "Dionysus'S Dagger" "Dionysus'S Steed" "Athena'S Steed" "Spirit Of Ares" "Hermes'S Rage" "Spirit Of Demeter" "Hestia'S Strike" "Aphrodite'S Sarissa" "Artemis'S Will" "Athena'S Shield" "Hermes'S Fist" "Hestia'S Vigil" "Spirit Of Hermes" "Voice Of Hera" "Aphrodite'S Dagger" "Vision Of Hephaestus" "Vision Of Demeter" "Dionysus'S Rage" "Athena'S Sarissa" "Artemis'S Rage" "Hephaestus'S Arrow" "Demeter'S Sword" "Hermes'S Javelin" "Artemis'S Sarissa" "Dionysus'S Javelin" "Hephaestus'S Fist" "Hermes'S Vigil" "Hestia'S Sword" "Ares'S Rage" "Dionysus'S Command" "Hermes'S Xiphon" "Artemis'S Spear" "Artemis'S Xiphon" "Hestia'S Haplon" "Will Of Hermes" "Hand Of Artemis" "Vision Of Hermes" "Hera'S Javelin" "Breath Of Aphrodite" "Will Of Hera" "Ares'S Will" "Hermes'S Will" "Ares'S Doru" "Hermes'S Spear" "Hand Of Athena" "Vision Of Hestia" "Word Of Artemis" "Apollo'S Dagger" "Artemis'S Sword" "Artemis'S Fist" "Demeter'S Chariot" "Hephaestus'S Dagger" "Hephaestus'S Command" "Hestia'S Shield" "Hephaestus'S Doru" "Dionysus'S Will" "Spirit Of Aphrodite" "Hermes'S Sword" "Aphrodite'S Courage" "Hera'S Xiphon" "Apollo'S Arrow" "Breath Of Hera" "Hand Of Hermes" "Hephaestus'S Xiphon" "Hermes'S Command" "Hestia'S Dagger" "Artemis'S Kopis" "Hermes'S Steed" "Hera'S Doru" "Hera'S Steed" "Hand Of Hephaestus" "Artemis'S Shield" "Athena'S Sword" "Spirit Of Hephaestus" "Hand Of Ares" "Breath Of Hephaestus" "Apollo'S Command" "Demeter'S Rage" "Hermes'S Arrow" "Word Of Hermes" "Athena'S Rage" "Aphrodite'S Command" "Aphrodite'S Chariot" "Hestia'S Command" "Athena'S Will" "Word Of Ares" "Ares'S Haplon" "Apollo'S Steed" "Breath Of Dionysus" "Apollo'S Javelin" "Will Of Apollo" "Hera'S Command" "Athena'S Kopis" "Apollo'S Spear" "Ares'S Steed" "Voice Of Hestia" "Hermes'S Strike" "Vision Of Artemis" "Vision Of Dionysus" "Athena'S Dagger" "Hephaestus'S Courage" "Voice Of Apollo" "Hestia'S Arrow" "Demeter'S Xiphon" "Spirit Of Artemis" "Dionysus'S Kopis" "Dionysus'S Courage" "Voice Of Dionysus" "Apollo'S Vigil" "Dionysus'S Sarissa" "Dionysus'S Shield" "Word Of Aphrodite" "Hestia'S Courage" "Aphrodite'S Haplon" "Apollo'S Chariot" "Hand Of Apollo" "Artemis'S Courage" "Ares'S Fist" "Demeter'S Shield" "Dionysus'S Fist" "Aphrodite'S Spear" "Athena'S Vigil" "Hestia'S Kopis" "Aphrodite'S Fist" "Dionysus'S Haplon" "Word Of Hestia" "Hand Of Dionysus" "Athena'S Spear" "Athena'S Chariot" "Hera'S Vigil" "Hestia'S Javelin" "Artemis'S Javelin" "Athena'S Courage" "Spirit Of Hestia" "Demeter'S Javelin" "Demeter'S Doru" "Ares'S Kopis" "Hephaestus'S Kopis" "Word Of Demeter" "Apollo'S Kopis" "Voice Of Hephaestus" "Hermes'S Dagger" "Demeter'S Kopis" "Word Of Apollo" "Breath Of Artemis" "Apollo'S Fist" "Apollo'S Shield" "Breath Of Hermes" "Dionysus'S Vigil" "Breath Of Athena" "Hestia'S Spear" "Word Of Dionysus" "Will Of Hephaestus" "Hephaestus'S Will" "Hestia'S Rage" "Ares'S Chariot" "Hera'S Rage" "Vision Of Athena" "Apollo'S Sword" "Ares'S Courage" "Ares'S Shield" "Apollo'S Doru" "Ares'S Sarissa" "Ares'S Spear" "Demeter'S Dagger" "Ares'S Sword" "Hand Of Hestia" "Artemis'S Dagger" "Demeter'S Vigil" "Hera'S Sword" "Spirit Of Dionysus" "Apollo'S Haplon" "Will Of Aphrodite" "Ares'S Javelin" "Hermes'S Sarissa" "Dionysus'S Arrow" "Hera'S Shield" "Vision Of Hera" "Athena'S Xiphon" "Hephaestus'S Sword" "Hephaestus'S Rage" "Voice Of Aphrodite" "Dionysus'S Xiphon" "Hera'S Will" "Artemis'S Haplon" "Artemis'S Chariot" "Vision Of Ares" "Hephaestus'S Vigil" "Apollo'S Strike" "Hestia'S Xiphon" "Hera'S Strike" "Spirit Of Hera" "Demeter'S Fist" "Ares'S Vigil" "Aphrodite'S Arrow" "Apollo'S Courage" "Hera'S Kopis" "Ares'S Dagger" "Artemis'S Command" "Spirit Of Athena" "Hand Of Hera" "Aphrodite'S Doru" "Will Of Dionysus" "Hera'S Dagger" "Hestia'S Doru" "Hera'S Courage" "Hera'S Sarissa" "Hermes'S Chariot" "Vision Of Aphrodite" "Hephaestus'S Strike" "Voice Of Artemis" "Aphrodite'S Sword" "Word Of Hera" "Athena'S Doru" "Ares'S Command" "Demeter'S Steed" "Will Of Artemis" "Athena'S Arrow" "Hera'S Spear" "Aphrodite'S Vigil" "Demeter'S Sarissa" "Demeter'S Will" "Voice Of Athena" "Dionysus'S Strike" "Artemis'S Vigil" "Artemis'S Steed" "Hand Of Aphrodite" "Ares'S Xiphon" "Hephaestus'S Chariot" "Aphrodite'S Javelin" "Dionysus'S Chariot" "Will Of Athena" "Breath Of Ares" "Aphrodite'S Steed" "Demeter'S Arrow" "Hephaestus'S Shield" "Hephaestus'S Haplon" "Hestia'S Sarissa" "Aphrodite'S Xiphon" "Demeter'S Spear" "Artemis'S Doru" "Hera'S Arrow" "Athena'S Javelin" "Breath Of Demeter" "Hephaestus'S Spear" "Hephaestus'S Sarissa" "Breath Of Hestia" "Artemis'S Arrow" "Hestia'S Fist" "Apollo'S Xiphon" "Apollo'S Will" "Hermes'S Doru" "Hermes'S Haplon" "Dionysus'S Sword" "Hera'S Fist" "Hestia'S Steed" "Aphrodite'S Strike" "Hephaestus'S Steed" "Aphrodite'S Kopis" "Will Of Demeter" "Demeter'S Courage" "Will Of Ares" "Athena'S Command" "Hestia'S Will" "Voice Of Ares" "Athena'S Strike" "Vision Of Apollo" "Apollo'S Rage" "Hera'S Chariot" "Voice Of Demeter" "Demeter'S Strike" "Athena'S Haplon" "Spirit Of Apollo" "Athena'S Fist" "Hand Of Demeter" "Word Of Athena" "Hermes'S Courage" "Apollo'S Sarissa" "Aphrodite'S Rage" "Aphrodite'S Shield" "Hestia'S Chariot" "Demeter'S Command" "Hermes'S Kopis" "Dionysus'S Spear" "Aphrodite'S Will" "Breath Of Apollo" "Artemis'S Strike" "Ares'S Strike" "Ares'S Arrow" "Demeter'S Haplon" "Dionysus'S Doru" "Hephaestus'S Javelin" "Word Of Hephaestus" "Hermes'S Shield" "Hera'S Haplon"
+		}
+		StrikeCruiser = {
+			""
+		}
+		Battlecruiser = {
+			"Dionysus'S Will" "Dionysus'S Spear" "Hestia'S Courage" "Hermes'S Arrow" "Hermes'S Will" "Word Of Demeter" "Aphrodite'S Fist" "Vision Of Ares" "Artemis'S Rage" "Artemis'S Spear" "Hermes'S Command" "Hera'S Shield" "Hephaestus'S Sarissa" "Voice Of Demeter" "Hephaestus'S Dagger" "Demeter'S Xiphon" "Breath Of Aphrodite" "Hermes'S Chariot" "Will Of Athena" "Will Of Hephaestus" "Spirit Of Hestia" "Dionysus'S Shield" "Demeter'S Sword" "Breath Of Hermes" "Ares'S Spear" "Hermes'S Xiphon" "Hera'S Command" "Artemis'S Command" "Hera'S Xiphon" "Spirit Of Athena" "Voice Of Hermes" "Demeter'S Steed" "Will Of Ares" "Hera'S Doru" "Hera'S Sarissa" "Hermes'S Haplon" "Apollo'S Kopis" "Apollo'S Vigil" "Apollo'S Arrow" "Ares'S Vigil" "Breath Of Demeter" "Artemis'S Vigil" "Ares'S Dagger" "Vision Of Athena" "Aphrodite'S Command" "Aphrodite'S Kopis" "Voice Of Hephaestus" "Aphrodite'S Shield" "Hephaestus'S Haplon" "Hermes'S Vigil" "Aphrodite'S Javelin" "Dionysus'S Courage" "Athena'S Sword" "Vision Of Hestia" "Apollo'S Spear" "Apollo'S Javelin" "Hephaestus'S Sword" "Hestia'S Doru" "Athena'S Command" "Hestia'S Chariot" "Vision Of Aphrodite" "Artemis'S Will" "Hera'S Chariot" "Hephaestus'S Steed" "Hestia'S Sarissa" "Hand Of Aphrodite" "Hestia'S Javelin" "Breath Of Ares" "Aphrodite'S Xiphon" "Hera'S Fist" "Hestia'S Will" "Hera'S Arrow" "Hephaestus'S Doru" "Ares'S Haplon" "Hera'S Spear" "Vision Of Hermes" "Hera'S Kopis" "Athena'S Spear" "Voice Of Aphrodite" "Hera'S Sword" "Spirit Of Hera" "Vision Of Hephaestus" "Hermes'S Shield" "Word Of Artemis" "Athena'S Fist" "Will Of Hera" "Apollo'S Courage" "Dionysus'S Command" "Apollo'S Xiphon" "Breath Of Apollo" "Ares'S Command" "Word Of Athena" "Artemis'S Javelin" "Hephaestus'S Arrow" "Breath Of Artemis" "Hestia'S Steed" "Demeter'S Strike" "Hand Of Hephaestus" "Word Of Hephaestus" "Apollo'S Doru" "Dionysus'S Arrow" "Spirit Of Apollo" "Hermes'S Sarissa" "Hera'S Will" "Ares'S Sarissa" "Hephaestus'S Fist" "Artemis'S Courage" "Hephaestus'S Command" "Voice Of Hestia" "Hermes'S Dagger" "Hestia'S Shield" "Hand Of Ares" "Hermes'S Steed" "Vision Of Dionysus" "Hephaestus'S Vigil" "Hermes'S Kopis" "Vision Of Artemis" "Artemis'S Xiphon" "Athena'S Haplon" "Aphrodite'S Doru" "Hephaestus'S Xiphon" "Demeter'S Command" "Artemis'S Doru" "Hermes'S Spear" "Athena'S Chariot" "Spirit Of Hephaestus" "Voice Of Athena" "Demeter'S Arrow" "Hera'S Strike" "Hand Of Hermes" "Spirit Of Ares" "Dionysus'S Vigil" "Aphrodite'S Sword" "Apollo'S Fist" "Aphrodite'S Will" "Aphrodite'S Steed" "Hermes'S Javelin" "Demeter'S Shield" "Demeter'S Vigil" "Hand Of Athena" "Vision Of Apollo" "Apollo'S Haplon" "Will Of Apollo" "Aphrodite'S Arrow" "Ares'S Doru" "Artemis'S Chariot" "Word Of Aphrodite" "Hephaestus'S Spear" "Will Of Dionysus" "Will Of Demeter" "Aphrodite'S Rage" "Spirit Of Hermes" "Hestia'S Xiphon" "Ares'S Steed" "Athena'S Javelin" "Hand Of Apollo" "Voice Of Apollo" "Dionysus'S Rage" "Aphrodite'S Dagger" "Ares'S Kopis" "Athena'S Vigil" "Dionysus'S Sword" "Athena'S Steed" "Demeter'S Courage" "Hera'S Rage" "Demeter'S Dagger" "Word Of Hera" "Artemis'S Kopis" "Voice Of Ares" "Artemis'S Sword" "Aphrodite'S Sarissa" "Hephaestus'S Will" "Athena'S Strike" "Voice Of Hera" "Hestia'S Strike" "Vision Of Hera" "Demeter'S Rage" "Apollo'S Steed" "Ares'S Arrow" "Ares'S Chariot" "Hephaestus'S Courage" "Demeter'S Sarissa" "Dionysus'S Doru" "Athena'S Will" "Vision Of Demeter" "Ares'S Will" "Hermes'S Rage" "Hestia'S Dagger" "Spirit Of Dionysus" "Athena'S Rage" "Dionysus'S Chariot" "Hermes'S Doru" "Will Of Hermes" "Apollo'S Dagger" "Dionysus'S Fist" "Athena'S Arrow" "Will Of Artemis" "Demeter'S Kopis" "Ares'S Sword" "Apollo'S Shield" "Hephaestus'S Rage" "Spirit Of Demeter" "Hermes'S Fist" "Artemis'S Strike" "Hestia'S Kopis" "Apollo'S Sarissa" "Athena'S Shield" "Dionysus'S Kopis" "Hestia'S Rage" "Hestia'S Sword" "Artemis'S Arrow" "Demeter'S Chariot" "Aphrodite'S Courage" "Ares'S Javelin" "Apollo'S Rage" "Spirit Of Aphrodite" "Artemis'S Haplon" "Hestia'S Arrow" "Breath Of Hestia" "Ares'S Courage" "Hand Of Demeter" "Artemis'S Steed" "Hestia'S Fist" "Hephaestus'S Chariot" "Word Of Apollo" "Aphrodite'S Haplon" "Ares'S Shield" "Aphrodite'S Chariot" "Demeter'S Will" "Hera'S Dagger" "Will Of Hestia" "Hephaestus'S Shield" "Will Of Aphrodite" "Demeter'S Fist" "Hermes'S Strike" "Athena'S Dagger" "Artemis'S Shield" "Hand Of Hestia" "Aphrodite'S Vigil" "Ares'S Xiphon" "Hestia'S Vigil" "Hera'S Javelin" "Dionysus'S Xiphon" "Dionysus'S Sarissa" "Apollo'S Will" "Aphrodite'S Strike" "Hera'S Vigil" "Hephaestus'S Kopis" "Voice Of Artemis" "Word Of Dionysus" "Voice Of Dionysus" "Breath Of Hera" "Hestia'S Command" "Breath Of Hephaestus" "Hera'S Haplon" "Demeter'S Spear" "Aphrodite'S Spear" "Word Of Hestia" "Athena'S Courage" "Artemis'S Dagger" "Artemis'S Fist" "Hestia'S Haplon" "Apollo'S Chariot" "Spirit Of Artemis" "Athena'S Xiphon" "Apollo'S Strike" "Word Of Hermes" "Hand Of Artemis" "Demeter'S Doru" "Hand Of Hera" "Hephaestus'S Javelin" "Ares'S Strike" "Demeter'S Javelin" "Artemis'S Sarissa" "Dionysus'S Haplon" "Demeter'S Haplon" "Hand Of Dionysus" "Apollo'S Command" "Hestia'S Spear" "Hermes'S Sword" "Hephaestus'S Strike" "Hermes'S Courage" "Word Of Ares" "Ares'S Rage" "Ares'S Fist" "Dionysus'S Dagger" "Athena'S Sarissa" "Apollo'S Sword" "Dionysus'S Steed" "Dionysus'S Javelin" "Athena'S Kopis" "Hera'S Steed" "Hera'S Courage" "Athena'S Doru" "Breath Of Athena" "Dionysus'S Strike" "Breath Of Dionysus"
+		}
+		battleship = {
+			"Dionysus" "Hera" "Hestia" "Demeter" "Athena" "Apollo" "Artemis" "Ares" "Aphrodite" "Hephaestus" "Hermes"
+		}
+		Carrier = {
+			"Hephaestus" "Hestia" "Athena" "Demeter" "Dionysus" "Hera" "Apollo" "Ares" "Hermes" "Aphrodite" "Artemis"
+		}
+		Dreadnought = {
+			"Dionysus" "Hera" "Hestia" "Demeter" "Athena" "Apollo" "Artemis" "Ares" "Aphrodite" "Hephaestus" "Hermes"
+		}
+		titan = {
+			"Dionysus" "Hera" "Hestia" "Demeter" "Athena" "Apollo" "Artemis" "Ares" "Aphrodite" "Hephaestus" "Hermes"
+		}
+		Flagship = {
+			"Poseidon" "Zeus" "Hades"
+		}
+		colossus = {
+			"Zeus" "Poseidon" "Hades"
+		}
+		juggernaut = {
+			"Hades" "Poseidon" "Zeus"
+		}
+
+		constructor = {
+			"Hephaestus" "Daedalus" "Epeius" "Erechtheus" "Icarus" "Metis" "Palamedes" "Poseidon" "Talos" "Tantalus"
+		}
+		colonizer = {
+			"Hestia" "Eunomia" "Boreas" "Demeter" "Hermes" "Amphictyonis" "Hecate" "Nike" "Pan" "Triptolemus"
+		}
+		sponsored_colonizer = {
+		"Hestia" "Eunomia" "Boreas" "Demeter" "Hermes" "Amphictyonis" "Hecate" "Nike" "Pan" "Triptolemus"
+		}
+		science = {
+			"Eileithyia" "Aristaeus" "Hecate" "Prometheus" "Metis" "Helios" "Mnemosyne" "Asclepius" "Ananke" "Thoth"
+		}
+		explorationship = {
+			"Pan" "Hecate" "Persephone" "Hermes Trismegistus" "Demeter" "Aeolus" "Eris" "Proteus" "Circe" "Charybdis"
+		}
+		transport = {
+			"Trireme"
+		}
+
+		military_station_small = {
+			"Phrourion"
+		}
+
+		military_station_medium = {
+			"Strategeion"
+		}
+
+		military_station_large = {
+			"Akropolis"
+		}
+
+		ion_cannon = {
+			"Zeus'S Lightning"
+		}
+
+		xl_cannon = {
+			"Zeus'S Thunderbolt"
+		}
+	}
+
+	fleet_names = {
+		random_names = {
+			""
+		}
+		sequential_name = "Osiris_Ancientgreek_Fleetnames_R"
+	}
+
+	army_names = {
+
+		machine_defense = {
+			sequential_name = "Osiris_Ancientgreek_Machinedefense_R"
+		}
+
+		machine_assault_1 = {
+			sequential_name = "Osiris_Ancientgreek_Machineassault1_R"
+		}
+
+		machine_assault_2 = {
+			sequential_name = "Osiris_Ancientgreek_Machineassault2_R"
+		}
+
+		machine_assault_3 = {
+			sequential_name = "Osiris_Ancientgreek_Machineassault3_R"
+		}
+
+		defense_army = {
+			sequential_name = "Osiris_Ancientgreek_Defensearmy_R"
+		}
+
+		assault_army = {
+			sequential_name = "Osiris_Ancientgreek_Assaultarmy_R"
+		}
+
+		slave_army = {
+			sequential_name = "Osiris_Ancientgreek_Slavearmy_R"
+		}
+
+		clone_army = {
+			sequential_name = "Osiris_Ancientgreek_Clonearmy_R"
+		}
+
+		undead_army = {
+			sequential_name = "Osiris_Ancientgreek_Undeadarmy_R"
+		}
+
+		robotic_army = {
+			sequential_name = "Osiris_Ancientgreek_Roboticarmy_R"
+		}
+
+		robotic_defense_army = {
+			sequential_name = "Osiris_Ancientgreek_Roboticdefensearmy_R"
+		}
+
+		psionic_army = {
+			sequential_name = "Osiris_Ancientgreek_Psionicarmy_R"
+		}
+
+		xenomorph_army = {
+			sequential_name = "Osiris_Ancientgreek_Xenomorpharmy_R"
+		}
+
+		gene_warrior_army = {
+			sequential_name = "Osiris_Ancientgreek_Genewarriorarmy_R"
+		}
+
+		occupation_army = {
+			sequential_name = "Osiris_Ancientgreek_Occupationarmy_R"
+		}
+
+		robotic_occupation_army = {
+			sequential_name = "Osiris_Ancientgreek_Roboticoccupationarmy_R"
+		}
+
+		primitive_army = {
+			sequential_name = "Osiris_Ancientgreek_Primitivearmy_R"
+		}
+		industrial_army = {
+			sequential_name = "Osiris_Ancientgreek_Industrialarmy_R"
+		}
+		postatomic_army = {
+			sequential_name = "Osiris_Ancientgreek_Postatomicarmy_R"
+		}
+	}
+
+	planet_names = {
+
+		generic = {
+			names = {
+				"Athens" "Sparta" "Corinth" "Syracuse" "Aegina" "Rhodes" "Argos" "Eretria" "Elis" "Abdera" "Abydos" "Acanthus" "Acharnae" "Aegium" "Aenus" "Amphipolis" "Andros" "Aphidnae" "Apollonia" "Asine" "Assus" "Brauron" "Byzantium" "Calchedon" "Calydon" "Carystus" "Chalcis" "Cnidus" "Cyme" "Cythera" "Decelea" "Delphi" "Demetrias" "Didyma" "Dodona" "Dyme" "Eleusis" "Ephesus" "Erythrae" "Gortyn" "Gortys" "Halicarnassus" "Heraclea" "Hermione" "Ialysus" "Iassus" "Ithaca" "Lampsacus" "Larissa" "Lepreum" "Lindus" "Locri" "Mantinea" "Marathon" "Massila" "Megalopolis" "Megara" "Messene" "Methone" "Miletus" "Mylasa" "Myndus" "Mytilene" "Naupactus" "Nicopolis" "Nysa" "Oenoe" "Olbia" "Olympia" "Olynthus" "Oreus" "Oropus" "Pagasae" "Pandosia" "Paros" "Patrae" "Pergamum" "Perinthus" "Phalerum" "Pharae" "Pherae" "Phlius" "Phocaea" "Piraeus" "Plataea" "Potidaea" "Pteleum" "Pydna" "Pylos" "Rhamnus" "Rhypes" "Salamis" "Same" "Selinunte" "Sestus" "Sicyon" "Stagirus" "Stymphalus" "Tanagra" "Tegea" "Teos" "Therma" "Thermum" "Thespiae" "Thoricus" "Thyreum" "Thyria" "Trachis" "Troy" "Zacynthus"
+			}
+		}
+
+		pc_desert = {
+			names = {
+				""
+			}
+		}
+
+		pc_tropical = {
+			 names = {
+				""
+			}
+		}
+
+		pc_arid = {
+			names = {
+				""
+			}
+		}
+
+		pc_continental = {
+			names = {
+				""
+			}
+		}
+
+		pc_gaia = {
+			names = {
+				""
+			}
+		}
+
+		pc_ocean = {
+			names = {
+				""
+			}
+		}
+
+		pc_tundra = {
+			names = {
+				""
+			}
+		}
+
+		pc_arctic = {
+			names = {
+				""
+			}
+		}
+
+		pc_savannah = {
+			names = {
+				""
+			}
+		}
+
+		pc_alpine = {
+			names = {
+				""
+			}
+		}
+
+	}
+
+	character_names = {
+
+		names1 = {
+			first_names_male = {
+				"Hermes" "Aeacus" "Thetis" "Eros" "Atlas" "Tycho" "Kit" "Ercole" "Kristofr" "Agamemnon" "Philoctetes" "Sebastiano" "Jason" "Eratosthenes" "Damien" "Geryon" "Basile" "Asclepius" "Priam" "Peleus" "Hippocrates" "Oedipus" "Menelaus" "Pancratius" "Amphion" "Chrysippus" "Lysander" "Alexandro" "Alkaios" "Clio" "Cadmus" "Anteros" "Kay" "Heracles" "Turannos" "Antaeus" "Oreias" "Anaxagoras" "Miltiades" "Melanippus" "Hippocampus" "Artimis" "Damion" "Glaucus" "Ares" "Tyndareus" "Cronus" "Iolaus" "Hypnos" "Lynceus" "Plutarch" "Alexander" "Achilles" "Odysseus" "Aristaeus" "Alistair" "Jorenr" "Grigor" "Demetrius" "Alastair" "Attis" "Damocles" "Scamander" "Alcibiades" "Daedalus" "Hippolytus" "Charon" "Stephenson" "Plato" "Hyacinthus" "Endymion" "Pericles" "Euryalus" "Vasyklo" "Icarus" "Cheiron" "Evasn" "Tim" "Alexi" "Laertes" "Dario" "Staffen" "Amphiaraus" "Teodors" "Pieter" "Dmitri" "Hades" "Hector" "Ammon" "Achates" "Sappho" "Alik" "Orpheus" "Kipr" "Bellerophon" "Ambrocio" "Galen" "Draco" "Solon" "Androcles" "Diogenes" "Erysichthon" "Theseus" "Zeno" "Dorian" "Epimetheus" "Aeneas" "Philo" "Euphemius" "Apolo" "Aristophanes" "Democritus" "Perseus" "Polydectes" "Alastor" "Taidgh" "Juliusr" "Apollo" "Nestor" "Vasileios" "Homer" "Euclid" "Ajax" "Castor" "Ocnus" "Sophocles" "Pythagoras" "Jocastus" "Diocles" "Xanthus" "Kozma" "Adonis" "Aristotelis" "Pausanias" "Daemon" "Palamedes" "Dionysus" "Procrustes" "Krystalynn" "Socrates" "Cleisthenes" "Damaskenos" "Phillip" "Philemon" "Dardanus" "Hephaestus" "Pandareos" "Triptolemus" "Ellis" "Aristarchus"
+			}
+			first_names_female = {
+				"Agatha" "Aglaia" "Agne" "Alcestis" "Alethea" "Althaia" "Amalthea" "Amara" "Anaxandra" "Andromache" "Andromeda" "Anthea" "Antigone" "Apollonia" "Arete" "Ariadne" "Artemisia" "Aspasia" "Athanasia" "Atherina" "Atalanta" "Athena" "Atropos" "Briseis" "Brynhildr" "Calliope" "Calypso" "Cassandra" "Celandine" "Chloris" "Chrysanthe" "Clio" "Clymene" "Clytemnestra" "Damaris" "Daphne" "Deianeira" "Demetria" "Dione" "Doris" "Echo" "Eirene" "Electra" "Eleni" "Elpis" "Emilia" "Enyo" "Eos" "Eudora" "Eudoxia" "Eumelia" "Euphemia" "Eurydice" "Eurykleia" "Galene" "Galinthias" "Harmonia" "Hecate" "Hedone" "Hestia" "Hippolyta" "Ianthe" "Iole" "Iphigenia" "Irene" "Ismene" "Jocasta" "Kalliope" "Kassandra" "Kore" "Lampetia" "Leda" "Leucothea" "Limnoria" "Liriope" "Lyra" "Maia" "Medea" "Megara" "Melia" "Melina" "Mneme" "Myrrha" "Nausicaa" "Nemesis" "Nike" "Nyx" "Oenone" "Oinone" "Oreithyia" "Pandora" "Penelope" "Persephone" "Phaedra" "Philemon" "Philia" "Philomela" "Phoebe" "Polyhymnia" "Pomona" "Proserpina" "Psyche" "Rhea" "Roxane" "Selene" "Semele" "Sophronia" "Sybil" "Thalia" "Thetis" "Tyche" "Urania" "Vasiliki" "Vesta" "Wilona" "Xanthe" "Xanthippe" "Zenobia" "Zephyrine" "Zara"
+			}
+			second_names = {
+				"Milionis" "Chatzikonstantinou" "Eleftheriou" "Fragkos" "Kyrou" "Karachaliou" "Oikonomidou" "Baros" "Bekiaris" "Linard" "Argyris" "Papantoniou" "Tsakonas" "Peppa" "Vlachaki" "Christou" "Sagona" "Balaban" "Daskalakis" "Argyropoulou" "Giannis" "Contos" "Karagiorgos" "Vasileiadis" "Mavropoulos" "Harris" "Alexopoulos" "Markopoulos" "Kontos" "Takes" "Mihal" "Alexopoulou" "Vasil" "Kontogianni" "Mallios" "Sarri" "Athanas" "Petridis" "Papanastasiou" "Christopoulos" "Emmanouilidou" "Mavros" "Arvanitaki" "Pavlidis" "Maragkos" "Dimakis" "Konstantopoulos" "Georgiou" "Karampela" "Kaloudi" "Kalogeropoulos" "Varelas" "Barberis" "Vergos" "Economides" "Kamber" "Voulgarakis" "Roumelioti" "Moschos" "Zafeiri" "Barbas" "Papazoglou" "Ziakas" "Roumelioti" "Kourti" "Stavropoulos" "Pavlis" "Antoniadis" "Tsakiridis" "Ziogas" "Nicoli" "Michou" "Christopoulos" "Christodoulopoulos" "Lappa" "Karagkounis" "Andreopoulos" "Sotiropoulou" "Sifakis" "Dimopoulos" "Paulos" "Thoma" "Exarchos" "Skiadas" "Paschalidou" "Kitsos" "Tzima" "Tzortzi" "Galatas" "Kapsali"
+			}
+
+			regnal_first_names_male = {
+				"Asclepiodotus" "Lycomedes" "Perdiccas" "Cimon" "Anaxagoras" "Chrysippus" "Agesilaus" "Iphicrates" "Alexander" "Pausanias" "Cleomenes" "Mithridates" "Philip" "Aristomachus" "Antigonus" "Themistocles" "Demaratus" "Epaminondas" "Ptolemy" "Euphaes" "Attalus" "Leonidas" "Cassander" "Perseus" "Nabis" "Thrasybulus" "Diomedes" "Leotychidas" "Pelopidas" "Dionysius" "Xerxes" "Periander" "Lachares" "Agathocles" "Nicomedes" "Gorgidas" "Archelaus" "Zopyrus" "Herod" "Aristodemus" "Eumenes" "Aristippus" "Demetrius" "Lysimachus" "Seleucus" "Aristaeus" "Autolycus" "Melanthus" "Hipparchus"
+			}
+
+			regnal_first_names_female = {
+				"Georgina" "Thelma" "Pythodorida" "Ceres" "Theodora" "Erasma" "Roxana" "Olympias" "Eldora" "Agrippina" "Laodice" "Pharnace" "Karin" "Calli" "Majorie" "Zenobia" "Pelagia" "Amastris" "Phila" "Varvara" "Elodie" "Arsinoe" "Appoline" "Adonia" "Lysandra" "Dionne" "Caeneus" "Berenice" "Katya" "Oria" "Glaphyra" "Ptolemy" "Amarande" "Stratonice" "Xylona" "Rhodogune" "Dice" "Lizann" "Damaris" "Julia" "Coralina" "Cleopatra" "Calypso" "Mellisa" "Penine" "Melita" "Eurydice" "Catriona"
+
+			}
+			regnal_second_names = {
+				"Zeus" "Hera" "Poseidon" "Demeter" "Athena" "Apollo" "Artemis" "Ares" "Aphrodite" "Hephaestus" "Hermes" "Dionysus" "Hestia" "Persephone" "Hades" "Eros" "Iris" "Nike" "Helios" "Selene"
+			}
+		}
+	}
+}

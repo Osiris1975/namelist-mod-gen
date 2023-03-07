@@ -1,0 +1,267 @@
+﻿### "Natureza (Onl)"
+### Created by "Osiris"
+
+"Osiris"_nature = {
+
+	ship_names = {
+
+		corvette = {
+			"Tarântula" "Viúva Negra" "Mosquito" "Escaravelho" "Vespa" "Vespa" "Jaqueta Amarela" "Centopéia" "Lanterna" "Mariposa" "Escorpião" "Gafanhoto" "Água-Viva" "Polvo" "Mangusto" "Doninha" "Louva-A-Deus" "Libélula" "Hornworm" "Críquete" "Kaydid" "Gafanhoto" "Barata" "Formiga De Fogo" "Formiga" "Geco" "Iguana" "Monstro De Gila" "Skink" "Uromastyx" "Chuckwalla" "Camaleão" "Skink" "Morcego" "Ratazana" "Furão" "Ouriço" "Megera" "Martens" "Wolverine" "Gazela" "Lobo" "Coiote" "Caribu" "Raposa Do Ártico"
+		}
+
+		destroyer = {
+			"Megera" "Uromastyx" "Camaleão" "Formiga De Fogo" "Mangusto" "Raposa Do Ártico" "Libélula" "Coiote" "Viúva Negra" "Formiga" "Gafanhoto" "Gafanhoto" "Lobo" "Lanterna" "Gazela" "Jaqueta Amarela" "Tarântula" "Caribu" "Doninha" "Vespa" "Mariposa" "Centopéia" "Ratazana" "Skink" "Louva-A-Deus" "Iguana" "Escaravelho" "Ouriço" "Martens" "Barata" "Escorpião" "Skink" "Água-Viva" "Monstro De Gila" "Mosquito" "Kaydid" "Polvo" "Geco" "Chuckwalla" "Hornworm" "Vespa" "Furão" "Críquete" "Morcego" "Carcaju"
+		}
+
+		cruiser = {
+			"Cascavel" "Águia Coroada" "Moray" "Mamba Negra" "Kestrel" "Abutre" "Marlim" "Águia Da Estepe" "Krait" "Falcão" "Águia Dourada" "Coruja" "Barracuda" "Águia Harpia" "Cobra" "Falcão" "Peixe-Leão" "Anaconda" "Caracará" "Arraia" "Osprey" "Águia" "Bushmaster" "Bateleur" "Python" "Boa" "Pipa" "Cobra Rei" "Merlim" "Urubu" "Harrier" "Cabeça De Cobre" "Águia Marcial" "Pit Viper" "Peixe-Tigre" "Cabeça De Serpente" "Espadarte" "Víbora" "Pipa" "Gavião" "Águia Careca" "Açor" "Piranha" "Somador De Morte" "Seriema" "Quimera" "Peregrino"
+		}
+		StrikeCruiser = {
+			""
+		}
+		Battlecruiser = {
+			"Falcão" "Águia Da Estepe" "Somador De Morte" "Gavião" "Águia" "Marlim" "Abutre" "Quimera" "Pipa" "Urubu" "Moray" "Águia Dourada" "Boa" "Arraia" "Pit Viper" "Cabeça De Serpente" "Peixe-Leão" "Kestrel" "Python" "Piranha" "Coruja" "Seriema" "Anaconda" "Águia Harpia" "Águia Careca" "Merlim" "Bushmaster" "Krait" "Pipa" "Cabeça De Cobre" "Águia Marcial" "Víbora" "Açor" "Bateleur" "Cobra Rei" "Mamba Negra" "Peixe-Tigre" "Águia Coroada" "Cobra" "Espadarte" "Cascavel" "Caracará" "Harrier" "Barracuda" "Osprey" "Falcão" "Peregrino" "Velociraptor"
+		}
+		battleship = {
+			"Crocodilo" "Orca" "Martelo" "Lince" "Debulhador" "Wobbegong" "Komodo" "Jaguatirica" "Jacaré" "Margay" "Caracal" "Mako" "Puma" "Grande Branco" "Kodiak" "Servais" "Grizzly" "Ponta Preta" "Leão" "Leopardo" "Tigre" "Chita" "Puma" "Jaguar" "Sevengill" "Sixgill" "Lince Da Eurásia" "Rinoceronte" "Búfalo" "Javali Africano" "Tiranossauro" "Megalodonte"
+		}
+		Carrier = {
+			"Servais" "Jacaré" "Puma" "Jaguar" "Margay" "Orca" "Chita" "Jaguatirica" "Wobbegong" "Ponta Preta" "Mako" "Rinoceronte" "Sevengill" "Javali Africano" "Puma" "Lince Da Eurásia" "Crocodilo" "Búfalo" "Lince" "Grande Branco" "Kodiak" "Martelo" "Caracal" "Grizzly" "Leopardo" "Leão" "Tigre" "Komodo" "Debulhador" "Sixgill"
+		}
+		Dreadnought = {
+			"Debulhador" "Chita" "Jaguatirica" "Crocodilo" "Leopardo" "Jacaré" "Grande Branco" "Sevengill" "Ponta Preta" "Lince" "Margay" "Martelo" "Búfalo" "Caracal" "Lince Da Eurásia" "Grizzly" "Leão" "Orca" "Puma" "Javali Africano" "Kodiak" "Servais" "Mako" "Puma" "Jaguar" "Tigre" "Wobbegong" "Rinoceronte" "Sixgill" "Komodo"
+		}
+		titan = {
+			"Puma" "Jaguatirica" "Servais" "Sevengill" "Kodiak" "Grande Branco" "Crocodilo" "Javali Africano" "Margay" "Jaguar" "Grizzly" "Jacaré" "Wobbegong" "Leopardo" "Rinoceronte" "Lince" "Debulhador" "Ponta Preta" "Lince Da Eurásia" "Tigre" "Martelo" "Orca" "Komodo" "Mako" "Caracal" "Sixgill" "Chita" "Puma" "Leão" "Búfalo"
+		}
+		Flagship = {
+			"Ciclone" "Tufão" "Avalanche" "Tempestade" "Tsunami" "Nevasca" "Tornado" "Furacão"
+		}
+		colossus = {
+			"Furacão" "Tufão" "Ciclone" "Avalanche" "Nevasca" "Tornado" "Tsunami" "Trovoada"
+		}
+		juggernaut = {
+			"Ciclone" "Avalanche" "Tufão" "Tsunami" "Furacão" "Tornado" "Nevasca" "Trovoada"
+		}
+
+		constructor = {
+			"Castor" "Lontra" "Cupim" "Tecelão" "Mailee" "Orb-Weaver" "Cão Da Pradaria" "Acromyrmex" "Atta" "Caddisfly"
+		}
+		colonizer = {
+			"Gnus" "Formiga" "Cupim" "Morcego" "Pinguim" "Flamengo" "Prarie Dog" "Meerkat" "Cisne" "Zebra"
+		}
+		sponsored_colonizer = {
+		""
+		}
+		science = {
+			"Golfinho" "Bonobo" "Polvo" "Raven"
+		}
+		explorationship = {
+			"Golfinho" "Jubarte" "Beluga" "Piloto" "Narval" "Cabeça De Arco" "Esquilo" "Esquilo" "Hamster" "Gerbilo"
+		}
+		transport = {
+			""
+		}
+
+		military_station_small = {
+			""
+		}
+
+		military_station_medium = {
+			""
+		}
+
+		military_station_large = {
+			""
+		}
+
+		ion_cannon = {
+			"Cuspindo Cobra" "Peixe-Arqueiro"
+		}
+
+		xl_cannon = {
+			"Cuspindo Cobra" "Peixe-Arqueiro"
+		}
+	}
+
+	fleet_names = {
+		random_names = {
+			""
+		}
+		sequential_name = "Osiris_Nature_Fleetnames_Seq"
+	}
+
+	army_names = {
+
+		machine_defense = {
+			sequential_name = "Osiris_Nature_Machinedefense_Seq"
+		}
+
+		machine_assault_1 = {
+			sequential_name = "Osiris_Nature_Machineassault1_Seq"
+		}
+
+		machine_assault_2 = {
+			sequential_name = "Osiris_Nature_Machineassault2_Seq"
+		}
+
+		machine_assault_3 = {
+			sequential_name = "Osiris_Nature_Machineassault3_Seq"
+		}
+
+		defense_army = {
+			sequential_name = "Osiris_Nature_Defensearmy_Seq"
+		}
+
+		assault_army = {
+			sequential_name = "Osiris_Nature_Assaultarmy_Seq"
+		}
+
+		slave_army = {
+			sequential_name = "Osiris_Nature_Slavearmy_Seq"
+		}
+
+		clone_army = {
+			sequential_name = "Osiris_Nature_Clonearmy_Seq"
+		}
+
+		undead_army = {
+			sequential_name = "Osiris_Nature_Undeadarmy_Seq"
+		}
+
+		robotic_army = {
+			sequential_name = "Osiris_Nature_Roboticarmy_Seq"
+		}
+
+		robotic_defense_army = {
+			sequential_name = "Osiris_Nature_Roboticdefensearmy_Seq"
+		}
+
+		psionic_army = {
+			sequential_name = "Osiris_Nature_Psionicarmy_Seq"
+		}
+
+		xenomorph_army = {
+			sequential_name = "Osiris_Nature_Xenomorpharmy_Seq"
+		}
+
+		gene_warrior_army = {
+			sequential_name = "Osiris_Nature_Genewarriorarmy_Seq"
+		}
+
+		occupation_army = {
+			sequential_name = "Osiris_Nature_Occupationarmy_Seq"
+		}
+
+		robotic_occupation_army = {
+			sequential_name = "Osiris_Nature_Roboticoccupationarmy_Seq"
+		}
+
+		primitive_army = {
+			sequential_name = "Osiris_Nature_Primitivearmy_Seq"
+		}
+		industrial_army = {
+			sequential_name = "Osiris_Nature_Industrialarmy_Seq"
+		}
+		postatomic_army = {
+			sequential_name = "Osiris_Nature_Postatomicarmy_Seq"
+		}
+	}
+
+	planet_names = {
+
+		generic = {
+			names = {
+				""
+			}
+		}
+
+		pc_desert = {
+			names = {
+				"Saara" "Gobi" "Grande Vitória" "Arábia" "Kalahari" "Mojave" "Atacama" "Gibson" "Simpson" "Grande Bacia" "Chihuahua" "Sonora" "Thar" "Namibe" "Karoo" "Dasht- E Lut" "Dasht-E Kavir" "Rub'Al Khali" "Taklamakan" "Negev"
+			}
+		}
+
+		pc_tropical = {
+			 names = {
+				"Amazônia" "Bacia Do Congo" "Sundarbans" "Daintree" "Bwindi" "Sinharaja" "Belum-Temengor" "Kinabalu" "Taman Negara" "Hoh" "Vale Do Danum" "Monteverde" "Gunung Mulu" "Khao Yai " " "Manu" "El Yunque" "Yasuní" "Corcovado" "Kakum" "Analamazoatra"
+			}
+		}
+
+		pc_arid = {
+			names = {
+				"Negev" "Gobi" "Arábia" "Thar" "Sonora" "Mojave" "Namibe" "Grande Bacia" "Grande Vitória" "Chihuahua" "Kalahari" "Dasht-E Lut" "Simpson" "Atacama" "Taklamakan" "Gibson" "Rub' Al Khali" "Saara" "Dasht-E Kavir" "Karoo"
+			}
+		}
+
+		pc_continental = {
+			names = {
+				"Sherwood" "Jasmund" "Epping" "Harz" "Daintree" "Bialowieza" "Ardennes" "Trossachs" "Broceliande" "Alto Veluwe" "Vosges" "Gauja" "Sumava" "Estrela" "Fontainebleau" "Gauja" " Bowland" "Oulanka" "Kalmthoutse" "Bieszczady"
+			}
+		}
+
+		pc_gaia = {
+			names = {
+				Wulingyuan, Aurora, Wadi Rum, Niagara, Banff, Paine Towers, Siwa, Iguaçu, Patagônia, Yosemite, Everest, Uluru, Pamukkale, Yellowstone, Galápagos, Cachoeira Do Anjo" "Bora Bora" "Baikal" "Sequóia" "Zhangjiajie"
+			}
+		}
+
+		pc_ocean = {
+			names = {
+				"Tasmânia" "Mediterrâneo" "Okhotsk" "Caribe" "Andamão" "Filipinas" "Atlântia" "Coral" "Pacífico" "Weddell" "Ross" "Bellingshausen" "Laptev" "Labrador" "Escócia" "Timor" "Okhotsk" "Azov" "Áden" "Mármara"
+			}
+		}
+
+		pc_tundra = {
+			names = {
+				"Asgard" "Amundsen" "Vitória" "Peito" "Boothia" "Laptev" "Hubbard" "Bótnia" "Helheim" "Beaufort" "Jacobshavn" "Baffin" "Tuktoyaktuk" "Petermann" "Chukchi" "Cara" "Fúria" "Fundy" "Bering" "Vamos Ver"
+			}
+		}
+
+		pc_arctic = {
+			names = {
+				"Baffin" "Chukchi" "Cara" "Laptev" "Taku" "Beaufort" "Boothia" "Peito" "Bothnia" "Amundsen" "Fundy" "Vitória" "Fúria" "Bering" "Tuktoyaktuk" "Helheim" "Asgard " " "Jacobshavn" "Petermann" "Hubbard"
+			}
+		}
+
+		pc_savannah = {
+			names = {
+				"Kaaimans" "Vamos Murchison" "Okavango" "Ngorongoro" "Serengueti" "Kilimanjaro" "Sossusvlei" "Brandberg" "Etosha Pan" "Augrabies" "Blyde" "Spitzkoppe" "Meru" "Manyara" "Maricó" "Moremi" "Ruaha" "Aberdare" "Portão Do Inferno"
+			}
+		}
+
+		pc_alpine = {
+			names = {
+				"Himalaia" "Atlas" "Sinai Drakensburgo" "Cáucaso" "Karakoram" "Kunlun" "Pamir" "Urais" "Apalaches" "Cárpatos" "Hengduan" "Altai" "Tien Shan" "Zagros" "Hindu Kush" "Hida" "Sayan" "Apeninos" "Pirinéus"
+			}
+		}
+
+	}
+
+	character_names = {
+
+		names1 = {
+			first_names_male = {
+				"Carlos" "Davi" "Alexandre" "Henrique" "João" "Alfredo" "Thomas" "José" "Guilherme" "Jorge" "Roberto" "Ricardo" "Ernst" "João" "Pedro" "Carlos" "Darwin" "Tiago" "Eduardo" "Luís" "Fernando" "Andreas" "Anders" "Jorge" "Jean" "Henrique" "Miguel" "Marcar" "Francisco" "Gregor" "Juliano" "Adriano" "Lucien" "Antonio" "Conrad" "Martin" "Bernardo" "Leonardo" "Frank" "Alwin" "Jacó" "Erasmo" "Paulo" "Adriano" "Jacques" "Leif" "França" "Agosto" "Patrick" "Victor" "Conrado" "Lars" "Steve" "Félix" "Wolfgang" "Jônatas" "Colin" "Gustavo" "Tim" "Fred" "Nigel" "Simão" "André" "Ian" "Ross" "Bruce" "Cris" "Douglas" "Luís" "Estevão" "Rogério" "Ralf"
+			}
+			first_names_female = {
+				"Raquel" "Jane" "Diana" "Maria" "Maria" "Susana" "Henrietta" "Joana" "Ana" "Maeve" "Sílvia" "Alegria" "Ethel" "Carlota" "Marjorie" "Alice" "Margarida" "Ellen" "Karen" "Dorothy" "Isabel" "Lois" "Rosalinda" "Fanny" "Beatriz" "Maud" "Gertrudes" "Nettie" "Amy" "Lina" "Eunice" "Graça" "Miriam" "Edite" "Jean" "Isabel" "Catarina" "Azeitona" "Florença" "Ada" "Catarina" "Cornélia" "Clara" "Georgina" "Emma" "Evelyn" "Kira" "Millicent" "Eugênia" "Doroteia" "Leonor" "Marion" "Cristina" "Cláudia" "Linda" "Mariane" "Gwen" "Estela" "Lírio" "Ynés" "Sibila" "Cristina" "Sara" "Irene" "Centavo" "Bárbara" "Inge" "Patsy" "Sibila" "Christia" "Dafne" "Lorna" "Berta" "Rute" "Alison" "Nancy" "Berilo" "Gudrun" "Kathleen" "Carolina" "Rosamundo" "Noemi" "Margo" "Kathryn" "Júlia" "Azevinho" "Diana" "Marlene" "Ana" "Kay" "Lynn"
+			}
+			second_names = {
+				"Darwin" "Attenborough" "Audubon" "Humboldt" "Lineu" "Wallace" "Cousteau" "Carson" "Muir" "Leakey" "Goodall" "Cuvier" "Bancroft" "Bartrão" "Bates" "Beebe" "Cinto " "Bufão" "Burroughs" "Carson" "Chapman" "Curie" "Durrell" "Eckström" "Eiseley" "Emmons" "Ernst" "Fabre" "Gilberto" "Ourives" "Gorman" "Cinza" "Verde" " Grinnell" "Haeckel" "Haldane" "Hansen" "Hargreaves" "Harvey" "Harvey" "Herschel" "Colina" "Holden" "Hornaday" "Huxley" "Jones" "Kaulback" "Kincaid" "Kincaid" "Kipling" "Krumbiegel" "Kukenthal" "Laflesche" "Lasalle" "Leconte" "Leopoldo" "Lewin" "Linné" "Lloyd" "Looney" "Loring" "Lyell" "Macdonald" "Mahler" "Pântano" "Mayer" "Hidromel " "Merril" "Michener" "Miller" "Morris" "Muir" "Nabokov" "Newberry" "Nutagem" "Aveia" "Owens" "Packard" "Palas" "Petiver" "Placa" "Raunkiaer" "Redfield" " Rehder" "Rochussen" "Rolfe" "Russel" "Sartore" "Selys" "Sheldon" "Neve" "Stearn" "Sternberg" "Mordomo" "Stirling" "De Humboldt" "Von Neumann" "Wallace" "Wege" " Wilson"
+			}
+
+			regnal_first_names_male = {
+				""
+			}
+
+			regnal_first_names_female = {
+				""
+
+			}
+			regnal_second_names = {
+				""
+			}
+		}
+	}
+}

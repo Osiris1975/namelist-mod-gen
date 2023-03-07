@@ -1,0 +1,267 @@
+﻿### "Egito Antigo (Onl)"
+### Created by "Osiris"
+
+"Osiris"_ancientegypt = {
+
+	ship_names = {
+
+		corvette = {
+			"Khopesh De Asti" "Fúria Do Webset" "Adaga De Kebehut" "Adaga De Shemat-Khu" "Lâmina De Waxmaker" "Adaga De Khesfu" "Lâmina Das Abelhas" "Adaga De Hetepes-Sekhus" "Fúria Das Abelhas" "Sangue De Buchis" "Adaga De Ta-Bijet" "Lâmina Da Sabedoria" "Sangue De Shemat-Khu" "Sangue De Serafim" "Adaga De Ahti" "Sangue De Hetepes-Sekhus" "Folhas Da Cabeça" "Flecha De Amu-Aa" "Carruagem De Sheshmeth" "Escudo De Taweret" "Escudo De Heryshaf" "Fúria De Amu-Aa" "Dardo De Heryshaf" "Punho De Webset" "Lâmina De Buchis" "Adaga De Khentekhtai" "Khopesh De Serket" "Khopesh De Ammit" "Fúria De Aani" "Fúria Da Web" "Lança De Hetepes-Sekhus" "Punho Dos Mortos" "Carruagem De Denwen" "Lâmina De Kebehut" "Lança De Amu-Aa" "Punho Da Cabeça" "Khopesh De Khefthernebes" "Dardo De Serápis" "Vigília De Mehen" "Adaga De Shemat-Khu" "Lâmina Da Torre" "Punho De Anat" "Punho De Oil Maker" "Carruagem De Anat" "Fúria De Seblumeker" "Punho De Buchis" "Sangue De Ishtar" "Punho De Astarte" "Escudo Do Circuito" "Lança De Ishtar" "Lança De Sheshmeth" "Lâmina Do Pelicano" "Flecha De Anat" "Escudo Do Bluemaker" "Carruagem De Ammit" "Escudo Do Ta-Budget" "Adaga Do Macaco" "Adaga Do Circuito" "Carruagem De Anhefta" "Khopesh De Ishtar" "Flecha De Apis" "Adaga De Pelicano" "Lâmina De Nehebu-Kau" "Carruagem De Apesh" "Vigília De Ahti" "Dardo De Shemat-Khu" "Punho De Hepteto" "Lâmina De Meretseger" "Escudo Anti" "Lâmina De Astarte" "Carruagem De Webset" "Carruagem De Baal" "Dardo De Mehen" "Dardo Do Anti" "Vigília De Khefthernebes" "Escudo De Anuke" "Fúria De Apep" "Fúria De Nehebu-Kau" "Fúria De Besna" "Sangue De Astarte" "Dardo De Am-Heh" "Vigília De Ishtar" "Sangue De Shesmetet" "Vigília Da Apep" "Dardo De Anat" "Fúria De Seblumeker" "Fúria De Heryshaf" "Ira De Ishtar" "Flecha De Wepwawet" "Lança De Shentayet" "Adaga De Webset" "Carruagem De Aani" "Adaga De Amu-Aa" "Khopesh De Baal" "Adaga De Buchis" "Escudo De Reshep" "Punho De Pelicano" "Flecha De Ishtar" "Fúria De Anhephta" "Ira Do Coração" "Punho De Harmachis" "Ira De Anuke" "Lâmina Do Macaco" "Sangue De Nehebu-Kau" "Adaga De Besna" "Fúria Do Macaco" "Escudo De Serápis" "Dardo Do Pelicano" "Dardo De Apesh" "Adaga De Anuke" "Flecha De Kebehut" "Fúria De Setcheh" "Adaga Do Apep" "Lâmina Das Asas" "Sangue Do Pelicano" "Adaga Da Torre" "Ira De Heryshaf" "Khopesh De Harmachis" "Lança De Taweret" "Ira De Wepwawet" "Fúria De Astarte" "Khopesh De Taweret" "Dardo Da Apep" "Ira De Baal" "Vigília De Seblumeker" "Vigília De Apesh" "Fúria Do Circuito" "Vigília De Kebehut" "Lança De Anat" "Adaga De Buchis" "Carruagem De Shentayet" "Adaga De Khefthernebes" "Lança Da Cabeça" "Adaga De Khentekhtai" "Adaga De Anhefta" "Dardo De Denwen" "Khopesh De Serápis" "Adaga De Serafim" "Khopesh De Hedetet" "Vigília De Astarte" "Adaga Da Coroa" "Adaga De Baal" "Sangue De Abelhas" "Lâmina De Setcheh" "Dardo Do Circuito" "Adaga De Setcheh" "Sangue De Reshep" "Adaga Do Céu" "Ira Do Circuito" "Adaga De Webset" "Escudo De Asti" "Fúria Do Pelicano" "Lança De Khentekhtai" "Vigília Do Webset" "Adaga De Webset" "Adaga De Apis" "Fúria De Hedetet" "Adaga De Shentayet" "Adaga De Anhefta" "Adaga De Shentayet" "Flecha De Shemat-Khu" "Fúria De Shentayet" "Punho Do Circuito" "Carruagem De Ahti" "Fúria Do Anti" "Adaga Do Anti" "Fúria De Setcheh" "Flecha De Aani" "Ira Do Criador Azul" "A Fúria De Besna" "Vigília De Aani" "Dardo De Asti" "Escudo Do Céu" "Lâmina De Anti" "Lança De Wepset" "Flecha Do Hepteto" "Fúria De Ishtar" "Fúria De Anat" "Ira De Meretseger" "Lança De Seblumeker" "Vigília Do Pelicano" "Dardo De Shentayet" "Fúria De Buchis" "Flecha De Reshep" "Escudo De Ahti" "Escudo De Khefthernebes" "Sangue De Anhefta" "Adaga De Besna" "Lança De Am-Heh" "Escudo De Sheshmete" "Khopesh De Mehen" "Punho De Serafim" "Carruagem De Wepwawet" "Dardo De Amu-Aa" "Escudo De Shentayet" "Adaga De Mehen" "Adaga De Ammit" "Khopesh Da Apep" "Vigília De Serápis" "Ira De Shemat-Khu" "Dardo De Hetepes-Sekhus" "Sangue De Khefthernebes" "Flecha De Setcheh" "Sangue De Webset" "LâminaDe Khefthernebes" "Fúria De Am-Heh" "Adaga De Nehebu-Kau" "Carruagem De Amu-Aa" "Lança De Ta-Bijet" "Ira De Nehebu-Kau" "Carruagem De Apep" "Vigília De Khesfu" "Sangue De Ammit" "Da De Wepwawetgger" "Lança De Besna" "Escudo De Aani" "Sangue De Hedetet" "Adaga Do Hepteto" "Dardo De Anuke"
+		}
+
+		destroyer = {
+			"Carruagem De Setcheh" "Khopesh De Apesh" "Punho De Denwen" "Vigília De Reshep" "Punho De Apesh" "Vigília De Apis" "Flecha De Mehen" "Ira De Khentekhtai" "Sangue De Harmachis" "Khopesh De Aani" "Adaga De Pelicano" "Carruagem De Astarte" "Sangue De Anat" "Carruagem De Khesfu" "Khopesh De Astarte" "Fúria De Hetepes-Sekhus" "Flecha De Shesmetet" "Flecha De Anhefta" "Khopesh De Seblumeker" "Lança De Baal" "Adaga De Meretseger" "Flecha De Meretseger" "Fúria De Mehen" "Lâmina De Reshep" "Sangue De Meretseger" "Adaga De Apis" "Fúria De Khesfu" "Adaga De Serápis" "Fúria De Shemat-Khu" "Khopesh De Wepwawet" "Adaga De Nehebu-Kau" "Adaga De Baal" "Adaga Do Pelicano" "Sangue De Pelicano" "Adaga De Khefthernebes" "Lâmina De Serápis" "Lâmina De Shentayet" "Adaga De Hedetet" "Punho De Shesmetet" "Punho De Meretseger" "Khopesh De Heryshaf" "Khopesh De Wepset" "Fúria Do Pelicano" "Sangue De Anuke" "Vigília De Khentekhtai" "Carruagem De Serápis" "Ira De Shentayet" "Lança De Serápis" "Ira De Harmachis" "Escudo Do Pelicano" "Adaga De Harmachis" "Lâmina De Hetepes-Sekhus" "Carruagem De Ishtar" "Vigília De Besna" "Escudo De Anat" "Dardo De Taweret" "Sangue De Setcheh" "Flecha De Buchis" "Khopesh De Meretseger" "Dardo De Aani" "Fúria De Khefthernebes" "Dardo Da Apis" "Khopesh De Kebehut" "Escudo De Khentekhtai" "Flecha De Am-Heh" "Escudo De Anhefta" "Flecha De Taweret" "Ira De Khesfu" "Flecha De Ta-Bijet" "Flecha De Apep" "Fúria De Wepset" "Fúria De Heryshaf" "Dardo De Khesfu" "Vigília Do Hepteto" "Adaga De Aani" "A Fúria De Denwen" "Carruagem De Khefthernebes" "Fúria De Aani" "Adaga De Anat" "Punho De Ammit" "Sangue De Besna" "Adaga De Anat" "Escudo Do Hepteto" "Lança Do Anti" "Escudo De Hetepes-Sekhus" "Flecha De Asti" "Dardo De Reshep" "Escudo De Baal" "Fúria De Khesfu" "Punho De Kebehut" "Carruagem De Shemat-Khu" "Vigília De Meretseger" "Fúria De Asti" "Fúria De Shemat-Khu" "Ira De Ammit" "Fúria De Apep" "Vigília De Anat" "Flecha De Astarte" "Vigília De Shemat-Khu" "Lâmina De Ishtar" "Dardo De Besna" "Lança De Apep" "Khopesh De Setcheh" "Dardo De Ammit" "Adaga De Taweret" "Khopesh De Reshep" "Carruagem De Asti" "Ira De Anti" "Adaga De Kebehut" "Fúria De Apis" "Khopesh De Anhefta" "Ira De Denwen" "Dardo De Hedetet" "Lança De Meretseger" "Lança De Nehebu-Kau" "Lâmina De Anuke" "Ira De Besna" "Flecha De Hedetet" "Fúria De Khefthernebes" "Vigília De Buchis" "Fúria De Reshep" "Lança De Ammit" "Lâmina De Harmachis" "Khopesh De Anat" "Fúria De Buchis" "Punho De Besna" "Punho De Anhefta" "Ira De Wepset" "Carruagem De Hetepes-Sekhus" "Dardo De Harmachis" "Escudo De Harmachis" "Escudo De Apep" "Fúria De Taweret" "Fúria De Ta-Bijet" "Dardo De Wepset" "Adaga De Mehen" "Lança De Ahti" "Escudo De Kebehut" "Flecha De Heryshaf" "Vigília De Serket" "Punho De Nehebu-Kau" "Adaga De Seblumeker" "Carruagem De Khentekhtai" "Sangue De Khesfu" "Lâmina De Shemat-Khu" "Flecha De Serápis" "Lâmina De Mehen" "Punho De Ishtar" "Dardo De Buchis" "Lança De Astarte" "Ira Do Pelicano" "Escudo De Mehen" "Fúria De Anuke" "Dardo De Nehebu-Kau" "Lança De Shemat-Khu" "Punho De Apis" "Carruagem Do Hepteto" "Adaga De Shesmetet" "Ira De Apep" "Fúria De Anti" "Adaga De Apep" "Lança De Aani" "Khopesh De Besna" "Flecha De Ahti" "Ira De Hepteto" "Sangue De Wepwawet" "Fúria De Anuke" "Flecha De Baal" "Khopesh De Denwen" "Ira De Shesmetet" "Flecha De Hetepes-Sekhus" "Fúria De Amu-Aa" "Ira De Anhefta" "Khopesh De Nehebu-Kau" "Carruagem De Serket" "Carruagem De Reshep" "Lâmina De Ammit" "A Fúria De Kebehut" "Vigília De Hedetet" "Fúria De Mehen" "Ira De Reshep" "Adaga De Harmachis" "Adaga De Asti" "Carruagem De Nehebu-Kau" "Lâmina De Anat" "Sangue De Shentayet" "A Flecha De Denwen" "A Raiva De Nehebu-Kau" "Carruagem De Taweret" "Adaga De Seblumeker" "Dardo De Wepwawet" "Dardo De Astarte" "Adaga De Heryshaf" "Sangue De Ahti" "Fúria De Kebehut" "Flecha De Besna" "Punho De Shemat-Khu" "Sangue De Kebehut" "Adaga De Reshep" "Lâmina De Ta-Bijet" "Fúria De Anat" "Sangue De Baal" "Vigília De Setcheh" "Flecha De Harmachis" "Lâmina De Wepset" "Sangue De Macaco" "Adaga De Ta-Bijet" "Fúria De Taweret" "Lâmina De Shesmetet" "Punho De Khefthernebes" "Flecha De Khentekhtai" "Fúria De Apesh"
+		}
+
+		cruiser = {
+			"Sangue Do Mês" "Adaga De Montu" "Adaga De Amon-Ra" "Adaga De Neith" "Flecha De Osíris" "Carruagem De Selkis" "Fúria De Osíris" "Sangue De Hetemit" "Adaga De Amon-Ra" "Carruagem De Menhit" "Punho De Osíris" "Fúria De Ra" "Dardo De Amon" "Vigília De Rá" "Lança De Hetemit" "Vigília De Hetemit" "Lâmina De Amon-Ra" "Flecha De Hórus" "Khopesh De Anhur" "Ira De Neith" "Escudo De Aten" "Khopesh De Sobek" "Lâmina De Neith" "Punho De Bastet" "Adaga De Montu" "Ira De Anúbis" "Sangue De Selkis" "Lâmina De Sobek" "Punho De Sekhmet" "Fúria De Anhur" "Adaga De Hetemit" "Escudo De Hetemit" "Punho De Montu" "Lâmina Do Conjunto" "Fúria De Neith" "Lâmina De Osíris" "Dardo De Neith" "Vigília De Selkis" "Carruagem De Maahes" "Adaga De Osíris" "Lança De Montu" "Fúria De Hetemit" "Ira De Bastet" "Flecha De Anúbis" "Adaga De Mahesh" "Sangue De Anúbis" "Dardo De Montu" "Sangue De Amon" "Sangue De Anhur" "Fúria De Maahes" "Punho De Maahes" "Lâmina De Hetemit" "Dardo De Sekhmet" "Vigília De Atenas" "Lâmina De Amon" "Dardo De Maahes" "Fúria De Menhit" "Adaga De Set" "Lança De Sobek" "Lança De Neith" "Flecha De Amon" "Escudo De Osíris" "Adaga De Bastet" "Fúria De Aton" "Punho De Atenas" "Fúria De Osíris" "Fúria De Neith" "Fúria De Amon" "Punho De Menhit" "Dardo De Aton" "Escudo De Amon" "Lança De Amon-Ra" "Fúria De Sobek" "Sangue De Amon-Ra" "Adaga De Mahes" "Escudo De Anúbis" "Fúria De Set" "Dardo De Osíris" "Khopesh De Osíris" "Dardo De Ra" "Dardo De Menhit" "Carruagem De Amon" "Sangue De Osíris" "Escudo De Ra" "Sangue De Sekhmet" "Lança De Aten" "Dardo De Hetemit" "Ira De Selkis" "Lâmina De Bastet" "Fúria De Anúbis" "Punho De Rá" "Conjunto De Dardo" "Khopesh De Neith" "Fúria De Montu" "Vigília De Sekhmet" "Vigília De Hórus" "Flecha De Bastet" "Carruagem De Sekhmet" "Adaga De Aton" "Adaga De Anúbis" "Adaga De Atenas" "Adaga De Sobek" "Escudo De Bastet" "Vigília De Amon" "Khopesh De Menhit" "Lâmina De Selkis" "Lança De Ra" "Fúria De Set" "Ira Do Montu" "Punho De Amon-Ra" "Dardo De Selkis" "Punho De Anhur" "Lança De Sekhmet" "Lança De Amon" "Carruagem De Hórus" "A Flecha De Sobek" "Adaga De Neith" "Sangue De Atenas" "Dardo De Sobek" "Carruagem De Montu" "Adaga De Amon" "Fúria De Anúbis" "Lança De Bastet" "Carruagem De Neith" "Dardo De Amon-Ra" "Carruagem De Osíris" "Punho De Hórus" "Punho De Sobek" "Fúria De Sekhmet" "Adaga De Osíris" "Escudo De Montu" "Lâmina De Atenas" "Khopesh De Montu" "Fúria De Anhur" "Ira De Rá" "Lança De Selkis" "Adaga De Bastet" "Khopesh De Amon" "Khopesh De Aten" "A Flecha De Neith" "Vigília De Sobek" "Flecha De Montu" "Ira Do Anhur" "Punho De Anúbis" "Khopesh De Maahes" "Sangue De Menhit" "Lança De Menhit" "Ira De Maahes" "Sangue De Hórus" "Lâmina De Ra" "Fúria De Hórus" "Ira De Amon-Ra" "Vigília De Amon-Ra" "Vigília De Montu" "Escudo De Hórus" "Escudo De Amon-Ra" "Set'S Khopesh" "Lança De Hórus" "Escudo De Selkis" "Adaga De Selkis" "Adaga De Sekhmet" "Fúria De Hórus" "Atenas Seta" "Fúria De Amon-Ra" "Lâmina De Hórus" "Carruagem De Ra" "Ra'S Khopesh" "Punho De Selkis" "A Fúria De Maahes" "Dardo De Bastet" "Lâmina De Sekhmet" "Escudo De Sobek" "Carruagem De Set" "Escudo De Neith" "Fúria De Hetemit" "Vigília De Anhur" "Fúria De Montu" "Vigília De Bastet" "Vigília De Maahes"
+		}
+		StrikeCruiser = {
+			""
+		}
+		Battlecruiser = {
+			"Sangue De Amon-Ra" "Ira De Neith" "Dardo De Amon-Ra" "Lâmina De Bastet" "Dardo De Montu" "Sangue De Menhit" "Lança De Bastet" "Fúria De Anhur" "Ira De Rá" "Sangue De Selkis" "Escudo De Ra" "Sangue De Hetemit" "Lâmina De Aton" "Dardo De Selkis" "Flecha De Montu" "Khopesh De Osíris" "Sangue De Aten" "Carruagem De Set" "Khopesh De Neith" "Vigília De Bastet" "Carruagem De Montu" "Fúria De Set" "Lança De Neith" "Adaga De Osíris" "Lâmina De Ra" "Khopesh De Aten" "Khopesh De Anhur" "Adaga De Amon-Ra" "Lança De Sobek" "Fúria De Montu" "Punho De Rá" "Dardo De Ra" "Sangue De Hórus" "Fúria De Hetemit" "Dardo De Aton" "Flecha De Hórus" "Dardo De Osíris" "Carruagem De Hórus" "Lança De Selkis" "Vigília De Rá" "Fúria De Set" "Fúria De Anúbis" "Fúria De Hórus" "Lança De Hetemit" "Adaga De Bastet" "Punho De Menhit" "Adaga De Sekhmet" "Escudo De Anúbis" "Dardo De Menhit" "Carruagem De Sekhmet" "Carruagem De Amon" "Punho De Montu" "Adaga De Osíris" "Dardo De Neith" "Lança De Aten" "Lâmina De Osíris" "Escudo De Bastet" "Ra'S Khopesh" "Vigília De Hetemit" "Adaga De Set" "Lança De Hórus" "Fúria De Montu" "Lâmina De Amon-Ra" "Punho De Maahes" "Adaga De Amon-Ra" "Sangue De Amon" "Lança De Menhit" "Fúria De Menhit" "Sangue De Montu" "Escudo De Hórus" "Punho De Anúbis" "Vigília De Maahes" "Adaga De Montu" "Fúria De Osíris" "Vigília De Selkis" "Sangue De Sekhmet" "Ira De Selkis" "Ira De Anhur" "Escudo De Montu" "Lança De Amon" "Lâmina De Amon" "Vigília De Hórus" "Carruagem De Maahes" "Escudo De Amon" "Lâmina Do Conjunto" "Ira De Bastet" "Adaga De Selkis" "Adaga De Hetemit" "Lança De Ra" "Conjunto De Dardo" "Dardo De Hetemit" "Khopesh De Montu" "Punho De Sobek" "Khopesh De Sobek" "Vigília De Amon-Ra" "Fúria De Anúbis" "Adaga De Aton" "Adaga De Bastet" "Flecha De Bastet" "Punho De Anhur" "Dardo De Sobek" "Punho De Amon-Ra" "Dardo De Amon" "Carruagem De Ra" "Fúria De Hórus" "Sangue De Anhur" "Khopesh De Maahes" "Punho De Hórus" "Lâmina De Hetemit" "Khopesh De Menhit" "Escudo De Selkis" "Ira De Anúbis" "Vigília De Montu" "Vigília De Sobek" "Adaga De Sobek" "Punho De Osíris" "Escudo De Amon-Ra" "Lâmina De Hórus" "Fúria De Osíris" "Flecha De Osíris" "Lança De Amon-Ra" "Escudo De Osíris" "Punho De Bastet" "A Fúria De Maahes" "Lança De Montu" "Adaga De Neith" "Adaga De Amon" "Fúria De Amon-Ra" "Flecha De Anúbis" "Lâmina De Selkis" "Escudo De Hetemit" "Fúria De Maahes" "Lâmina De Sobek" "Flecha De Amon" "Vigília De Amon" "Sangue De Osíris" "Fúria De Ra" "Adaga De Anúbis" "Vigília De Anhur" "Fúria De Amon" "Adaga De Maahes" "Dardo De Sekhmet" "Adaga De Montu" "Lança De Sekhmet" "Punho De Selkis" "Escudo De Aton" "A Flecha De Neith" "Vigília De Aton" "Flecha De Aton" "Punho De Sekhmet" "Dardo De Maahes" "Carruagem De Menhit" "Vigília De Sekhmet" "Fúria De Sobek" "Adaga De Maahes" "Punho De Aton" "Ira De Amon-Ra" "Carruagem De Osíris" "Dardo De Bastet" "Lâmina De Neith" "Adaga De Neith" "Sangue De Anúbis" "Escudo De Sobek" "A Flecha De Sobek" "Khopesh De Amon" "Fúria De Neith" "Lâmina De Sekhmet" "Ira De Maahes" "Fúria De Aton" "Fúria De Anhur" "Carruagem De Selkis" "Ira De Montu" "Fúria De Hetemit" "Adaga De Aton" "Escudo De Neith" "Fúria De Sekhmet" "Fúria De Neith" "Set'S Khopesh" "Carruagem De Neith"
+		}
+		battleship = {
+			"Circuito" "Ammit" "Anúbis" "Hepteto" "Ta-Orçamento" "Hetepes-Sekhus" "Pelicano" "Bastete"
+		}
+		Carrier = {
+			"Sekhmet" "Neath" "Sobek" "Astarte" "Horus" "Hedetet" "Kebehut" "Anhefta" "Shemat-Khu" "Ishtar" "Besna" "Meretseger" "Kefthernebes"
+		}
+		Dreadnought = {
+			"Definir" "Limpar" "Anuke" "Anat" "Sites" "Shesmetet" "Amon" "Deus Da Água"
+		}
+		titan = {
+			"Horus" "Anhur" "Shentayet" "Taweret" "Sekhmet" "Athena" "Monte" "Osiris"
+		}
+		Flagship = {
+			"Osíris"
+		}
+		colossus = {
+			"Amon-Rá"
+		}
+		juggernaut = {
+			"Ligado" "Ligado"
+		}
+
+		constructor = {
+			"Arado De Renenutet" "Mão De Atum" "Sopro De Nepit" "Mão De Ptah" "A Criação De Nefertum" "Bênção De Bennu" "Atitude De Ptah" "Visão De Ptah" "Vigor De Ptah" "Vontade De Ptah"
+		}
+		colonizer = {
+			"Testamento De Renenutet" "Dilúvio De Hapi" "Recompensa De Nepit" "Lareira De Ísis" "Testamento De Tatenen" "Recompensa De Hathor" "Rito De Anuket" "Testamento De Hathor" "A Recompensa De Ísis" "Rito De Tatenen" "Lareira De Anuket" "Recompensa De Anuket" "Rito De Hapi" "Testamento De Nepit" "Recompensa De Hapi" "Testamento De Ísis" "Rito De Nepit" "Lareira De Renenutet" "Vontade De Hapi" "Rito De Hathor" "Recompensa De Renenutet" "Lareira De Hapi" "Terra De Tatenen" "Recompensa De Tatenen" "Rito De Ísis" "Lareira De Nepit" "Lareira De Hathor" "Lareira De Tatenen" "Rito De Renenutet" "Testamento De Anuket"
+		}
+		sponsored_colonizer = {
+		"Testamento De Tatenen" "Lareira De Nepit" "Rito De Tatenen" "Testamento De Nepit" "Lareira De Tatenen" "Rito De Nepit" "Recompensa De Tatenen" "Terra De Tatenen" "Lareira De Ísis" "Rito De Anuket" "Rito De Hathor" "Testamento De Anuket" "Testamento De Renenutet" "Lareira De Anuket" "Dilúvio De Hapi" "Testamento De Hathor" "Rito De Ísis" "Recompensa De Renenutet" "Lareira De Renenutet" "A Recompensa De Ísis" "Lareira De Hathor" "Testamento De Ísis" "Recompensa De Nepit" "Recompensa De Hathor" "Vontade De Hapi" "Recompensa De Anuket" "Recompensa De Hapi" "Rito De Hapi" "Lareira De Hapi" "Rito De Renenutet"
+		}
+		science = {
+			"Brilho De Thoth" "A Luz De Thoth" "Espírito De Thoth" "Gênio De Thoth" "A Luz De Imhotep" "Olho De Imhotep" "Mão De Thoth" "Espírito De Imhotep" "Mão De Imhotep" "Gênio De Imhotep" "Brilho De Imhotep" "Olho De Thoth"
+		}
+		explorationship = {
+			"Alcance De Thoth" "Descoberta De Thoth" "Revelação De Khonsu" "O Segredo De Khonsu" "A Saudade De Khonsu" "Expressão De Thoth" "Pioneiro De Khonsu" "A Profecia De Khonsu" "A Profecia De Thoth" "Alcance De Khonsu" "Revelação De Thoth" "O Segredo De Thoth" "Expressão De Khonsu" "Horizonte De Thoth" "Horizonte De Khonsu"
+		}
+		transport = {
+			"Barca De Khufu" "Palavra De Den" "Sopro Da Apep" "Carruagem De Ra" "Espírito De Neferirkare" "Corcel De Kagemni" "Voz De Ptahshepses" "Espírito De Ísis" "Corcel De Apep" "Espírito De Khafre" "Comando De Nyuserre Ini" "Corcel De Khonsu" "Palavra De Ra" "Comando De Neferefre" "Barca De Senusret" "Espírito De Den" "Espírito De Senusret" "Palavra De Khafre" "Voz De Hor-Aha" "Vontade De Senusret" "Sopro De Djedre" "Voz De Senusret" "Corcel De Ra" "Voz De Osíris" "Barca De Nyuserre Ini" "Carruagem De Hor-Aha" "Palavra De Nyuserre Ini" "Palavra De Ptahshepses" "Palavra De Djedre" "Barca De Nephthys" "Carruagem De Hetepheres" "Espírito De Kagemni" "Barca De Hórus" "Den'S Barque" "Palavra De Kagemni" "Voz De Kagemni" "Voz De Nephthys" "Voz De Neferirkare" "Barca De Neferirkare" "Comando De Khafre" "Vontade De Ptahshepses" "Comando De Osíris" "Vontade De Khentkaus" "Corcel De Ísis" "Voz De Den" "Espírito De Rá" "Espírito De Hor-Aha" "Comando De Ptahshepses" "Comando De Kagemni" "Carruagem De Khufu" "Carruagem De Khafre" "Espírito De Mahen" "Vontade De Kagemni" "Carruagem De Kagemni" "Carruagem De Neferefre" "Comando Da Apep" "Voz De Khonsu" "Barca De Mahen" "Vontade De Nyuserre Ini" "Voz De Khafre" "Corcel De Hor-Aha" "Palavra Da Apep" "Sopro De Hor-Aha" "Palavra De Neferefre" "Espírito De Hetepheres" "Espírito De Nephthys" "Espírito De Nyuserre Ini" "Palavra De Osíris" "Sopro De Hórus" "Palavra De Hetepheres" "Voz De Hórus" "Barca De Hor-Aha" "Sopro De Senusret" "Barca Do Djedre" "Comando De Khufu" "Vontade De Ra" "Barca De Hetepheres" "Comando De Nephthys" "Sopro De Kagemni" "Corcel De Senusret" "Carruagem De Neferirkare" "Comando De Ra" "Corcel De Khafre" "Respiração De Ptahshepses" "Barca De Ísis" "Corcel De Khentkaus" "Barca De Khonsu" "Vontade De Ísis" "Comando De Khonsu" "Comando De Senusret" "Vontade De Neferirkare" "Voz Da Apep" "Barca De Neferefre" "Corcel De Hetepheres" "Palavra De Neferirkare" "Corcel De Ptahshepses" "Corcel De Neferirkare" "Espírito De Neferirkare" "Comando De Hor-Aha" "Carruagem De Mahen" "Vontade De Neferefre" "Comando De Neferirkare" "Respiração De Ra" "Vontade De Den" "Corcel De Hórus" "Voz De Rá" "Vontade De Hórus" "Espírito De Khentkaus" "Espírito De Djedre" "Ra'S Barca" "Carruagem De Nephthys" "Palavra De Ísis" "Corcel De Nephthys" "Voz De Ísis" "Espírito De Osíris" "Sopro De Neferefre" "Espírito De Hórus" "Corcel De Osíris" "Barca Do Apep" "Corcel De Khufu" "Vontade De Nephthys" "Palavra De Hórus" "Respiração De Khonsu" "Carruagem De Ísis" "Comando De Mahen" "Corcel De Djedre" "Vontade De Hor-Aha" "Sopro De Ísis" "Vontade De Djedre" "Voz De Nyuserre Ini" "Comando De Hetepheres" "Carruagem De Apep" "Sopro De Neferirkare" "Respiração De Nyuserre Ini" "Corcel De Nyuserre Ini" "Sopro De Osíris" "Carruagem De Khentkaus" "Espírito De Apep" "Palavra De Mahen" "Corcel De Neferefre" "Sopro De Khentkaus" "Palavra De Neferirkare" "Carruagem De Khonsu" "Respiração De Den" "Vontade De Khafre" "Carruagem De Hórus" "Barca De Khafre" "Sopro De Neferirkare" "Corcel De Den" "Comando De Hórus" "Carruagem De Ptahshepses" "Vontade Da Apep" "Palavra De Hor-Aha" "Sopro De Hetepheres" "Comando De Khentkaus" "Respiração De Nephthys" "Palavra De Senusret" "Palavra De Néftis" "Palavra De Khonsu" "Carruagem De Nyuserre Ini" "Vontade De Hetepheres" "Carruagem De Osíris" "Carruagem De Djedre" "Voz De Mahen" "Voz De Khentkaus" "Voz De Hetepheres" "Palavra De Khentkaus" "Sopro De Khafre" "Voz De Neferefre" "Sopro De Mahen" "Espírito De Khonsu" "Barca De Kagemni" "Espírito De Ptahshepses" "Comando De Den" "Barca De Ptahshepses" "Carruagem De Senusret" "Barca De Khentkaus" "Vontade De Osíris" "Comando De Djedre" "Vontade De Mahen" "Comando De Ísis" "Voz De Djedre" "Vontade De Khonsu" "Voz De Neferirkare" "Vontade De Neferirkare" "Espírito De Neferefre" "Carruagem De Den" "Barca De Osíris" "Corcel De Mahen"
+		}
+
+		military_station_small = {
+			"Casa De Sekhmet"
+		}
+
+		military_station_medium = {
+			"Casa de Anhur"
+		}
+
+		military_station_large = {
+			"Casa De Hórus"
+		}
+
+		ion_cannon = {
+			"Luz De Rá"
+		}
+
+		xl_cannon = {
+			"Luz Ofuscante De Ra"
+		}
+	}
+
+	fleet_names = {
+		random_names = {
+			"Vendaval De Sopdu" "Esplendor De Hathor" "Guardiões De Sekhmet" "Rugido De Maahes" "Trovão De Menhit" "Guarda De Khepri" "Ira De Set" "Fogo De Bennu" "Picada De Selkis" "Bendito De Ísis" "Aríete De Khnum" "Tempestade De Shu" "Graça De Bastet" "Pedra De Geb" "Flecha De Anhur" "Chamado De Hórus" "Arco De Anuket" "Pioneiros De Satet" "Dilúvio De Hapi" "O Escolhido De Amun" "Onda De Wadj" "Brilho De Atum" "Mordida De Sobek" "Herdeiros De Amunet" "Flagelo De Anúbis" "Caçada De Neith" "Khopesh De Montu" "Sabedoria De Thoth" "Tufão De Tefnut" "Halo De Khonsu" "Radiância De Ra" "A Luz De Aton" "O Renascimento De Osíris" "Justiça De Maat" "Silvo De Wadjet"
+		}
+		sequential_name = "Osiris_Ancientegypt_Fleetnames_Ord"
+	}
+
+	army_names = {
+
+		machine_defense = {
+			sequential_name = "Osiris_Ancientegypt_Machinedefense_Ord"
+		}
+
+		machine_assault_1 = {
+			sequential_name = "Osiris_Ancientegypt_Machineassault1_Ord"
+		}
+
+		machine_assault_2 = {
+			sequential_name = "Osiris_Ancientegypt_Machineassault2_Ord"
+		}
+
+		machine_assault_3 = {
+			sequential_name = "Osiris_Ancientegypt_Machineassault3_Ord"
+		}
+
+		defense_army = {
+			sequential_name = "Osiris_Ancientegypt_Defensearmy_Ord"
+		}
+
+		assault_army = {
+			sequential_name = "Osiris_Ancientegypt_Assaultarmy_Ord"
+		}
+
+		slave_army = {
+			sequential_name = "Osiris_Ancientegypt_Slavearmy_Ord"
+		}
+
+		clone_army = {
+			sequential_name = "Osiris_Ancientegypt_Clonearmy_Ord"
+		}
+
+		undead_army = {
+			sequential_name = "Osiris_Ancientegypt_Undeadarmy_Ord"
+		}
+
+		robotic_army = {
+			sequential_name = "Osiris_Ancientegypt_Roboticarmy_Ord"
+		}
+
+		robotic_defense_army = {
+			sequential_name = "Osiris_Ancientegypt_Roboticdefensearmy_Ord"
+		}
+
+		psionic_army = {
+			sequential_name = "Osiris_Ancientegypt_Psionicarmy_Ord"
+		}
+
+		xenomorph_army = {
+			sequential_name = "Osiris_Ancientegypt_Xenomorpharmy_Ord"
+		}
+
+		gene_warrior_army = {
+			sequential_name = "Osiris_Ancientegypt_Genewarriorarmy_Ord"
+		}
+
+		occupation_army = {
+			sequential_name = "Osiris_Ancientegypt_Occupationarmy_Ord"
+		}
+
+		robotic_occupation_army = {
+			sequential_name = "Osiris_Ancientegypt_Roboticoccupationarmy_Ord"
+		}
+
+		primitive_army = {
+			sequential_name = "Osiris_Ancientegypt_Primitivearmy_Ord"
+		}
+		industrial_army = {
+			sequential_name = "Osiris_Ancientegypt_Industrialarmy_Ord"
+		}
+		postatomic_army = {
+			sequential_name = "Osiris_Ancientegypt_Postatomicarmy_Ord"
+		}
+	}
+
+	planet_names = {
+
+		generic = {
+			names = {
+				"Thebes Memphis" "Amarna" "Abidos" "Apis" "Setennu" "Tao" "Por-Hathor" "Kom Ombo" "Sueco" "Hieracon" "Avaris" "Tayu-Djayet" "Djedet" "Edfu" "Khem " "Khasut" "Hebenu" "Qus" "Thinis" "Amplo" "Pachnamunis" "Nekhen" "Shashotep" "Por Wadjet" "Iken" "Djerty" "Aqui" "Canopo" "Shedet" "Soknopaiou Nesos" "Ipu " "Coptas" "Chenem-Waset" "Por-Atum" "Pi-Ramsés" "Nacada" "Thoni" "Heliópolis" "Por-Amun" "Naucratis" "Dendera" "Nekheb" "Sumenu" "Timinghor" "Alexandria " "Ptkheka" "Madhu" "Tebas Djedu" "For-Bast" "Khemenu" "Trabalhando" "For-Sopdu" "Buhen" "Qis" "For-Medjedu" "Herms É" "Tepihu" "Tanis" "Asyut " "Taremu" "Saka" "Ta-Senet" "Tjebu" "Seshesh Henen-Nesut" "Hermopolis Parva" "Menouthis" "Tjaru" "Athribis" "Tamiat" "Rosette"
+			}
+		}
+
+		pc_desert = {
+			names = {
+				""
+			}
+		}
+
+		pc_tropical = {
+			 names = {
+				""
+			}
+		}
+
+		pc_arid = {
+			names = {
+				""
+			}
+		}
+
+		pc_continental = {
+			names = {
+				""
+			}
+		}
+
+		pc_gaia = {
+			names = {
+				""
+			}
+		}
+
+		pc_ocean = {
+			names = {
+				""
+			}
+		}
+
+		pc_tundra = {
+			names = {
+				""
+			}
+		}
+
+		pc_arctic = {
+			names = {
+				""
+			}
+		}
+
+		pc_savannah = {
+			names = {
+				""
+			}
+		}
+
+		pc_alpine = {
+			names = {
+				""
+			}
+		}
+
+	}
+
+	character_names = {
+
+		names1 = {
+			first_names_male = {
+				"Akhom Amásis Amenmesse Amenose Amennakht Amenophis Amém Amun-Her-Khepeshef Amun-Her-Wenemef Ankh-Ef-En-Khonsu" "Ankhefensekhmet Ankhkherednefer Anpuhotep Apófis Sim" "Bakenkhonsu" "Bakeranef" "Bárdia" "Baufra" "Quéfren" "Djedefhor " " "Djedefptah" "Djedefre" "Djedhor" "Djedkare" "Djehutihotep" "Djoser Harsiese Heqaib Hordjedef Horemheb Hotepsekhemwy Ibi" "Idu" "Imoúthēs Inykhnum Inyotef Iry-Hor" "Iuseneb Joba" "Ka" "Kanefer Khabawsokar Khaemweset" " "Khasekhemwy" "Khensu" "Kheperkare Khepri" "Khueninpu" "Khufukhaf Koshari" "Menkaure" "Menkheperre Mentuherkhepeshef Mentuhotep Meriiti" "Merneptah Merysekhmet Mesen-Ka Metjen" "Mina" "Minmose" "Nakht" "Nakhtmut Nakhtre" "Narmer" "Nebemakhet Nebmaatre" "Nefer Neferhotep Neferirkare Neferkasokar Nefermaat Nefer-Setekh Nefertem Neheb Nemtinakht Nesubanebdjedet Netjeraperref" "Nikaure" "Nisuheqet Pa-Ankh-Entef Pachomios Pahemnetjer Pakhom Pamiu" "Panehesy Panhsj" "Paramesse Pareherwenemef Pasebakhaen Pamiu" "Pasur Pedubaut" eftjauawybast" "Pehen-Ptah" "Pehernefer Perneb Ptahotep" "Ptahshepses Ptahwer" "Rahotep" "Ramsés Ramsés Ranefer Sahure" "Sasobek Seb" "Sebekemhab" "Sekhemkare Sekhemrekhutawy Sekhemreshedwaset" "Senbi" "Senenmut Senefer Senusret" "Setna" " " Shabaka" "Shepseskare Siamum" "Siharnedjheritef Smenkhkare Sneferu" "Sobekemsaf Tao" "Tefnakht Temhotep Teos Thamphthis Tutancâmon Tutankhaten Tutu" "Usercherês" "Userkare" "Wadjenes Wadjitefni"
+			}
+			first_names_female = {
+				"Aat" "Ahhotep" "Amenirdis" "Aneksi" "Ankhenespepi" "Ankhesenamun" "Ankhesenpaaten" "Anpuhotep" "Baketmut" "Beketamon" "Beketaten" "Beneribe" "Melhor" "Bintanath" "Djedjetamen" "Djefatnebti" "Djeseretnebti " " "Duathhor" "Gautseshen" "Haankhes" "Hathorhotep" "Hbnj" "Hbny" "Hekenuhedjet" "Henutmehyt" "Henutmire" "Henutsekhemu" "Henutsen" "Henuttadesh" "Henuttamehu" "Henuttaneb" "Henuttawy" "Herneith" " Hetepenamon" "Hetepheres" "Hetephernebti" "Hrere" "Inenek" "Isetemkheb" "Isetnofret" "Trabalho" "Kanzuie" "Khamerernebty" "Khedebneithirbinet" "Khenemetibamun" "Khenemetneferhedjet" "Khenthap" "Khufuankh" "Kia" "Maat - Hor" "Maathorneferure" "Maio" "Mayetenaten" "Meketatena" "Menmet" "Meresamun" "Meres-Nip" "Meret-Isesi" "Meretseger" "Mérito" "Meritamen" "Meritamun" "Meritaten" "Meritptah" " Merneith " "Meryt" "Merytkhet" "Merytmihapi" "Merytnetjer" "Merytre" "Mutemwiya" "Mutmetjennefer" "Mut-Tuya" "Nakhtmut" "Nakhtneith" "Nebetá" "Nebetananash" "Nebetimmunedjem" "Nebetiunet" "Nebetnehat" " Nebet awy" "Nebty-Tepites" "Nedjemmut" "Neferet" "Neferhetepes" "Neferneferuaten" "Neferneferure" "Neferthenut" "Nefertiabet" "Nefertkau" "Neferu" "Neferuaten" "Neferublidade" "Neferutá" "Neferure" "Neferusobek" " Nefretiri" "Neithhotep" "Nesitanebetashru" "Neskhons" "Netiqret" "Nimaathap" "Nitócris" "Nofret" "Nofrete" "Nubemhat" "Nubemiunu" "Nubemweskhet" "Nubhetepti" "Nubkhaes" "Nubkhesbed" "Nubwenet" "Parerenpetnefer" "Patareshnes" "Penebuí" "Persenet" "Peseshet" "Ptahneferu" "Pypuy" "Qalhata" "Rekhetre" "Renesres" "Renmet-Setesh" "Repetnefer" "Satiah Satsobek" "Sehener" "Semat" "Senebhenas" "Senebtisi " " "Seshemetka" "Sesheset" "Setembro" "Sha-Amun-En-Su" "Shehiryotes" "Shepset-Ipet" "Sheretnebty" "Sinuhe" "Sitamun" "Sitdjehuti" "Sithhor" "Sithhoriunet" "Site" " Sobekemsaf " "Sobekneferu" "Takhat" "Tati" "Tarete" "Tentamun" "Tiaa" "Tia-Sitra" "Tiye" "Tjesraperet" "Tjuyu" "Tsillah" "Tuya" "Tuya-Nebettawy" "Twosret" "Werenro " "Zathapy" "Zatipy"
+			}
+			second_names = {
+				""""
+			}
+
+			regnal_first_names_male = {
+				"Djoser, Espírito De Aten" "Khufu, O Grande Arquiteto" "Tutmés, Domador De Mundos" "Amenhotep, Expressão De Osíris" "Akhenaton, O Falcão Lutador" "Tutancâmon, Senhor Das Estrelas" "Remesses, Protetor Osiriano" "Sekhemket, Guardião Dos Deuses" "Snefru, Abençoado De Ísis" "Khafre, Olho De Hórus" "Menkaure, Senhor Dos Mundos" "Mentuhotep, O Falcão Dourado" "Tao, Poderoso De Kas" "Kamose, Mão De Aten" "Ptolomeu, Sabedoria Dos Antigos" "Inaros, Raio De Amon" "Seti, Rei Dos Céus"
+			}
+
+			regnal_first_names_female = {
+				"Merneith, Das Duas Senhoras" "Sobekneferu, Amado De Ra" "Hatshepsut, A Duradoura" "Nefertiti, Sagrada Da Aparência" "Cleópatra, Doadora Da Vida" "Neferirkare, Luz De Ra" "Aya, Divina Em Aparência"
+
+			}
+			regnal_second_names = {
+				""
+			}
+		}
+	}
+}
