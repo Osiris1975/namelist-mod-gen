@@ -105,9 +105,9 @@ def create_mod(args):
             continue
 
         nl_dict, ord_dict = csv_to_dicts(f, args.author.lower(), args.lcode)
-        if args.lcode != 'en':
-            nl_dict = translate_dict(nl_dict, args.lcode)
-            ord_dict = translate_dict(ord_dict, args.lcode)
+        # if args.lcode != 'en':
+        #     nl_dict = translate_dict(nl_dict, args.lcode)
+        #     ord_dict = translate_dict(ord_dict, args.lcode)
 
         namelist_info[nl_dict['namelist_id']] = {
             'file': f,
@@ -120,10 +120,6 @@ def create_mod(args):
         with io.open(name_list_file, 'w', encoding='utf-8-sig') as file:
             namelist_template = template_env.get_template(c.NAMELIST_TEMPLATE)
             name_list = namelist_template.render(nl_dict)
-            # if args.lcode != 'en':
-            #     translate_namelist = translate(name_list, args.lcode)
-            #     print(translate_namelist)
-            x = len(name_list)
             file.write(name_list)
             print(f'Namelist file written to {name_list_file}')
 
@@ -172,8 +168,8 @@ def csv_to_dicts(namelists, author, lang):
     # TODO: stellaris doesn't allow empty second names but this is a workaround
     if len(processed_dict['cn_second_names']) == 0:
         processed_dict['cn_second_names'] = '\"\"'
-    if lang != 'en':
-        processed_dict = translate_dict(processed_dict, lang)
+    # if lang != 'en':
+    #     processed_dict = translate_dict(processed_dict, lang)
     processed_dict = quotify(processed_dict)
     return processed_dict, ord_dict
 
@@ -226,8 +222,8 @@ def main():
     if args.dump_csv_template:
         csv_template(args)
     else:
-        args.lcode = 'en'
-        create_mod(args)
+        # args.lcode = 'en'
+        # create_mod(args)
 
         for lcode in c.LANGUAGES.keys():
             args.lcode = lcode
