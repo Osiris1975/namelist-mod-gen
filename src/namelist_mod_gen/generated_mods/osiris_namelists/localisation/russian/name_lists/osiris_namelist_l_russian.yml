@@ -1,8 +1,14 @@
 ﻿l_english:
+ name_list_osiris_astrosci:0 "AstroSci (ONL)"
+ name_list_osiris_astrosci_desc:0 " "
  name_list_osiris_american:0 "American (ONL)"
  name_list_osiris_american_desc:0 " "
  name_list_osiris_ancientgreek:0 "Ancient Greek (ONL)"
  name_list_osiris_ancientgreek_desc:0 " "
+ name_list_osiris_medmodern:0 "Medieval-Modern (ONL)"
+ name_list_osiris_medmodern_desc:0 " "
+ name_list_osiris_ancientroman:0 "Ancient Roman (ONL)"
+ name_list_osiris_ancientroman_desc:0 " "
  name_list_osiris_westernnations:0 "Western Nations (ONL)"
  name_list_osiris_westernnations_desc:0 " "
  name_list_osiris_chatgpt:0 "ChatGPT (ONL)"
@@ -15,8 +21,6 @@
  name_list_osiris_medieval_desc:0 " "
  name_list_osiris_arabian:0 "Arabian (ONL)"
  name_list_osiris_arabian_desc:0 " "
- name_list_osiris_astrosci:0 "AstroSci (ONL)"
- name_list_osiris_astrosci_desc:0 " "
  
 
 
