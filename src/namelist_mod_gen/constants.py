@@ -16,7 +16,7 @@ ORD_TYPES = {
 
 LANGUAGES = {
     'en': 'english',
-    'pt-BR': 'braz_por',
+    'pt': 'braz_por',
     'fr': 'french',
     'de': 'german',
     'pl': 'polish',
@@ -26,3 +26,13 @@ LANGUAGES = {
     'ja': 'japanese',
     'ko': 'korean'
 }
+
+NOTITLE_FIELDS = [
+    'namelist_title', 'namelist_author', 'namelist_id'
+]
+
+NO_TRANSLATE_FIELD_FRAGMENTS = [
+    '_author', '_id', '_army', 'an_machine', 'fn_fleet'
+]
+
+CHUNK_SIZE = 4000

@@ -1,6 +1,9 @@
 #!/usr/bin/env python
 
 import argparse
+import time
+import requests.exceptions
+from ratelimit import limits
 import constants as c
 import csv
 import io
@@ -9,7 +12,8 @@ import jinja2schema
 import os
 import shutil
 import sys
-import translators as ts
+from deep_translator import GoogleTranslator, MyMemoryTranslator, MicrosoftTranslator, DeeplTranslator, PonsTranslator
+from google_trans_new import google_translator
 import re
 from pathlib import Path
 from collections import OrderedDict
@@ -18,9 +22,63 @@ template_loader = FileSystemLoader(searchpath=c.TEMPLATES_DIR)
 template_env = Environment(loader=template_loader)
 
 
+def chunkify(txt):
+    n = c.CHUNK_SIZE
+    chunks = [txt[i:i+n] for i in range(0, len(txt), n)]
+    return chunks
+
+
+def translate(txt, to_lang):
+    t_chunks = []
+    chunks = chunkify(txt)
+    for chunk in chunks:
+        time.sleep(0.5)
+        try:
+            translated = GoogleTranslator(source='auto', target=to_lang).translate(chunk)
+        except Exception as e:
+            print(f'Unable to translate with GoogleTranslator: {e}. Trying another one...')
+            translated = MyMemoryTranslator(source='auto', target=to_lang).translate(chunk)
+        except Exception as e:
+            print(f'Unable to translate with MyMemoryTranslator:{e} Trying another one...')
+            translated = MicrosoftTranslator(source='auto', target=to_lang).translate(chunk)
+        except Exception as e:
+            print(f'Unable to translate with MicrosoftTranslator:{e} Trying another one...')
+            translated = DeeplTranslator(source='auto', target=to_lang).translate(chunk)
+        except Exception as e:
+            print(f'Unable to translate with DeeplTranslator{e}. Trying another one...')
+            translated = PonsTranslator(source='auto', target=to_lang).translate(chunk)
+
+
+        t_chunks.append(translated)
+    if not t_chunks[0]:
+        return txt
+    translated_namelist = ''.join(t_chunks)
+    return translated_namelist
+
+
+def translate_dict(indict, to_lang):
+    translated_dict = dict()
+    for k, v in indict.items():
+        if process(k, v):
+            translation = translate(v, to_lang)
+            translated_dict[k] = translation
+        else:
+            translated_dict[k] = v
+    return translated_dict
+
+
+def process(k, v):
+    if len(v) == 0 or v == "\"\"":
+        return False
+    for fragment in c.NO_TRANSLATE_FIELD_FRAGMENTS:
+        if fragment in k:
+            return False
+    return True
+
+
 def make_mod_directories(mod_name, lang):
     dirs = {
-        "namelist": os.path.join(c.MOD_OUTPUT_DIR, mod_name, 'common', 'name_lists'),
+        "namelist": os.path.join(c.MOD_OUTPUT_DIR, mod_name, 'common', lang, 'name_lists'),
         "localization": os.path.join(c.MOD_OUTPUT_DIR, mod_name, 'localisation', lang, 'name_lists')
     }
 
@@ -45,7 +103,12 @@ def create_mod(args):
     for f in csv_files:
         if 'DS_Store' in f:
             continue
-        nl_dict, ord_dict = csv_to_dicts(f, args.author.lower())
+
+        nl_dict, ord_dict = csv_to_dicts(f, args.author.lower(), args.lcode)
+        if args.lcode != 'en':
+            nl_dict = translate_dict(nl_dict, args.lcode)
+            ord_dict = translate_dict(ord_dict, args.lcode)
+
         namelist_info[nl_dict['namelist_id']] = {
             'file': f,
             'author': args.author,
@@ -57,6 +120,10 @@ def create_mod(args):
         with io.open(name_list_file, 'w', encoding='utf-8-sig') as file:
             namelist_template = template_env.get_template(c.NAMELIST_TEMPLATE)
             name_list = namelist_template.render(nl_dict)
+            # if args.lcode != 'en':
+            #     translate_namelist = translate(name_list, args.lcode)
+            #     print(translate_namelist)
+            x = len(name_list)
             file.write(name_list)
             print(f'Namelist file written to {name_list_file}')
 
@@ -86,18 +153,16 @@ def create_seq_key(key, value, author, id):
     return f"{author.upper()}_{id.upper()}_{ord_base}_{c.ORD_TYPES[ord]}"
 
 
-def csv_to_dicts(namelists, author):
+def csv_to_dicts(namelists, author, lang):
     namelist_dict = {key: [] for key in get_template_variables()}
     with open(namelists, 'r') as file:
-        print(namelists)
         reader = csv.DictReader(file)
         for row in reader:
             for k, v in row.items():
                 if k in namelist_dict.keys() and len(v) > 0:
-                    qv = (f'\"{v}\"' if 'namelist' not in k else v)
+                    qv = (f'{v}' if 'namelist' not in k else v)
                     namelist_dict[k].append(qv)
-
-    processed_dict = {key: " ".join(value) for key, value in namelist_dict.items()}
+    processed_dict = {key: " | ".join(value) for key, value in namelist_dict.items()}
     ord_dict = OrderedDict()
     for k, v in processed_dict.items():
         if "$" in v:
@@ -107,7 +172,32 @@ def csv_to_dicts(namelists, author):
     # TODO: stellaris doesn't allow empty second names but this is a workaround
     if len(processed_dict['cn_second_names']) == 0:
         processed_dict['cn_second_names'] = '\"\"'
+    if lang != 'en':
+        processed_dict = translate_dict(processed_dict, lang)
+    processed_dict = quotify(processed_dict)
     return processed_dict, ord_dict
+
+
+def quotify(indict):
+    outdict = dict()
+    for k, v in indict.items():
+        temp_array = []
+        for element in v.split('|'):
+            if k != 'namelist_id':
+                temp_array.append(f'\"{element.strip().title()}\"')
+            else:
+                temp_array.append(element)
+        new_value = " ".join(temp_array)
+        outdict[k] = new_value
+    return outdict
+
+
+def report_success(result):
+    print(f"Processing complete: {result}")
+
+
+def report_failure(error):
+    print(f"Processing failed: {error}")
 
 
 def get_template_variables():
@@ -136,9 +226,16 @@ def main():
     if args.dump_csv_template:
         csv_template(args)
     else:
+        args.lcode = 'en'
+        create_mod(args)
+
         for lcode in c.LANGUAGES.keys():
             args.lcode = lcode
             create_mod(args)
+
+        # with multiprocessing.Pool(processes=multiprocessing.cpu_count() - 1) as pool:
+        #     for result in pool.map(create_mod, inputs):
+        #         print(f'Got result: {result}', flush=True)
 
 
 parser = argparse.ArgumentParser(
