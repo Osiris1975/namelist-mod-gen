@@ -1,0 +1,267 @@
+﻿### Ancient Roman EN(ONL)
+### Created by osiris
+
+osiris_ancientromanen = {
+
+	ship_names = {
+
+		corvette = {
+			"Bellona's Chariot" "Bellona's Courage" "Bellona's Gladius" "Bellona's Command" "Bellona's Fire" "Bellona's Vigil" "Bellona's Sagitta" "Bellona's Pugio" "Bellona's Pilum" "Bellona's Spatha" "Bellona's Hasta" "Bellona's Scutum" "Bellona's Fury" "Bellona's Rage" "Bellona's Valor" "Bellona's Tenacity" "Bellona's Audacity" "Bellona's Ire" "Bellona's Storm" "Bellona's Tempest" "Bellona's Thunder" "Victoria's Chariot" "Victoria's Courage" "Victoria's Gladius" "Victoria's Command" "Victoria's Fire" "Victoria's Vigil" "Victoria's Sagitta" "Victoria's Pugio" "Victoria's Pilum" "Victoria's Spatha" "Victoria's Hasta" "Victoria's Scutum" "Victoria's Fury" "Victoria's Rage" "Victoria's Valor" "Victoria's Tenacity" "Victoria's Audacity" "Victoria's Ire" "Victoria's Storm" "Victoria's Tempest" "Victoria's Thunder" "Mars's Chariot" "Mars's Courage" "Mars's Gladius" "Mars's Command" "Mars's Fire" "Mars's Vigil" "Mars's Sagitta" "Mars's Pugio" "Mars's Pilum" "Mars's Spatha" "Mars's Hasta" "Mars's Scutum" "Mars's Fury" "Mars's Rage" "Mars's Valor" "Mars's Tenacity" "Mars's Audacity" "Mars's Ire" "Mars's Storm" "Mars's Tempest" "Mars's Thunder" "Virtus's Chariot" "Virtus's Courage" "Virtus's Gladius" "Virtus's Command" "Virtus's Fire" "Virtus's Vigil" "Virtus's Sagitta" "Virtus's Pugio" "Virtus's Pilum" "Virtus's Spatha" "Virtus's Hasta" "Virtus's Scutum" "Virtus's Fury" "Virtus's Rage" "Virtus's Valor" "Virtus's Tenacity" "Virtus's Audacity" "Virtus's Ire" "Virtus's Storm" "Virtus's Tempest" "Virtus's Thunder" "Fortuna's Chariot" "Fortuna's Courage" "Fortuna's Gladius" "Fortuna's Command" "Fortuna's Fire" "Fortuna's Vigil" "Fortuna's Sagitta" "Fortuna's Pugio" "Fortuna's Pilum" "Fortuna's Spatha" "Fortuna's Hasta" "Fortuna's Scutum" "Fortuna's Fury" "Fortuna's Rage" "Fortuna's Valor" "Fortuna's Tenacity" "Fortuna's Audacity" "Fortuna's Ire" "Fortuna's Storm" "Fortuna's Tempest" "Fortuna's Thunder" "Felicitas's Chariot" "Felicitas's Courage" "Felicitas's Gladius" "Felicitas's Command" "Felicitas's Fire" "Felicitas's Vigil" "Felicitas's Sagitta" "Felicitas's Pugio" "Felicitas's Pilum" "Felicitas's Spatha" "Felicitas's Hasta" "Felicitas's Scutum" "Felicitas's Fury" "Felicitas's Rage" "Felicitas's Valor" "Felicitas's Tenacity" "Felicitas's Audacity" "Felicitas's Ire" "Felicitas's Storm" "Felicitas's Tempest" "Felicitas's Thunder" "Concordia's Chariot" "Concordia's Courage" "Concordia's Gladius" "Concordia's Command" "Concordia's Fire" "Concordia's Vigil" "Concordia's Sagitta" "Concordia's Pugio" "Concordia's Pilum" "Concordia's Spatha" "Concordia's Hasta" "Concordia's Scutum" "Concordia's Fury" "Concordia's Rage" "Concordia's Valor" "Concordia's Tenacity" "Concordia's Audacity" "Concordia's Ire" "Concordia's Storm" "Concordia's Tempest" "Concordia's Thunder" "Fides's Chariot" "Fides's Courage" "Fides's Gladius" "Fides's Command" "Fides's Fire" "Fides's Vigil" "Fides's Sagitta" "Fides's Pugio" "Fides's Pilum" "Fides's Spatha" "Fides's Hasta" "Fides's Scutum" "Fides's Fury" "Fides's Rage" "Fides's Valor" "Fides's Tenacity" "Fides's Audacity" "Fides's Ire" "Fides's Storm" "Fides's Tempest" "Fides's Thunder" "Honos's Chariot" "Honos's Courage" "Honos's Gladius" "Honos's Command" "Honos's Fire" "Honos's Vigil" "Honos's Sagitta" "Honos's Pugio" "Honos's Pilum" "Honos's Spatha" "Honos's Hasta" "Honos's Scutum" "Honos's Fury" "Honos's Rage" "Honos's Valor" "Honos's Tenacity" "Honos's Audacity" "Honos's Ire" "Honos's Storm" "Honos's Tempest" "Honos's Thunder" "Justitia's Chariot" "Justitia's Courage" "Justitia's Gladius" "Justitia's Command" "Justitia's Fire" "Justitia's Vigil" "Justitia's Sagitta" "Justitia's Pugio" "Justitia's Pilum" "Justitia's Spatha" "Justitia's Hasta" "Justitia's Scutum" "Justitia's Fury" "Justitia's Rage" "Justitia's Valor" "Justitia's Tenacity" "Justitia's Audacity" "Justitia's Ire" "Justitia's Storm" "Justitia's Tempest" "Justitia's Thunder" "Ultor's Chariot" "Ultor's Courage" "Ultor's Gladius" "Ultor's Command" "Ultor's Fire" "Ultor's Vigil" "Ultor's Sagitta" "Ultor's Pugio" "Ultor's Pilum" "Ultor's Spatha" "Ultor's Hasta" "Ultor's Scutum" "Ultor's Fury" "Ultor's Rage" "Ultor's Valor" "Ultor's Tenacity" "Ultor's Audacity" "Ultor's Ire" "Ultor's Storm" "Ultor's Tempest" "Ultor's Thunder" "Pavor's Chariot" "Pavor's Courage" "Pavor's Gladius" "Pavor's Command" "Pavor's Fire" "Pavor's Vigil" "Pavor's Sagitta" "Pavor's Pugio" "Pavor's Pilum" "Pavor's Spatha" "Pavor's Hasta" "Pavor's Scutum" "Pavor's Fury" "Pavor's Rage" "Pavor's Valor" "Pavor's Tenacity" "Pavor's Audacity" "Pavor's Ire" "Pavor's Storm" "Pavor's Tempest" "Pavor's Thunder" "Timor's Chariot" "Timor's Courage" "Timor's Gladius" "Timor's Command" "Timor's Fire" "Timor's Vigil" "Timor's Sagitta" "Timor's Pugio" "Timor's Pilum" "Timor's Spatha" "Timor's Hasta" "Timor's Scutum" "Timor's Fury" "Timor's Rage" "Timor's Valor" "Timor's Tenacity" "Timor's Audacity" "Timor's Ire" "Timor's Storm" "Timor's Tempest" "Timor's Thunder" "Disciplina's Chariot" "Disciplina's Courage" "Disciplina's Gladius" "Disciplina's Command" "Disciplina's Fire" "Disciplina's Vigil" "Disciplina's Sagitta" "Disciplina's Pugio" "Disciplina's Pilum" "Disciplina's Spatha" "Disciplina's Hasta" "Disciplina's Scutum" "Disciplina's Fury" "Disciplina's Rage" "Disciplina's Valor" "Disciplina's Tenacity" "Disciplina's Audacity" "Disciplina's Ire" "Disciplina's Storm" "Disciplina's Tempest" "Disciplina's Thunder" "Praetoria's Chariot" "Praetoria's Courage" "Praetoria's Gladius" "Praetoria's Command" "Praetoria's Fire" "Praetoria's Vigil" "Praetoria's Sagitta" "Praetoria's Pugio" "Praetoria's Pilum" "Praetoria's Spatha" "Praetoria's Hasta" "Praetoria's Scutum" "Praetoria's Fury" "Praetoria's Rage" "Praetoria's Valor" "Praetoria's Tenacity" "Praetoria's Audacity" "Praetoria's Ire" "Praetoria's Storm" "Praetoria's Tempest" "Praetoria's Thunder" "Tutela's Chariot" "Tutela's Courage" "Tutela's Gladius" "Tutela's Command" "Tutela's Fire" "Tutela's Vigil" "Tutela's Sagitta" "Tutela's Pugio" "Tutela's Pilum" "Tutela's Spatha" "Tutela's Hasta" "Tutela's Scutum" "Tutela's Fury" "Tutela's Rage" "Tutela's Valor" "Tutela's Tenacity" "Tutela's Audacity" "Tutela's Ire" "Tutela's Storm" "Tutela's Tempest" "Tutela's Thunder" "Metus's Chariot" "Metus's Courage" "Metus's Gladius" "Metus's Command" "Metus's Fire" "Metus's Vigil" "Metus's Sagitta" "Metus's Pugio" "Metus's Pilum" "Metus's Spatha" "Metus's Hasta" "Metus's Scutum" "Metus's Fury" "Metus's Rage" "Metus's Valor" "Metus's Tenacity" "Metus's Audacity" "Metus's Ire" "Metus's Storm" "Metus's Tempest" "Metus's Thunder" "Quirinus's Chariot" "Quirinus's Courage" "Quirinus's Gladius" "Quirinus's Command" "Quirinus's Fire" "Quirinus's Vigil" "Quirinus's Sagitta" "Quirinus's Pugio" "Quirinus's Pilum" "Quirinus's Spatha" "Quirinus's Hasta" "Quirinus's Scutum" "Quirinus's Fury" "Quirinus's Rage" "Quirinus's Valor" "Quirinus's Tenacity" "Quirinus's Audacity" "Quirinus's Ire" "Quirinus's Storm" "Quirinus's Tempest" "Quirinus's Thunder" "Vindex's Chariot" "Vindex's Courage" "Vindex's Gladius" "Vindex's Command" "Vindex's Fire" "Vindex's Vigil" "Vindex's Sagitta" "Vindex's Pugio" "Vindex's Pilum" "Vindex's Spatha" "Vindex's Hasta" "Vindex's Scutum" "Vindex's Fury" "Vindex's Rage" "Vindex's Valor" "Vindex's Tenacity" "Vindex's Audacity" "Vindex's Ire" "Vindex's Storm" "Vindex's Tempest" "Vindex's Thunder" "Tychon's Chariot" "Tychon's Courage" "Tychon's Gladius" "Tychon's Command" "Tychon's Fire" "Tychon's Vigil" "Tychon's Sagitta" "Tychon's Pugio" "Tychon's Pilum" "Tychon's Spatha" "Tychon's Hasta" "Tychon's Scutum" "Tychon's Fury" "Tychon's Rage" "Tychon's Valor" "Tychon's Tenacity" "Tychon's Audacity" "Tychon's Ire" "Tychon's Storm" "Tychon's Tempest" "Tychon's Thunder" "Scipio's Chariot" "Scipio's Courage" "Scipio's Gladius" "Scipio's Command" "Scipio's Fire" "Scipio's Vigil" "Scipio's Sagitta" "Scipio's Pugio" "Scipio's Pilum" "Scipio's Spatha" "Scipio's Hasta" "Scipio's Scutum" "Scipio's Fury" "Scipio's Rage" "Scipio's Valor" "Scipio's Tenacity" "Scipio's Audacity" "Scipio's Ire" "Scipio's Storm" "Scipio's Tempest" "Scipio's Thunder" "Voice of Bellona" "Wrath of Bellona" "Will of Bellona" "Bolt of Bellona" "Fist of Bellona" "Might of Bellona" "Voice of Victoria" "Wrath of Victoria" "Will of Victoria" "Bolt of Victoria" "Fist of Victoria" "Might of Victoria" "Voice of Mars" "Wrath of Mars" "Will of Mars" "Bolt of Mars" "Fist of Mars" "Might of Mars" "Voice of Virtus" "Wrath of Virtus" "Will of Virtus" "Bolt of Virtus" "Fist of Virtus" "Might of Virtus" "Voice of Fortuna" "Wrath of Fortuna" "Will of Fortuna" "Bolt of Fortuna" "Fist of Fortuna" "Might of Fortuna" "Voice of Felicitas" "Wrath of Felicitas" "Will of Felicitas" "Bolt of Felicitas" "Fist of Felicitas" "Might of Felicitas" "Voice of Concordia" "Wrath of Concordia" "Will of Concordia" "Bolt of Concordia" "Fist of Concordia" "Might of Concordia" "Voice of Fides" "Wrath of Fides" "Will of Fides" "Bolt of Fides" "Fist of Fides" "Might of Fides" "Voice of Honos" "Wrath of Honos" "Will of Honos" "Bolt of Honos" "Fist of Honos" "Might of Honos" "Voice of Justitia" "Wrath of Justitia" "Will of Justitia" "Bolt of Justitia" "Fist of Justitia" "Might of Justitia" "Voice of Ultor" "Wrath of Ultor" "Will of Ultor" "Bolt of Ultor" "Fist of Ultor" "Might of Ultor" "Voice of Pavor" "Wrath of Pavor" "Will of Pavor" "Bolt of Pavor" "Fist of Pavor" "Might of Pavor" "Voice of Timor" "Wrath of Timor" "Will of Timor" "Bolt of Timor" "Fist of Timor" "Might of Timor" "Voice of Disciplina" "Wrath of Disciplina" "Will of Disciplina" "Bolt of Disciplina" "Fist of Disciplina" "Might of Disciplina" "Voice of Praetoria" "Wrath of Praetoria" "Will of Praetoria" "Bolt of Praetoria" "Fist of Praetoria" "Might of Praetoria" "Voice of Tutela" "Wrath of Tutela" "Will of Tutela" "Bolt of Tutela" "Fist of Tutela" "Might of Tutela" "Voice of Metus" "Wrath of Metus" "Will of Metus" "Bolt of Metus" "Fist of Metus" "Might of Metus" "Voice of Quirinus" "Wrath of Quirinus" "Will of Quirinus" "Bolt of Quirinus" "Fist of Quirinus" "Might of Quirinus" "Voice of Vindex" "Wrath of Vindex" "Will of Vindex" "Bolt of Vindex" "Fist of Vindex" "Might of Vindex" "Voice of Tychon" "Wrath of Tychon" "Will of Tychon" "Bolt of Tychon" "Fist of Tychon" "Might of Tychon" "Voice of Scipio" "Wrath of Scipio" "Will of Scipio" "Bolt of Scipio" "Fist of Scipio" "Might of Scipio" "Voice of Manius" "Wrath of Manius" "Will of Manius" "Bolt of Manius" "Fist of Manius" "Might of Manius" "Voice of Volusianus" "Wrath of Volusianus" "Will of Volusianus" "Bolt of Volusianus" "Fist of Volusianus" "Might of Volusianus" "Manius's Chariot" "Manius's Courage" "Manius's Gladius" "Manius's Command" "Manius's Fire" "Manius's Vigil" "Manius's Sagitta" "Manius's Pugio" "Manius's Pilum" "Manius's Spatha" "Manius's Hasta" "Manius's Scutum" "Manius's Fury" "Manius's Rage" "Manius's Valor" "Manius's Tenacity" "Manius's Audacity" "Manius's Ire" "Manius's Storm" "Manius's Tempest" "Manius's Thunder" "Volusianus's Chariot" "Volusianus's Courage" "Volusianus's Gladius" "Volusianus's Command" "Volusianus's Fire" "Volusianus's Vigil" "Volusianus's Sagitta" "Volusianus's Pugio" "Volusianus's Pilum" "Volusianus's Spatha" "Volusianus's Hasta" "Volusianus's Scutum" "Volusianus's Fury" "Volusianus's Rage" "Volusianus's Valor" "Volusianus's Tenacity" "Volusianus's Audacity" "Volusianus's Ire" "Volusianus's Storm" "Volusianus's Tempest" "Volusianus's Thunder"
+		}
+
+		destroyer = {
+			"Bellona's Storm" "Honos's Chariot" "Tutela's Tempest" "Vindex's Fury" "Virtus's Valor" "Victoria's Fire" "Mars's Pugio" "Voice of Timor" "Voice of Felicitas" "Metus's Command" "Tychon's Vigil" "Will of Honos" "Mars's Fire" "Quirinus's Rage" "Ultor's Ire" "Praetoria's Hasta" "Fortuna's Storm" "Metus's Tenacity" "Vindex's Hasta" "Bolt of Quirinus" "Virtus's Pilum" "Tychon's Scutum" "Bolt of Fides" "Quirinus's Thunder" "Metus's Vigil" "Might of Pavor" "Victoria's Tempest" "Will of Fortuna" "Bolt of Bellona" "Timor's Hasta" "Vindex's Audacity" "Fortuna's Courage" "Will of Metus" "Quirinus's Valor" "Tychon's Tenacity" "Scipio's Sagitta" "Volusianus's Thunder" "Tutela's Spatha" "Bellona's Thunder" "Praetoria's Pugio" "Concordia's Ire" "Quirinus's Tenacity" "Honos's Scutum" "Fortuna's Thunder" "Will of Bellona" "Manius's Chariot" "Timor's Rage" "Manius's Fury" "Virtus's Fire" "Victoria's Thunder" "Fides's Chariot" "Wrath of Fortuna" "Honos's Rage" "Voice of Quirinus" "Might of Praetoria" "Volusianus's Fire" "Fortuna's Command" "Fides's Fury" "Scipio's Hasta" "Virtus's Hasta" "Praetoria's Scutum" "Voice of Justitia" "Manius's Spatha" "Pavor's Rage" "Wrath of Timor" "Fist of Honos" "Will of Concordia" "Honos's Hasta" "Timor's Valor" "Scipio's Command" "Voice of Mars" "Manius's Tempest" "Mars's Audacity" "Pavor's Command" "Victoria's Spatha" "Justitia's Chariot" "Ultor's Tenacity" "Voice of Manius" "Fortuna's Tempest" "Will of Disciplina" "Vindex's Storm" "Will of Scipio" "Timor's Chariot" "Wrath of Vindex" "Felicitas's Pugio" "Bolt of Concordia" "Mars's Rage" "Ultor's Storm" "Fides's Command" "Ultor's Fury" "Wrath of Manius" "Ultor's Tempest" "Wrath of Victoria" "Fist of Victoria" "Wrath of Metus" "Justitia's Audacity" "Fortuna's Fury" "Tutela's Courage" "Fides's Pilum" "Disciplina's Fire" "Volusianus's Audacity" "Wrath of Pavor" "Virtus's Chariot" "Mars's Fury" "Might of Honos" "Felicitas's Hasta" "Bolt of Scipio" "Metus's Sagitta" "Pavor's Tenacity" "Tychon's Spatha" "Quirinus's Pugio" "Mars's Tempest" "Timor's Sagitta" "Might of Tychon" "Pavor's Spatha" "Voice of Honos" "Quirinus's Audacity" "Virtus's Gladius" "Metus's Pugio" "Vindex's Rage" "Ultor's Audacity" "Fist of Justitia" "Concordia's Vigil" "Tychon's Thunder" "Tychon's Courage" "Honos's Valor" "Justitia's Tenacity" "Praetoria's Tenacity" "Metus's Spatha" "Mars's Tenacity" "Vindex's Spatha" "Fortuna's Pugio" "Voice of Concordia" "Tutela's Rage" "Bellona's Pilum" "Timor's Spatha" "Might of Victoria" "Pavor's Scutum" "Disciplina's Gladius" "Tutela's Audacity" "Honos's Pilum" "Virtus's Sagitta" "Metus's Valor" "Bellona's Chariot" "Might of Timor" "Timor's Storm" "Mars's Gladius" "Victoria's Sagitta" "Fist of Scipio" "Justitia's Pugio" "Metus's Fury" "Fist of Disciplina" "Voice of Praetoria" "Felicitas's Command" "Mars's Courage" "Manius's Vigil" "Bellona's Fury" "Felicitas's Fury" "Ultor's Spatha" "Will of Praetoria" "Honos's Command" "Concordia's Tenacity" "Concordia's Pugio" "Voice of Vindex" "Manius's Hasta" "Voice of Disciplina" "Manius's Courage" "Volusianus's Scutum" "Bolt of Mars" "Bolt of Ultor" "Honos's Tempest" "Timor's Command" "Bolt of Timor" "Ultor's Hasta" "Fist of Concordia" "Vindex's Courage" "Might of Justitia" "Disciplina's Audacity" "Fist of Volusianus" "Timor's Vigil" "Ultor's Chariot" "Justitia's Fire" "Bolt of Tutela" "Bolt of Honos" "Ultor's Valor" "Fist of Bellona" "Timor's Courage" "Ultor's Pilum" "Volusianus's Pugio" "Praetoria's Pilum" "Praetoria's Fury" "Pavor's Audacity" "Concordia's Fury" "Virtus's Tenacity" "Might of Vindex" "Will of Tutela" "Might of Scipio" "Timor's Scutum" "Fides's Ire" "Timor's Audacity" "Pavor's Gladius" "Manius's Thunder" "Wrath of Ultor" "Bolt of Metus" "Felicitas's Chariot" "Honos's Fire" "Fides's Fire" "Wrath of Virtus" "Fides's Storm" "Felicitas's Valor" "Fides's Sagitta" "Will of Volusianus" "Victoria's Pilum" "Ultor's Scutum" "Praetoria's Spatha" "Quirinus's Chariot" "Manius's Pugio" "Timor's Ire" "Might of Disciplina" "Fortuna's Sagitta" "Quirinus's Gladius" "Disciplina's Rage" "Bellona's Sagitta" "Fortuna's Tenacity" "Manius's Gladius" "Volusianus's Vigil" "Bolt of Felicitas" "Pavor's Tempest" "Ultor's Rage" "Virtus's Vigil" "Scipio's Pilum" "Praetoria's Sagitta" "Tychon's Valor" "Disciplina's Ire" "Praetoria's Tempest" "Vindex's Valor" "Timor's Fire" "Justitia's Hasta" "Praetoria's Ire" "Fortuna's Ire" "Ultor's Command" "Victoria's Courage" "Volusianus's Tenacity" "Mars's Valor" "Quirinus's Storm" "Tutela's Storm" "Bolt of Fortuna" "Victoria's Storm" "Felicitas's Tempest" "Disciplina's Chariot" "Quirinus's Fire" "Tychon's Command" "Justitia's Spatha" "Voice of Tutela" "Honos's Ire" "Felicitas's Sagitta" "Metus's Hasta" "Bolt of Disciplina" "Fortuna's Rage" "Felicitas's Storm" "Concordia's Audacity" "Volusianus's Chariot" "Honos's Thunder" "Metus's Courage" "Bellona's Tenacity" "Wrath of Concordia" "Ultor's Pugio" "Felicitas's Thunder" "Pavor's Hasta" "Disciplina's Vigil" "Pavor's Pugio" "Might of Tutela" "Scipio's Vigil" "Praetoria's Courage" "Pavor's Fire" "Quirinus's Tempest" "Justitia's Scutum" "Volusianus's Valor" "Will of Mars" "Felicitas's Ire" "Bellona's Fire" "Fortuna's Valor" "Virtus's Spatha" "Fides's Tenacity" "Tychon's Fury" "Ultor's Courage" "Might of Mars" "Disciplina's Pilum" "Bolt of Volusianus" "Timor's Tenacity" "Voice of Tychon" "Concordia's Chariot" "Disciplina's Hasta" "Voice of Fortuna" "Fortuna's Spatha" "Timor's Pugio" "Scipio's Storm" "Volusianus's Hasta" "Timor's Pilum" "Tutela's Vigil" "Tutela's Gladius" "Ultor's Fire" "Volusianus's Spatha" "Fist of Felicitas" "Bellona's Vigil" "Victoria's Pugio" "Metus's Audacity" "Fortuna's Hasta" "Tychon's Pugio" "Praetoria's Storm" "Voice of Pavor" "Mars's Scutum" "Concordia's Valor" "Praetoria's Command" "Concordia's Spatha" "Voice of Virtus" "Volusianus's Courage" "Pavor's Sagitta" "Bellona's Courage" "Fortuna's Gladius" "Fortuna's Scutum" "Disciplina's Courage" "Metus's Fire" "Volusianus's Ire" "Victoria's Valor" "Felicitas's Scutum" "Might of Bellona" "Fides's Spatha" "Tychon's Pilum" "Quirinus's Scutum" "Bellona's Valor" "Disciplina's Sagitta" "Concordia's Storm" "Metus's Tempest" "Manius's Ire" "Concordia's Tempest" "Timor's Gladius" "Volusianus's Storm" "Will of Fides" "Quirinus's Courage" "Fist of Fortuna" "Manius's Command" "Virtus's Storm" "Scipio's Pugio" "Manius's Valor" "Justitia's Vigil" "Concordia's Hasta" "Bellona's Tempest" "Ultor's Thunder" "Bolt of Praetoria" "Fides's Hasta" "Bolt of Manius" "Pavor's Ire" "Justitia's Sagitta" "Scipio's Thunder" "Will of Pavor" "Manius's Tenacity" "Fist of Praetoria" "Justitia's Pilum" "Scipio's Spatha" "Tutela's Hasta" "Wrath of Tutela" "Quirinus's Pilum" "Fist of Tychon" "Mars's Spatha" "Wrath of Mars" "Mars's Hasta" "Fides's Audacity" "Justitia's Gladius" "Fides's Tempest" "Bellona's Ire" "Vindex's Thunder" "Mars's Storm" "Voice of Metus" "Will of Vindex" "Praetoria's Thunder" "Honos's Gladius" "Fides's Thunder" "Bellona's Rage" "Quirinus's Sagitta" "Bellona's Spatha" "Tychon's Audacity" "Scipio's Audacity" "Virtus's Ire" "Victoria's Fury" "Justitia's Valor" "Vindex's Sagitta" "Fides's Scutum" "Manius's Scutum" "Pavor's Courage" "Concordia's Fire" "Quirinus's Ire" "Bolt of Tychon" "Tychon's Rage" "Quirinus's Command" "Might of Metus" "Fortuna's Audacity" "Justitia's Storm" "Victoria's Ire" "Voice of Fides" "Volusianus's Tempest" "Tutela's Thunder" "Vindex's Vigil" "Scipio's Scutum" "Tychon's Sagitta" "Victoria's Rage" "Might of Quirinus" "Quirinus's Fury" "Bellona's Gladius" "Fides's Courage" "Will of Manius" "Bellona's Command" "Manius's Fire" "Wrath of Quirinus" "Bellona's Hasta" "Justitia's Rage" "Tutela's Tenacity" "Manius's Storm" "Scipio's Ire" "Vindex's Ire" "Victoria's Hasta" "Ultor's Vigil" "Wrath of Bellona" "Fortuna's Vigil" "Metus's Rage" "Felicitas's Vigil" "Wrath of Tychon" "Pavor's Thunder" "Mars's Pilum" "Praetoria's Chariot" "Scipio's Gladius" "Voice of Scipio" "Honos's Vigil" "Will of Victoria" "Might of Manius" "Fides's Rage" "Volusianus's Command" "Tutela's Sagitta" "Might of Fortuna" "Bolt of Pavor" "Mars's Thunder" "Justitia's Tempest" "Fist of Ultor" "Scipio's Chariot" "Justitia's Command" "Fist of Quirinus" "Concordia's Sagitta" "Bolt of Victoria" "Pavor's Valor" "Manius's Rage" "Virtus's Audacity" "Disciplina's Fury" "Honos's Storm" "Voice of Bellona" "Pavor's Storm" "Concordia's Rage" "Will of Quirinus" "Disciplina's Tempest" "Timor's Tempest" "Tutela's Valor" "Manius's Sagitta" "Concordia's Gladius" "Metus's Pilum" "Virtus's Command" "Will of Felicitas" "Metus's Storm" "Might of Concordia" "Tutela's Pilum" "Virtus's Tempest" "Tutela's Chariot" "Bolt of Virtus" "Vindex's Chariot" "Quirinus's Hasta" "Will of Justitia" "Vindex's Tempest" "Quirinus's Spatha" "Tutela's Fire" "Virtus's Thunder" "Might of Ultor" "Victoria's Chariot" "Disciplina's Storm" "Wrath of Honos" "Disciplina's Valor" "Volusianus's Rage" "Vindex's Fire" "Bolt of Vindex" "Mars's Ire" "Fist of Virtus" "Fist of Vindex" "Tychon's Gladius" "Victoria's Scutum" "Fortuna's Pilum" "Tychon's Tempest" "Will of Tychon" "Mars's Vigil" "Manius's Pilum" "Praetoria's Gladius" "Disciplina's Tenacity" "Vindex's Pugio" "Praetoria's Valor" "Victoria's Command" "Wrath of Fides" "Honos's Pugio" "Metus's Ire" "Fides's Valor" "Felicitas's Gladius" "Might of Virtus" "Mars's Command" "Timor's Thunder" "Tutela's Command" "Vindex's Gladius" "Fides's Pugio" "Vindex's Command" "Scipio's Tenacity" "Concordia's Pilum" "Will of Timor" "Tychon's Chariot" "Honos's Fury" "Scipio's Courage" "Concordia's Scutum" "Pavor's Pilum" "Scipio's Rage" "Virtus's Rage" "Scipio's Tempest" "Volusianus's Pilum" "Bellona's Audacity" "Metus's Scutum" "Justitia's Ire" "Tychon's Storm" "Pavor's Fury" "Praetoria's Audacity" "Fist of Mars" "Honos's Spatha" "Victoria's Audacity" "Felicitas's Spatha" "Praetoria's Vigil" "Ultor's Sagitta" "Mars's Chariot" "Virtus's Pugio" "Timor's Fury" "Honos's Tenacity" "Pavor's Vigil" "Victoria's Gladius" "Scipio's Fire" "Tychon's Hasta" "Might of Volusianus" "Quirinus's Vigil" "Fist of Timor" "Mars's Sagitta" "Victoria's Tenacity" "Fortuna's Fire" "Felicitas's Pilum" "Wrath of Volusianus" "Pavor's Chariot" "Honos's Courage" "Volusianus's Gladius" "Tychon's Fire" "Felicitas's Rage" "Disciplina's Pugio" "Bolt of Justitia" "Concordia's Thunder" "Felicitas's Fire" "Might of Felicitas" "Tutela's Fury" "Vindex's Tenacity" "Wrath of Justitia" "Will of Virtus" "Scipio's Fury" "Tutela's Scutum" "Virtus's Scutum" "Disciplina's Thunder" "Fist of Tutela" "Metus's Thunder" "Fist of Metus" "Tutela's Pugio" "Metus's Chariot" "Bellona's Pugio" "Praetoria's Rage" "Honos's Sagitta" "Felicitas's Tenacity" "Ultor's Gladius" "Metus's Gladius" "Disciplina's Command" "Will of Ultor" "Fides's Gladius" "Felicitas's Courage" "Volusianus's Fury" "Vindex's Pilum" "Virtus's Fury" "Concordia's Courage" "Disciplina's Spatha" "Wrath of Felicitas" "Fist of Manius" "Virtus's Courage" "Justitia's Thunder" "Fides's Vigil" "Felicitas's Audacity" "Disciplina's Scutum" "Concordia's Command" "Victoria's Vigil" "Scipio's Valor" "Volusianus's Sagitta" "Tutela's Ire" "Wrath of Praetoria" "Wrath of Scipio" "Vindex's Scutum" "Might of Fides" "Manius's Audacity" "Voice of Victoria" "Voice of Volusianus" "Tychon's Ire" "Wrath of Disciplina" "Fist of Fides" "Praetoria's Fire" "Fist of Pavor" "Honos's Audacity" "Fortuna's Chariot" "Justitia's Courage" "Bellona's Scutum" "Voice of Ultor" "Justitia's Fury"
+		}
+
+		cruiser = {
+			"Apollo's Gladius" "Will of Pluto" "Cupid's Hasta" "Venus's Scutum" "Fortuna's Tenacity" "Voice of Vulcan" "Vesta's Pilum" "Venus's Fury" "Mars's Fury" "Tellus's Sagitta" "Minerva's Audacity" "Fist of Vesta" "Jupiter's Valor" "Luna's Hasta" "Apollo's Sagitta" "Might of Neptune" "Fortuna's Rage" "Sol's Command" "Sol's Rage" "Will of Bacchus" "Vesta's Scutum" "Neptune's Tenacity" "Jupiter's Thunder" "Apollo's Spatha" "Tellus's Gladius" "Vulcan's Pugio" "Wrath of Diana" "Janus's Courage" "Jupiter's Pilum" "Diana's Vigil" "Wrath of Venus" "Fortuna's Valor" "Bolt of Diana" "Fortuna's Courage" "Venus's Valor" "Pluto's Scutum" "Minerva's Valor" "Wrath of Pluto" "Tellus's Thunder" "Diana's Gladius" "Bacchus's Tenacity" "Ceres's Chariot" "Ceres's Sagitta" "Wrath of Neptune" "Voice of Venus" "Pluto's Chariot" "Mars's Thunder" "Faunus's Tenacity" "Saturn's Fire" "Venus's Sagitta" "Sol's Gladius" "Cupid's Ire" "Jupiter's Hasta" "Apollo's Courage" "Neptune's Ire" "Mars's Valor" "Ceres's Gladius" "Minerva's Tenacity" "Bolt of Cupid" "Neptune's Sagitta" "Minerva's Fire" "Minerva's Ire" "Neptune's Audacity" "Vulcan's Scutum" "Bacchus's Sagitta" "Fist of Venus" "Ceres's Spatha" "Bacchus's Scutum" "Might of Pluto" "Bolt of Juno" "Bacchus's Audacity" "Pluto's Pugio" "Saturn's Tempest" "Jupiter's Tenacity" "Mars's Ire" "Ceres's Storm" "Diana's Spatha" "Sol's Pugio" "Ceres's Audacity" "Faunus's Gladius" "Fortuna's Scutum" "Bacchus's Valor" "Vesta's Fire" "Bolt of Mercury" "Bolt of Ceres" "Mars's Command" "Voice of Pluto" "Mercury's Scutum" "Pluto's Hasta" "Ceres's Fire" "Tellus's Ire" "Mars's Fire" "Voice of Juno" "Will of Cupid" "Apollo's Pilum" "Luna's Spatha" "Vulcan's Valor" "Bacchus's Pugio" "Cupid's Fire" "Faunus's Rage" "Faunus's Sagitta" "Mars's Gladius" "Venus's Spatha" "Diana's Ire" "Mercury's Vigil" "Luna's Storm" "Cupid's Tenacity" "Fortuna's Thunder" "Fortuna's Chariot" "Faunus's Vigil" "Janus's Pilum" "Pluto's Pilum" "Juno's Pilum" "Mercury's Storm" "Jupiter's Ire" "Luna's Fury" "Saturn's Command" "Bolt of Saturn" "Mercury's Tenacity" "Pluto's Storm" "Janus's Pugio" "Voice of Apollo" "Ceres's Ire" "Faunus's Storm" "Sol's Sagitta" "Diana's Fury" "Mercury's Command" "Saturn's Vigil" "Wrath of Vesta" "Jupiter's Storm" "Might of Ceres" "Ceres's Thunder" "Juno's Tempest" "Fortuna's Tempest" "Ceres's Command" "Bacchus's Storm" "Janus's Chariot" "Juno's Audacity" "Fist of Minerva" "Will of Janus" "Faunus's Scutum" "Tellus's Command" "Minerva's Hasta" "Saturn's Hasta" "Minerva's Gladius" "Ceres's Vigil" "Bacchus's Tempest" "Bacchus's Chariot" "Bacchus's Spatha" "Venus's Hasta" "Might of Apollo" "Sol's Audacity" "Minerva's Pilum" "Might of Mercury" "Janus's Tenacity" "Apollo's Audacity" "Vesta's Spatha" "Fist of Vulcan" "Voice of Sol" "Vesta's Ire" "Cupid's Sagitta" "Fortuna's Audacity" "Diana's Tempest" "Pluto's Fury" "Janus's Gladius" "Vulcan's Sagitta" "Saturn's Chariot" "Pluto's Valor" "Pluto's Thunder" "Venus's Fire" "Will of Jupiter" "Juno's Hasta" "Mercury's Sagitta" "Voice of Mercury" "Wrath of Jupiter" "Vulcan's Thunder" "Will of Ceres" "Pluto's Rage" "Mercury's Hasta" "Vesta's Tenacity" "Jupiter's Tempest" "Sol's Storm" "Diana's Chariot" "Mercury's Pugio" "Voice of Faunus" "Might of Janus" "Wrath of Ceres" "Jupiter's Vigil" "Ceres's Tenacity" "Voice of Mars" "Bolt of Fortuna" "Vesta's Gladius" "Wrath of Mars" "Cupid's Command" "Tellus's Chariot" "Janus's Command" "Fist of Fortuna" "Neptune's Pugio" "Minerva's Spatha" "Neptune's Tempest" "Jupiter's Fury" "Diana's Pugio" "Saturn's Storm" "Fortuna's Sagitta" "Bolt of Janus" "Voice of Fortuna" "Luna's Scutum" "Ceres's Scutum" "Saturn's Sagitta" "Faunus's Courage" "Cupid's Pugio" "Might of Vulcan" "Will of Vesta" "Voice of Janus" "Fist of Mars" "Faunus's Fire" "Mars's Pilum" "Neptune's Gladius" "Jupiter's Spatha" "Apollo's Fury" "Might of Sol" "Minerva's Fury" "Vesta's Storm" "Apollo's Pugio" "Faunus's Audacity" "Faunus's Fury" "Diana's Fire" "Luna's Courage" "Mars's Storm" "Neptune's Thunder" "Vesta's Rage" "Juno's Command" "Vesta's Pugio" "Venus's Thunder" "Sol's Fury" "Neptune's Command" "Luna's Tempest" "Pluto's Courage" "Pluto's Fire" "Venus's Gladius" "Saturn's Pilum" "Luna's Pugio" "Fist of Janus" "Saturn's Spatha" "Jupiter's Pugio" "Cupid's Storm" "Fortuna's Command" "Wrath of Faunus" "Diana's Command" "Diana's Rage" "Bolt of Luna" "Juno's Ire" "Jupiter's Fire" "Ceres's Pugio" "Fortuna's Pugio" "Bolt of Faunus" "Fortuna's Storm" "Luna's Valor" "Mars's Sagitta" "Will of Mars" "Venus's Rage" "Neptune's Valor" "Fortuna's Hasta" "Tellus's Courage" "Voice of Luna" "Juno's Tenacity" "Fist of Luna" "Bacchus's Courage" "Juno's Chariot" "Luna's Ire" "Bacchus's Thunder" "Voice of Cupid" "Mars's Tenacity" "Tellus's Rage" "Cupid's Valor" "Diana's Audacity" "Apollo's Hasta" "Sol's Courage" "Janus's Scutum" "Saturn's Valor" "Cupid's Thunder" "Might of Luna" "Apollo's Vigil" "Mercury's Spatha" "Fist of Sol" "Pluto's Vigil" "Neptune's Vigil" "Will of Venus" "Sol's Fire" "Janus's Rage" "Might of Fortuna" "Bacchus's Vigil" "Bolt of Pluto" "Minerva's Thunder" "Bacchus's Fire" "Might of Cupid" "Minerva's Command" "Wrath of Luna" "Voice of Vesta" "Mercury's Fury" "Vesta's Hasta" "Vesta's Vigil" "Vulcan's Pilum" "Minerva's Scutum" "Bacchus's Command" "Vulcan's Storm" "Diana's Storm" "Sol's Pilum" "Sol's Valor" "Faunus's Hasta" "Vulcan's Gladius" "Cupid's Chariot" "Voice of Diana" "Fist of Cupid" "Venus's Courage" "Ceres's Tempest" "Sol's Tempest" "Might of Diana" "Janus's Tempest" "Janus's Hasta" "Bacchus's Gladius" "Mars's Pugio" "Venus's Pugio" "Fist of Neptune" "Might of Bacchus" "Neptune's Fury" "Cupid's Courage" "Vulcan's Vigil" "Neptune's Courage" "Faunus's Tempest" "Will of Vulcan" "Saturn's Fury" "Apollo's Storm" "Neptune's Spatha" "Neptune's Pilum" "Apollo's Fire" "Mercury's Audacity" "Fortuna's Ire" "Mars's Spatha" "Mercury's Courage" "Apollo's Ire" "Janus's Vigil" "Venus's Ire" "Vulcan's Fire" "Bolt of Vulcan" "Luna's Pilum" "Sol's Chariot" "Neptune's Scutum" "Bolt of Sol" "Mars's Hasta" "Janus's Audacity" "Venus's Vigil" "Wrath of Bacchus" "Mercury's Thunder" "Will of Luna" "Juno's Gladius" "Tellus's Pilum" "Sol's Ire" "Sol's Spatha" "Faunus's Thunder" "Mercury's Gladius" "Diana's Scutum" "Fortuna's Vigil" "Fist of Mercury" "Venus's Command" "Luna's Fire" "Juno's Fire" "Might of Vesta" "Apollo's Tempest" "Tellus's Tempest" "Fist of Juno" "Mercury's Valor" "Wrath of Mercury" "Jupiter's Scutum" "Juno's Fury" "Diana's Hasta" "Apollo's Rage" "Pluto's Sagitta" "Saturn's Ire" "Fortuna's Spatha" "Mars's Tempest" "Apollo's Tenacity" "Janus's Thunder" "Tellus's Fury" "Pluto's Spatha" "Tellus's Fire" "Ceres's Hasta" "Juno's Rage" "Faunus's Chariot" "Cupid's Gladius" "Vesta's Sagitta" "Minerva's Rage" "Saturn's Scutum" "Saturn's Gladius" "Luna's Chariot" "Cupid's Tempest" "Faunus's Pilum" "Jupiter's Sagitta" "Will of Fortuna" "Might of Saturn" "Vulcan's Chariot" "Vulcan's Audacity" "Neptune's Chariot" "Cupid's Audacity" "Tellus's Valor" "Apollo's Thunder" "Might of Tellus" "Bolt of Minerva" "Luna's Command" "Luna's Vigil" "Juno's Thunder" "Sol's Thunder" "Saturn's Pugio" "Wrath of Saturn" "Wrath of Tellus" "Juno's Scutum" "Neptune's Storm" "Fortuna's Fury" "Apollo's Chariot" "Mercury's Pilum" "Luna's Gladius" "Will of Mercury" "Bacchus's Pilum" "Diana's Courage" "Bolt of Mars" "Cupid's Pilum" "Voice of Tellus" "Fist of Pluto" "Janus's Fury" "Voice of Saturn" "Jupiter's Chariot" "Neptune's Hasta" "Tellus's Spatha" "Sol's Vigil" "Will of Sol" "Minerva's Courage" "Janus's Storm" "Might of Mars" "Mars's Vigil" "Will of Tellus" "Neptune's Rage" "Luna's Rage" "Vulcan's Command" "Pluto's Ire" "Minerva's Tempest" "Will of Saturn" "Ceres's Fury" "Bolt of Jupiter" "Vesta's Audacity" "Voice of Neptune" "Sol's Tenacity" "Fortuna's Fire" "Mercury's Rage" "Pluto's Tenacity" "Apollo's Valor" "Jupiter's Command" "Juno's Valor" "Faunus's Spatha" "Fist of Diana" "Wrath of Minerva" "Faunus's Ire" "Pluto's Command" "Ceres's Valor" "Ceres's Pilum" "Might of Faunus" "Vulcan's Ire" "Vulcan's Spatha" "Vesta's Tempest" "Luna's Thunder" "Fist of Bacchus" "Mars's Scutum" "Venus's Chariot" "Vesta's Command" "Wrath of Janus" "Neptune's Fire" "Faunus's Command" "Fist of Saturn" "Mercury's Tempest" "Might of Venus" "Juno's Pugio" "Might of Jupiter" "Bolt of Apollo" "Tellus's Tenacity" "Diana's Thunder" "Vulcan's Courage" "Fist of Faunus" "Venus's Pilum" "Jupiter's Audacity" "Janus's Valor" "Juno's Storm" "Janus's Ire" "Bacchus's Ire" "Pluto's Gladius" "Pluto's Audacity" "Fist of Apollo" "Tellus's Audacity" "Minerva's Pugio" "Cupid's Rage" "Mars's Audacity" "Minerva's Storm" "Jupiter's Gladius" "Bacchus's Rage" "Janus's Fire" "Faunus's Pugio" "Cupid's Scutum" "Luna's Audacity" "Ceres's Rage" "Will of Minerva" "Tellus's Pugio" "Juno's Courage" "Will of Diana" "Cupid's Fury" "Vesta's Chariot" "Vulcan's Tempest" "Vesta's Valor" "Mars's Courage" "Juno's Vigil" "Venus's Tenacity" "Fist of Jupiter" "Minerva's Sagitta" "Diana's Pilum" "Faunus's Valor" "Minerva's Vigil" "Venus's Storm" "Bolt of Vesta" "Vulcan's Hasta" "Tellus's Storm" "Bacchus's Fury" "Jupiter's Rage" "Bolt of Tellus" "Mercury's Ire" "Diana's Tenacity" "Luna's Sagitta" "Bacchus's Hasta" "Juno's Sagitta" "Saturn's Audacity" "Cupid's Spatha" "Vulcan's Fury" "Will of Neptune" "Voice of Minerva" "Fortuna's Gladius" "Janus's Sagitta" "Sol's Scutum" "Mercury's Fire" "Wrath of Vulcan" "Vesta's Courage" "Apollo's Scutum" "Pluto's Tempest" "Saturn's Rage" "Voice of Jupiter" "Will of Apollo" "Wrath of Juno" "Fortuna's Pilum" "Tellus's Scutum" "Jupiter's Courage" "Might of Juno" "Bolt of Neptune" "Cupid's Vigil" "Wrath of Cupid" "Venus's Audacity" "Voice of Bacchus" "Diana's Valor" "Fist of Tellus" "Venus's Tempest" "Minerva's Chariot" "Bolt of Bacchus" "Mars's Rage" "Diana's Sagitta" "Saturn's Thunder" "Vulcan's Tenacity" "Tellus's Hasta" "Vulcan's Rage" "Tellus's Vigil" "Apollo's Command" "Voice of Ceres" "Will of Faunus" "Mars's Chariot" "Wrath of Sol" "Bolt of Venus" "Wrath of Fortuna" "Janus's Spatha" "Vesta's Thunder" "Saturn's Tenacity" "Vesta's Fury" "Sol's Hasta" "Might of Minerva" "Juno's Spatha" "Mercury's Chariot" "Ceres's Courage" "Will of Juno" "Wrath of Apollo" "Luna's Tenacity" "Fist of Ceres" "Saturn's Courage"
+		}
+		StrikeCruiser = {
+			
+		}
+		Battlecruiser = {
+			"Fortuna's Vigil" "Minerva's Pugio" "Bacchus's Spatha" "Tellus's Rage" "Neptune's Tempest" "Mercury's Spatha" "Might of Tellus" "Cupid's Ire" "Bacchus's Scutum" "Will of Venus" "Saturn's Fire" "Vesta's Vigil" "Tellus's Chariot" "Apollo's Fire" "Faunus's Storm" "Saturn's Thunder" "Cupid's Courage" "Might of Juno" "Vesta's Hasta" "Faunus's Ire" "Might of Janus" "Wrath of Cupid" "Fist of Mercury" "Venus's Pugio" "Pluto's Audacity" "Pluto's Rage" "Bacchus's Gladius" "Bolt of Juno" "Voice of Faunus" "Will of Janus" "Fist of Cupid" "Bolt of Vulcan" "Might of Apollo" "Tellus's Valor" "Ceres's Hasta" "Apollo's Courage" "Apollo's Scutum" "Tellus's Spatha" "Wrath of Tellus" "Might of Fortuna" "Jupiter's Tempest" "Janus's Tempest" "Fist of Luna" "Diana's Vigil" "Voice of Jupiter" "Might of Jupiter" "Sol's Fire" "Mars's Storm" "Jupiter's Pugio" "Vesta's Chariot" "Venus's Sagitta" "Pluto's Scutum" "Mercury's Courage" "Saturn's Tenacity" "Fortuna's Storm" "Vulcan's Fury" "Fist of Bacchus" "Venus's Rage" "Tellus's Fury" "Vulcan's Gladius" "Wrath of Mars" "Vesta's Fury" "Vesta's Storm" "Janus's Sagitta" "Jupiter's Gladius" "Ceres's Valor" "Faunus's Thunder" "Janus's Audacity" "Mars's Command" "Fortuna's Tenacity" "Pluto's Command" "Sol's Hasta" "Saturn's Valor" "Apollo's Hasta" "Pluto's Hasta" "Sol's Fury" "Pluto's Storm" "Vesta's Pilum" "Wrath of Jupiter" "Venus's Tempest" "Jupiter's Courage" "Apollo's Spatha" "Tellus's Storm" "Juno's Pugio" "Faunus's Gladius" "Sol's Spatha" "Luna's Fire" "Janus's Pilum" "Might of Luna" "Fist of Pluto" "Fortuna's Chariot" "Minerva's Hasta" "Will of Tellus" "Jupiter's Fire" "Diana's Spatha" "Bolt of Tellus" "Minerva's Audacity" "Voice of Tellus" "Saturn's Pugio" "Luna's Tempest" "Venus's Fire" "Diana's Scutum" "Saturn's Courage" "Mars's Tenacity" "Cupid's Fury" "Bolt of Jupiter" "Vulcan's Hasta" "Vesta's Valor" "Fist of Janus" "Jupiter's Ire" "Apollo's Command" "Fortuna's Audacity" "Fist of Sol" "Sol's Thunder" "Voice of Juno" "Wrath of Ceres" "Fortuna's Tempest" "Might of Vulcan" "Luna's Fury" "Minerva's Sagitta" "Vesta's Tenacity" "Neptune's Sagitta" "Cupid's Chariot" "Luna's Thunder" "Vesta's Thunder" "Tellus's Audacity" "Saturn's Scutum" "Janus's Courage" "Apollo's Rage" "Janus's Tenacity" "Ceres's Gladius" "Minerva's Vigil" "Ceres's Rage" "Saturn's Storm" "Mercury's Audacity" "Minerva's Pilum" "Cupid's Sagitta" "Mars's Fury" "Sol's Chariot" "Might of Ceres" "Bacchus's Pilum" "Juno's Ire" "Bacchus's Courage" "Vesta's Audacity" "Pluto's Pilum" "Might of Neptune" "Cupid's Fire" "Pluto's Pugio" "Bacchus's Thunder" "Vulcan's Command" "Bolt of Sol" "Fortuna's Fury" "Mars's Gladius" "Wrath of Mercury" "Wrath of Apollo" "Faunus's Rage" "Luna's Spatha" "Tellus's Tempest" "Will of Vulcan" "Mercury's Fury" "Ceres's Tenacity" "Mercury's Fire" "Vulcan's Valor" "Fortuna's Hasta" "Bacchus's Storm" "Mercury's Scutum" "Fortuna's Scutum" "Voice of Bacchus" "Diana's Ire" "Jupiter's Audacity" "Mars's Vigil" "Janus's Gladius" "Venus's Ire" "Vesta's Gladius" "Venus's Vigil" "Will of Ceres" "Vulcan's Scutum" "Bacchus's Vigil" "Tellus's Hasta" "Janus's Scutum" "Mars's Ire" "Saturn's Gladius" "Mercury's Ire" "Ceres's Ire" "Wrath of Vesta" "Jupiter's Rage" "Bacchus's Rage" "Bolt of Neptune" "Diana's Sagitta" "Wrath of Saturn" "Vulcan's Thunder" "Juno's Fury" "Fortuna's Valor" "Wrath of Venus" "Janus's Storm" "Neptune's Storm" "Voice of Diana" "Pluto's Gladius" "Ceres's Tempest" "Mars's Tempest" "Mercury's Gladius" "Mercury's Tempest" "Juno's Rage" "Pluto's Chariot" "Janus's Command" "Neptune's Vigil" "Will of Minerva" "Juno's Sagitta" "Venus's Fury" "Wrath of Vulcan" "Vesta's Ire" "Juno's Fire" "Ceres's Audacity" "Voice of Sol" "Fist of Apollo" "Mars's Sagitta" "Will of Pluto" "Minerva's Scutum" "Voice of Minerva" "Minerva's Fury" "Faunus's Spatha" "Sol's Tempest" "Jupiter's Chariot" "Apollo's Chariot" "Luna's Audacity" "Saturn's Hasta" "Mars's Chariot" "Will of Faunus" "Sol's Pilum" "Bacchus's Chariot" "Sol's Courage" "Tellus's Pugio" "Ceres's Command" "Sol's Pugio" "Pluto's Fire" "Venus's Chariot" "Faunus's Scutum" "Vulcan's Storm" "Bacchus's Valor" "Neptune's Valor" "Apollo's Pugio" "Voice of Mars" "Apollo's Sagitta" "Tellus's Fire" "Juno's Tempest" "Fist of Ceres" "Jupiter's Valor" "Ceres's Scutum" "Fist of Diana" "Apollo's Pilum" "Fist of Fortuna" "Bolt of Luna" "Faunus's Fire" "Jupiter's Command" "Ceres's Fire" "Mars's Valor" "Jupiter's Vigil" "Fortuna's Courage" "Saturn's Vigil" "Saturn's Chariot" "Neptune's Gladius" "Tellus's Pilum" "Minerva's Spatha" "Voice of Saturn" "Apollo's Gladius" "Neptune's Courage" "Venus's Hasta" "Saturn's Rage" "Luna's Tenacity" "Neptune's Chariot" "Luna's Sagitta" "Fist of Vulcan" "Might of Faunus" "Janus's Chariot" "Bolt of Fortuna" "Will of Luna" "Bacchus's Fire" "Diana's Fury" "Neptune's Spatha" "Venus's Spatha" "Juno's Thunder" "Will of Jupiter" "Faunus's Tempest" "Vesta's Pugio" "Juno's Storm" "Diana's Courage" "Ceres's Courage" "Might of Sol" "Neptune's Ire" "Cupid's Audacity" "Diana's Gladius" "Diana's Chariot" "Minerva's Tenacity" "Fist of Juno" "Bolt of Saturn" "Might of Diana" "Faunus's Audacity" "Juno's Chariot" "Janus's Ire" "Cupid's Vigil" "Cupid's Command" "Voice of Vulcan" "Mercury's Tenacity" "Luna's Courage" "Minerva's Gladius" "Mars's Thunder" "Vulcan's Vigil" "Fortuna's Sagitta" "Bolt of Janus" "Janus's Pugio" "Bolt of Diana" "Fist of Neptune" "Diana's Fire" "Apollo's Tenacity" "Voice of Janus" "Fortuna's Gladius" "Neptune's Rage" "Bolt of Minerva" "Faunus's Command" "Fortuna's Command" "Bacchus's Tempest" "Vesta's Command" "Wrath of Luna" "Mars's Pilum" "Saturn's Ire" "Minerva's Chariot" "Will of Neptune" "Voice of Cupid" "Voice of Luna" "Neptune's Scutum" "Faunus's Fury" "Faunus's Sagitta" "Pluto's Fury" "Janus's Spatha" "Vesta's Fire" "Venus's Audacity" "Mercury's Pilum" "Saturn's Command" "Diana's Pugio" "Mercury's Storm" "Vulcan's Courage" "Saturn's Pilum" "Faunus's Pilum" "Diana's Hasta" "Cupid's Pugio" "Vulcan's Pilum" "Cupid's Storm" "Wrath of Faunus" "Luna's Pilum" "Mars's Courage" "Luna's Scutum" "Janus's Valor" "Bacchus's Ire" "Apollo's Audacity" "Might of Venus" "Vesta's Sagitta" "Janus's Thunder" "Venus's Scutum" "Cupid's Tenacity" "Juno's Hasta" "Apollo's Vigil" "Fortuna's Pugio" "Saturn's Sagitta" "Juno's Audacity" "Fist of Mars" "Will of Diana" "Jupiter's Pilum" "Vesta's Courage" "Minerva's Ire" "Might of Vesta" "Mercury's Rage" "Juno's Vigil" "Bolt of Venus" "Will of Mercury" "Jupiter's Hasta" "Voice of Mercury" "Jupiter's Sagitta" "Diana's Valor" "Minerva's Courage" "Cupid's Rage" "Diana's Audacity" "Bacchus's Hasta" "Pluto's Tenacity" "Fortuna's Fire" "Wrath of Fortuna" "Tellus's Command" "Diana's Tempest" "Voice of Neptune" "Minerva's Fire" "Voice of Apollo" "Venus's Thunder" "Bolt of Cupid" "Fist of Vesta" "Ceres's Thunder" "Neptune's Command" "Mars's Fire" "Luna's Vigil" "Will of Saturn" "Tellus's Courage" "Cupid's Hasta" "Tellus's Thunder" "Bolt of Ceres" "Jupiter's Scutum" "Juno's Gladius" "Wrath of Janus" "Diana's Rage" "Might of Cupid" "Will of Apollo" "Faunus's Chariot" "Vesta's Tempest" "Mars's Pugio" "Venus's Valor" "Voice of Ceres" "Sol's Scutum" "Luna's Valor" "Voice of Fortuna" "Janus's Hasta" "Juno's Command" "Mercury's Command" "Cupid's Valor" "Sol's Audacity" "Faunus's Pugio" "Will of Cupid" "Apollo's Thunder" "Sol's Command" "Pluto's Thunder" "Janus's Fire" "Mercury's Thunder" "Janus's Rage" "Might of Minerva" "Mars's Spatha" "Saturn's Tempest" "Wrath of Minerva" "Bolt of Apollo" "Luna's Hasta" "Might of Mercury" "Neptune's Audacity" "Will of Fortuna" "Mercury's Chariot" "Fist of Jupiter" "Sol's Ire" "Vesta's Scutum" "Apollo's Tempest" "Faunus's Courage" "Ceres's Spatha" "Luna's Command" "Bacchus's Command" "Fist of Saturn" "Might of Bacchus" "Mercury's Vigil" "Minerva's Rage" "Minerva's Valor" "Pluto's Vigil" "Vulcan's Sagitta" "Juno's Tenacity" "Diana's Pilum" "Tellus's Ire" "Luna's Gladius" "Neptune's Pugio" "Will of Bacchus" "Pluto's Sagitta" "Jupiter's Spatha" "Juno's Valor" "Luna's Rage" "Jupiter's Storm" "Diana's Storm" "Saturn's Spatha" "Vulcan's Rage" "Venus's Courage" "Mercury's Sagitta" "Faunus's Hasta" "Pluto's Courage" "Venus's Storm" "Fortuna's Rage" "Neptune's Fire" "Vesta's Rage" "Pluto's Spatha" "Janus's Fury" "Bolt of Mars" "Saturn's Fury" "Sol's Storm" "Mars's Hasta" "Vesta's Spatha" "Neptune's Pilum" "Luna's Chariot" "Luna's Pugio" "Voice of Venus" "Vulcan's Pugio" "Jupiter's Fury" "Wrath of Juno" "Juno's Pilum" "Apollo's Fury" "Bolt of Mercury" "Sol's Tenacity" "Voice of Vesta" "Fortuna's Thunder" "Sol's Sagitta" "Wrath of Sol" "Bacchus's Sagitta" "Sol's Vigil" "Cupid's Spatha" "Pluto's Valor" "Vulcan's Chariot" "Janus's Vigil" "Tellus's Scutum" "Vulcan's Audacity" "Minerva's Tempest" "Neptune's Fury" "Venus's Command" "Diana's Tenacity" "Pluto's Tempest" "Might of Saturn" "Ceres's Sagitta" "Voice of Pluto" "Cupid's Tempest" "Juno's Courage" "Vulcan's Ire" "Bacchus's Fury" "Mercury's Valor" "Apollo's Valor" "Cupid's Gladius" "Bolt of Bacchus" "Faunus's Tenacity" "Juno's Spatha" "Tellus's Sagitta" "Fortuna's Ire" "Faunus's Vigil" "Sol's Rage" "Bolt of Vesta" "Will of Vesta" "Tellus's Vigil" "Will of Juno" "Diana's Thunder" "Fortuna's Spatha" "Bolt of Pluto" "Mars's Rage" "Tellus's Tenacity" "Neptune's Hasta" "Ceres's Storm" "Juno's Scutum" "Mars's Scutum" "Tellus's Gladius" "Might of Mars" "Venus's Pilum" "Bolt of Faunus" "Wrath of Diana" "Mars's Audacity" "Wrath of Pluto" "Vulcan's Tempest" "Sol's Valor" "Cupid's Pilum" "Will of Mars" "Will of Sol" "Pluto's Ire" "Might of Pluto" "Fist of Tellus" "Ceres's Chariot" "Luna's Ire" "Venus's Tenacity" "Cupid's Scutum" "Luna's Storm" "Fortuna's Pilum" "Ceres's Pilum" "Mercury's Pugio" "Apollo's Storm" "Vulcan's Tenacity" "Wrath of Bacchus" "Bacchus's Pugio" "Ceres's Fury" "Vulcan's Fire" "Fist of Faunus" "Neptune's Tenacity" "Minerva's Storm" "Minerva's Thunder" "Ceres's Vigil" "Fist of Venus" "Ceres's Pugio" "Mercury's Hasta" "Sol's Gladius" "Jupiter's Thunder" "Apollo's Ire" "Venus's Gladius" "Vulcan's Spatha" "Wrath of Neptune" "Bacchus's Tenacity" "Diana's Command" "Neptune's Thunder" "Bacchus's Audacity" "Faunus's Valor" "Minerva's Command" "Fist of Minerva" "Saturn's Audacity" "Jupiter's Tenacity" "Cupid's Thunder"
+		}
+		battleship = {
+			"Apollo" "Bacchus" "Ceres" "Cupid" "Diana" "Fortuna" "Janus" "Luna" "Mars" "Mercury" "Neptune" "Pluto" "Proserpina" "Saturn" "Sol" "Tellus" "Venus" "Vesta" "Vulcan" "Faunus"
+		}
+		Carrier = {
+			"Fortuna" "Luna" "Mars" "Faunus" "Mercury" "Vulcan" "Diana" "Tellus" "Pluto" "Vesta" "Ceres" "Cupid" "Bacchus" "Apollo" "Sol" "Proserpina" "Janus" "Venus" "Neptune" "Saturn"
+		}
+		Dreadnought = {
+			"Luna" "Sol" "Neptune" "Mercury" "Apollo" "Fortuna" "Pluto" "Vesta" "Venus" "Janus" "Bacchus" "Vulcan" "Ceres" "Proserpina" "Diana" "Cupid" "Tellus" "Faunus" "Mars" "Saturn"
+		}
+		titan = {
+			"Luna" "Mars" "Cupid" "Pluto" "Apollo" "Proserpina" "Saturn" "Venus" "Janus" "Bacchus" "Diana" "Tellus" "Mercury" "Vulcan" "Vesta" "Ceres" "Faunus" "Fortuna" "Neptune" "Sol"
+		}
+		Flagship = {
+			"Jupiter" "Juno" "Minerva"
+		}
+		colossus = {
+			"Jupiter" "Juno" "Minerva"
+		}
+		juggernaut = {
+			"Jupiter" "Juno" "Minerva"
+		}
+
+		constructor = {
+			"Cardea" "Deverra" "Fornax" "Limentinus" "Mefitis" "Nodutus" "Pales" "Sterquilinus" "Tutelina" "Fabulinus"
+		}
+		colonizer = {
+			"Claudius" "Crassus" "Pompeius" "Marius" "Tarquinius" "Pulcher" "Sulla" "Brutus" "Scipio" "Maximus"
+		}
+		sponsored_colonizer = {
+		"Claudius" "Crassus" "Pompeius" "Marius" "Tarquinius" "Pulcher" "Sulla" "Brutus" "Scipio" "Maximus"
+		}
+		science = {
+			"Thales" "Anaximander" "Pythagoras" "Heraclitus" "Parmenides" "Zeno" "Empedocles" "Democritus" "Protagoras" "Socrates" "Plato" "Aristotle" "Euclid" "Archimedes" "Hippocrates" "Eratosthenes" "Ptolemy" "Aristarchus" "Epicurus" "Diogenes"
+		}
+		explorationship = {
+			"Viagium" "Ovid" "Martial" "Detegere" "Pliny" "Prospectum" "Safari" "Lucretius" "Deterrere" "Excursum" "Plautus" "Iter" "Horace" "Seneca" "Petronius" "Transitum" "Strabo" "Vitruvius" "Livy"
+		}
+		transport = {
+			"Naves Actuariae"
+		}
+
+		military_station_small = {
+			"Castrum"
+		}
+
+		military_station_medium = {
+			"Castellum"
+		}
+
+		military_station_large = {
+			"Arx"
+		}
+
+		ion_cannon = {
+			"Visus Martis"
+		}
+
+		xl_cannon = {
+			"Tonitru Iovis"
+		}
+	}
+
+	fleet_names = {
+		random_names = {
+			
+		}
+		sequential_name = OSIRIS_ANCIENTROMANEN_FLEETNAMES_R
+	}
+
+	army_names = {
+
+		machine_defense = {
+			sequential_name = OSIRIS_ANCIENTROMANEN_MACHINEDEFENSE_R
+		}
+
+		machine_assault_1 = {
+			sequential_name = OSIRIS_ANCIENTROMANEN_MACHINEASSAULT1_R
+		}
+
+		machine_assault_2 = {
+			sequential_name = OSIRIS_ANCIENTROMANEN_MACHINEASSAULT2_R
+		}
+
+		machine_assault_3 = {
+			sequential_name = OSIRIS_ANCIENTROMANEN_MACHINEASSAULT3_R
+		}
+
+		defense_army = {
+			sequential_name = OSIRIS_ANCIENTROMANEN_DEFENSEARMY_R
+		}
+
+		assault_army = {
+			sequential_name = OSIRIS_ANCIENTROMANEN_ASSAULTARMY_R
+		}
+
+		slave_army = {
+			sequential_name = OSIRIS_ANCIENTROMANEN_SLAVEARMY_R
+		}
+
+		clone_army = {
+			sequential_name = OSIRIS_ANCIENTROMANEN_CLONEARMY_R
+		}
+
+		undead_army = {
+			sequential_name = OSIRIS_ANCIENTROMANEN_UNDEADARMY_R
+		}
+
+		robotic_army = {
+			sequential_name = OSIRIS_ANCIENTROMANEN_ROBOTICARMY_R
+		}
+
+		robotic_defense_army = {
+			sequential_name = OSIRIS_ANCIENTROMANEN_ROBOTICDEFENSEARMY_R
+		}
+
+		psionic_army = {
+			sequential_name = OSIRIS_ANCIENTROMANEN_PSIONICARMY_R
+		}
+
+		xenomorph_army = {
+			sequential_name = OSIRIS_ANCIENTROMANEN_XENOMORPHARMY_R
+		}
+
+		gene_warrior_army = {
+			sequential_name = OSIRIS_ANCIENTROMANEN_GENEWARRIORARMY_R
+		}
+
+		occupation_army = {
+			sequential_name = OSIRIS_ANCIENTROMANEN_OCCUPATIONARMY_R
+		}
+
+		robotic_occupation_army = {
+			sequential_name = OSIRIS_ANCIENTROMANEN_ROBOTICOCCUPATIONARMY_R
+		}
+
+		primitive_army = {
+			sequential_name = OSIRIS_ANCIENTROMANEN_PRIMITIVEARMY_R
+		}
+		industrial_army = {
+			sequential_name = OSIRIS_ANCIENTROMANEN_INDUSTRIALARMY_R
+		}
+		postatomic_army = {
+			sequential_name = OSIRIS_ANCIENTROMANEN_POSTATOMICARMY_R
+		}
+	}
+
+	planet_names = {
+
+		generic = {
+			names = {
+				"Rome" "Alexandria" "Antioch" "Carthage" "Ephesus" "Pergamum" "Smyrna" "Corinth" "Syracuse" "Sardis" "Cyrene" "Leptis Magna" "Tarsus" "Nicaea" "Byzantium" "Thessalonica" "Athens" "Capua" "Pompeii" "Timgad"
+			}
+		}
+
+		pc_desert = {
+			names = {
+				"Petra" "Palmyra" "Cyrene" "Leptis Magna" "Garama" "Adrana" "Thamugadi" "Caesarea Mauretaniae" "Theveste" "Timgad" "Tingis" "Antinopolis" "Coptos" "Berenice Troglodytica" "Kharga Oasis" "Arsinoe" "Dura-Europos" "Heliopolis" "Oxyrhynchus" "Siwa"
+			}
+		}
+
+		pc_tropical = {
+			 names = {
+				"Alexandria" "Leptis Magna" "Sabratha" "Ptolemais" "Oea" "Carthage" "Adulis" "Berenice Troglodytica" "Cyrene" "Thebes" "Axum" "Meroë" "Napata" "Dongola" "Sabae" "Parthia" "Barygaza" "Pattanam" "Tissamaharama" "Muziris"
+			}
+		}
+
+		pc_arid = {
+			names = {
+				"Palmyra" "Petra" "Cyrene" "Leptis Magna" "Garama" "Adrana" "Thamugadi" "Caesarea Mauretaniae" "Volubilis" "Lixus" "Gao" "Theveste" "Oea" "Timgad" "Tingis" "Antinopolis" "Coptos" "Berenice Troglodytica" "Kharga Oasis" "Arsinoe"
+			}
+		}
+
+		pc_continental = {
+			names = {
+				"Rome" "Athens" "Corinth" "Sparta" "Byzantium" "Syracuse" "Pompeii" "Carthage" "Alexandria" "Cyzicus" "Pergamon" "Tarsus" "Ephesus" "Massilia" "Aquileia" "Trier" "Cologne" "Mainz" "Londonium" "Lugdunum"
+			}
+		}
+
+		pc_gaia = {
+			names = {
+				"Elysium" "Hesperidum Hortus" "Olympus Mons" "Arcadia" "Campi Asphodeli" "Insulae Beatissimae" "Adonidis Horti" "Insulae Beatae" "Insula Beata" "Campi Elysii" "Insulae Fortunatae" "Insulae Mortui Beatique" "Auri Vellus" "Porta Eburnea" "Palatium Crystallinum" "Insula Solis" "Rosarium Heliogabali" "Insula Circae" "Hortus Alcinoi" "Flumen Stygium"
+			}
+		}
+
+		pc_ocean = {
+			names = {
+				"Carthage" "Alexandria" "Ostia" "Leptis Magna" "Sabratha" "Ptolemais" "Oea" "Tarraco" "Gades" "Cyrene" "Neapolis" "Ephesus" "Byzantium" "Syracuse" "Caieta" "Cumae" "Pompeii" "Aquileia" "Brundisium" "Ariminum"
+			}
+		}
+
+		pc_tundra = {
+			names = {
+				"Eboracum" "Londinium" "Lindum Colonia" "Deva Victrix" "Colonia Agrippina" "Augusta Treverorum" "Lutetia Parisiorum" "Lugdunum Batavorum" "Nidaros" "Kaupang" "Birka" "Jomsborg" "Vineta" "Ribe" "Hedeby" "Danum" "Glevum" "Isca Dumnoniorum" "Venta Belgarum" "Durovernum Cantiacorum"
+			}
+		}
+
+		pc_arctic = {
+			names = {
+				"Eboracum" "Londinium" "Lindum Colonia" "Deva Victrix" "Colonia Agrippina" "Augusta Treverorum" "Lutetia Parisiorum" "Lugdunum Batavorum" "Nidaros" "Kaupang" "Birka" "Jomsborg" "Vineta" "Ribe" "Hedeby" "Danum" "Glevum" "Isca Dumnoniorum" "Venta Belgarum" "Durovernum Cantiacorum"
+			}
+		}
+
+		pc_savannah = {
+			names = {
+				"Carthage" "Alexandria" "Thebes" "Memphis" "Cyrene" "Leptis Magna" "Sabratha" "Adrana" "Thapsus" "Ptolemais" "Oea" "Hippo Regius" "Tacape" "Volubilis" "Thamugadi" "Ammaedara" "Sufetula" "Cirta" "Capsa" "Gao"
+			}
+		}
+
+		pc_alpine = {
+			names = {
+				"Aquileia" "Augusta Praetoria" "Bergomum" "Brixia" "Cemenelum" "Comum" "Forum Claudii Vallensium" "Iulia Augusta Taurinorum" "Iulia Carnica" "Leponticum" "Lugdunum" "Mantua" "Mediolanum" "Novaria" "Tridentum" "Veldidena" "Verona" "Vipitenum" "Virunum" "Viturbo Augusta"
+			}
+		}
+
+	}
+
+	character_names = {
+
+		names1 = {
+			first_names_male = {
+				"Aeneas" "Agrippa" "Alexander" "Antonius" "Appius" "Augustus" "Brutus" "Caius" "Camillus" "Cassius" "Cato" "Celsus" "Cicero" "Claudius" "Cornelius" "Crassus" "Decimus" "Drusus" "Fabius" "Flavius" "Gaius" "Germanicus" "Gracchus" "Hadrianus" "Horatius" "Julius" "Junius" "Justus" "Livius" "Lucius" "Magnus" "Marcellus" "Marcus" "Maximus" "Nero" "Nerva" "Octavianus" "Paulus" "Plinius" "Pompeius" "Postumus" "Publius" "Quintus" "Regulus" "Scipio" "Septimius" "Servius" "Suetonius" "Tiberius" "Virgilius"
+			}
+			first_names_female = {
+				"Agatha" "Agrippina" "Aemilia" "Alba" "Antonia" "Apollonia" "Aquilia" "Artemisia" "Aurelia" "Caecilia" "Camilla" "Cassia" "Ceres" "Claudia" "Cornelia" "Decima" "Drusilla" "Fabia" "Faustina" "Flavia" "Fulvia" "Galla" "Julia" "Junia" "Justina" "Lavinia" "Livia" "Lucilla" "Lucretia" "Marcia" "Martina" "Maximilla" "Messalina" "Minervina" "Octavia" "Paulina" "Petronia" "Plautilla" "Pomponia" "Porcia" "Prima" "Publia" "Quinta" "Regilla" "Sabina" "Salvia" "Secunda" "Septima" "Tertia" "Valeria"
+			}
+			second_names = {
+				"Aelianus" "Aemilius" "Agrippa" "Albinus" "Aurelius" "Balbus" "Calpurnius" "Cassius" "Cato" "Claudius" "Cornelius" "Crassus" "Curius" "Decius" "Domitius" "Drusus" "Fabius" "Flavius" "Fulvius" "Gaius" "Galerius" "Germanicus" "Gracchus" "Horatius" "Iulius" "Junius" "Licinius" "Livius" "Lucius" "Mancinus" "Marcius" "Maximus" "Metellus" "Nero" "Nerva" "Octavius" "Paulus" "Piso" "Plinius" "Pompeius" "Postumus" "Quinctilius" "Regulus" "Scaevola" "Scipio" "Sulpicius" "Tacitus" "Terentius" "Tullius" "Valerius"
+			}
+
+			regnal_first_names_male = {
+				"Augustus" "Tiberius" "Caligula" "Claudius" "Nero" "Vespasian" "Titus" "Domitian" "Trajan" "Hadrian" "Antoninus Pius" "Marcus Aurelius" "Commodus" "Septimius Severus" "Caracalla" "Elagabalus" "Alexander Severus" "Maximinus Thrax" "Decius" "Diocletian"
+			}
+
+			regnal_first_names_female = {
+				"Agrippina" "Antonia" "Calpurnia" "Claudia" "Cleopatra" "Domitia" "Drusilla" "Faustina" "Fulvia" "Julia" "Junia" "Livia" "Messalina" "Octavia" "Poppaea" "Regilla" "Sabina" "Tullia" "Valeria" "Vipsania"
+
+			}
+			regnal_second_names = {
+				"Augustus" "Tiberius" "Caligula" "Claudius" "Nero" "Vespasian" "Titus" "Domitian" "Nerva" "Trajan" "Hadrian" "Antoninus" "Marcus Aurelius" "Commodus" "Septimius Severus" "Caracalla" "Elagabalus" "Alexander Severus" "Diocletian" "Constantine"
+			}
+		}
+	}
+}
