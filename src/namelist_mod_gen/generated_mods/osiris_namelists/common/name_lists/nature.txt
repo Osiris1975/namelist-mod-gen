@@ -17,7 +17,7 @@ osiris_nature = {
 			"Rattlesnake" "Crowned Eagle" "Moray" "Black Mamba" "Kestrel" "Vulture" "Marlin" "Steppe Eagle" "Krait" "Hawk" "Golden Eagle" "Owl" "Barracuda" "Harpy Eagle" "Cobra" "Falcon" "Lionfish" "Anaconda" "Caracara" "Stingray" "Osprey" "Eagle" "Bushmaster" "Bateleur" "Python" "Boa" "Kite" "King Cobra" "Merlin" "Buzzard" "Harrier" "Copperhead" "Martial Eagle" "Pit Viper" "Tigerfish" "Snakehead" "Swordfish" "Viper" "Kite" "Sparrowhawk" "Bald Eagle" "Goshawk" "Piranha" "Death Adder" "Seriema" "Chimaera" "Peregrine"
 		}
 		StrikeCruiser = {
-			
+			"Buzzard" "Caracara" "Osprey" "Kite" "Hawk" "Owl" "Falcon" "Krait" "Viper" "Piranha" "Seriema" "Crowned Eagle" "Stingray" "Kestrel" "Swordfish" "Black Mamba" "Anaconda" "Merlin" "Golden Eagle" "Copperhead" "Kite" "Bushmaster" "Harrier" "Steppe Eagle" "Boa" "Chimaera" "Bald Eagle" "Lionfish" "Goshawk" "Barracuda" "Death Adder" "Martial Eagle" "Bateleur" "Snakehead" "Tigerfish" "Marlin" "Rattlesnake" "Cobra" "Eagle" "Python" "Sparrowhawk" "Pit Viper" "King Cobra" "Moray" "Harpy Eagle" "Vulture" "Peregrine"
 		}
 		Battlecruiser = {
 			"Falcon" "Steppe Eagle" "Death Adder" "Sparrowhawk" "Eagle" "Marlin" "Vulture" "Chimaera" "Kite" "Buzzard" "Moray" "Golden Eagle" "Boa" "Stingray" "Pit Viper" "Snakehead" "Lionfish" "Kestrel" "Python" "Piranha" "Owl" "Seriema" "Anaconda" "Harpy Eagle" "Bald Eagle" "Merlin" "Bushmaster" "Krait" "Kite" "Copperhead" "Martial Eagle" "Viper" "Goshawk" "Bateleur" "King Cobra" "Black Mamba" "Tigerfish" "Crowned Eagle" "Cobra" "Swordfish" "Rattlesnake" "Caracara" "Harrier" "Barracuda" "Osprey" "Hawk" "Peregrine" "Velociraptor"

@@ -6,81 +6,81 @@ osiris_medmodern = {
 	ship_names = {
 
 		corvette = {
-			"Tarantula" "Black Widow" "Mosquito" "Scarab" "Wasp" "Hornet" "Yellowjacket" "Centipede" "Lanternfly" "Moth" "Scorpion" "Locust" "Jellyfish" "Octopus" "Mongoose" "Weasel" "Praying Mantis" "Dragonfly" "Hornworm" "Cricket" "Kaydid" "Grasshopper" "Cockroach" "Fire Ant" "Ant" "Gecko" "Iguana" "Gila Monster" "Skink" "Uromastyx" "Chuckwalla" "Chameleon" "Skink" "Bat" "Vole" "Ferret" "Hedgehog" "Shrew" "Martens" "Wolverine" "Gazelle" "Wolf" "Coyote" "Carribou" "Arctic Fox"
+			"Katti" "Bolas" "Machete" "Sickle" "Epee" "Saif" "Shamshir" "Partisan" "Gauntlet" "Tegha" "Kastane" "Javelin" "Kilij" "Flail" "Nunchaku" "Shashka" "Spadroon" "Takoba" "Zafar" "Battle Axe" "Mahera" "Cleaver" "Lochaber" "Katar" "Cestus" "Qama" "Wakizashi" "Voulge" "Sabre" "Chokuto" "Flyssa" "Kampilan" "Pata" "Whip" "Spatha" "Kwame" "Kama" "Tomahawk" "Dagger" "Hammer" "Falchion" "Siangham" "Cinquedea" "Tanto" "Slingshot" "Hwando" "Gazza" "Francisca" "Tabar" "Estoc" "Urumi" "Talwar" "Sap" "Dha" "Dart" "Shotel" "Yatagan" "Dao" "Pala" "Jian" "Kora" "Rapier" "Sai" "Kris" "Karabela" "Dussack" "Smatchet" "Xiphos" "Scimitar" "Shuriken" "Kirpan" "Bastard Sword" "Bardiche" "Longsword" "Maduvu" "Baselard" "Chakram" "Broadsword" "Kindjal" "Bec de Corbin" "Hunga Munga" "Tuck" "Bhuj" "Hatchet" "Club" "Firangi" "Seax" "Tekko" "Jamadhar" "Churi" "Short Sword" "Kard" "Tulwar" "Fauchard" "Flamberge" "Waraxe" "Spetum" "Cutlass" "Kukri" "Shamsir" "Kpinga" "Nihang" "Dirk" "Takouba" "Kaskara" "Spear" "Morningstar" "Main Gauche" "Espada" "Qaddara" "Nimcha" "Sanjak" "Gladius" "Mace" "Zulfiqar" "Khopesh" "Ida"
 		}
 
 		destroyer = {
-			"Shrew" "Uromastyx" "Chameleon" "Fire Ant" "Mongoose" "Arctic Fox" "Dragonfly" "Coyote" "Black Widow" "Ant" "Grasshopper" "Locust" "Wolf" "Lanternfly" "Gazelle" "Yellowjacket" "Tarantula" "Carribou" "Weasel" "Hornet" "Moth" "Centipede" "Vole" "Skink" "Praying Mantis" "Iguana" "Scarab" "Hedgehog" "Martens" "Cockroach" "Scorpion" "Skink" "Jellyfish" "Gila Monster" "Mosquito" "Kaydid" "Octopus" "Gecko" "Chuckwalla" "Hornworm" "Wasp" "Ferret" "Cricket" "Bat" "Wolverine"
+			"Bardiche" "Baselard" "Bastard Sword" "Battle Axe" "Bec de Corbin" "Bhuj" "Bolas" "Broadsword" "Cestus" "Chakram" "Chokuto" "Churi" "Cinquedea" "Cleaver" "Club" "Cutlass" "Dagger" "Dao" "Dart" "Dha" "Dirk" "Dussack" "Epee" "Espada" "Estoc" "Falchion" "Fauchard" "Firangi" "Flail" "Flamberge" "Flyssa" "Francisca" "Gauntlet" "Gazza" "Gladius" "Hammer" "Hatchet" "Hunga Munga" "Hwando" "Ida" "Jamadhar" "Javelin" "Jian" "Kama" "Kampilan" "Karabela" "Kard" "Kaskara" "Kastane" "Katar" "Katti" "Khopesh" "Kilij" "Kindjal" "Kirpan" "Kora" "Kpinga" "Kris" "Kukri" "Kwame" "Lochaber" "Longsword" "Mace" "Machete" "Maduvu" "Mahera" "Main Gauche" "Morningstar" "Nihang" "Nimcha" "Nunchaku" "Pala" "Partisan" "Pata" "Qaddara" "Qama" "Rapier" "Sabre" "Sai" "Saif" "Sanjak" "Sap" "Scimitar" "Seax" "Shamshir" "Shamsir" "Shashka" "Short Sword" "Shotel" "Shuriken" "Siangham" "Sickle" "Slingshot" "Smatchet" "Spadroon" "Spatha" "Spear" "Spetum" "Tabar" "Takoba" "Takouba" "Talwar" "Tanto" "Tegha" "Tekko" "Tomahawk" "Tuck" "Tulwar" "Urumi" "Voulge" "Wakizashi" "Waraxe" "Whip" "Xiphos" "Yatagan" "Zafar" "Zulfiqar"
 		}
 
 		cruiser = {
-			"Rattlesnake" "Crowned Eagle" "Moray" "Black Mamba" "Kestrel" "Vulture" "Marlin" "Steppe Eagle" "Krait" "Hawk" "Golden Eagle" "Owl" "Barracuda" "Harpy Eagle" "Cobra" "Falcon" "Lionfish" "Anaconda" "Caracara" "Stingray" "Osprey" "Eagle" "Bushmaster" "Bateleur" "Python" "Boa" "Kite" "King Cobra" "Merlin" "Buzzard" "Harrier" "Copperhead" "Martial Eagle" "Pit Viper" "Tigerfish" "Snakehead" "Swordfish" "Viper" "Kite" "Sparrowhawk" "Bald Eagle" "Goshawk" "Piranha" "Death Adder" "Seriema" "Chimaera" "Peregrine"
+			"Katana" "Spetum" "Kusarigama" "Lance" "Sallet" "Tuck" "Pike" "Romphaia" "Tachi" "Tizona" "Zweihander" "Sickle" "Woldo" "Brownbill" "Partisan" "Halberd" "Sashka" "Longspear" "Godendag" "Claymore" "Brandistock" "Greatsword" "Faix" "Zulfiqar" "Moro Kris" "Zweilhander" "Urghosh" "Hache-gueule" "Katzbalger" "Lochaber" "Swordstaff" "Trident" "Shotel" "Zhua" "Langmesser" "Thracian pick" "Zwiepiken" "Longbow" "Nagamaki" "Warhammer" "Blunderbuss" "Great Axe" "Tonbogiri" "War Hammer" "Kampilan" "Ranseur" "Soliferrum" "Voulge" "War Scythe" "Pata" "Fokos" "Tabarzin" "Arquebus" "Murgleys" "War Sword" "Naginata" "Poleaxe" "Wodao" "Pavise" "Yari" "Kriegsmesser" "Zanbato" "Warclub" "Guisarme" "Greatclub" "Zhanmadao" "Dadao" "Tepoztopilli" "Arbalest" "Longsword" "Spear" "Almogavar" "Shashqua" "Nodachi" "Mangonel" "Cinquedea" "Chauve Souris" "Spontoon" "Gisarme" "Makila" "Zweihammer" "Greataxe" "Mace" "Pollaxe" "Harpoon" "Nandao" "Tongi" "Datanuki" "Billhook" "Glaive" "Warscythe" "War Staff" "Harlott" "Crossbow" "Bardiche" "Scythe" "Lucerne"
 		}
 		StrikeCruiser = {
-			
+			"Crossbow" "Zweilhander" "Pollaxe" "Tizona" "Thracian pick" "Hache-gueule" "Great Axe" "Chauve Souris" "Tonbogiri" "Spetum" "War Scythe" "Zhanmadao" "Romphaia" "Zwiepiken" "Fokos" "Langmesser" "Swordstaff" "Greatclub" "Shashqua" "Brownbill" "Spear" "Sallet" "Lochaber" "Zanbato" "Woldo" "Makila" "Claymore" "Tabarzin" "Sickle" "War Hammer" "Zweihander" "Sashka" "Murgleys" "Pike" "Nagamaki" "Warscythe" "Mace" "Mangonel" "Urghosh" "Partisan" "Scythe" "Yari" "Moro Kris" "Godendag" "Poleaxe" "Gisarme" "Katana" "Glaive" "Billhook" "Greataxe" "Trident" "Shotel" "Longspear" "Brandistock" "Dadao" "Zulfiqar" "Kusarigama" "Tongi" "Warclub" "Guisarme" "Greatsword" "War Sword" "Harlott" "Longbow" "Arquebus" "Harpoon" "Nodachi" "Ranseur" "Lucerne" "Tuck" "Warhammer" "Kampilan" "Tepoztopilli" "Zhua" "Lance" "Tachi" "Halberd" "Zweihammer" "Pata" "Naginata" "Wodao" "Datanuki" "Nandao" "Pavise" "Spontoon" "Katzbalger" "Blunderbuss" "Voulge" "Cinquedea" "Kriegsmesser" "Bardiche" "War Staff" "Almogavar" "Soliferrum" "Faix" "Longsword" "Arbalest"
 		}
 		Battlecruiser = {
-			"Falcon" "Steppe Eagle" "Death Adder" "Sparrowhawk" "Eagle" "Marlin" "Vulture" "Chimaera" "Kite" "Buzzard" "Moray" "Golden Eagle" "Boa" "Stingray" "Pit Viper" "Snakehead" "Lionfish" "Kestrel" "Python" "Piranha" "Owl" "Seriema" "Anaconda" "Harpy Eagle" "Bald Eagle" "Merlin" "Bushmaster" "Krait" "Kite" "Copperhead" "Martial Eagle" "Viper" "Goshawk" "Bateleur" "King Cobra" "Black Mamba" "Tigerfish" "Crowned Eagle" "Cobra" "Swordfish" "Rattlesnake" "Caracara" "Harrier" "Barracuda" "Osprey" "Hawk" "Peregrine" "Velociraptor"
+			"Zulfiqar" "Soliferrum" "Mace" "Godendag" "Crossbow" "Mangonel" "Zweihander" "Yari" "Voulge" "Nodachi" "Greataxe" "Arquebus" "Brownbill" "Sallet" "Longsword" "Warscythe" "Zwiepiken" "Lochaber" "Ranseur" "Nandao" "Spear" "Poleaxe" "Nagamaki" "Cinquedea" "Billhook" "Longspear" "Warhammer" "Longbow" "Tizona" "Tepoztopilli" "Halberd" "Partisan" "Pollaxe" "War Sword" "Tuck" "Chauve Souris" "Bardiche" "Tonbogiri" "Zanbato" "Great Axe" "Lance" "Harlott" "Murgleys" "Spetum" "War Hammer" "Urghosh" "Datanuki" "Pavise" "Faix" "War Scythe" "Wodao" "Arbalest" "Romphaia" "Spontoon" "Tongi" "Thracian pick" "Katana" "Tabarzin" "Lucerne" "Tachi" "Pike" "Claymore" "Greatsword" "Sashka" "Fokos" "Kriegsmesser" "Kusarigama" "Pata" "Glaive" "Zweihammer" "Zhanmadao" "Kampilan" "Warclub" "Zweilhander" "Brandistock" "Harpoon" "Naginata" "Shashqua" "Dadao" "Woldo" "Scythe" "Shotel" "Moro Kris" "Hache-gueule" "Swordstaff" "Guisarme" "Greatclub" "Katzbalger" "Blunderbuss" "Langmesser" "Makila" "Sickle" "Trident" "Almogavar" "Gisarme" "Zhua" "War Staff"
 		}
 		battleship = {
-			"Crocodile" "Orca" "Hammerhead" "Bobcat" "Thresher" "Wobbegong" "Komodo" "Ocelot" "Alligator" "Margay" "Caracal" "Mako" "Cougar" "Great White" "Kodiak" "Servals" "Grizzly" "Blacktip" "Lion" "Leopard" "Tiger" "Cheetah" "Puma" "Jaguar" "Sevengill" "Sixgill" "Eurasian lynx" "Rhino" "Buffalo" "Warthog" "Tyranosaur" "Megalodon"
+			"William de la Pole" "Gawain" "Gareth" "Percival" "Robert de Beaumont" "Gaheris" "Geraint" "Owain" "Lancelot" "Vasco da Gama" "El Cid" "Alfonso " "Marshal" "William de Warenne" "Bertrand du Guesclin" "Juan de la Cosa" "Beowulf" "Hugh de Lacy" "Bartolomeu Dias" "Tor" "Pellinore" "Tristan" "Baldwin I" "Bors" "Hawkwood" "Yvain" "Joan of Arc" "Joanot Martorell" "Brian Boru" "Afonso de Paiva" "Iwein" "Hernán Cortés" "Étienne de Vignolles" "Lamorak" "Galahad" "Godfrey " "Bedevere" "Kay" "Arturo Prat" "William Wallace" "Baldwin IV " "Francisco Pizarro" "Francisco " "Erec" "Humphrey" "Mordred" "Jean de Dunois" "El Cid"
 		}
 		Carrier = {
-			"Servals" "Alligator" "Cougar" "Jaguar" "Margay" "Orca" "Cheetah" "Ocelot" "Wobbegong" "Blacktip" "Mako" "Rhino" "Sevengill" "Warthog" "Puma" "Eurasian lynx" "Crocodile" "Buffalo" "Bobcat" "Great White" "Kodiak" "Hammerhead" "Caracal" "Grizzly" "Leopard" "Lion" "Tiger" "Komodo" "Thresher" "Sixgill"
+			"Joanot Martorell" "Jean de Dunois" "Hugh de Lacy" "Arturo Prat" "William de la Pole" "Tristan" "Percival" "Bedevere" "Hawkwood" "Brian Boru" "El Cid" "Bertrand du Guesclin" "Baldwin IV " "Étienne de Vignolles" "Lamorak" "Gaheris" "Kay" "Gawain" "Robert de Beaumont" "Erec" "Francisco Pizarro" "Alfonso " "Afonso de Paiva" "Hernán Cortés" "Francisco " "Gareth" "Tor" "Lancelot" "Owain" "Iwein" "Vasco da Gama" "William Wallace" "Baldwin I" "William de Warenne" "Marshal" "Juan de la Cosa" "Beowulf" "Mordred" "Bors" "Bartolomeu Dias" "Pellinore" "Galahad" "Humphrey" "El Cid" "Godfrey " "Joan of Arc" "Geraint" "Yvain"
 		}
 		Dreadnought = {
-			"Thresher" "Cheetah" "Ocelot" "Crocodile" "Leopard" "Alligator" "Great White" "Sevengill" "Blacktip" "Bobcat" "Margay" "Hammerhead" "Buffalo" "Caracal" "Eurasian lynx" "Grizzly" "Lion" "Orca" "Puma" "Warthog" "Kodiak" "Servals" "Mako" "Cougar" "Jaguar" "Tiger" "Wobbegong" "Rhino" "Sixgill" "Komodo"
+			"Baldwin I" "Tor" "Alfonso " "William de Warenne" "El Cid" "Tristan" "Iwein" "Brian Boru" "Gaheris" "Hugh de Lacy" "Bertrand du Guesclin" "Beowulf" "Owain" "Geraint" "Jean de Dunois" "Étienne de Vignolles" "Arturo Prat" "Robert de Beaumont" "Joanot Martorell" "Pellinore" "Vasco da Gama" "Juan de la Cosa" "Francisco Pizarro" "Joan of Arc" "Afonso de Paiva" "Gareth" "Humphrey" "Bedevere" "Hernán Cortés" "Lamorak" "William Wallace" "Hawkwood" "William de la Pole" "Gawain" "Erec" "Bors" "Mordred" "Kay" "Percival" "Bartolomeu Dias" "Godfrey " "Yvain" "Francisco " "Baldwin IV " "Galahad" "Marshal" "El Cid" "Lancelot"
 		}
 		titan = {
-			"Puma" "Ocelot" "Servals" "Sevengill" "Kodiak" "Great White" "Crocodile" "Warthog" "Margay" "Jaguar" "Grizzly" "Alligator" "Wobbegong" "Leopard" "Rhino" "Bobcat" "Thresher" "Blacktip" "Eurasian lynx" "Tiger" "Hammerhead" "Orca" "Komodo" "Mako" "Caracal" "Sixgill" "Cheetah" "Cougar" "Lion" "Buffalo"
+			"Beowulf" "Lancelot" "Lamorak" "Tristan" "Godfrey " "Mordred" "William Wallace" "Kay" "Marshal" "Humphrey" "Geraint" "Galahad" "Erec" "Bertrand du Guesclin" "Pellinore" "William de Warenne" "Joanot Martorell" "Juan de la Cosa" "Iwein" "Afonso de Paiva" "Bors" "El Cid" "Owain" "Gawain" "Gareth" "Hugh de Lacy" "Hawkwood" "Hernán Cortés" "William de la Pole" "Percival" "Tor" "Francisco " "Alfonso " "Robert de Beaumont" "Joan of Arc" "Jean de Dunois" "Bedevere" "Bartolomeu Dias" "Yvain" "Brian Boru" "El Cid" "Baldwin IV " "Étienne de Vignolles" "Gaheris" "Francisco Pizarro" "Baldwin I" "Vasco da Gama" "Arturo Prat"
 		}
 		Flagship = {
-			"Cyclone" "Typhoon" "Avalanche" "Thunderstorm" "Tsunami" "Blizzard" "Tornado" "Hurricane"
+			"Helepolis" "Onager" "Catapult" "Ballista" "Springald" "Scorpio" "Mangonel" "Trebuchet" "Sambuca"
 		}
 		colossus = {
-			"Hurricane" "Typhoon" "Cyclone" "Avalanche" "Blizzard" "Tornado" "Tsunami" "Thunderstorm"
+			"Trebuchet" "Sambuca" "Scorpio" "Ballista" "Catapult" "Springald" "Onager" "Helepolis" "Mangonel"
 		}
 		juggernaut = {
-			"Cyclone" "Avalanche" "Typhoon" "Tsunami" "Hurricane" "Tornado" "Blizzard" "Thunderstorm"
+			"Ballista" "Mangonel" "Catapult" "Scorpio" "Trebuchet" "Springald" "Helepolis" "Sambuca" "Onager"
 		}
 
 		constructor = {
-			"Beaver" "Otter" "Termite" "Weaver" "Mailee" "Orb-Weaver" "Prairee Dog" "Acromyrmex" "Atta" "Caddisfly"
+			"Eiffel" "Roebling" "Brunel" "Baker" "Maillart" "Fazlur" "LeMessurier" "Otis" "Severud" "Barlow" "Wright" "Rennie" "Galileo" "Isambard" "Calatrava" "Gustave" "Telford" "Eliasson" "Foster" "Gehry"
 		}
 		colonizer = {
-			"Wildebeest" "Ant" "Termite" "Bat" "Penguin" "Flamingo" "Prarie Dog" "Meerkat" "Swan" "Zebra"
+			"Nova Venture" "Odyssey Explorer" "Starlight Destiny" "Horizon Voyager" "Galactic Odyssey" "Celestial Endeavor" "Stellar Odyssey" "Cosmos Pioneer" "Nebula Nomad" "Infinity Quest" "Andromeda Crusader" "Cosmic Conqueror" "Eclipse Explorer" "Solaris Venture" "Orion Odyssey" "Universe Explorer" "Aquarius Voyager" "Hyperion Venture" "Phoenix Explorer" "Aurora Odyssey"
 		}
 		sponsored_colonizer = {
-		
+		"Aston" "Parry" "Outen" "Honnold" "Messner" "Pyle" "Nilson" "Cope" "Marquis" "Piccard" "Davis" "Cousteau" "Márquez" "Salbi" "Swan" "Horn" "Stafford" "Ousland" "Kagge" "Fiennes"
 		}
 		science = {
-			"Dolphin" "Bonobo" "Octopus" "Raven"
+			"Bohr" "Watson" "Hawking" "Crick" "El-Baz" "Darwin" "Carson" "Gould" "Feynman" "Sagan" "Einstein" "Heisenberg" "Goodall" "Newton" "Tyson" "Gallo" "Curie" "Schrödinger" "Faraday" "Hawass" "Pasteur"
 		}
 		explorationship = {
-			"Dolphin" "Humpback" "Beluga" "Pilot" "Narwhal" "Bowhead" "Squirrel" "Chipmunk" "Hamster" "Gerbil"
+			"Piccard" "Kagge" "Marquis" "Stafford" "Swan" "Cousteau" "Honnold" "Messner" "Davis" "Aston" "Horn" "Nilson" "Pyle" "Outen" "Cope" "Ousland" "Márquez" "Parry" "Salbi" "Fiennes"
 		}
 		transport = {
-			
+			"Vasco da Gama" "Ibn Battuta" "Erikson" "Cabral" "Cabeza de Vaca" "Vespucci" "Ponce de Leon" "Prince Henry" "Zheng He" "Magellan" "Marco Polo" "Diaz" "Cortez" "James Cook" "Cabot" "Corte-Real" "Columbus" "Pizarro" "Verrazzano"
 		}
 
 		military_station_small = {
-			
+			"Bulwark"
 		}
 
 		military_station_medium = {
-			
+			"Bastion"
 		}
 
 		military_station_large = {
-			
+			"Citadel"
 		}
 
 		ion_cannon = {
-			"Spitting Cobra" "Archerfish"
+			"Onager" "Catapult" "Sambuca" "Springald" "Ballista" "Trebuchet" "Helepolis" "Scorpio" "Mangonel"
 		}
 
 		xl_cannon = {
-			"Spitting Cobra" "Archerfish"
+			"Scorpio" "Helepolis" "Springald" "Trebuchet" "Ballista" "Sambuca" "Onager" "Mangonel" "Catapult"
 		}
 	}
 
@@ -88,7 +88,7 @@ osiris_medmodern = {
 		random_names = {
 			
 		}
-		sequential_name = 
+		sequential_name = OSIRIS_MEDMODERN_FLEETNAMES_ORD
 	}
 
 	army_names = {

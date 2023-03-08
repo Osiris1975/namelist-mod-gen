@@ -17,7 +17,7 @@ osiris_american = {
 			"Bradley" "Dewey" "Pershing" "Abrams" "Spruance" "McChrystal" "Powell" "Ridgway" "Lee" "Arnold" "Grant" "Milley" "Sheridan" "Farragut" "Westmoreland" "Mattis" "Clark" "Odierno" "LeMay" "King" "Petraeus" "Sherman" "Schwarzkopf" "Patton" "MacArthur" "Franks" "Johnston" "Meade" "Dunford" "Halsey" "Eichelberger" "Nimitz"
 		}
 		StrikeCruiser = {
-			
+			"Abrams" "Franks" "Arnold" "Petraeus" "Spruance" "Grant" "LeMay" "Nimitz" "Sheridan" "Dunford" "MacArthur" "Eichelberger" "Patton" "Westmoreland" "Powell" "King" "McChrystal" "Schwarzkopf" "Halsey" "Dewey" "Johnston" "Clark" "Meade" "Odierno" "Sherman" "Lee" "Farragut" "Ridgway" "Bradley" "Milley" "Pershing" "Mattis"
 		}
 		Battlecruiser = {
 			"Patton" "MacArthur" "Nimitz" "Halsey" "Bradley" "Arnold" "Pershing" "Lee" "Grant" "Sherman" "Johnston" "Sheridan" "Meade" "Farragut" "Dewey" "King" "Spruance" "Clark" "Eichelberger" "LeMay" "Ridgway" "Westmoreland" "Abrams" "Schwarzkopf" "Powell" "Franks" "McChrystal" "Petraeus" "Odierno" "Mattis" "Dunford" "Milley"
