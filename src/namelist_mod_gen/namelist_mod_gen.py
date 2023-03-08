@@ -17,13 +17,16 @@ template_loader = FileSystemLoader(searchpath=c.TEMPLATES_DIR)
 template_env = Environment(loader=template_loader)
 
 
-def make_mod_directories(mod_name, lang):
+def make_mod_directories(mod_name):
     dirs = {
-        "namelist": os.path.join(c.MOD_OUTPUT_DIR, mod_name, 'common', lang, 'name_lists'),
-        "localization": os.path.join(c.MOD_OUTPUT_DIR, mod_name, 'localisation', lang, 'name_lists')
+        "namelist": os.path.join(c.MOD_OUTPUT_DIR, mod_name, 'common', 'name_lists'),
+        "localization": [os.path.join(c.MOD_OUTPUT_DIR, mod_name, 'localisation', lang, 'name_lists') for lang in c.LANGUAGES.values()]
     }
+    if os.path.exists(dirs["namelist"]):
+        shutil.rmtree(dirs["namelist"])
+    os.makedirs(dirs["namelist"])
 
-    for d in dirs.values():
+    for d in dirs['localization']:
         if os.path.exists(d):
             shutil.rmtree(d)
         os.makedirs(d)
@@ -37,14 +40,14 @@ def abs_file_paths(directory):
 
 
 def create_mod(args):
-    mod_dirs = make_mod_directories(args.mod_name, c.LANGUAGES[args.lcode])
+    mod_dirs = make_mod_directories(args.mod_name)
     csv_files = abs_file_paths(args.namelists)
     namelist_info = {}
 
     for f in csv_files:
         if 'DS_Store' in f:
             continue
-        nl_dict, ord_dict = csv_to_dicts(f, args.author.lower(), args.lcode)
+        nl_dict, ord_dict = csv_to_dicts(f, args.author.lower())
         namelist_info[nl_dict['namelist_id']] = {
             'file': f,
             'author': args.author,
@@ -60,23 +63,23 @@ def create_mod(args):
             print(f'Namelist file written to {name_list_file}')
 
         # Generate ord localization files for each name list
-        ord_loc_file = os.path.join(mod_dirs["localization"],
-                                    f"name_list_{nl_dict['namelist_id'].upper()}_l_{c.LANGUAGES[args.lcode]}.yml")
-        with io.open(ord_loc_file, 'w', encoding='utf-8-sig') as file:
-            ord_loc_template = template_env.get_template(c.ORD_NAMES_LOC_TEMPLATE)
-            ord_loc = ord_loc_template.render(dict_item=ord_dict)
-            file.write(ord_loc)
-            print(f'Ordinal namelist localization file written to {ord_loc_file}')
+        for dir in mod_dirs['localization']:
+            lang = dir.split('/')[-2]
+            ord_loc_file = os.path.join(dir, f"name_list_{nl_dict['namelist_id'].upper()}_l_{lang}.yml")
+            with io.open(ord_loc_file, 'w', encoding='utf-8-sig') as file:
+                ord_loc_template = template_env.get_template(c.ORD_NAMES_LOC_TEMPLATE)
+                ord_loc = ord_loc_template.render(dict_item=ord_dict)
+                file.write(ord_loc)
+                print(f'Ordinal namelist localization file written to {ord_loc_file}')
 
-    # generate localization file
-    namelist_loc_file = os.path.join(mod_dirs["localization"],
-                                     f"{args.author.lower()}_namelist_l_{c.LANGUAGES[args.lcode]}.yml")
-    nl_loc_template = template_env.get_template(c.LOCALIZATION_TEMPLATE)
+            # generate localization files
+            namelist_loc_file = os.path.join(dir, f"{args.author.lower()}_namelist_l_{lang}.yml")
+            nl_loc_template = template_env.get_template(c.LOCALIZATION_TEMPLATE)
 
-    with io.open(namelist_loc_file, 'w', encoding='utf-8') as file:
-        nl_loc = nl_loc_template.render(dict_item=namelist_info)
-        file.write(nl_loc)
-        print(f'Namelist localization file written to {namelist_loc_file}')
+            with io.open(namelist_loc_file, 'w', encoding='utf-8') as file:
+                nl_loc = nl_loc_template.render(dict_item=namelist_info)
+                file.write(nl_loc)
+                print(f'Namelist localization file written to {namelist_loc_file}')
 
 
 def create_seq_key(key, value, author, id):
@@ -85,7 +88,7 @@ def create_seq_key(key, value, author, id):
     return f"{author.upper()}_{id.upper()}_{ord_base}_{c.ORD_TYPES[ord]}"
 
 
-def csv_to_dicts(namelists, author, lang):
+def csv_to_dicts(namelists, author):
     namelist_dict = {key: [] for key in get_template_variables()}
     with open(namelists, 'r') as file:
         print(namelists)
@@ -135,9 +138,7 @@ def main():
     if args.dump_csv_template:
         csv_template(args)
     else:
-        for lcode in c.LANGUAGES.keys():
-            args.lcode = lcode
-            create_mod(args)
+        create_mod(args)
 
 
 parser = argparse.ArgumentParser(
