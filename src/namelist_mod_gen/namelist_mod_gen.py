@@ -9,12 +9,69 @@ import jinja2schema
 import os
 import shutil
 import sys
+import time
+from deep_translator import GoogleTranslator, MyMemoryTranslator, MicrosoftTranslator, DeeplTranslator, PonsTranslator
+from deep_translator import exceptions
+from google_trans_new import google_translator
 import re
 from pathlib import Path
 from collections import OrderedDict
 
 template_loader = FileSystemLoader(searchpath=c.TEMPLATES_DIR)
 template_env = Environment(loader=template_loader)
+
+
+def chunkify(txt):
+    n = c.CHUNK_SIZE
+    chunks = [txt[i:i+n] for i in range(0, len(txt), n)]
+    return chunks
+
+
+def translate(txt, to_lang):
+    t_chunks = []
+    chunks = chunkify(txt)
+    for chunk in chunks:
+        # time.sleep(0.5)
+        try:
+            translated = GoogleTranslator(source='auto', target=to_lang).translate(chunk)
+        except exceptions.LanguageNotSupportedException as e:
+            print(f'Unable to translate with GoogleTranslator: {e}. Trying another one...')
+            translated = MyMemoryTranslator(source='auto', target=to_lang).translate(chunk)
+        except Exception as e:
+            print(f'Unable to translate with MyMemoryTranslator:{e} Trying another one...')
+            translated = MicrosoftTranslator(source='auto', target=to_lang).translate(chunk)
+        except Exception as e:
+            print(f'Unable to translate with MicrosoftTranslator:{e} Trying another one...')
+            translated = DeeplTranslator(source='auto', target=to_lang).translate(chunk)
+        except Exception as e:
+            print(f'Unable to translate with DeeplTranslator{e}. Trying another one...')
+            translated = PonsTranslator(source='auto', target=to_lang).translate(chunk)
+
+        t_chunks.append(translated)
+    if not t_chunks[0]:
+        return txt
+    translated_namelist = ''.join(t_chunks)
+    return translated_namelist
+
+
+def translate_dict(indict, to_lang_code):
+    translated_dict = dict()
+    for k, v in indict.items():
+        if process(k, v):
+            translation = translate(v, to_lang_code)
+            translated_dict[k] = translation.title()
+        else:
+            translated_dict[k] = v
+    return translated_dict
+
+
+def process(k, v):
+    if len(v) == 0 or v == "\"\"":
+        return False
+    for fragment in c.NO_TRANSLATE_FIELD_FRAGMENTS:
+        if fragment in k:
+            return False
+    return True
 
 
 def make_mod_directories(mod_name):
@@ -65,10 +122,13 @@ def create_mod(args):
         # Generate ord localization files for each name list
         for dir in mod_dirs['localization']:
             lang = dir.split('/')[-2]
+            lang_code = list(c.LANGUAGES.keys())[list(c.LANGUAGES.values()).index(lang)]
             ord_loc_file = os.path.join(dir, f"name_list_{nl_dict['namelist_id'].upper()}_l_{lang}.yml")
+            if lang != 'english':
+                ord_dict = translate_dict(ord_dict, lang_code)
             with io.open(ord_loc_file, 'w', encoding='utf-8-sig') as file:
                 ord_loc_template = template_env.get_template(c.ORD_NAMES_LOC_TEMPLATE)
-                ord_loc = ord_loc_template.render(dict_item=ord_dict)
+                ord_loc = ord_loc_template.render(dict_item=ord_dict, lang=lang)
                 file.write(ord_loc)
                 print(f'Ordinal namelist localization file written to {ord_loc_file}')
 
@@ -77,7 +137,11 @@ def create_mod(args):
             nl_loc_template = template_env.get_template(c.LOCALIZATION_TEMPLATE)
 
             with io.open(namelist_loc_file, 'w', encoding='utf-8') as file:
-                nl_loc = nl_loc_template.render(dict_item=namelist_info)
+                if lang != 'english':
+                    id = nl_dict['namelist_id']
+                    namelist_info[id]['title'] = translate(namelist_info[id]['title'], lang_code)
+                nl_loc = nl_loc_template.render(dict_item=namelist_info, lang=lang)
+
                 file.write(nl_loc)
                 print(f'Namelist localization file written to {namelist_loc_file}')
 
@@ -152,3 +216,8 @@ parser.add_argument('-d', '--dump_csv_template', help='dump a blank csv with nam
 
 if __name__ == "__main__":
     sys.exit(main())
+
+# TODO: For localization, need to resolve issue where tokens get moved. Maybe based on token put in an example word
+# based on what kind of token it is (first for $ORD$, I for $R$ and 1 for $C$). Then replace example token before writing.
+# TODO: namelist file with titles are all in korean.
+# TODO: Once that's resolved, need to use localization keys for all other fields for full translated localization.

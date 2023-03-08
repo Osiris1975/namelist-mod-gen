@@ -40,7 +40,7 @@ LANGUAGES = {
     'pl': 'polish',
     'ru': 'russian',
     'es': 'spanish',
-    'zh-Hans': 'simp_chinese',
+    'zh-CN': 'simp_chinese',
     'ja': 'japanese',
     'ko': 'korean'
 }
