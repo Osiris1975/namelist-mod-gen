@@ -9,10 +9,8 @@ import jinja2schema
 import os
 import shutil
 import sys
-import time
 from deep_translator import GoogleTranslator, MyMemoryTranslator, MicrosoftTranslator, DeeplTranslator, PonsTranslator
 from deep_translator import exceptions
-from google_trans_new import google_translator
 import re
 from pathlib import Path
 from collections import OrderedDict
@@ -23,7 +21,7 @@ template_env = Environment(loader=template_loader)
 
 def chunkify(txt):
     n = c.CHUNK_SIZE
-    chunks = [txt[i:i+n] for i in range(0, len(txt), n)]
+    chunks = [txt[i:i + n] for i in range(0, len(txt), n)]
     return chunks
 
 
@@ -77,7 +75,8 @@ def process(k, v):
 def make_mod_directories(mod_name):
     dirs = {
         "namelist": os.path.join(c.MOD_OUTPUT_DIR, mod_name, 'common', 'name_lists'),
-        "localization": [os.path.join(c.MOD_OUTPUT_DIR, mod_name, 'localisation', lang, 'name_lists') for lang in c.LANGUAGES.values()]
+        "localization": [os.path.join(c.MOD_OUTPUT_DIR, mod_name, 'localisation', lang, 'name_lists') for lang in
+                         c.LANGUAGES.values()]
     }
     if os.path.exists(dirs["namelist"]):
         shutil.rmtree(dirs["namelist"])
@@ -96,6 +95,16 @@ def abs_file_paths(directory):
             yield os.path.abspath(os.path.join(dirpath, f))
 
 
+def make_render_dict(indict):
+    render_dict = dict()
+    for k, v in indict.items():
+        if len(v) > 1:
+            render_dict[k] = " ".join(v.keys())
+        else:
+            render_dict[k] = v[0]
+    return render_dict
+
+
 def create_mod(args):
     mod_dirs = make_mod_directories(args.mod_name)
     csv_files = abs_file_paths(args.namelists)
@@ -105,17 +114,18 @@ def create_mod(args):
         if 'DS_Store' in f:
             continue
         nl_dict, ord_dict = csv_to_dicts(f, args.author.lower())
-        namelist_info[nl_dict['namelist_id']] = {
+        namelist_info[nl_dict['namelist_id'][0]] = {
             'file': f,
             'author': args.author,
-            'title': nl_dict['namelist_title']
+            'title': nl_dict['namelist_title'][0]
         }
 
         # Generate namelist file for each list
         name_list_file = os.path.join(mod_dirs["namelist"], f"{nl_dict['namelist_id']}.txt")
         with io.open(name_list_file, 'w', encoding='utf-8-sig') as file:
             namelist_template = template_env.get_template(c.NAMELIST_TEMPLATE)
-            name_list = namelist_template.render(nl_dict)
+            render_dict = make_render_dict(nl_dict)
+            name_list = namelist_template.render(render_dict)
             file.write(name_list)
             print(f'Namelist file written to {name_list_file}')
 
@@ -147,9 +157,20 @@ def create_mod(args):
 
 
 def create_seq_key(key, value, author, id):
-    ord = re.search(r'\$\S+\$', value).group().replace('$', '')
-    ord_base = "".join(key.split('_')[1:]).upper()
-    return f"{author.upper()}_{id.upper()}_{ord_base}_{c.ORD_TYPES[ord]}"
+    for element in value:
+        if "$" in element:
+            ord = re.search(r'\$\S+\$', element).group().replace('$', '')
+            ord_base = "".join(key.split('_')[1:]).upper()
+            return f"{author.upper()}_{id.upper()}_{ord_base}_{c.ORD_TYPES[ord]}"
+        if key not in c.UNKEYED_FIELDS:
+            return f"{author.upper()}_{id.upper()}_{key.upper()}_{element.upper()}"
+        else:
+            return value[0]
+
+
+def create_seq_key_dict(key, values, author, namelist_id):
+    value_keys = [f"{author.upper()}_{namelist_id.upper()}_{key.upper()}_{vkey.upper()}" for vkey in values]
+    return dict(zip(value_keys, values))
 
 
 def csv_to_dicts(namelists, author):
@@ -159,20 +180,24 @@ def csv_to_dicts(namelists, author):
         for row in reader:
             for k, v in row.items():
                 if k in namelist_dict.keys() and len(v) > 0:
-                    qv = (f'\"{v}\"' if 'namelist' not in k else v)
-                    namelist_dict[k].append(qv)
+                    # qv = (f'\"{v}\"' if 'namelist' not in k else v)
+                    namelist_dict[k].append(v)
 
-    processed_dict = {key: " ".join(value) for key, value in namelist_dict.items()}
     ord_dict = OrderedDict()
-    for k, v in processed_dict.items():
-        if "$" in v:
-            seq_key = create_seq_key(k, v, author, namelist_dict['namelist_id'][0])
-            ord_dict[seq_key] = v
-            processed_dict[k] = seq_key
-    # TODO: stellaris doesn't allow empty second names but this is a workaround
-    if len(processed_dict['cn_second_names']) == 0:
-        processed_dict['cn_second_names'] = '\"\"'
-    return processed_dict, ord_dict
+    namelist_id = namelist_dict['namelist_id'][0]
+    for k, v in namelist_dict.items():
+        if k not in c.UNKEYED_FIELDS:
+            seq_key = create_seq_key(k, v, author, namelist_id)
+            if len(v) > 1:
+                values = create_seq_key_dict(k, v, author, namelist_id)
+                for k2, v2 in values.items():
+                    ord_dict[k2] = v2
+                namelist_dict[k] = values
+            else:
+                ord_dict[seq_key] = v
+                namelist_dict[k] = [seq_key]
+
+    return namelist_dict, ord_dict
 
 
 def get_template_variables():
