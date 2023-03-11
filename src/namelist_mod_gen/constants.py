@@ -2,8 +2,8 @@ import os
 SRC_ROOT_DIR = os.path.dirname(os.path.abspath(__file__))
 TEMPLATES_DIR = os.path.join(SRC_ROOT_DIR, 'templates')
 NAMELIST_TEMPLATE = 'namelist.txt'
-LOCALIZATION_TEMPLATE = 'name_lists_loc.yml'
-ORD_NAMES_LOC_TEMPLATE = 'ord_names_loc.yml'
+NL_TITLES_LOC_TEMPLATE = 'name_lists_loc.yml'
+NAMELISTS_LOC_TEMPLATE = 'ord_names_loc.yml'
 temp = SRC_ROOT_DIR.split('/')[0:-2]
 temp.append('generated_mods')
 MOD_OUTPUT_DIR = os.path.join('/', *temp)
@@ -15,6 +15,12 @@ ORD_TYPES = {
     "ORD": "ORD"
 }
 
+ORD_EXAMPLES = {
+    "$C$": "1",
+    "$O$": "First",
+    "$R$": "IV",
+    "$ORD$": "First"
+}
 LANGUAGES = {
     'en': 'english',
     'pt': 'braz_por',
