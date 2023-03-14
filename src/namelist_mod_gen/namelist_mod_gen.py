@@ -86,30 +86,39 @@ def make_loc_dict(indict):
     return loc_dict
 
 
-def create_localized_namelist_listing(nl_dict, namelist_info, lang, author, dir):
+def create_localized_namelist_listing(input, author, root_loc_dir):
+    nl_def_template = template_env.get_template(c.NL_DEF_TEMPLATE)
+
+    for code, lang in c.LANGUAGES.items():
+        def_dict = dict()
+        for nl, info in input.items():
+            if code != 'en':
+                title = translate(None, info['title'], code)[1]
+            else:
+                title = info['title']
+            def_dict[nl] = {
+                'title': title
+            }
+
+            nl_def_file = os.path.join(root_loc_dir, lang, f"name_lists/{author.lower()}_namelist_l_{lang}.yml")
+            try:
+                if not os.path.exists(nl_def_file):
+                    with io.open(nl_def_file, 'w', encoding='utf-8') as file:
+                        nl_loc = nl_def_template.render(dict_item=def_dict, author=author, lang=lang)
+                        file.write(nl_loc)
+                        logger.info(f'Localized namelist description file written to {nl_def_file}')
+                else:
+                    logger.warning(f'File already exists:{nl_def_file}. Skipping...')
+            except Exception as e:
+                logger.error(f'Failed to create {nl_def_file}: {e}')
+
+
+def create_localized_translations(loc_inputs):
+    loc_dir = loc_inputs['dir']
+    nl_dict = loc_inputs['data']
+    lang = loc_dir.split('/')[-2]
     lang_code = list(c.LANGUAGES.keys())[list(c.LANGUAGES.values()).index(lang)]
-    # generate localisation files
-    namelist_loc_file = os.path.join(dir, f"{author.lower()}_namelist_l_{lang}.yml")
-    nl_loc_template = template_env.get_template(c.NL_TITLES_LOC_TEMPLATE)
-
-    try:
-        if not os.path.exists(namelist_loc_file):
-            with io.open(namelist_loc_file, 'w', encoding='utf-8') as file:
-                if lang != 'english':
-                    namelist_info[nl_dict['namelist_id'][0]]['title'] = translate(None, nl_dict['namelist_title'][0], lang_code)[-1].replace('(Onl)', '(ONL)')
-                nl_loc = nl_loc_template.render(dict_item=namelist_info, lang=lang)
-
-                file.write(nl_loc)
-                logger.info(f'Namelist info localisation file written to {namelist_loc_file}')
-        else:
-            logger.warning(f'File already exists:{namelist_loc_file}. Skipping...')
-    except Exception as e:
-        logger.error(f'Failed to create {namelist_loc_file}: {e}')
-
-
-def create_localized_translations(nl_dict, lang, dir):
-    lang_code = list(c.LANGUAGES.keys())[list(c.LANGUAGES.values()).index(lang)]
-    ord_loc_file = os.path.join(dir, f"name_list_{nl_dict['namelist_id'][0].upper()}_l_{lang}.yml")
+    ord_loc_file = os.path.join(loc_dir, f"name_list_{nl_dict['namelist_id'][0].upper()}_l_{lang}.yml")
     if not os.path.exists(ord_loc_file):
         loc_dict = make_loc_dict(nl_dict)
         if lang != 'english':
@@ -121,7 +130,7 @@ def create_localized_translations(nl_dict, lang, dir):
                 sys.exit(1)
         with io.open(ord_loc_file, 'w', encoding='utf-8-sig') as file:
             quotified = {k: f'\"{v}\"' for k, v in loc_dict.items()}
-            namelist_loc_template = template_env.get_template(c.NAMELISTS_LOC_TEMPLATE)
+            namelist_loc_template = template_env.get_template(c.NL_LOC_TEMPLATE)
             nl_loc = namelist_loc_template.render(dict_item=quotified, lang=lang)
             file.write(nl_loc)
             logger.info(f'Namelist localisation file written to {ord_loc_file}')
@@ -129,24 +138,10 @@ def create_localized_translations(nl_dict, lang, dir):
         logger.warning(f'File already exists:{ord_loc_file}. Skipping...')
 
 
-def create_localisation(input):
-    dir = input['dir']
-    nl_dict = input['data']
-    author = input['author']
-    namelist_info = input['meta']
-    lang = dir.split('/')[-2]
-    create_localized_translations(nl_dict, lang, dir)
-
-    # generate localisation files
-    create_localized_namelist_listing(nl_dict, namelist_info, lang, author, dir)
-    logger.info(f'localisation files generated for {nl_dict["namelist_id"][0]}')
-
-
 def create_mod(args):
     mod_dirs = make_mod_directories(args.mod_name)
     csv_files = abs_file_paths(args.namelists)
-    namelist_info = {}
-
+    namelist_info = dict()
     for f in csv_files:
         st = datetime.datetime.now()
         if 'DS_Store' in f:
@@ -154,8 +149,8 @@ def create_mod(args):
         nl_dict = csv_to_dicts(f, args.author.lower())
         namelist_info[nl_dict['namelist_id'][0]] = {
             'file': f,
-            'author': args.author,
-            'title': nl_dict['namelist_title'][0]
+            'title': nl_dict['namelist_title'][0],
+            'source_data': nl_dict
         }
 
         # Create output file names and skip if all three exist:
@@ -169,11 +164,11 @@ def create_mod(args):
                 file.write(name_list)
                 logger.info(f'Namelist file written to {name_list_file}')
 
-        # Generate ord localisation files for each name list
+        # Generate translated localisation files for each name list
         inputs = []
-        for dir in mod_dirs['localisation']:
+        for loc_dir in mod_dirs['localisation']:
             input = {
-                'dir': dir,
+                'dir': loc_dir,
                 'data': nl_dict,
                 'meta': namelist_info,
                 'author': args.author
@@ -182,18 +177,23 @@ def create_mod(args):
 
         if args.multiprocess:
             pool = Pool(os.cpu_count() - 1)
-            pool.map_async(create_localisation, inputs)
+            pool.map_async(create_localized_translations, inputs)
             pool.close()
             pool.join()
             print('All tasks are done', flush=True)
             logger.info(f'------------------ALL TASKS DONE------------------')
         else:
             for i in inputs:
-                create_localisation(i)
+                create_localized_translations(i)
 
+        # generate namelist description file for each language
         et = datetime.datetime.now()
         elapsed_time = et - st
         logger.info(f'NAMELIST {f} COMPLETED IN {elapsed_time}.')
+
+    loc_split = loc_dir.split('/')
+    root_loc_dir = os.path.join('/', *loc_split[0:-2])
+    create_localized_namelist_listing(namelist_info, args.author, root_loc_dir)
 
 
 def create_seq_key_dict(key, values, author, namelist_id):

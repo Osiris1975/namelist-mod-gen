@@ -5,8 +5,8 @@ temp = SRC_ROOT_DIR.split('/')[0:-3]
 PROJECT_DIR = os.path.join('/', *temp)
 TEMPLATES_DIR = os.path.join(SRC_ROOT_DIR, 'templates')
 NAMELIST_TEMPLATE = 'namelist.txt'
-NL_TITLES_LOC_TEMPLATE = 'name_lists_loc.yml'
-NAMELISTS_LOC_TEMPLATE = 'ord_names_loc.yml'
+NL_DEF_TEMPLATE = 'definitions.yml'
+NL_LOC_TEMPLATE = 'translations.yml'
 temp.append('generated_mods')
 MOD_OUTPUT_DIR = os.path.join('/', *temp)
 
@@ -26,21 +26,20 @@ ORD_EXAMPLES = {
 LANGUAGES = {
     'en': 'english',
     'pt': 'braz_por',
-    'fr': 'french',
-    'de': 'german',
-    'pl': 'polish',
-    'ru': 'russian',
-    'es': 'spanish',
-    'zh-CN': 'simp_chinese',
-    'ja': 'japanese',
-    'ko': 'korean'
+    # 'fr': 'french',
+    # 'de': 'german',
+    # 'pl': 'polish',
+    # 'ru': 'russian',
+    # 'es': 'spanish',
+    # 'zh-CN': 'simp_chinese',
+    # 'ja': 'japanese',
+    # 'ko': 'korean'
 }
 
 LANG_TRANS_MAP = {
     'en': ["alibaba", "baidu", "bing", "caiyun", "deepl", "google", "iciba", "iflytek", "itranslate", "lingvanex",
            "niutrans", "papago", "reverso", "sogou", "tencent", "translateCom", "yandex", "youdao"],
-    'pt': ["alibaba", "bing", "deepl", "google", "iciba", "iflytek", "itranslate", "lingvanex",
-           "niutrans", "papago", "reverso", "tencent", "translateCom", "yandex", "youdao"],
+    'pt': ["bing", "deepl", "google", "niutrans", "papago", "reverso", "tencent", "translateCom"],
     'fr': ["alibaba", "baidu", "bing", "caiyun", "deepl", "google", "iciba", "iflytek", "itranslate", "lingvanex",
            "niutrans", "papago", "reverso", "sogou", "tencent", "translateCom", "yandex", "youdao"],
     'de': ["baidu", "bing", "deepl", "google", "iciba", "iflytek", "itranslate", "lingvanex",
@@ -69,3 +68,5 @@ NO_TRANSLATE_FIELD_FRAGMENTS = [
 ]
 
 UNKEYED_FIELDS = ['namelist_id', 'id', 'namelist_author', 'namelist_title']
+
+THREAD_CONCURRENCY = 10

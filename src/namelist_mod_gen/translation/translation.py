@@ -2,13 +2,13 @@ import copy
 import datetime
 import logging
 import os
-import re
+import regex
 import sqlite3
 import threading
 from collections import Counter
 from difflib import get_close_matches
 from queue import Queue
-from random import shuffle, choice
+from random import choice
 
 import colorlog
 import translators as ts
@@ -19,7 +19,8 @@ exitFlag = 0
 loglevel = os.getenv('LOG_LEVEL').upper()
 handler = colorlog.StreamHandler()
 handler.setFormatter(colorlog.ColoredFormatter('%(log_color)s[%(asctime)s][%(levelname)s][%(name)s]: %(message)s'))
-file_handler = logging.FileHandler(filename=f"{c.PROJECT_DIR}/logs/{datetime.datetime.now().strftime('%d.%m.%Y_%H.%M.%S')}.translation.log")
+file_handler = logging.FileHandler(
+    filename=f"{c.PROJECT_DIR}/logs/{datetime.datetime.now().strftime('%d.%m.%Y_%H.%M.%S')}.translation.log")
 file_handler.setFormatter(logging.Formatter('[%(asctime)s][%(levelname)s][%(name)s]: %(message)s'))
 file_handler.setLevel(loglevel)
 
@@ -28,7 +29,7 @@ logger.addHandler(handler)
 logger.addHandler(file_handler)
 logger.setLevel(loglevel)
 
-threadLimiter = threading.BoundedSemaphore(100)
+threadLimiter = threading.BoundedSemaphore(c.THREAD_CONCURRENCY)
 
 
 class TransThread(threading.Thread):
@@ -50,14 +51,14 @@ class TransThread(threading.Thread):
             threadLimiter.release()
 
 
-
-def insert(txt, translation, lang_code):
+def insert(txt, translation, lang_code, translators_string, is_translated, is_same):
     con = sqlite3.connect("translations.db")
     cur = con.cursor()
     long_lang = c.LANGUAGES[lang_code]
     src_text = f"\042{txt.replace('$', '_')}\042"
     trans_text = f"\042{translation.replace('$', '_')}\042"
-    query = f"INSERT OR IGNORE INTO {long_lang} (english, {long_lang}) VALUES({src_text}, {trans_text});"
+    translators_string = f"\042{translators_string}\042"
+    query = f"INSERT OR IGNORE INTO {long_lang} (english, {long_lang}, translators, is_translated, is_same) VALUES({src_text}, {trans_text}, {translators_string}, {is_translated}, {is_same});"
     cur.execute(query)
     con.commit()
     con.close()
@@ -66,7 +67,7 @@ def insert(txt, translation, lang_code):
 def validate_translation(trans_array, original_txt):
     matches = get_close_matches(original_txt, trans_array)
     if len(matches) > 0:
-        return matches[0].replace(' •', '')
+        return matches[0]
     occurence_count = Counter(trans_array)
     counts = sorted(occurence_count.values())
     ct_array = [len(occurence_count.most_common(1)[0][0].split(' ')), len(original_txt.split(' '))]
@@ -81,60 +82,67 @@ def validate_translation(trans_array, original_txt):
         return validate_translation(trans_array[:-1], trans_array[0])
 
 
+def clean(txt):
+    s = regex.sub(r'[^a-zA-Z0-9_,\'\.\$\s\p{script=Latin}()-]', '', txt).rstrip('.')
+    return s
+
+
 def finalize(txt, token):
     underscore_loc = txt.rfind('_')
     if (len(txt) != underscore_loc - 1) and txt[underscore_loc + 1] != ' ':
         txt = txt.replace('_', '_ ')
-    return txt.replace('_', token).rstrip('.').replace(' •', '')
+    return clean(txt.replace('_', token))
 
 
-def translate(key, txt, to_lang):
-    logger.info(f'\n[------------------TRANSLATING {txt.upper()} TO {to_lang.upper()}------------------]')
+def pronoun(key):
+    pronoun_fragments = ['CN']
+    for f in pronoun_fragments:
+        if f in key:
+            return True
+    return False
+
+
+def translate(key, txt, lang_code):
+    logger.info(f'\n[------------------TRANSLATING {txt.upper()} TO {lang_code.upper()}------------------]')
     if txt == '' or txt is None:
         return key, txt
     token = ''
     if '$' in txt:
-        token = re.match(r'\$\S+\$', txt).group().upper()
+        token = regex.match(r'\$\S+\$', txt).group().upper()
         txt = txt.replace(token, '_')
-    active_pool = copy.copy(c.LANG_TRANS_MAP[to_lang])
-    translated = check_in_db(txt, to_lang).rstrip('.')
+    active_pool = copy.copy(c.LANG_TRANS_MAP[lang_code])
+    translated = check_in_db(txt, lang_code).rstrip('.')
     if translated:
-        logger.info(f'Translation({to_lang}) for {txt} found in db: {translated}')
+        logger.info(f'Translation({lang_code}) for {txt} found in db: {translated}')
         return key, finalize(translated, token)
     else:
+        trans_array = []
+        translators = []
         for translator in active_pool:
-            if translator in ['utiibet', 'lingvanex']:
-                from_lang = 'en_GB'
-            else:
-                from_lang = 'en'
             logger.debug(f'Current translator pool {active_pool}')
-            try:
-                trans_array = [ts.translate_text(txt, translator, from_language=from_lang, to_language=to_lang)]
-                for i in range(0, 2):
-                    trans_array.append(ts.translate_text(txt, choice(active_pool),
-                                                         from_language='en',
-                                                         to_language=to_lang).replace(' •', ''))
-                translated = validate_translation(trans_array, txt).rstrip('.')
-                logger.info(f'Translation of {txt} completed with {translator}: {translated}.')
-                insert(txt, translated, to_lang)
-                break
-
-            except Exception as e:
-                logger.error(f'Translation exception: Text:{txt} Translator: {translator} | ToLang: {to_lang} | Error: {e}')
+            while len(trans_array) != 5:
+                if len(active_pool) == 0:
+                    break
+                translator = choice(active_pool)
                 active_pool.remove(translator)
+                try:
+                    translation = clean(
+                        ts.translate_text(txt, translator, from_language='en', to_language=lang_code))
+                    trans_array.append(translation)
+                    translators.append(translator)
 
-                if len(active_pool) > 2:
-                    logger.debug(
-                        f'Translation of {txt} failed using {translator} with {e} Trying another one from list: {active_pool}')
-                else:
-                    logger.warning(f'Ran out of translator options. Resetting the translator pool.')
-                    active_pool = copy.copy(c.LANG_TRANS_MAP[to_lang])
-            finally:
-                shuffle(active_pool)
+                except Exception as e:
+                    logger.error(
+                        f'Translation exception: Text:{txt} Translator: {translator} | ToLang: {lang_code} | Error: {e}')
+
+            translated = validate_translation(trans_array, txt)
+            translators_string = ','.join(translators)
+            logger.info(f'Translation of {txt} completed with {translator}: {translated}.')
+            insert(txt, translated, lang_code, translators_string, True, True)
 
         if not translated:
             translated = txt
-            insert(txt, translated, to_lang)
+            insert(txt, translated, lang_code, None, False, True)
         return key, finalize(translated, token)
 
 
@@ -176,7 +184,7 @@ def translate_dict(indict, to_lang_code):
 def check_in_db(txt, to_lang):
     con = sqlite3.connect("translations.db")
     cur = con.cursor()
-    query = f"CREATE TABLE IF NOT EXISTS {c.LANGUAGES[to_lang]} (english varchar, {c.LANGUAGES[to_lang]} varchar, UNIQUE(english))"
+    query = f"CREATE TABLE IF NOT EXISTS {c.LANGUAGES[to_lang]} (english varchar, {c.LANGUAGES[to_lang]} varchar, translators varchar, is_translated boolean, is_same boolean, UNIQUE(english))"
     cur.execute(query)
     txt = txt.replace("'", "''")
     lookup = f"SELECT {c.LANGUAGES[to_lang]} FROM {c.LANGUAGES[to_lang]} where english='{txt}'"

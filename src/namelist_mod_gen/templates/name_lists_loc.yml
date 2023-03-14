@@ -1,8 +1,0 @@
-﻿l_{{ lang }}:
- {% for k, v in dict_item.items() %}name_list_{{ v.author }}_{{ k }}:0 "{{ v.title }}"
- name_list_{{ v.author }}_{{ k }}_desc:0 " "
- {% endfor %}
-
-
-
-
