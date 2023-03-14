@@ -1,141 +1,67 @@
 #!/usr/bin/env python
 
 import argparse
-import constants as c
-import copy
 import csv
+import datetime
 import io
-from jinja2 import Environment, FileSystemLoader
-import jinja2schema
+import logging
 import os
-from random import shuffle, choice
-import shutil
-import sys
-import sqlite3
-import translators as ts
-import translators.server as tss
 import re
+import shutil
+import sqlite3
+import sys
+from multiprocessing import Pool
 from pathlib import Path
 from string import printable
-from collections import Counter
-from difflib import get_close_matches
-from multiprocessing import Pool
-import logging
 
-logging.basicConfig(level=logging.DEBUG)
+import colorlog
+import jinja2schema
+from jinja2 import Environment, FileSystemLoader
+
+from constants import constants as c
+from translation.translation import translate_dict, translate
+
+loglevel = os.getenv('LOG_LEVEL').upper()
+
+handler = colorlog.StreamHandler()
+handler.setFormatter(colorlog.ColoredFormatter('%(log_color)s[%(asctime)s][%(levelname)s][%(name)s]: %(message)s'))
+file_handler = logging.FileHandler(
+    filename=f"{c.PROJECT_DIR}/logs/{datetime.datetime.now().strftime('%d.%m.%Y_%H.%M.%S')}.main.log")
+file_handler.setFormatter(logging.Formatter('[%(asctime)s][%(levelname)s][%(name)s]: %(message)s'))
+file_handler.setLevel(loglevel)
+
+logger = colorlog.getLogger('__main__.' + __name__)
+logger.addHandler(handler)
+logger.setLevel(loglevel)
+logger.addHandler(file_handler)
+
 template_loader = FileSystemLoader(searchpath=c.TEMPLATES_DIR)
 template_env = Environment(loader=template_loader)
 
-
-con = sqlite3.connect("translations.db")
+con = sqlite3.connect("translations.db", timeout=15)
 cur = con.cursor()
 
-
-def insert(txt, translation, lang_code):
-    long_lang = c.LANGUAGES[lang_code]
-    src_text = f"\042{txt.replace('$', '_')}\042"
-    trans_text = f"\042{translation.replace('$', '_')}\042"
-    query = f"INSERT OR IGNORE INTO {long_lang} (english, {long_lang}) VALUES({src_text}, {trans_text});"
-    cur.execute(query)
-    con.commit()
+process_dirs = []
 
 
-def check_in_db(txt, to_lang):
-    query = f"CREATE TABLE IF NOT EXISTS {c.LANGUAGES[to_lang]} (english varchar, {c.LANGUAGES[to_lang]} varchar, UNIQUE(english))"
-    cur.execute(query)
-    txt = txt.replace("'", "''")
-    lookup = f"SELECT {c.LANGUAGES[to_lang]} FROM {c.LANGUAGES[to_lang]} where english='{txt}'"
-    logging.debug(f'Execution query:\n {lookup}')
-    res = cur.execute(lookup)
-    translation = res.fetchone()
-    if translation:
-        return translation[0].replace(' •', '')
-    else:
-        return ''
-
-
-def validate_translation(trans_array, original_txt, count):
-    if count == 3:
-        logging.warning(
-            f'Could not find a best match for {original_txt} from list: {trans_array}. Using original text.')
-        return original_txt
-    matches = get_close_matches(original_txt, trans_array)
-    if len(matches) > 0:
-        return matches[0].replace(' •', '')
-    occurence_count = Counter(trans_array)
-    counts = sorted(occurence_count.values())
-    ct_array = [len(occurence_count.most_common(1)[0][0].split(' ')), len(original_txt.split(' '))]
-    ct_array.sort()
-    if counts[-1] > 1 and ct_array[1] - ct_array[0] < 2:
-        return occurence_count.most_common(1)[0][0]
-    else:
-        return validate_translation(trans_array, trans_array[0], count + 1)
-
-
-def translate(txt, to_lang):
-    if txt == '':
-        return txt
-    token = ''
-    if '$' in txt:
-        token = re.match(r'\$\S+\$', txt).group()
-        txt = txt.replace(token, '_')
-    translator_pool = copy.copy(tss.translators_pool)
-    shuffle(translator_pool)
-    removed = []
-    translated = check_in_db(txt, to_lang)
-    if translated:
-        return translated.replace('_', token)
-    else:
-        for translator in translator_pool:
-            logging.debug(f'Current translator pool {translator_pool}')
-            try:
-                trans_array = [ts.translate_text(txt, translator, from_language='en', to_language=to_lang).title()]
-                for i in range(0, 2):
-                    trans_array.append(ts.translate_text(txt, choice(translator_pool),
-                                                         from_language='en',
-                                                         to_language=to_lang).title().replace(' •', ''))
-                translated = validate_translation(trans_array, txt)
-                logging.debug(f'Translation completed with {translator}.')
-                insert(txt, translated, to_lang)
-                translator_pool = copy.copy(tss.translators_pool)
-                break
-            except Exception as e:
-                logging.error(f'Translation exception: {e}')
-                removed.append(translator)
-                translator_pool.remove(translator)
-                if len(translator_pool) > 2:
-                    logging.debug(f'Translation of {txt} failed using {translator} with {e} Trying another one from list: {translator_pool}')
-                else:
-                    logging.info(f'Ran out of translator options. Resetting the translator pool.')
-                    translator_pool = copy.copy(tss.translators_pool)
-        if not translated:
-            translated = ''
-        return translated.replace('_', token)
-
-
-def translate_dict(indict, to_lang_code):
-    translated_dict = dict()
-    for k, v in indict.items():
-        logging.debug(f'Attempting to translate {k}: {v} to {to_lang_code}')
-        translation = translate(v, to_lang_code)
-        translated_dict[k] = translation.title()
-    return translated_dict
+def failure_cleanup():
+    for p in process_dirs:
+        shutil.rmtree(p)
 
 
 def make_mod_directories(mod_name):
     dirs = {
         "namelist": os.path.join(c.MOD_OUTPUT_DIR, mod_name, 'common', 'name_lists'),
-        "localization": [os.path.join(c.MOD_OUTPUT_DIR, mod_name, 'localisation', lang, 'name_lists') for lang in
+        "localisation": [os.path.join(c.MOD_OUTPUT_DIR, mod_name, 'localisation', lang, 'name_lists') for lang in
                          c.LANGUAGES.values()]
     }
-    if os.path.exists(dirs["namelist"]):
-        shutil.rmtree(dirs["namelist"])
-    os.makedirs(dirs["namelist"])
+    if not os.path.exists(dirs["namelist"]):
+        os.makedirs(dirs["namelist"])
 
-    for d in dirs['localization']:
-        if os.path.exists(d):
-            shutil.rmtree(d)
-        os.makedirs(d)
+    for d in dirs['localisation']:
+        if not os.path.exists(d):
+            os.makedirs(d)
+
     return dirs
 
 
@@ -160,12 +86,69 @@ def make_loc_dict(indict):
     return loc_dict
 
 
+def create_localized_namelist_listing(nl_dict, namelist_info, lang, author, dir):
+    lang_code = list(c.LANGUAGES.keys())[list(c.LANGUAGES.values()).index(lang)]
+    # generate localisation files
+    namelist_loc_file = os.path.join(dir, f"{author.lower()}_namelist_l_{lang}.yml")
+    nl_loc_template = template_env.get_template(c.NL_TITLES_LOC_TEMPLATE)
+
+    try:
+        if not os.path.exists(namelist_loc_file):
+            with io.open(namelist_loc_file, 'w', encoding='utf-8') as file:
+                if lang != 'english':
+                    namelist_info[nl_dict['namelist_id'][0]]['title'] = translate(None, nl_dict['namelist_title'][0], lang_code)[-1].replace('(Onl)', '(ONL)')
+                nl_loc = nl_loc_template.render(dict_item=namelist_info, lang=lang)
+
+                file.write(nl_loc)
+                logger.info(f'Namelist info localisation file written to {namelist_loc_file}')
+        else:
+            logger.warning(f'File already exists:{namelist_loc_file}. Skipping...')
+    except Exception as e:
+        logger.error(f'Failed to create {namelist_loc_file}: {e}')
+
+
+def create_localized_translations(nl_dict, lang, dir):
+    lang_code = list(c.LANGUAGES.keys())[list(c.LANGUAGES.values()).index(lang)]
+    ord_loc_file = os.path.join(dir, f"name_list_{nl_dict['namelist_id'][0].upper()}_l_{lang}.yml")
+    if not os.path.exists(ord_loc_file):
+        loc_dict = make_loc_dict(nl_dict)
+        if lang != 'english':
+            try:
+                loc_dict = translate_dict(loc_dict, lang_code)
+            except Exception as e:
+                logger.critical(f'Translation failure: {e}')
+                con.close()
+                sys.exit(1)
+        with io.open(ord_loc_file, 'w', encoding='utf-8-sig') as file:
+            quotified = {k: f'\"{v}\"' for k, v in loc_dict.items()}
+            namelist_loc_template = template_env.get_template(c.NAMELISTS_LOC_TEMPLATE)
+            nl_loc = namelist_loc_template.render(dict_item=quotified, lang=lang)
+            file.write(nl_loc)
+            logger.info(f'Namelist localisation file written to {ord_loc_file}')
+    else:
+        logger.warning(f'File already exists:{ord_loc_file}. Skipping...')
+
+
+def create_localisation(input):
+    dir = input['dir']
+    nl_dict = input['data']
+    author = input['author']
+    namelist_info = input['meta']
+    lang = dir.split('/')[-2]
+    create_localized_translations(nl_dict, lang, dir)
+
+    # generate localisation files
+    create_localized_namelist_listing(nl_dict, namelist_info, lang, author, dir)
+    logger.info(f'localisation files generated for {nl_dict["namelist_id"][0]}')
+
+
 def create_mod(args):
     mod_dirs = make_mod_directories(args.mod_name)
     csv_files = abs_file_paths(args.namelists)
     namelist_info = {}
 
     for f in csv_files:
+        st = datetime.datetime.now()
         if 'DS_Store' in f:
             continue
         nl_dict = csv_to_dicts(f, args.author.lower())
@@ -175,61 +158,60 @@ def create_mod(args):
             'title': nl_dict['namelist_title'][0]
         }
 
-        # Generate namelist file for each list
+        # Create output file names and skip if all three exist:
         name_list_file = os.path.join(mod_dirs["namelist"], f"{nl_dict['namelist_id'][0]}.txt")
-        with io.open(name_list_file, 'w', encoding='utf-8-sig') as file:
-            namelist_template = template_env.get_template(c.NAMELIST_TEMPLATE)
-            render_dict = {k: " ".join(v) for k, v, in nl_dict.items()}
-            name_list = namelist_template.render(render_dict)
-            file.write(name_list)
-            logging.info(f'Namelist file written to {name_list_file}')
+        if not os.path.exists(name_list_file):
+            # Generate namelist file for each list
+            with io.open(name_list_file, 'w', encoding='utf-8-sig') as file:
+                namelist_template = template_env.get_template(c.NAMELIST_TEMPLATE)
+                render_dict = {k: " ".join(v) for k, v, in nl_dict.items()}
+                name_list = namelist_template.render(render_dict)
+                file.write(name_list)
+                logger.info(f'Namelist file written to {name_list_file}')
 
-        # Generate ord localization files for each name list
-        for dir in mod_dirs['localization']:
-            lang = dir.split('/')[-2]
-            lang_code = list(c.LANGUAGES.keys())[list(c.LANGUAGES.values()).index(lang)]
-            ord_loc_file = os.path.join(dir, f"name_list_{nl_dict['namelist_id'][0].upper()}_l_{lang}.yml")
-            loc_dict = make_loc_dict(nl_dict)
-            if lang != 'english':
-                try:
-                    loc_dict = translate_dict(loc_dict, lang_code)
-                except Exception as e:
-                    logging.error(f'Translation failure: {e}')
-                    con.close()
-                    sys.exit(1)
+        # Generate ord localisation files for each name list
+        inputs = []
+        for dir in mod_dirs['localisation']:
+            input = {
+                'dir': dir,
+                'data': nl_dict,
+                'meta': namelist_info,
+                'author': args.author
+            }
+            inputs.append(input)
 
-            with io.open(ord_loc_file, 'w', encoding='utf-8-sig') as file:
-                quotified = {k: f'\"{v}\"' for k, v in loc_dict.items()}
-                namelist_loc_template = template_env.get_template(c.NAMELISTS_LOC_TEMPLATE)
-                nl_loc = namelist_loc_template.render(dict_item=quotified, lang=lang)
-                file.write(nl_loc)
-                logging.info(f'Namelist localization file written to {ord_loc_file}')
+        if args.multiprocess:
+            pool = Pool(os.cpu_count() - 1)
+            pool.map_async(create_localisation, inputs)
+            pool.close()
+            pool.join()
+            print('All tasks are done', flush=True)
+            logger.info(f'------------------ALL TASKS DONE------------------')
+        else:
+            for i in inputs:
+                create_localisation(i)
 
-            # generate localization files
-            namelist_loc_file = os.path.join(dir, f"{args.author.lower()}_namelist_l_{lang}.yml")
-            nl_loc_template = template_env.get_template(c.NL_TITLES_LOC_TEMPLATE)
-
-            with io.open(namelist_loc_file, 'w', encoding='utf-8') as file:
-                if lang != 'english':
-                    id = nl_dict['namelist_id'][0]
-                    namelist_info[id]['title'] = translate(namelist_info[id]['title'], lang_code)
-                nl_loc = nl_loc_template.render(dict_item=namelist_info, lang=lang)
-
-                file.write(nl_loc)
-                logging.info(f'Namelist info localization file written to {namelist_loc_file}')
+        et = datetime.datetime.now()
+        elapsed_time = et - st
+        logger.info(f'NAMELIST {f} COMPLETED IN {elapsed_time}.')
 
 
 def create_seq_key_dict(key, values, author, namelist_id):
     if len(values) > 1:
-        value_keys = [f'{author.upper()}_{namelist_id.upper()}_{key.upper()}_{vkey.upper()}' for vkey in values]
-        value_keys = [vkey.replace("'", "") for vkey in value_keys]
-        return dict(zip(value_keys, values))
+        vdict = dict()
+        for v in values:
+            # value_keys = [f'{author.upper()}_{namelist_id.upper()}_{key.upper()}_{vkey.upper()}' for vkey in values]
+            value_key = f'{author}_{namelist_id}_{key}_{v}'
+            value_key = re.sub('[^0-9a-zA-Z]+', '_', value_key).upper()
+            vdict[value_key] = v
+        return vdict
     else:
-        return {f"{author.upper()}_{namelist_id.upper()}_{key.upper()}": values}
+        value_key = re.sub('[^0-9a-zA-Z]+', '_', key).upper()
+        return {f"{author.upper()}_{namelist_id.upper()}_{value_key}": values}
 
 
 def clean(txt):
-    logging.debug(f'Cleaning txt {txt}...')
+    logger.debug(f'Cleaning txt {txt}...')
     cleaned = ''.join(char for char in txt if char in printable).strip()
     return cleaned
 
@@ -271,7 +253,7 @@ def csv_template(args):
     with open(file_dest, 'w', newline='\n') as file:
         writer = csv.writer(file)
         writer.writerow(fields)
-        logging.info(f'Blank CSV template written to {file_dest}')
+        logger.info(f'Blank CSV template written to {file_dest}')
 
 
 def main():
@@ -279,8 +261,12 @@ def main():
     if args.dump_csv_template:
         csv_template(args)
     else:
+        st = datetime.datetime.now()
         create_mod(args)
         con.close()
+        et = datetime.datetime.now()
+        elapsed_time = et - st
+        logger.info(f'NAMELIST MOD GENERATION COMPLETED IN {elapsed_time}.')
 
 
 parser = argparse.ArgumentParser(
@@ -290,6 +276,7 @@ parser = argparse.ArgumentParser(
 parser.add_argument('-c', '--namelists', help="path to the directory with namelist csv files", required=False)
 parser.add_argument('-a', '--author', help="mod author", required=False)
 parser.add_argument('-m', '--mod_name', help="name to use for the generated mod", required=False)
+parser.add_argument('-M', '--multiprocess', default=False, help='activate multiprocessing mode', action='store_true')
 parser.add_argument('-d', '--dump_csv_template', help='dump a blank csv with namelist headers with the specified name',
                     required=False)
 
@@ -298,9 +285,10 @@ if __name__ == "__main__":
         sys.exit(main())
     except Exception as e:
         con.close()
-        logging.error(f"Process failed with {e}")
+        failure_cleanup()
+        logger.error(f"Process failed with {e}")
 
-# TODO: For localization, need to resolve issue where tokens get moved. Maybe based on token put in an example word
+# TODO: For localisation, need to resolve issue where tokens get moved. Maybe based on token put in an example word
 # based on what kind of token it is (first for $ORD$, I for $R$ and 1 for $C$). Then replace example token before writing.
 # TODO: namelist file with titles are all in korean.
-# TODO: Once that's resolved, need to use localization keys for all other fields for full translated localization.
+# TODO: Once that's resolved, need to use localisation keys for all other fields for full translated localisation.
