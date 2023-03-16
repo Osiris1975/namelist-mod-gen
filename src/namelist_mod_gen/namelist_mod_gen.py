@@ -36,17 +36,16 @@ def make_mod_directories(mod_name):
 def abs_file_paths(directory):
     for dirpath, _, filenames in os.walk(directory):
         for f in filenames:
-            yield os.path.abspath(os.path.join(dirpath, f))
+            if f.endswith(".csv"):
+                print(f'Found file "{f}"')
+                yield os.path.abspath(os.path.join(dirpath, f))
 
 
 def create_mod(args):
     mod_dirs = make_mod_directories(args.mod_name)
     csv_files = abs_file_paths(args.namelists)
     namelist_info = {}
-
     for f in csv_files:
-        if 'DS_Store' in f:
-            continue
         nl_dict, ord_dict = csv_to_dicts(f, args.author.lower())
         namelist_info[nl_dict['namelist_id']] = {
             'file': f,
@@ -80,7 +79,7 @@ def create_mod(args):
                 nl_loc = nl_loc_template.render(dict_item=namelist_info)
                 file.write(nl_loc)
                 print(f'Namelist localization file written to {namelist_loc_file}')
-
+    print(f'Done parsing files in "{args.namelists}"')
 
 def create_seq_key(key, value, author, id):
     ord = re.search(r'\$\S+\$', value).group().replace('$', '')
@@ -137,16 +136,20 @@ def main():
     if args.dump_csv_template:
         csv_template(args)
     else:
+        if args.author == c.DEFAULT_AUTHOR:
+            print(f"No author provided - using {c.DEFAULT_AUTHOR}")
+        if args.mod_name == c.DEFAULT_MOD_NAME:
+            print(f"No mod name provided - using {c.DEFAULT_MOD_NAME}")
         create_mod(args)
 
 
 parser = argparse.ArgumentParser(
     description='A tool for creating Stellaris namelist mods from a CSV file',
-    usage='namelist_generator.py -c [NAMELIST_FILE]',
+    usage='namelist_generator.py -c [NAMELIST_DIRECTORY] -a [AUTHOR_NAME] -m [MOD_NAME]',
     formatter_class=argparse.ArgumentDefaultsHelpFormatter)
-parser.add_argument('-c', '--namelists', help="path to the directory with namelist csv files", required=False)
-parser.add_argument('-a', '--author', help="mod author", required=False)
-parser.add_argument('-m', '--mod_name', help="name to use for the generated mod", required=False)
+parser.add_argument('-c', '--namelists', help="path to the directory with namelist csv files", default=os.getcwd(), required=False)
+parser.add_argument('-a', '--author', help="mod author", default=c.DEFAULT_AUTHOR, required=False)
+parser.add_argument('-m', '--mod_name', help="name to use for the generated mod", default=c.DEFAULT_MOD_NAME, required=False)
 parser.add_argument('-d', '--dump_csv_template', help='dump a blank csv with namelist headers with the specified name',
                     required=False)
 
