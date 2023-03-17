@@ -14,4 +14,6 @@ clean:
 	rm -f deployables/osiris_namelists.zip
 	rm -rf src/namelist_mod_gen/generated_mods/osiris_namelists
 
+build:
+	python3 build
 release: clean build_osiris mod_deployable
