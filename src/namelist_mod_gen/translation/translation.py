@@ -10,7 +10,9 @@ from difflib import get_close_matches
 from queue import Queue
 from random import choice
 
+import backoff
 import colorlog
+import requests.exceptions
 import translators as ts
 
 from src.namelist_mod_gen.constants import constants as c
@@ -30,6 +32,7 @@ logger.addHandler(file_handler)
 logger.setLevel(loglevel)
 
 threadLimiter = threading.BoundedSemaphore(c.THREAD_CONCURRENCY)
+skipped_translators = []
 
 
 class TransThread(threading.Thread):
@@ -83,14 +86,18 @@ def validate_translation(trans_array, original_txt):
 
 
 def clean(txt):
-    s = regex.sub(r'[^a-zA-Z0-9_,\'\.\$\s\p{script=Latin}()-]', '', txt).rstrip('.')
+    s = regex.sub(r'[^a-zA-Z0-9_,\'\.\$\s\p{script=Latin}()-]\'', '', txt).rstrip('.')
     return s
 
 
 def finalize(txt, token):
-    underscore_loc = txt.rfind('_')
-    if (len(txt) != underscore_loc - 1) and txt[underscore_loc + 1] != ' ':
-        txt = txt.replace('_', '_ ')
+    if '_' in txt:
+        underscore_loc = txt.rfind('_')
+        try:
+            if (len(txt) != underscore_loc - 1) and txt[underscore_loc + 1] != ' ':
+                txt = txt.replace('_', '_ ')
+        except IndexError as e:
+            logger.error(f'Retokenization of {txt} with {token} failed: {e}')
     return clean(txt.replace('_', token))
 
 
@@ -102,15 +109,23 @@ def pronoun(key):
     return False
 
 
+def get_active_pool(lang_code):
+    active_pool = copy.copy(c.LANG_TRANS_MAP[lang_code])
+    return [t for t in active_pool if t not in skipped_translators]
+
+
 def translate(key, txt, lang_code):
     logger.info(f'\n[------------------TRANSLATING {txt.upper()} TO {lang_code.upper()}------------------]')
     if txt == '' or txt is None:
         return key, txt
     token = ''
     if '$' in txt:
-        token = regex.match(r'\$\S+\$', txt).group().upper()
-        txt = txt.replace(token, '_')
-    active_pool = copy.copy(c.LANG_TRANS_MAP[lang_code])
+        try:
+            token = regex.search(r'\$\w+\$', txt).group().upper()
+        except Exception as e:
+            logger.error(f'Token matching failed: {e}')
+    txt = regex.sub(r'\$\w+\$', '_', txt).title()
+    active_pool = get_active_pool(lang_code)
     translated = check_in_db(txt, lang_code).rstrip('.')
     if translated:
         logger.info(f'Translation({lang_code}) for {txt} found in db: {translated}')
@@ -121,19 +136,23 @@ def translate(key, txt, lang_code):
         for translator in active_pool:
             logger.debug(f'Current translator pool {active_pool}')
             while len(trans_array) != 5:
-                if len(active_pool) == 0:
-                    break
                 translator = choice(active_pool)
-                active_pool.remove(translator)
                 try:
                     translation = clean(
                         ts.translate_text(txt, translator, from_language='en', to_language=lang_code))
                     trans_array.append(translation)
                     translators.append(translator)
-
+                    logger.info(f'Translator ({translator}) succeeded: {txt} to {translation}')
+                except requests.exceptions.SSLError:
+                    logger.warning(f'Removing translator {translator} for the pool for this run.')
+                    skipped_translators.append(translator)
                 except Exception as e:
                     logger.error(
-                        f'Translation exception: Text:{txt} Translator: {translator} | ToLang: {lang_code} | Error: {e}')
+                        f'Translation exception: Text:{txt} | Translator: {translator} | ToLang: {lang_code} | Error: {e}')
+                finally:
+                    active_pool.remove(translator)
+                    if len(active_pool) == 0:
+                        active_pool = get_active_pool(lang_code)
 
             translated = validate_translation(trans_array, txt)
             translators_string = ','.join(translators)
@@ -143,7 +162,7 @@ def translate(key, txt, lang_code):
         if not translated:
             translated = txt
             insert(txt, translated, lang_code, None, False, True)
-        return key, finalize(translated, token)
+        return key, finalize(translated.title(), token)
 
 
 def translate_dict(indict, to_lang_code):
@@ -151,10 +170,18 @@ def translate_dict(indict, to_lang_code):
     counter = 0
     thread_pool = []
     my_queue = Queue()
+    thread_inputs = []
     for k, v in indict.items():
         this_cnt = counter + 1
         thread_id = f'{k}_{v}'
         logger.debug(f'Attempting to translate {k}: {v} to {to_lang_code}')
+        input = {
+            "key": k,
+            "txt": v,
+            "to_lang_code": to_lang_code,
+            "queue": my_queue
+        }
+        thread_inputs.append(input)
         thread = TransThread(this_cnt, thread_id, k, v, to_lang_code, my_queue)
         thread_pool.append(thread)
 

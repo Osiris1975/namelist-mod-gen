@@ -97,20 +97,20 @@ def create_localized_namelist_listing(input, author, root_loc_dir):
             else:
                 title = info['title']
             def_dict[nl] = {
-                'title': title
+                'title': title.title().replace('(onl)', '(ONL)').replace('(Onl)', '(ONL)')
             }
 
-            nl_def_file = os.path.join(root_loc_dir, lang, f"name_lists/{author.lower()}_namelist_l_{lang}.yml")
-            try:
-                if not os.path.exists(nl_def_file):
-                    with io.open(nl_def_file, 'w', encoding='utf-8') as file:
-                        nl_loc = nl_def_template.render(dict_item=def_dict, author=author, lang=lang)
-                        file.write(nl_loc)
-                        logger.info(f'Localized namelist description file written to {nl_def_file}')
-                else:
-                    logger.warning(f'File already exists:{nl_def_file}. Skipping...')
-            except Exception as e:
-                logger.error(f'Failed to create {nl_def_file}: {e}')
+        nl_def_file = os.path.join(root_loc_dir, lang, f"name_lists/{author.lower()}_namelist_l_{lang}.yml")
+        try:
+            if not os.path.exists(nl_def_file):
+                with io.open(nl_def_file, 'w', encoding='utf-8') as file:
+                    nl_loc = nl_def_template.render(dict_item=def_dict, author=author, lang=lang)
+                    file.write(nl_loc)
+                    logger.info(f'Localized namelist description file written to {nl_def_file}')
+            else:
+                logger.warning(f'File already exists:{nl_def_file}. Skipping...')
+        except Exception as e:
+            logger.error(f'Failed to create {nl_def_file}: {e}')
 
 
 def create_localized_translations(loc_inputs):
@@ -200,7 +200,6 @@ def create_seq_key_dict(key, values, author, namelist_id):
     if len(values) > 1:
         vdict = dict()
         for v in values:
-            # value_keys = [f'{author.upper()}_{namelist_id.upper()}_{key.upper()}_{vkey.upper()}' for vkey in values]
             value_key = f'{author}_{namelist_id}_{key}_{v}'
             value_key = re.sub('[^0-9a-zA-Z]+', '_', value_key).upper()
             vdict[value_key] = v
@@ -285,6 +284,7 @@ if __name__ == "__main__":
         sys.exit(main())
     except Exception as e:
         con.close()
+        file_handler.close()
         failure_cleanup()
         logger.error(f"Process failed with {e}")
 
