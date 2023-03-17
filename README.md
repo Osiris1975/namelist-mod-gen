@@ -23,11 +23,12 @@ will be dictated by interest outside of the author's usage.
 * Creates namelists from one or more CSV files and produces a single mod for all the namelists. 
 * Has resolved the %SEQ% issue introduced with Stellaris 3.6.0
 * Write a blank csv template to fill out.
+* Basic localization.
 
 ### Planned Features
 
-* NSC Support
 * Write a CSV from a given namelist text file. 
+* Translated localization.
 
 ### Installing Python
 
