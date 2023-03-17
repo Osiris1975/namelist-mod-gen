@@ -1,17 +1,19 @@
 #!/usr/bin/env python
 
 import argparse
-import constants as c
 import csv
 import io
-from jinja2 import Environment, FileSystemLoader
-import jinja2schema
 import os
+import re
 import shutil
 import sys
-import re
-from pathlib import Path
 from collections import OrderedDict
+from pathlib import Path
+
+import jinja2schema
+from jinja2 import Environment, FileSystemLoader
+
+import constants as c
 
 template_loader = FileSystemLoader(searchpath=c.TEMPLATES_DIR)
 template_env = Environment(loader=template_loader)
@@ -20,7 +22,8 @@ template_env = Environment(loader=template_loader)
 def make_mod_directories(mod_name):
     dirs = {
         "namelist": os.path.join(c.MOD_OUTPUT_DIR, mod_name, 'common', 'name_lists'),
-        "localization": [os.path.join(c.MOD_OUTPUT_DIR, mod_name, 'localisation', lang, 'name_lists') for lang in c.LANGUAGES.values()]
+        "localization": [os.path.join(c.MOD_OUTPUT_DIR, mod_name, 'localisation', lang, 'name_lists') for lang in
+                         c.LANGUAGES.values()]
     }
     if os.path.exists(dirs["namelist"]):
         shutil.rmtree(dirs["namelist"])
@@ -80,6 +83,7 @@ def create_mod(args):
                 file.write(nl_loc)
                 print(f'Namelist localization file written to {namelist_loc_file}')
     print(f'Done parsing files in "{args.namelists}"')
+
 
 def create_seq_key(key, value, author, id):
     ord = re.search(r'\$\S+\$', value).group().replace('$', '')
@@ -147,9 +151,11 @@ parser = argparse.ArgumentParser(
     description='A tool for creating Stellaris namelist mods from a CSV file',
     usage='namelist_generator.py -c [NAMELIST_DIRECTORY] -a [AUTHOR_NAME] -m [MOD_NAME]',
     formatter_class=argparse.ArgumentDefaultsHelpFormatter)
-parser.add_argument('-c', '--namelists', help="path to the directory with namelist csv files", default=os.getcwd(), required=False)
+parser.add_argument('-n', '--namelists', help="path to the directory with namelist csv files", default=os.getcwd(),
+                    required=False)
 parser.add_argument('-a', '--author', help="mod author", default=c.DEFAULT_AUTHOR, required=False)
-parser.add_argument('-m', '--mod_name', help="name to use for the generated mod", default=c.DEFAULT_MOD_NAME, required=False)
+parser.add_argument('-m', '--mod_name', help="name to use for the generated mod", default=c.DEFAULT_MOD_NAME,
+                    required=False)
 parser.add_argument('-d', '--dump_csv_template', help='dump a blank csv with namelist headers with the specified name',
                     required=False)
 

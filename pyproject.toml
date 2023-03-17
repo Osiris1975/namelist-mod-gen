@@ -4,7 +4,7 @@ version = "0.0.1"
 description = "a tool for generating stellaris namelist mods"
 authors = ["Osiris1975 <amr@aaleil.com>"]
 readme = "README.md"
-packages = [{include = "namelist_mod_gen"}]
+packages = [{include = "src/namelist_mod_gen"}]
 
 [tool.poetry.dependencies]
 python = "^3.10"

@@ -131,3 +131,4 @@ dmypy.json
 /deployables/
 /poetry.lock
 /src/namelist_mod_gen/translations.db
+/generated_mods/
