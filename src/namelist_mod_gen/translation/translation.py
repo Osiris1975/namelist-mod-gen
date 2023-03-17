@@ -10,7 +10,6 @@ from difflib import get_close_matches
 from queue import Queue
 from random import choice
 
-import backoff
 import colorlog
 import requests.exceptions
 import translators as ts

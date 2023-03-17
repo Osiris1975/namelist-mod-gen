@@ -130,3 +130,4 @@ dmypy.json
 .idea
 /deployables/
 /generated_mods/
+/src/namelist_mod_gen/translations.db
