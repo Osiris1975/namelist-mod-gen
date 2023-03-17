@@ -11,7 +11,10 @@ ORD_TYPES = {
     "C": "SEQ",
     "O": "ORD",
     "R": "R",
-    "ORD": "ORD"
+    "ORD": "ORD",
+    "HEX": "HEX",
+    "CC": "SEQ",
+    "CCC": "SEQ"
 }
 
 # SEQUENTIAL_NAMES = [
