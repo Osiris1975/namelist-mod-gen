@@ -1,0 +1,279 @@
+﻿### Western Nations (ONL)
+### Created by osiris
+
+osiris_westernnations = {
+
+	ship_names = {
+
+        generic = {
+            "Malta" "Bolivia" "Cuba" "Trinidad" "Grenada" "Germany" "Italy" "Denmark" "Dominica" "Spain" "Argentina" "Brazil" "Saint Lucia" "Suriname" "Monaco" "Austria" "Dominican Republic" "Sweden" "England" "Costa Rica" "Panama" "Jamaica" "Finland" "Chile" "Iceland" "Bahamas" "Ireland" "Nicaragua" "Scotland" "Haiti" "Colombia" "Mexico" "Paraguay" "Uruguay" "Andorra" "Guyana" "Liechtenstein" "Barbados" "Portugal" "Netherlands" "San Marino" "Belgium" "France" "Ecuador" "Norway" "America" "Wales" "Honduras" "Venezuela" "Belize" "El Salvador" "Guatemala" "Canada" "Luxembourg" "Peru" "Antigua" "Switzerland"
+        }
+
+		corvette = {
+			"Meko 200" "Spitfire" "Descubierta" "Warthog" "Skyray" "Corsair" "Airacobra" "Skjold" "Osprey" "Superfortress" "Amazonas" "Wildcat" "Leander" "Stratofortress" "Invader" "Avenger" "Phantom" "Trafalgar" "Steregushchy" "Dauntless" "Nighthawk" "He 162" "Phantom II" "Brandenburg" "Shooting Star" "Hawk" "Thunderchief" "Nighthawk" "F125" "Black Hawk" "Bay" "Tempest" "Starfighter" "Pave Hawk" "Sabre" "Dragonfly" "Tornado" "Reaper" "Fearless" "Havoc" "Apache" "Oaxaca" "Dreadnought" "Gnat" "Skjold" "Bayern" "Spitfire" "Cougar" "Baden-Wurttemberg" "Type 45" "Raptor" "Predator" "America" "Berlin" "Merlin" "Ada-class" "Vanguard" "Argos" "Intruder" "SBD Dauntless" "Thunderbolt" "Super Etendard" "Tripartite" "Victor" "Tigershark" "Valiant" "Kingcobra" "Talon" "D'Estienne d'Orves" "Comandanti" "Cobra" "Ton" "Yavuz-class" "Black Hawk" "Goshawk" "Draken" "Vulcan" "Skyhawk" "Astute" "Talon" "Chinook" "Cyclone" "Thunderbolt" "Marauder" "Galaxy" "Skytrain" "Sabre" "Defiant" "Mirage" "Typhoon" "Tempest" "Canberra" "Gabya" "Lysander" "Gladiator" "Blackhawk" "Zumwalt" "Ar 234" "Mistral" "Oliver Hazard Perry" "Eagle" "Globemaster" "Banshee" "Sachsen-Anhalt" "Hamburg" "Ar 234" "Visby" "Nimrod" "Blackhawk" "Mustang" "Lightning" "Hellcat" "Gripen" "Apache" "Kingcobra" "Brandenburg" "Mitchell" "Gnat" "Taranis" "Mitchell" "Tucano" "Koln" "Carrasco" "Dauntless" "Skywarrior" "Wasp" "Hercules" "Ohio" "Gowind" "Los Angeles" "Skyraider" "K130 Braunschweig" "Nimrod" "Shooting Star" "Viggen" "Lancer" "Mustang" "Goshawk" "Storch" "Viking" "Sandown" "Corsair" "Nelson" "Daring" "Taranis" "Havoc" "Harrier" "Falcon" "Vulcan" "Tigershark" "Anzac" "Hornet" "Harrier II" "Reaper" "Predator" "Skytrain" "Lancer" "Thunderbolt" "Absalon" "Corsair" "Falcon" "Tomcat" "Texan" "Queen Elizabeth" "La Combattante" "Fridtjof Nansen" "Virginia" "Intruder" "Bremen" "Shooting" "San Antonio" "Jaguar" "Eagle" "Horizon" "Almirante Lynch" "Harrier II" "Stratotanker" "Spirit" "Duke" "Typhoon" "Collins" "Bearcat" "Blackbird" "Resolution" "Galaxy" "Skyhawk" "Bathurst" "Scorpène" "Demon" "Dragon Lady" "Skyraider" "Chinook" "Dauphin" "Draken" "Globemaster" "Gladiator" "Warhawk" "Whirlwind" "Invader" "Shooting" "Storch" "Raptor" "Osprey" "Aardvark" "Seahawk" "Sachsen" "Visby" "River" "Cougar" "Aardvark" "Bearcat" "Newport" "Starfighter" "Lightning II" "Thunderbolt II" "San Giorgio" "Victor" "Blackbird" "Talwar" "Warthog" "Tucano" "Tornado" "Bearcat" "Kilo" "Flower" "Thunderbolt II" "Phantom" "Pave Hawk" "Broadsword" "Dragon Lady" "Hellcat" "Cassiopea" "Hornet" "Canberra" "Lightning" "Wildcat" "Stratofortress" "Invincible" "Lysander" "Valiant" "Dauphin" "Nansen" "Harrier" "Avenger" "Whirlwind" "Crusader" "Warhawk" "Karel Doorman" "Viggen" "Gripen" "Catamaran" "Osumi" "Spirit" "He 111" "Superfortress" "Texan II" "Lightning II" "Hercules" "Seahawk" "Absalon" "Hawk" "Super Sabre" "Halifax" "Airacobra" "FREMM" "Defiant" "Rotterdam" "Type 26" "Tomcat" "Merlin"
+		}
+
+        frigate = {
+            "Globemaster" "Lightning II" "Mustang" "Anzac" "Dragon Lady" "Havoc" "Bearcat" "Leander" "Hornet" "Spitfire" "Skjold" "Super Etendard" "Thunderbolt" "Starfighter" "Havoc" "Skytrain" "Skyraider" "Wasp" "Stratofortress" "Ohio" "Cougar" "Victor" "Ton" "Tornado" "San Giorgio" "Harrier II" "Sandown" "Galaxy" "Chinook" "Airacobra" "SBD Dauntless" "Argos" "Cyclone" "Karel Doorman" "Dauntless" "Gowind" "Stratofortress" "Lightning II" "Lightning" "Tripartite" "Visby" "Warhawk" "FREMM" "Dauntless" "Tomcat" "Harrier" "Skyhawk" "Spirit" "Falcon" "Texan II" "Carrasco" "Tigershark" "Black Hawk" "Super Sabre" "Pave Hawk" "Fridtjof Nansen" "Trafalgar" "Nighthawk" "Seahawk" "Vulcan" "Blackbird" "Resolution" "Goshawk" "Aardvark" "Tucano" "Berlin" "Gladiator" "Skytrain" "Canberra" "Mitchell" "Bayern" "He 162" "Thunderbolt II" "Nansen" "Chinook" "Defiant" "Taranis" "Tornado" "Viking" "Predator" "Amazonas" "Reaper" "Galaxy" "Talwar" "Marauder" "Warthog" "Lightning" "Hawk" "Stratotanker" "River" "Aardvark" "Absalon" "Spitfire" "Broadsword" "Superfortress" "Kingcobra" "Gnat" "Apache" "Nimrod" "Blackhawk" "Eagle" "Black Hawk" "Blackhawk" "Corsair" "Dragonfly" "Tempest" "Draken" "Kingcobra" "Typhoon" "Valiant" "Shooting Star" "Type 26" "Viggen" "Brandenburg" "Osprey" "Invader" "Ar 234" "Tigershark" "Invader" "Koln" "Cassiopea" "Draken" "Tempest" "Taranis" "Bremen" "Phantom" "Airacobra" "Valiant" "Hercules" "Collins" "Newport" "Zumwalt" "Mirage" "Storch" "Crusader" "Mitchell" "Shooting" "Whirlwind" "Gladiator" "Queen Elizabeth" "Fearless" "Talon" "Goshawk" "Reaper" "Sachsen-Anhalt" "Cobra" "Rotterdam" "Canberra" "Catamaran" "Osprey" "Gabya" "Seahawk" "Brandenburg" "Cougar" "Skywarrior" "Spirit" "Flower" "Harrier II" "Corsair" "Oliver Hazard Perry" "Duke" "Gripen" "Osumi" "Los Angeles" "Skyhawk" "Kilo" "Virginia" "Viggen" "Nimrod" "Mustang" "Ada" "Thunderbolt" "Wildcat" "San Antonio" "Lancer" "Horizon" "Halifax" "Bearcat" "Tucano" "Raptor" "Hellcat" "Pave Hawk" "Defiant" "Nelson" "Superfortress" "Hamburg" "Blackbird" "Type 45" "Sachsen" "Starfighter" "Dauphin" "Dauphin" "Globemaster" "F125" "Corsair" "La Combattante" "Avenger" "Vulcan" "Scorpène" "Phantom II" "Falcon" "Vanguard" "Phantom" "Warthog" "Mistral" "Lysander" "Merlin" "Sabre" "Ar 234" "Typhoon" "Victor" "America" "Predator" "Thunderbolt II" "Almirante Lynch" "Storch" "Bay" "Thunderchief" "Eagle" "Daring" "Lysander" "Sabre" "Nighthawk" "Skyraider" "Bathurst" "Bearcat" "Gnat" "Texan" "Warhawk" "Jaguar" "Skyray" "Steregushchy" "Dreadnought" "Merlin" "K130 Braunschweig" "Astute" "Banshee" "Visby" "Intruder" "Raptor" "Hellcat" "Thunderbolt" "Invincible" "Gripen" "Shooting Star" "Meko 200" "Skjold" "He 111" "Descubierta" "Harrier" "Dragon Lady" "Hawk" "Hornet" "Apache" "Absalon" "Tomcat" "Avenger" "Shooting" "Wildcat" "Oaxaca" "Baden-Wurttemberg" "Comandanti" "Hercules" "Intruder" "Demon" "Lancer" "Whirlwind" "Talon" "Yavuz"
+        }
+
+		destroyer = {
+			"Skyhawk" "Hercules" "Eagle" "Dreadnought" "Superfortress" "Skyraider" "Osprey" "Oaxaca" "Fearless" "Kingcobra" "Starfighter" "Typhoon" "Valiant" "Gabya" "Dragonfly" "Skytrain" "Mistral" "Demon" "Warthog" "Tripartite" "Bearcat" "Brandenburg" "Tomcat" "Falcon" "Corsair" "Steregushchy" "Thunderbolt II" "Skyhawk" "Avenger" "Scorpène" "Valiant" "Intruder" "Visby" "Gnat" "Bremen" "Descubierta" "Corsair" "Black Hawk" "Sabre" "Nelson" "Berlin" "Lysander" "Defiant" "Sachsen" "Spirit" "Thunderbolt" "Tornado" "He 111" "Wildcat" "Flower" "Queen Elizabeth" "Taranis" "Sandown" "Skyray" "Gowind" "Storch" "Canberra" "Stratotanker" "Tucano" "Thunderchief" "Stratofortress" "Globemaster" "Amazonas" "Airacobra" "Nansen" "Kilo" "San Giorgio" "Rotterdam" "Aardvark" "Spitfire" "Lancer" "San Antonio" "Tornado" "Hornet" "Absalon" "Galaxy" "Trafalgar" "Leander" "Hornet" "Lightning" "America" "Talwar" "Raptor" "Vulcan" "Koln" "He 162" "Tucano" "Collins" "Eagle" "Dauphin" "Resolution" "Falcon" "Mustang" "Super Etendard" "Shooting" "Ada-class" "D'Estienne d'Orves" "Phantom" "Aardvark" "Sabre" "Blackbird" "Invader" "Nimrod" "Super Sabre" "Tigershark" "Virginia" "Vanguard" "Carrasco" "Seahawk" "Almirante Lynch" "Havoc" "Bearcat" "La Combattante" "Harrier" "Visby" "Stratofortress" "Vulcan" "Type 45" "Skyraider" "Thunderbolt" "Mitchell" "Anzac" "Shooting Star" "Corsair" "Oliver Hazard Perry" "Reaper" "Wasp" "Broadsword" "Marauder" "Taranis" "Blackhawk" "Nimrod" "Defiant" "Newport" "Whirlwind" "Whirlwind" "Nighthawk" "Los Angeles" "Horizon" "Cassiopea" "Goshawk" "Lysander" "Gladiator" "Blackhawk" "Raptor" "Brandenburg" "Galaxy" "Tomcat" "Mitchell" "Phantom" "Osumi" "Sachsen-Anhalt" "Harrier II" "Talon" "Texan" "Dauntless" "Phantom II" "Globemaster" "Seahawk" "Mirage" "Cyclone" "Invader" "Baden-Wurttemberg" "Jaguar" "Shooting Star" "Warhawk" "Blackbird" "Ton" "Pave Hawk" "Invincible" "Storch" "Kingcobra" "Dragon Lady" "Type 26" "Bayern" "Cobra" "Skytrain" "Hercules" "Cougar" "Daring" "Comandanti" "Hawk" "Fridtjof Nansen" "Intruder" "Havoc" "Merlin" "Thunderbolt II" "Hellcat" "Gladiator" "Lancer" "Absalon" "Mustang" "Hamburg" "Typhoon" "Pave Hawk" "Victor" "Catamaran" "Warhawk" "Lightning" "Bathurst" "Skywarrior" "Gripen" "Hellcat" "Apache" "Dauntless" "Merlin" "Dragon Lady" "Dauphin" "Tigershark" "Yavuz-class" "K130 Braunschweig" "Argos" "Chinook" "Apache" "Nighthawk" "Superfortress" "Victor" "Bay" "Skjold" "Lightning II" "Banshee" "Astute" "Wildcat" "Skjold" "Canberra" "Gripen" "Bearcat" "Airacobra" "Zumwalt" "Viggen" "Draken" "Ohio" "Spirit" "Black Hawk" "Tempest" "Gnat" "Viking" "Karel Doorman" "Cougar" "Shooting" "Duke" "Predator" "Ar 234" "Meko 200" "Talon" "F125" "Goshawk" "Texan II" "SBD Dauntless" "Hawk" "Warthog" "Draken" "Spitfire" "Harrier II" "Harrier" "Avenger" "Osprey" "River" "Starfighter" "Lightning II" "Viggen" "Tempest" "Thunderbolt" "Crusader" "Chinook" "Halifax" "AR 234" "Predator" "Reaper"
+		}
+
+		cruiser = {
+			"Merkel" "de Gaulle" "Chretien" "Washington" "Bonaparte" "Victoria" "Disraeli" "Bolivar" "Mitterrand" "Obama" "Trudeau" "Louis XIV" "Diaz" "Bismarck" "Pearson" "Wilson" "Lincoln" "Roosevelt" "Thatcher" "Churchill" "Heath" "Kohl" "Elizabeth II" "Blair" "Macdonald" "Adenauer" "Mulroney" "Lincoln" "Schroeder" "Trudeau" "Attlee" "Pompidou" "Vargas" "Macron" "Brandt"
+		}
+		StrikeCruiser = {
+			"Hale" "Van den Burg" "Slessor" "Clark" "Hodges" "Cunningham" "Luns" "Lemnitzer" "Bartels" "Ramsay" "Shearer" "Somerville" "Kosciuszko" "Sirnick" "Dewey" "Sklavounos" "Bingham" "Joulwan" "Miranda" "Wolters" "Rogers" "Fraser" "Craddock" "Masaryk" "Barton" "Rickenbacker" "Tillman" "Bouchard" "Rice" "Pound" "Ritchie" "Galvin" "Tovey" "Douglass" "Ralston" "Breed" "King" "Halsey" "Fraser" "Leigh-Mallory" "Powell" "Perry" "Craddock" "Costilla" "Rokke" "Sklenka" "Woloszyn" "York" "Montgomery" "Equiano" "Ramsay" "Brooke-Popham" "Murphy" "Stirling" "Rasmussen" "Nimitz" "Marshall" "Mercier" "Hummel" "Demers" "van Uhm" "Bradley" "Hart" "Wilson" "Joulwan" "Sheppard" "Palomeros" "Harville" "Somerville" "Brooke" "Doss" "Gortney" "Sturdee" "Guevara" "Spruance" "Odierno" "Bader" "Houghton" "Tedder" "Goransson" "Henault" "Naumann" "Rommel" "Hemingway" "Jones" "Cunningham" "Norstad" "Haig" "Stavridis" "Scowcroft" "Rogers" "Bortoluzzi" "Petraeus" "Richards" "Beatty" "McCrae" "Carver" "Clark" "Giambastiani" "Shalikashvili" "Foggo" "Wake-Walker" "Jones" "Pavel" "Allen" "Smith" "Eisenhower" "Horton" "Jellicoe" "Mountbatten" "Jones" "Scaparrotti" "Rokke" "Sherman" "Lanata" "Wallace" "Fisher" "Phillips" "Vance" "Jones" "Cunningham" "Breedlove" "Dawes" "Patch" "Mattis" "Bartels" "Bolivar" "Schweitzer" "Di Paola" "Balboa" "Portal" "Ridgway"
+		}
+		Battlecruiser = {
+			"Bader" "Balboa" "Barton" "Bingham" "Bolivar" "Carver" "Costilla" "Dawes" "Doss" "Douglass" "Equiano" "Guevara" "Hale" "Hart" "Hemingway" "Jones" "Kosciuszko" "Marshall" "Masaryk" "McCrae" "Miranda" "Murphy" "Patch" "Rickenbacker" "Rogers" "Rommel" "Schweitzer" "Sherman" "Stirling" "Tillman" "Wallace" "York" "Breedlove" "Rasmussen" "Stavridis" "Foggo" "Wolters" "Mercier" "Lanata" "Bartels" "Pavel" "Gortney" "Scaparrotti" "Hodges" "Sklavounos" "Smith" "Palomeros" "Di Paola" "Shearer" "Jones" "Richards" "Houghton" "Demers" "Henault" "Vance" "Bouchard" "Van den Burg" "van Uhm" "Clark" "Joulwan" "Naumann" "Rokke" "Craddock" "Bortoluzzi" "Giambastiani" "Rice" "Odierno" "Scowcroft" "Petraeus" "Mattis" "Allen" "Breed" "Woloszyn" "Sklenka" "Bartels" "Sirnick" "Goransson" "Harville" "Hummel" "Perry" "Shalikashvili" "Joulwan" "Ralston" "Clark" "Jones" "Rokke" "Craddock" "Sheppard" "Luns" "Haig" "Powell" "Jones" "Galvin" "Rogers" "Lemnitzer" "Norstad" "Eisenhower" "Ridgway" "Bradley" "Montgomery" "Wilson" "Slessor" "Tedder" "Ramsay" "Cunningham" "Brooke" "Leigh-Mallory" "Portal" "Pound" "Somerville" "Tovey" "Fraser" "Horton" "Halsey" "Spruance" "Nimitz" "King" "Cunningham" "Ramsay" "Brooke-Popham" "Phillips" "Wake-Walker" "Somerville" "Fraser" "Ritchie" "Mountbatten" "Cunningham" "Sturdee" "Jellicoe" "Beatty" "Fisher" "Dewey"
+		}
+		battleship = {
+			"Brandt" "Heath" "Lincoln" "Merkel" "Churchill" "Disraeli" "Victoria" "Bismarck" "Thatcher" "Chretien" "Obama" "Trudeau" "Attlee" "Trudeau" "Bolivar" "Adenauer" "Macdonald" "Mulroney" "Bonaparte" "Pearson" "Vargas" "Macron" "Blair" "Mitterrand" "de Gaulle" "Wilson" "Pompidou" "Washington" "Kohl" "Schroeder" "Elizabeth II" "Roosevelt" "Diaz" "Louis XIV" "Lincoln"
+		}
+		Carrier = {
+			"Bonaparte" "Lincoln" "Kohl" "Pompidou" "Heath" "Roosevelt" "Vargas" "Disraeli" "Victoria" "Blair" "Attlee" "Macdonald" "Thatcher" "Obama" "Lincoln" "Mulroney" "Elizabeth II" "Chretien" "Churchill" "Bolivar" "Bismarck" "Trudeau" "Brandt" "Louis XIV" "Washington" "Wilson" "Schroeder" "Adenauer" "Pearson" "de Gaulle" "Mitterrand" "Diaz" "Merkel" "Trudeau" "Macron"
+		}
+		Dreadnought = {
+			"Bolivar" "Victoria" "Bonaparte" "Mulroney" "Vargas" "Elizabeth II" "Mitterrand" "Merkel" "Macdonald" "Kohl" "Bismarck" "Blair" "Thatcher" "Heath" "Lincoln" "Roosevelt" "Macron" "Louis XIV" "Churchill" "Schroeder" "Brandt" "de Gaulle" "Disraeli" "Adenauer" "Pompidou" "Lincoln" "Pearson" "Wilson" "Trudeau" "Washington" "Chretien" "Trudeau" "Diaz" "Attlee" "Obama"
+		}
+		titan = {
+			"Wilson" "Lincoln" "Roosevelt" "Chretien" "Blair" "de Gaulle" "Macron" "Attlee" "Victoria" "Pompidou" "Pearson" "Mitterrand" "Washington" "Bismarck" "Obama" "Diaz" "Trudeau" "Macdonald" "Merkel" "Louis XIV" "Kohl" "Brandt" "Trudeau" "Heath" "Adenauer" "Bonaparte" "Bolivar" "Mulroney" "Thatcher" "Disraeli" "Schroeder" "Churchill" "Elizabeth II" "Lincoln" "Vargas"
+		}
+		Flagship = {
+			"Mont Blanc" "Logan" "Saint Elias" "Blackburn" "Fairweather" "Whitney" "Popocatepetl" "Lucania" "Pico de Orizaba" "Aconcagua"
+		}
+		colossus = {
+			"Mont Blanc" "Whitney" "Aconcagua" "Saint Elias" "Logan" "Pico de Orizaba" "Popocatepetl" "Fairweather" "Blackburn" "Lucania"
+		}
+		juggernaut = {
+			"Pico de Orizaba" "Saint Elias" "Whitney" "Blackburn" "Mont Blanc" "Popocatepetl" "Lucania" "Aconcagua" "Fairweather" "Logan"
+		}
+
+		constructor = {
+			"Dent Blanche" "Shasta" "Hood" "Grand Teton" "Denali" "Blanc de Courmayeur" "Elbert" "Robson" "Gran Paradiso" "Wildspitze" "Rainier" "Jungfrau" "Zugspitze" "Grossglockner" "Finsteraarhorn" "Weisshorn" "Matterhorn" "Washington" "Dom" "Grand Combin" "Dufourspitze" "Baker" "Eiger"
+		}
+
+		colonizer = {
+			"Como" "Onega" "Ladoga" "Erie" "Peipus" "Vattern" "Texcoco" "Maggiore" "Ness" "Huron" "Constance" "Balaton" "Geneva" "Michigan" "Winnipegosis" "Winnipeg" "Ontario" "Timiskaming" "Chapala" "Neagh" "Lucerne" "Tahoe" "Maracaibo" "Malaren" "Okeechobee" "Athabasca" "Manitoba" "Superior" "Vanern" "St. Clair" "Saimaa" "Garda" "Bourget" "Zurich" "Trasimeno" "Annecy"
+		}
+		sponsored_colonizer = {
+		"Manitoba" "Onega" "Geneva" "Ladoga" "Saimaa" "Texcoco" "Como" "Timiskaming" "Ness" "Michigan" "Malaren" "Winnipegosis" "Athabasca" "Superior" "Chapala" "Huron" "Winnipeg" "Maracaibo" "Constance" "Lucerne" "Okeechobee" "Neagh" "Erie" "Vattern" "Garda" "Vanern" "Maggiore" "Tahoe" "Balaton" "St. Clair" "Ontario" "Peipus"
+		}
+
+		science = {
+			"Newton" "Galilei" "Darwin" "Einstein" "Pasteur" "Curie" "Faraday" "Maxwell" "Mendel" "Fleming" "Hawking" "Kepler" "Boyle" "Planck" "Heisenberg" "Crick" "Franklin" "Feynman" "Bohr" "Schrodinger"
+		}
+
+		explorationship = {
+			"Cook" "Hudson" "Vespucci" "Lewis" "Franklin" "Livingstone" "Pike" "Clark" "Champlain" "Amundsen" "Drake" "Cortes" "La Salle" "Stanley" "Vancouver" "Cabot" "Pizarro" "Shackleton" "Magellan"
+		}
+
+		transport = {
+			"Expedition"
+		}
+
+		military_station_small = {
+			"Allied Combat Post"
+		}
+
+		military_station_medium = {
+			"Allied Fort"
+		}
+
+		military_station_large = {
+			"Allied Base"
+		}
+
+		ion_cannon = {
+			"Ulfhednar"
+		}
+
+		xl_cannon = {
+			"Varangian"
+		}
+	}
+
+	fleet_names = {
+		random_names = {
+			"Allied Fleet Alpha" "Allied Fleet Bravo" "Allied Fleet Charlie" "Allied Fleet Delta" "Allied Fleet Echo" "Allied Fleet Foxtrot" "Allied Fleet Golf" "Allied Fleet Hotel" "Allied Fleet India" "Allied Fleet Juliet" "Allied Fleet Kilo" "Allied Fleet Lima" "Allied Fleet Mike" "Allied Fleet November" "Allied Fleet Oscar" "Allied Fleet Papa" "Allied Fleet Quebec" "Allied Fleet Romeo" "Allied Fleet Sierra" "Allied Fleet Tango" "Allied Fleet Uniform" "Allied Fleet Victor" "Allied Fleet Whiskey" "Allied Fleet Xray" "Allied Fleet Yankee" "Allied Fleet Zulu"
+		}
+		sequential_name = OSIRIS_WESTERNNATIONS_FLEETNAMES_ORD
+	}
+
+	army_names = {
+
+		machine_defense = {
+			sequential_name = OSIRIS_WESTERNNATIONS_MACHINEDEFENSE_ORD
+		}
+
+		machine_assault_1 = {
+			sequential_name = OSIRIS_WESTERNNATIONS_MACHINEASSAULT1_ORD
+		}
+
+		machine_assault_2 = {
+			sequential_name = OSIRIS_WESTERNNATIONS_MACHINEASSAULT2_ORD
+		}
+
+		machine_assault_3 = {
+			sequential_name = OSIRIS_WESTERNNATIONS_MACHINEASSAULT3_ORD
+		}
+
+		defense_army = {
+			sequential_name = OSIRIS_WESTERNNATIONS_DEFENSEARMY_ORD
+		}
+
+		assault_army = {
+			sequential_name = OSIRIS_WESTERNNATIONS_ASSAULTARMY_ORD
+		}
+
+		slave_army = {
+			sequential_name = OSIRIS_WESTERNNATIONS_SLAVEARMY_ORD
+		}
+
+		clone_army = {
+			sequential_name = OSIRIS_WESTERNNATIONS_CLONEARMY_ORD
+		}
+
+		undead_army = {
+			sequential_name = OSIRIS_WESTERNNATIONS_UNDEADARMY_ORD
+		}
+
+		robotic_army = {
+			sequential_name = OSIRIS_WESTERNNATIONS_ROBOTICARMY_ORD
+		}
+
+		robotic_defense_army = {
+			sequential_name = OSIRIS_WESTERNNATIONS_ROBOTICDEFENSEARMY_ORD
+		}
+
+		psionic_army = {
+			sequential_name = OSIRIS_WESTERNNATIONS_PSIONICARMY_ORD
+		}
+
+		xenomorph_army = {
+			sequential_name = OSIRIS_WESTERNNATIONS_XENOMORPHARMY_ORD
+		}
+
+		gene_warrior_army = {
+			sequential_name = OSIRIS_WESTERNNATIONS_GENEWARRIORARMY_ORD
+		}
+
+		occupation_army = {
+			sequential_name = OSIRIS_WESTERNNATIONS_OCCUPATIONARMY_ORD
+		}
+
+		robotic_occupation_army = {
+			sequential_name = OSIRIS_WESTERNNATIONS_ROBOTICOCCUPATIONARMY_ORD
+		}
+
+		primitive_army = {
+			sequential_name = OSIRIS_WESTERNNATIONS_PRIMITIVEARMY_ORD
+		}
+		industrial_army = {
+			sequential_name = OSIRIS_WESTERNNATIONS_INDUSTRIALARMY_ORD
+		}
+		postatomic_army = {
+			sequential_name = OSIRIS_WESTERNNATIONS_POSTATOMICARMY_ORD
+		}
+	}
+
+	planet_names = {
+
+		generic = {
+			names = {
+				"Istanbul" "London" "Paris" "Madrid" "Barcelona" "Rome" "Berlin" "Athens" "Vienna" "Hamburg" "Milan" "Naples" "Munich" "Valencia" "Frankfurt" "Lisbon" "Dublin" "Porto" "Zurich" "Brussels"
+			}
+		}
+
+		pc_desert = {
+			names = {
+				"Riyadh" "Cairo" "Tehran" "Baghdad" "Ankara" "Algiers" "Casablanca" "Medina" "Jeddah" "Mashhad" "Marrakech" "Dubai" "Riyadh al Khabra" "Fès" "Mecca" "Sulaymaniyah" "Al Ain" "Erbil" "Khartoum" "Aswan"
+			}
+		}
+
+		pc_tropical = {
+			 names = {
+				"Barranquilla" "Belem" "Brasilia" "Cali" "Campo Grande" "Cancun" "Cartagena" "Cucuta" "Fortaleza" "Goiania" "Guadalajara" "Guayaquil" "La Paz" "Manaus" "Medellin" "Merida" "Monterrey" "Recife" "Salvador" "Santo Domingo"
+			}
+		}
+
+		pc_arid = {
+			names = {
+				"Phoenix" "Las Vegas" "Tucson" "San Diego" "El Paso" "Albuquerque" "Mesa" "Los Angeles" "Bakersfield" "Fresno" "San Antonio" "Juarez" "Austin" "San Jose" "Lubbock" "Hermosillo" "Santa Fe" "Sacramento" "Monterrey" "Roswell"
+			}
+		}
+
+		pc_continental = {
+			names = {
+				"Buenos Aires" "São Paulo" "Santiago" "Madrid" "Barcelona" "Rome" "Lima" "Montevideo" "Rio de Janeiro" "Valencia" "Seville" "Mendoza" "Porto" "Lisbon" "Rosario" "Bilbao" "La Plata" "Zaragoza" "Marseille" "Bordeaux"
+			}
+		}
+
+		pc_gaia = {
+			names = {
+				"Bois de Boulogne" "Tiergarten" "Chapultepec" "Ibirapuera" "Retiro" "Tivoli" "Stanley" "Vondel" "Golden Gate" "Griffith" "Stanley" "Buttes-Chaumont" "Hampstead Heath" "Kensington" "Luxembourg" "Bois de Vincennes" "Tuileries" "Millennium" "Borghese" "Ciutadella"
+			}
+		}
+
+		pc_ocean = {
+			names = {
+				"Palma de Mallorca" "Las Palmas de Gran Canaria" "Santa Cruz de Tenerife" "Funchal" "Ibiz" "San Sebastian" "Soller" "Angra do Heroismo" "Santa Cruz de la Palma" "Arrecife" "Saint-Pierre" "Saint-Malo" "Saint Helier" "Douglas" "Newport" "San Juan" "Christiansted" "Cruz Bay" "Saint Peter Port" "Grand Case"
+			}
+		}
+
+		pc_tundra = {
+			names = {
+				"Barrow" "Churchill" "Ilulissat" "Inuvik" "Kaktovik" "Kirkenes" "Longyearbyen" "Tasiilaq" "Alert" "Arctic Bay" "Baker Lake" "Clyde River" "Deline" "Grise Fiord" "Ittoqqortoormiit" "Kimmirut" "Naujaat" "Pond Inlet" "Qaanaaq" "Sachs Harbour"
+			}
+		}
+
+		pc_arctic = {
+			names = {
+				"Tromso" "Rovaniemi" "Oulu" "Luleå" "Reykjavik" "Trondheim" "Alta" "Kiruna" "Bodø" "Sundsvall" "Kemi" "Mo i Rana" "Umea" "Kajaani" "Kemi-Tornio" "Sodertalje" "Pitea" "Luleå-Kallax" "Oskarshamn" "Lulea-Sunderbyn"
+			}
+		}
+
+		pc_savannah = {
+			names = {
+				"Sao Paulo" "Buenos Aires" "Rio de Janeiro" "Lima" "Bogota" "Salvador" "Fortaleza" "Recife" "Brasilia" "Montevideo" "Cordoba" "Guayaquil" "Porto Alegre" "Goiania" "Manaus" "Belem" "Maceio" "Campo Grande" "Aracaju" "Teresina"
+			}
+		}
+
+		pc_alpine = {
+			names = {
+				"Vienna" "Munich" "Zurich" "Innsbruck" "Geneva" "Grenoble" "Salzburg" "Chambéry" "Annecy" "Trento" "Aosta" "Cortina d'Ampezzo" "Turin" "Klagenfurt" "Bregenz" "Cuneo" "Sondrio" "Sion" "Bormio" "Bolzano"
+			}
+		}
+
+	}
+
+	character_names = {
+
+		names1 = {
+			first_names_male = {
+				"Alejandro" "Andres" "Angel" "Antonio" "Armando" "Arturo" "Augusto" "Benito" "Bruno" "Carlos" "Cesar" "Christian" "Cristobal" "Daniel" "David" "Diego" "Edgar" "Eduardo" "Emilio" "Enrique" "Ernesto" "Esteban" "Fabian" "Felipe" "Fernando" "Francisco" "Gabriel" "Gerardo" "Gilberto" "Gonzalo" "Guillermo" "Hector" "Hugo" "Ignacio" "Isaac" "Ivan" "Javier" "Joel" "Jorge" "Jose" "Josue" "Juan" "Julian" "Julio" "Leonardo" "Luis" "Manuel" "Marco" "Mario" "Martin" "Mateo" "Mauricio" "Max" "Miguel" "Nando" "Nestor" "Nicolas" "Octavio" "Orlando" "Oscar" "Pablo" "Pancho" "Pedro" "Rafael" "Ramon" "Raul" "Ricardo" "Roberto" "Rodrigo" "Rogelio" "Ruben" "Salvador" "Samuel" "Santiago" "Saul" "Sebastian" "Sergio" "Simon" "Tadeo" "Thomas" "Timoteo" "Tobias" "Tomas" "Tony" "Ulises" "Victor" "Vinicio" "Xavier" "Yahir" "Yago" "Yeray" "Yon" "Yuri" "Zacarias" "Zenon" "Zeus" "Zoran" "Zuriel" "Zygmunt" "Derrick" "Chris" "Qasim" "Terrence" "Adahy" "Christopher" "Felix" "Pratik" "Elijah" "Paul" "Maurice" "Kasa" "Minal" "Tristan" "Ken" "Imran" "Yosef" "Aaron" "Girish" "Cameron" "Ankur" "Hassan" "Edward" "Basim" "Ryan" "Makaio" "Avi" "Douglas" "Atul" "Dennis" "Dev" "Aponivi" "Edwin" "Jeffrey" "Askuwheteau" "Chosovi" "Avonaco" "Adam" "Adrian" "Alessandro" "Alexander" "Alfredo" "Andrea" "Angelo" "Anthony" "Arthur" "Benjamin" "Carlo" "Edoardo" "Elias" "Emil" "Enrico" "Fabio" "Fabrizio" "Federico" "Filippo" "Francesco" "Georgio" "Giovanni" "Gregorio" "Jack" "Jacob" "James" "Jan" "Jason" "Johannes" "Joseph" "Lorenzo" "Luca" "Matteo" "Maximilian" "Michael" "Oliver"
+			}
+			first_names_female = {
+				"Isabella" "Sofia" "Valentina" "Anaïs" "Marisol" "Paloma" "Esperanza" "Isadora" "Giselle" "Catalina" "Josefina" "Lucia" "Salma" "Maya" "Miriam" "Maribel" "Luz" "Juliana" "Aria" "Camila" "Lorena" "Adela" "Adriana" "Alba" "Alejandra" "Alma" "Amalia" "Amelia" "Andrea" "Angela" "Antonia" "Araceli" "Ariana" "Beatriz" "Bianca" "Bruna" "Carlota" "Carmen" "Celeste" "Clara" "Constanza" "Daniela" "Diana" "Dulce" "Elisa" "Emilia" "Estela" "Fabiola" "Fernanda" "Gabriela" "Genesis" "Graciela" "Guadalupe" "Ines" "Irene" "Ivana" "Jimena" "Josefita" "Juana" "Julieta" "Karen" "Karina" "Lara" "Leticia" "Liliana" "Loreto" "Lourdes" "Luciana" "Mabel" "Magdalena" "Marcela" "Mariela" "Martina" "Mercedes" "Milena" "Nadia" "Natalia" "Olga" "Patricia" "Paulina" "Paz" "Raquel" "Renata" "Rosalba" "Rosario" "Rosita" "Sara" "Selena" "Silvana" "Solange" "Susana" "Tania" "Tatiana" "Valeria" "Vanessa" "Vera" "Victoria" "Viviana" "Ximena" "Shania" "Tara" "Teresa" "Leshawn" "Lulu" "Michiko" "Beyoncé" "Asuka" "Zara" "Shahrazad" "Dakota" "Aditi" "Kiana" "Haruka" "Raelynn" "Inez" "Radhika" "Brianna" "Cheyenne" "Jade" "Rania" "Rosalinda" "Awentia" "Ruby" "Chanel" "Ebony" "Stella" "Sunki" "Mariam" "Nisha" "Sierra" "Carla" "Kaori" "Misaki" "Chie" "Mei" "Elena" "Gracie" "Penelope" "Amy" "Kaylee" "Isabelle" "Naomi" "Bailey" "Madison" "Ada" "Ana" "Anastasia" "Anna" "Aurora" "Beatrice" "Camilla" "Cecilia" "Chiara" "Claudia" "Daria" "Elisabeth" "Emma" "Federica" "Francesca" "Ginevra" "Giulia" "Johanna" "Laura" "Lina" "Luisa" "Maddalena" "Maria" "Matilda" "Mia" "Mila" "Olivia" "Paola" "Susanna" "Violetta"
+			}
+			second_names = {
+				"Aguilar" "Alvarado" "Arroyo" "Barajas" "Barrera" "Beltran" "Benitez" "Bernal" "Bonilla" "Bravo" "Cabrera" "Calderon" "Campos" "Cano" "Cardenas" "Carranza" "Carrasco" "Carrillo" "Casillas" "Castañeda" "Castillo" "Castro" "Cervantes" "Chavez" "Contreras" "Coronado" "Cortes" "Cruz" "Delgado" "Diaz" "Dominguez" "Duran" "Espinoza" "Estrada" "Farias" "Fernandez" "Flores" "Franco" "Gallegos" "Garcia" "Garza" "Gomez" "Gonzales" "Gonzalez" "Guerrero" "Gutierrez" "Hernandez" "Herrera" "Ibarra" "Jaimes" "Jimenez" "Juarez" "Lara" "Leal" "Leon" "Lerma" "Linares" "Loera" "Lopez" "Luna" "Madrid" "Maldonado" "Marquez" "Martinez" "Medina" "Mejia" "Mendoza" "Mercado" "Miranda" "Molina" "Monroy" "Montes" "Morales" "Moreno" "Munoz" "Murillo" "Navarro" "Nunez" "Ochoa" "Olivas" "Olmedo" "Ortega" "Ortiz" "Osorio" "Pacheco" "Padilla" "Palacios" "Paredes" "Parra" "Pena" "Perez" "Ramirez" "Rangel" "Reyes" "Rios" "Rivera" "Robles" "Rodriguez" "Rojas" "Romero" "Anderson" "Brown" "Carlson" "Clark" "Davies" "Davis" "Evans" "Fischer" "Green" "Hall" "Harris" "Jackson" "Jensen" "Johnson" "Jones" "Kowalski" "Lee" "Miller" "Moore" "Murphy" "Nielsen" "Olsen" "Parker" "Petersen" "Peterson" "Rasmussen" "Sanchez" "Scott" "Smith" "Taylor" "Thompson" "Torres" "Turner" "Walker" "Wilson" "Wood" "Wright" "Young" "Ziegler" "Zimmermann" "Zuccaro" "Zunino"
+			}
+
+			regnal_first_names_male = {
+				
+			}
+
+			regnal_first_names_female = {
+				
+
+			}
+			regnal_second_names = {
+				
+			}
+		}
+	}
+}

@@ -1,0 +1,279 @@
+﻿### Star Wars (ONL)
+### Created by osiris
+
+osiris_starwars = {
+
+	ship_names = {
+
+        generic = {
+            "Fury" "Vanguard" "Nova" "Eclipse" "Omega" "Thunderbolt" "Seraph" "Leviathan" "Infinity" "Titan" "Meteor" "Phoenix" "Dominion" "Shadow" "Nebula" "Lightning" "Helios" "Tempest" "Odyssey" "Titanus" "Nova Blade" "Celestial Fury" "Horizon Runner" "Hyperion Cruiser" "Nightshade" "Shadow Hawk" "Solar Phoenix" "Stormchaser" "Skyward Vanguard" "Starfire" "Thunderbolt Corvette" "Void Runner" "Comet" "Stellar Sentinel" "Phantom" "Solar Wind" "Warp" "Xenon"
+        }
+
+		corvette = {
+			"Y-wing" "TIE" "X-wing" "TIE" "U-wing" "TIE" "BTL-B" "TIE/D" "Nantex" "Preybird" "Alpha-3" "Belbullab-22" "Geonosian" "V-wing" "TIE/rc" "TIE/ln" "V-19" "ARC-170" "Delta" "TIE" "Upsilon" "Xi" "Theta" "Lambda" "Sentinel" "T-6" "Sheathipede" "Eta" "Nu" "Neimoidian" "Acclamator" "TIE/rp" "TIE" "TIE/ph" "TIE" "Tantive" "TIE" "TIE/IN" "TIE" "Eta-2" "Delta-7" "Delta-7B" "Phantom" "TIE/rb" "Braha'tok" "Corellian" "Dornean" "LAAT/i" "Ghost" "Munificent" "Lancer" "EF76" "Pelta" "Munificent" "Kom'rk" "TIE" "TIE/FO" "TIE/SF" "Mandalorian" "TIE/vn" "TIE/sk" "TIE" "TIE/D" "Raider" "Corellian" "TIE" "TIE/sa" "B-wing" "TIE" "TIE" "A-wing" "GR-75" "Action" "Wayfarer" "AAL-1971/9.1" "J-type" "Naboo" "Separatist" "Droid" "Imperial" "Umbaran" "YT-1300" "YT-2400" "VCX-100" "Baleen" "YT-2000" "BFF-1" "MC18" "G9" "720" "YT-2400" "Aurore" "G9" "J-type"
+		}
+
+        frigate = {
+            "Y-wing" "TIE" "X-wing" "TIE" "U-wing" "TIE" "BTL-B" "TIE/D" "Nantex" "Preybird" "Alpha-3" "Belbullab-22" "Geonosian" "V-wing" "TIE/rc" "TIE/ln" "V-19" "ARC-170" "Delta" "TIE" "Upsilon" "Xi" "Theta" "Lambda" "Sentinel" "T-6" "Sheathipede" "Eta" "Nu" "Neimoidian" "Acclamator" "TIE/rp" "TIE" "TIE/ph" "TIE" "Tantive" "TIE" "TIE/IN" "TIE" "Eta-2" "Delta-7" "Delta-7B" "Phantom" "TIE/rb" "Braha'tok" "Corellian" "Dornean" "LAAT/i" "Ghost" "Munificent" "Lancer" "EF76" "Pelta" "Munificent" "Kom'rk" "TIE" "TIE/FO" "TIE/SF" "Mandalorian" "TIE/vn" "TIE/sk" "TIE" "TIE/D" "Raider" "Corellian" "TIE" "TIE/sa" "B-wing" "TIE" "TIE" "A-wing" "GR-75" "Action" "Wayfarer" "AAL-1971/9.1" "J-type" "Naboo" "Separatist" "Droid" "Imperial" "Umbaran" "YT-1300" "YT-2400" "VCX-100" "Baleen" "YT-2000" "BFF-1" "MC18" "G9" "720" "YT-2400" "Aurore" "G9" "J-type"
+        }
+
+		destroyer = {
+			"Y-wing" "TIE" "X-wing" "TIE" "U-wing" "TIE" "BTL-B" "TIE/D" "Nantex" "Preybird" "Alpha-3" "Belbullab-22" "Geonosian" "V-wing" "TIE/rc" "TIE/ln" "V-19" "ARC-170" "Delta" "TIE" "Upsilon" "Xi" "Theta" "Lambda" "Sentinel" "T-6" "Sheathipede" "Eta" "Nu" "Neimoidian" "Acclamator" "TIE/rp" "TIE" "TIE/ph" "TIE" "Tantive" "TIE" "TIE/IN" "TIE" "Eta-2" "Delta-7" "Delta-7B" "Phantom" "TIE/rb" "Braha'tok" "Corellian" "Dornean" "LAAT/i" "Ghost" "Munificent" "Lancer" "EF76" "Pelta" "Munificent" "Kom'rk" "TIE" "TIE/FO" "TIE/SF" "Mandalorian" "TIE/vn" "TIE/sk" "TIE" "TIE/D" "Raider" "Corellian" "TIE" "TIE/sa" "B-wing" "TIE" "TIE" "A-wing" "GR-75" "Action" "Wayfarer" "AAL-1971/9.1" "J-type" "Naboo" "Separatist" "Droid" "Imperial" "Umbaran" "YT-1300" "YT-2400" "VCX-100" "Baleen" "YT-2000" "BFF-1" "MC18" "G9" "720" "YT-2400" "Aurore" "G9" "J-type"
+		}
+
+		cruiser = {
+			"Secutor" "Venator" "Victory" "Imperial" "Recusant" "Sabaoth" "Interdictor" "Gladiator" "Imperial" "Imperial" "Victory" "Victory" "Quasar" "MC80" "MC85" "MC90" "MC75" "MC40a" "Arquitens" "Consular" "Charger" "Vindicator" "Dreadnaught" "Gozanti" "Hammerhead" "MC80" "MC80A" "MC80B" "Carrack" "Arquitens" "Gozanti" "Naboo" "Republic" "Diamond"
+		}
+		StrikeCruiser = {
+			
+		}
+		Battlecruiser = {
+			"Secutor" "Venator" "Victory" "Imperial" "Recusant" "Sabaoth" "Interdictor" "Gladiator" "Imperial" "Imperial" "Victory" "Victory" "Quasar" "MC80" "MC85" "MC90" "MC75" "MC40a" "Arquitens" "Consular" "Charger" "Vindicator" "Dreadnaught" "Gozanti" "Hammerhead" "MC80" "MC80A" "MC80B" "Carrack" "Arquitens" "Gozanti" "Naboo" "Republic" "Diamond"
+		}
+		battleship = {
+			"Eclipse" "Executor" "Mandator" "Assertor" "Bellator" "Sovereign" "Providence" "Mandator" "Bellator" "Sovereign" "Kandosii" "Providence" "Ton-Falk" "Kom'rk" "Lucrehulk"
+		}
+		Carrier = {
+			"Eclipse" "Executor" "Mandator" "Assertor" "Bellator" "Sovereign" "Providence" "Mandator" "Bellator" "Sovereign" "Kandosii" "Providence" "Ton-Falk" "Kom'rk" "Lucrehulk"
+		}
+		Dreadnought = {
+			"Eclipse" "Executor" "Mandator" "Assertor" "Bellator" "Sovereign" "Providence" "Mandator" "Bellator" "Sovereign" "Kandosii" "Providence" "Ton-Falk" "Kom'rk" "Lucrehulk"
+		}
+		titan = {
+			"Eclipse" "Executor" "Mandator" "Assertor" "Bellator" "Sovereign" "Providence" "Mandator" "Bellator" "Sovereign" "Kandosii" "Providence" "Ton-Falk" "Kom'rk" "Lucrehulk"
+		}
+		Flagship = {
+			"Executor" "Resurgent" "Finalizer"
+		}
+		colossus = {
+			"Death Star" "Starkiller" "Death Star II"
+		}
+		juggernaut = {
+			"Executor" "Resurgent" "Finalizer"
+		}
+
+		constructor = {
+			"GAT-12" "Lucrehulk"
+		}
+
+		colonizer = {
+			"Colony" "GR-75" "Sentinel" "Theta" "J-2"
+		}
+		sponsored_colonizer = {
+		"Trade Federation" "Galactic Empire" "Corporate Alliance" "Techno Union" "InterGalactic Banking Clan" "Kuat Drive Yards" "Sienar Fleet Systems" "Corellian Engineering Corporation" "Arakyd Industries" "Hoersch-Kessel"
+		}
+
+		science = {
+			"Guardian's Path" "Vector" "Envoy" "Eye of Palpatine" "Starbreaker 12" "Ebon Hawk" "The Iron Eclipse" "Deep Core Explorer"
+		}
+
+		explorationship = {
+			"Guardian's Path" "Vector" "Envoy" "Eye of Palpatine" "Starbreaker 12" "Ebon Hawk" "The Iron Eclipse" "Deep Core Explorer"
+		}
+
+		transport = {
+			"GR-75" "AAL-1971" "Theta" "J-2"
+		}
+
+		military_station_small = {
+			"Golan Arms S"
+		}
+
+		military_station_medium = {
+			"Golan Arms M"
+		}
+
+		military_station_large = {
+			"Golan Arms L"
+		}
+
+		ion_cannon = {
+			"Heavy Ion"
+		}
+
+		xl_cannon = {
+			"Orbital Ion"
+		}
+	}
+
+	fleet_names = {
+		random_names = {
+			
+		}
+		sequential_name = OSIRIS_STARWARS_FLEETNAMES_ORD
+	}
+
+	army_names = {
+
+		machine_defense = {
+			sequential_name = OSIRIS_STARWARS_MACHINEDEFENSE_ORD
+		}
+
+		machine_assault_1 = {
+			sequential_name = OSIRIS_STARWARS_MACHINEASSAULT1_ORD
+		}
+
+		machine_assault_2 = {
+			sequential_name = OSIRIS_STARWARS_MACHINEASSAULT2_ORD
+		}
+
+		machine_assault_3 = {
+			sequential_name = OSIRIS_STARWARS_MACHINEASSAULT3_ORD
+		}
+
+		defense_army = {
+			sequential_name = OSIRIS_STARWARS_DEFENSEARMY_ORD
+		}
+
+		assault_army = {
+			sequential_name = OSIRIS_STARWARS_ASSAULTARMY_ORD
+		}
+
+		slave_army = {
+			sequential_name = OSIRIS_STARWARS_SLAVEARMY_ORD
+		}
+
+		clone_army = {
+			sequential_name = OSIRIS_STARWARS_CLONEARMY_ORD
+		}
+
+		undead_army = {
+			sequential_name = OSIRIS_STARWARS_UNDEADARMY_ORD
+		}
+
+		robotic_army = {
+			sequential_name = OSIRIS_STARWARS_ROBOTICARMY_ORD
+		}
+
+		robotic_defense_army = {
+			sequential_name = OSIRIS_STARWARS_ROBOTICDEFENSEARMY_ORD
+		}
+
+		psionic_army = {
+			sequential_name = OSIRIS_STARWARS_PSIONICARMY_ORD
+		}
+
+		xenomorph_army = {
+			sequential_name = OSIRIS_STARWARS_XENOMORPHARMY_ORD
+		}
+
+		gene_warrior_army = {
+			sequential_name = OSIRIS_STARWARS_GENEWARRIORARMY_ORD
+		}
+
+		occupation_army = {
+			sequential_name = OSIRIS_STARWARS_OCCUPATIONARMY_ORD
+		}
+
+		robotic_occupation_army = {
+			sequential_name = OSIRIS_STARWARS_ROBOTICOCCUPATIONARMY_ORD
+		}
+
+		primitive_army = {
+			sequential_name = OSIRIS_STARWARS_PRIMITIVEARMY_ORD
+		}
+		industrial_army = {
+			sequential_name = OSIRIS_STARWARS_INDUSTRIALARMY_ORD
+		}
+		postatomic_army = {
+			sequential_name = OSIRIS_STARWARS_POSTATOMICARMY_ORD
+		}
+	}
+
+	planet_names = {
+
+		generic = {
+			names = {
+				
+			}
+		}
+
+		pc_desert = {
+			names = {
+				"Tatooine" "Jakku" "Geonosis" "Ryloth" "Malachor" "Florrum" "Ziost" "Lothal" "Sorgan" "Arvala-7" "Savareen" "Christophsis" "Socorro" "Kafrene" "Nod Kartha" "Krayiss II" "Llanic" "Garel" "Tarkintown" "Pasaana"
+			}
+		}
+
+		pc_tropical = {
+			 names = {
+				"Abafar" "Affavan" "Akiva" "Aleen" "Amondo" "Aralia" "Atzerri" "Bakura" "Bogden" "Callos" "Cato Neimoidia" "Corellia" "Dantooine" "Dathomir" "Dorin" "Endor" "Eriadu" "Felucia" "Florrum" "Geonosis"
+			}
+		}
+
+		pc_arid = {
+			names = {
+				"Tatooine" "Jakku" "Geonosis" "Ryloth" "Malachor" "Florrum" "Ziost" "Lothal" "Sorgan" "Arvala-7" "Subterrel" "Savareen" "Christophsis" "Socorro" "Kafrene" "Nod Kartha" "Krayiss II" "Llanic" "Garel" "Tarkintown"
+			}
+		}
+
+		pc_continental = {
+			names = {
+				"Coruscant" "Naboo" "Alderaan" "Hosnian Prime" "Cato Neimoidia" "Taris" "Chandrila" "Pantora" "Scarif" "Durkteel" "Sullust" "Yavin 8" "Riosa" "Balmorra" "Mon Cala" "Rhen Var" "Ord Mantell" "Onderon" "Serenno" "Devaron"
+			}
+		}
+
+		pc_gaia = {
+			names = {
+				"Naboo" "Alderaan" "Scarif" "Hosnian Prime" "Cantonica" "Lothal" "Crait" "Takodana" "Vardos" "D'Qar" "Ahch-To" "Coruscant" "Manaan" "Chandrila" "Taris" "Sullust" "Kijimi" "Mustafar" "Felucia" "Ryloth"
+			}
+		}
+
+		pc_ocean = {
+			names = {
+				"Kamino" "Mon Calamari" "Ahch-To" "Glee Anselm" "Dac" "Caluula" "Manaan" "Drexel" "Duro" "Glee Anselm" "Iskalon" "Karkaris" "Manpha" "Munto Codru" "Pelagia" "Phindar" "Rakata Prime" "Tibrin" "Trinta" "Vodran"
+			}
+		}
+
+		pc_tundra = {
+			names = {
+				"Carlac" "Concord Dawn" "Oosalon" "Rishi Maze" "Rugosa" "Sarapin" "Thule" "Uvoss" "Zanbar" "Ansion" "Bosph" "Dreighton" "Felucia" "Iego" "Klatooine" "Korriban" "Mandalore" "Mustafar" "Mygeeto" "Ziost"
+			}
+		}
+
+		pc_arctic = {
+			names = {
+				"Hoth" "Ilum" "Orto Plutonia" "Rhen Var" "Toola" "Antar 4" "Malastare Narrows" "Zaloriis" "Roche Asteroids" "Rishi" "Maridun" "Starkiller Base" "Vandor-1" "Abafar" "Belsavis" "Anoat" "Ojom" "Fest" "Lamaredd" "Zeffo"
+			}
+		}
+
+		pc_savannah = {
+			names = {
+				"Dathomir" "Ryloth" "Ord Radama" "Kintan" "Lokori" "Tund" "Boz Pity" "Vassek" "Rishi" "Siskeen" "Rorak 4" "Nal Hutta" "Telos IV" "Scarif" "Takodana"
+			}
+		}
+
+		pc_alpine = {
+			names = {
+				"Alderaan" "Hoth" "Bespin" "Dagobah" "Endor" "Yavin 4" "Kashyyyk" "Coruscant" "Dathomir" "Naboo" "Mustafar" "Ilum" "Mygeeto" "Utapau" "Felucia" "Vardos" "Crait" "Pillio" "Bracca" "Lira San"
+			}
+		}
+
+	}
+
+	character_names = {
+
+		names1 = {
+			first_names_male = {
+				"Luke" "Han" "Anakin" "Obi-Wan" "Darth" "Kylo" "Lando" "Qui-Gon" "Mace" "Poe" "Finn" "Chewbacca" "Watto" "Jango" "Count" "Bail" "Owen" "Wilhuff" "Plo" "Kit" "Saesee" "Shaak" "Kanan" "Ezra" "Zeb" "Hera" "Chopper" "Bodhi" "Cassian" "Saw" "Galen" "Jyn" "Orson" "Krennic" "Bodhi" "Rook" "DJ" "Hux" "Snoke" "Sidious" "Palpatine" "Dooku" "Grievous" "Ventress" "Sebulba" "Biggs" "Wedge" "Owen" "Beru" "Dexter" "Kamino" "Wicket" "Ewok" "Jabba" "Bib" "Salacious" "Garindan" "BoShek" "IG-88" "Bossk" "Dengar" "Zuckuss" "4-LOM" "Aurra" "Cad" "Boba" "Jodo" "Anakin" "Xizor" "Mara" "Thrawn" "Pellaeon" "Talon" "Kyle" "Tycho" "Wes" "Hobbie" "Nien" "Ackbar" "Lobot" "Lor" "Tseebo" "Ozzel" "Piett" "Veers" "Jerjerrod" "Tarkin" "Tagge" "Needa" "Ozzik" "Gideon" "Moff" "Aphra" "Kuiil" "Greef" "Toro" "IG-11" "Peli" "Ranzar" "Djarin"
+			}
+			first_names_female = {
+				"Padmé" "Shmi" "Leia" "Beru" "Mon" "Satele" "Aayla" "Barriss" "Luminara" "Shaak" "Bria" "Winter" "Jaina" "Mara" "Tahiri" "Tenel" "Syal" "Natasi" "Cilghal" "Alema" "Astraal" "Callista" "Carlist" "Cesi" "Chak" "Cha" "Cindel" "Dejah" "Deena" "Deliah" "Dianoga" "Dineé" "Erisi" "Erayn" "Erkina" "Eréne" "Feena" "Ferus" "Fiolli" "Galney" "Gara" "Ghent" "Ghia" "Ginivex" "Hallis" "Iella" "Iliana" "Iyra" "Jeswi" "Jora" "K'kruhk" "Kae" "Kalyn" "Karina" "Karyn" "Katarn" "Kee" "Kiara" "Kina" "Kiree" "Kitai" "Komari" "Koyi" "Lando" "Lara" "Latara" "Lirin" "Lira" "Lissarkh" "Lumiya" "Lyric" "Mako" "Marasiah" "Mas" "Melina" "Miara" "Mirax" "Morrigan" "Myra" "Nicanas" "Niima" "Nik" "Nomi" "Norra" "Nyri" "Oola" "Ooryl" "Padme" "Palpatine" "Pooja" "Qwi" "Rachi" "Rae" "Rasha" "Reena" "Reesa" "Rena" "Rhinann" "Rianna" "Rystáll"
+			}
+			second_names = {
+				"Skywalker" "Solo" "Organa" "Kenobi" "Tarkin" "Palpatine" "Amidala" "Fett" "Dooku" "Ventress" "Jinn" "Calrissian" "Krennic" "Ackbar" "Bridger" "Katooni" "Wren" "Ti" "Secura" "Unduli" "Plo" "Yoda" "Windu" "Koon" "Offee" "Syndulla" "Meeko" "Needa" "Piett" "Ozzel" "Tagge" "Veers" "Hux" "Phasma" "Ren" "Sloane" "Dameron" "Damask" "Rax" "Terrik" "Jade" "Horn" "Celchu" "Fel" "Antilles" "Rendar" "Ooryl" "Darklighter" "Janson" "Zsinj" "Isard" "Teradoc" "Daala" "Harrsk" "Fel" "Natasi" "Krayt" "Zorin" "Tyber" "Nihilus" "Revan" "Malak" "Bane" "Ventress" "Tano" "Fisto" "Unduli" "Koth" "Shaak" "Bulq" "Secura" "Kcaj" "Luminara" "Kolar" "Gi" "Adi" "Sunrider" "Shan" "Zayne" "Onasi" "Dall" "Rand" "Cadash" "Kast" "Drayen" "Atton" "Canderous" "Ordo" "Carth" "Vao" "Thul" "Orli Shoshan" "Farlander" "Landau" "Doza" "Mundi" "Kotobuki" "Vebb" "Daz" "Elessedil"
+			}
+
+			regnal_first_names_male = {
+				"Sanjay" "Alaric" "Xizor" "Soontir" "Shizor" "Isolder" "Lee-Char" "Wilhuff" "Sheev"
+			}
+
+			regnal_first_names_female = {
+				"Padmé" "Leia" "Aurra" "Sabé" "Kylantha" "Ryoo" "Pooja" "Tenel" "Ta'a" "Apailana"
+
+			}
+			regnal_second_names = {
+				"Organa" "Palpatine" "Rash" "Fel" "Tarkin" "Amadala" "Amidala" "Skywalker" "Antilles" "Mothma" "Kryze" "Calrissian" "Sienar" "Terrik" "Isard" "Pallin" "Papanoida" "Onderon" "Valorum" "Hapes" "Tiin" "Koon" "Pelleaon"
+			}
+		}
+	}
+}
