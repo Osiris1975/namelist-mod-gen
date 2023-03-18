@@ -11,6 +11,10 @@ python = "^3.7"
 Jinja2 = "^3.1.2"
 jinja2schema = "^0.1.4"
 pathlib = "^1.0.1"
+colorlog = "^6.7.0"
+regex = "^2022.10.31"
+requests = "^2.28.2"
+translators = "^5.6.3"
 
 [tool.poetry.group.dev.dependencies]
 Jinja2 = "^3.1.2"

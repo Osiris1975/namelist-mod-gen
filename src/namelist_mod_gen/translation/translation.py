@@ -3,11 +3,10 @@ import datetime
 import logging
 import os
 import sqlite3
-import threading
 from collections import Counter
 from difflib import get_close_matches
-from queue import Queue
 from multiprocessing.pool import ThreadPool
+from queue import Queue
 from random import choice
 
 import colorlog
