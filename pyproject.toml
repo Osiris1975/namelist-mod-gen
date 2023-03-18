@@ -1,22 +1,22 @@
-[build-system]
-requires = ["setuptools>=61.0"]
-build-backend = "setuptools.build_meta"
-
-[project]
-name = "Osiris's Namelist Mod Generator"
+[tool.poetry]
+name = "namelist-mod-gen"
 version = "0.0.1"
-authors = [
-  { name="Osiris", email="amr@aaleil.com" }
-]
-description = ""
+description = "a tool for generating stellaris namelist mods"
+authors = ["Osiris1975 <amr@aaleil.com>"]
 readme = "README.md"
-requires-python = ">=3.7"
-classifiers = [
-    "Programming Language :: Python :: 3",
-    "License :: OSI Approved :: MIT License",
-    "Operating System :: OS Independent",
-]
+packages = [{include = "src/namelist_mod_gen"}]
 
-[project.urls]
-"Homepage" = "https://github.com/Osiris1975/namelist-mod-gen"
-"Bug Tracker" = "https://github.com/Osiris1975/namelist-mod-gen/issues"
+[tool.poetry.dependencies]
+python = "^3.7"
+Jinja2 = "^3.1.2"
+jinja2schema = "^0.1.4"
+pathlib = "^1.0.1"
+
+[tool.poetry.group.dev.dependencies]
+Jinja2 = "^3.1.2"
+jinja2schema = "^0.1.4"
+pathlib = "^1.0.1"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
