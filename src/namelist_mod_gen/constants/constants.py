@@ -68,7 +68,7 @@ NO_TRANSLATE_FIELD_FRAGMENTS = [
 
 UNKEYED_FIELDS = ['namelist_id', 'id', 'namelist_author', 'namelist_title']
 
-THREAD_CONCURRENCY = 500
+THREAD_CONCURRENCY = 10
 
 TIER_MAP = {
     'sn_tier_x': ['sn_flagship', 'sn_juggernaut', 'sn_colossus'],
