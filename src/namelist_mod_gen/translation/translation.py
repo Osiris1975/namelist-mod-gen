@@ -2,21 +2,21 @@ import copy
 import datetime
 import logging
 import os
-import regex
 import sqlite3
 import threading
 from collections import Counter
 from difflib import get_close_matches
 from queue import Queue
+from multiprocessing.pool import ThreadPool
 from random import choice
 
 import colorlog
+import regex
 import requests.exceptions
 import translators as ts
 
 from src.namelist_mod_gen.constants import constants as c
 
-exitFlag = 0
 loglevel = os.getenv('LOG_LEVEL').upper()
 handler = colorlog.StreamHandler()
 handler.setFormatter(colorlog.ColoredFormatter('%(log_color)s[%(asctime)s][%(levelname)s][%(name)s]: %(message)s'))
@@ -30,27 +30,7 @@ logger.addHandler(handler)
 logger.addHandler(file_handler)
 logger.setLevel(loglevel)
 
-threadLimiter = threading.BoundedSemaphore(c.THREAD_CONCURRENCY)
 skipped_translators = []
-
-
-class TransThread(threading.Thread):
-    def __init__(self, threadID, name, key, word, to_lang_code, queue):
-        threading.Thread.__init__(self)
-        self.threadID = threadID
-        self.name = name
-        self.word = word
-        self.key = key
-        self.to_lang_code = to_lang_code
-        self.queue = queue
-
-    def run(self):
-        threadLimiter.acquire()
-        try:
-            translate_response = translate(self.key, self.word, self.to_lang_code)
-            self.queue.put(translate_response)
-        finally:
-            threadLimiter.release()
 
 
 def insert(txt, translation, lang_code, translators_string, is_translated, is_same):
@@ -164,6 +144,11 @@ def translate(key, txt, lang_code):
         return key, finalize(translated.title(), token)
 
 
+def _translate(thr_input):
+    response = translate(thr_input['key'], thr_input['txt'], thr_input['lang_code'])
+    thr_input['queue'].put(response)
+
+
 def translate_dict(indict, to_lang_code):
     translated_dict = dict()
     counter = 0
@@ -171,24 +156,16 @@ def translate_dict(indict, to_lang_code):
     my_queue = Queue()
     thread_inputs = []
     for k, v in indict.items():
-        this_cnt = counter + 1
-        thread_id = f'{k}_{v}'
-        logger.debug(f'Attempting to translate {k}: {v} to {to_lang_code}')
-        input = {
+        thr_input = {
             "key": k,
             "txt": v,
-            "to_lang_code": to_lang_code,
+            "lang_code": to_lang_code,
             "queue": my_queue
         }
-        thread_inputs.append(input)
-        thread = TransThread(this_cnt, thread_id, k, v, to_lang_code, my_queue)
-        thread_pool.append(thread)
+        thread_inputs.append(thr_input)
 
-    for thread in thread_pool:
-        thread.start()
-
-    for thread in thread_pool:
-        thread.join()
+    with ThreadPool(len(indict)) as pool:
+        result = pool.map(_translate, thread_inputs)
 
     while my_queue.qsize() > 0:
         logger.debug(f"Queue length is {my_queue.qsize()}")
