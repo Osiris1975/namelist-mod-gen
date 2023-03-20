@@ -42,10 +42,9 @@ LANG_TRANS_MAP = {
     'pt': ["google", "niutrans", "papago", "reverso", "tencent", "translateCom"],
     'fr': ["alibaba", "baidu", "caiyun", "google", "iciba", "iflytek", "itranslate",
            "niutrans", "papago", "reverso", "tencent", "translateCom", "yandex"],
-    'de': ["baidu", "google", "iciba", "iflytek", "itranslate", "lingvanex",
-           "niutrans", "papago", "reverso", "sogou", "tencent", "translateCom", "yandex", "youdao"],
-    'pl': ["baidu", "google", "iciba", "iflytek", "itranslate",
-           "niutrans", "papago", "reverso", "translateCom", "yandex"],
+    'de': ["baidu", "google", "iciba", "iflytek", "itranslate",
+           "niutrans", "papago", "reverso", "sogou", "tencent", "translateCom", "yandex"],
+    'pl': ["baidu", "google", "iciba", "iflytek", "itranslate","niutrans", "reverso", "translateCom", "yandex"],
     'ru': ["alibaba", "baidu", "caiyun", "google", "iciba", "iflytek", "itranslate", "lingvanex",
            "niutrans", "papago", "reverso", "sogou", "tencent", "translateCom", "yandex", "youdao"],
     'es': ["alibaba", "baidu", "caiyun", "google", "iciba", "iflytek", "itranslate", "lingvanex",
@@ -53,7 +52,8 @@ LANG_TRANS_MAP = {
     'zh-CN': ["alibaba", "baidu", "caiyun", "google", "iciba", "iflytek", "itranslate", "lingvanex",
               "niutrans", "papago", "reverso", "sogou", "tencent", "translateCom", "yandex",
               "youdao"],
-    'ja': ["baidu", "google", "iciba", "iflytek", "itranslate", "niutrans", "papago", "reverso", "sogou", "translateCom", "yandex"],
+    'ja': ["baidu", "google", "iciba", "iflytek", "itranslate", "niutrans", "papago", "reverso", "sogou",
+           "translateCom", "yandex"],
     'ko': ["baidu", "google", "iciba", "iflytek", "itranslate",
            "papago", "reverso", "sogou", "translateCom", "yandex", "youdao"]
 }
@@ -78,3 +78,11 @@ TIER_MAP = {
     'sn_tran': ['sn_transport'],
     'sn_sci': ['sn_science', 'sn_exploration_ship']
 }
+
+DL_CODES = {
+    'pt': 'PT-BR',
+    'zh-CN': 'ZH'
+}
+THREAD_CONCURRENCY = 50
+
+OPUS_UNSUPPORTED = ['ja', 'pt', 'pl', 'zh-CN', 'ko']

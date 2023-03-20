@@ -131,3 +131,4 @@ dmypy.json
 /deployables/
 /generated_mods/
 /src/namelist_mod_gen/translations.db
+/secrets.py

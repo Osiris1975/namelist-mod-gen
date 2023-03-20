@@ -2,6 +2,10 @@
 
 import argparse
 import csv
+import cProfile
+import pstats
+import io
+from pstats import SortKey
 import datetime
 import io
 import logging
@@ -20,6 +24,9 @@ from jinja2 import Environment, FileSystemLoader
 
 from constants import constants as c
 from translation.translation import translate_dict, translate
+import googletrans as gt
+
+ob = cProfile.Profile()
 
 loglevel = os.getenv('LOG_LEVEL').upper()
 
@@ -113,7 +120,7 @@ def create_localized_namelist_listing(input, author, root_loc_dir):
             logger.error(f'Failed to create {nl_def_file}: {e}')
 
 
-def create_localized_translations(loc_inputs):
+def create_localized_translations(loc_inputs, translate):
     loc_dir = loc_inputs['dir']
     nl_dict = loc_inputs['data']
     lang = loc_dir.split('/')[-2]
@@ -123,7 +130,7 @@ def create_localized_translations(loc_inputs):
         loc_dict = make_loc_dict(nl_dict)
         if lang != 'english':
             try:
-                loc_dict = translate_dict(loc_dict, lang_code)
+                loc_dict = translate_dict(loc_dict, lang_code, translate)
             except Exception as e:
                 logger.critical(f'Translation failure: {e}')
                 con.close()
@@ -184,7 +191,7 @@ def create_mod(args):
             logger.info(f'------------------ALL TASKS DONE------------------')
         else:
             for i in inputs:
-                create_localized_translations(i)
+                create_localized_translations(i, args.translate)
 
         # generate namelist description file for each language
         et = datetime.datetime.now()
@@ -197,16 +204,19 @@ def create_mod(args):
 
 
 def create_seq_key_dict(key, values, author, namelist_id):
-    if len(values) > 1:
-        vdict = dict()
-        for v in values:
-            value_key = f'{author}_{namelist_id}_{key}_{v}'
-            value_key = re.sub('[^0-9a-zA-Z]+', '_', value_key).upper()
-            vdict[value_key] = v
-        return vdict
-    else:
-        value_key = re.sub('[^0-9a-zA-Z]+', '_', key).upper()
-        return {f"{author.upper()}_{namelist_id.upper()}_{value_key}": values}
+    try:
+        if len(values) > 1:
+            vdict = dict()
+            for v in values:
+                value_key = f'{author}_{namelist_id}_{key}_{v}'
+                value_key = re.sub('[^0-9a-zA-Z]+', '_', value_key).upper()
+                vdict[value_key] = v
+            return vdict
+        else:
+            value_key = re.sub('[^0-9a-zA-Z]+', '_', key).upper()
+            return {f"{author.upper()}_{namelist_id.upper()}_{value_key}": values}
+    except Exception as e:
+        logger.error(f'Failed creating sequence keys: {e}')
 
 
 def clean(txt):
@@ -255,17 +265,29 @@ def csv_template(args):
         logger.info(f'Blank CSV template written to {file_dest}')
 
 
+def profile_output():
+    ob.disable()
+    sec = io.StringIO()
+    sortby = SortKey.CUMULATIVE
+    ps = pstats.Stats(ob, stream=sec).sort_stats(sortby)
+    ps.print_stats()
+
+
 def main():
     args = parser.parse_args()
     if args.dump_csv_template:
         csv_template(args)
     else:
+        if args.profile:
+            ob.enable()
         st = datetime.datetime.now()
         create_mod(args)
         con.close()
         et = datetime.datetime.now()
         elapsed_time = et - st
         logger.info(f'NAMELIST MOD GENERATION COMPLETED IN {elapsed_time}.')
+        if args.profile:
+            profile_output()
 
 
 parser = argparse.ArgumentParser(
@@ -276,6 +298,8 @@ parser.add_argument('-c', '--namelists', help="path to the directory with nameli
 parser.add_argument('-a', '--author', help="mod author", required=False)
 parser.add_argument('-m', '--mod_name', help="name to use for the generated mod", required=False)
 parser.add_argument('-M', '--multiprocess', default=False, help='activate multiprocessing mode', action='store_true')
+parser.add_argument('-t', '--translate', default=False, help='activate namelist translation', action='store_true')
+parser.add_argument('-p', '--profile', default=False, help='activate performance profiling', action='store_true')
 parser.add_argument('-d', '--dump_csv_template', help='dump a blank csv with namelist headers with the specified name',
                     required=False)
 
@@ -287,8 +311,3 @@ if __name__ == "__main__":
         file_handler.close()
         failure_cleanup()
         logger.error(f"Process failed with {e}")
-
-# TODO: For localisation, need to resolve issue where tokens get moved. Maybe based on token put in an example word
-# based on what kind of token it is (first for $ORD$, I for $R$ and 1 for $C$). Then replace example token before writing.
-# TODO: namelist file with titles are all in korean.
-# TODO: Once that's resolved, need to use localisation keys for all other fields for full translated localisation.
