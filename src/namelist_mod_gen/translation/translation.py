@@ -129,7 +129,7 @@ def random_api_translation(txt, lang_code):
                 skipped_translators.append(translator)
             except Exception as e:
                 logger.error(
-                        f'Random API Mode Translation Failed | Original: {txt} | ToLang: {lang_code} | Exception: {e}')
+                        f'Random API Mode Translation Failed | Original: {txt} | ToLang: {lang_code} | Translator: {translator} | Exception: {e}')
             finally:
                 active_pool.remove(translator)
                 if len(active_pool) == 0:
@@ -137,7 +137,7 @@ def random_api_translation(txt, lang_code):
 
         translation = validate_translation(trans_array, txt)
         translators_string = ','.join(translators)
-        logger.info(f'Translation of {txt} to {lang_code} completed with {translator}: {translated}.')
+        logger.info(f'Translation of {txt} to {lang_code} completed with {translator}: {translation}.')
         insert(txt, translation.title(), lang_code, translators_string, True, True)
 
     if translated:
@@ -190,9 +190,10 @@ def gtrans_translation(txt, lang_code):
 
 def resolve_token_placement(txt):
     try:
+        detokenized_txt = regex.sub(r'\$\w+\$', '', txt)
         response = {
             'original_txt': txt,
-            'detokenized_txt': regex.sub(r'\$\w+\$', '', txt).title().strip(),
+            'detokenized_txt': detokenized_txt.title().strip(),
             'token': '',
             'loc': 0
         }
@@ -277,7 +278,6 @@ def translate(key, txt, lang_code):
 
 
 def _translate(thr_input):
-
     response = translate(thr_input['key'], thr_input['txt'], thr_input['lang_code'])
     thr_input['queue'].put(response)
 
