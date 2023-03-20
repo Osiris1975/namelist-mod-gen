@@ -26,7 +26,10 @@ from translation.translation import translate_dict, translate
 
 ob = cProfile.Profile()
 
-loglevel = os.getenv('LOG_LEVEL').upper()
+try:
+    loglevel = os.getenv('LOG_LEVEL').upper()
+except AttributeError:
+    loglevel = 'INFO'
 
 handler = colorlog.StreamHandler()
 handler.setFormatter(colorlog.ColoredFormatter('%(log_color)s[%(asctime)s][%(levelname)s][%(name)s]: %(message)s'))
@@ -292,7 +295,7 @@ parser = argparse.ArgumentParser(
     description='A tool for creating Stellaris namelist mods from a CSV file',
     usage='namelist_generator.py -c [NAMELIST_FILE]',
     formatter_class=argparse.ArgumentDefaultsHelpFormatter)
-parser.add_argument('-c', '--namelists', help="path to the directory with namelist csv files", required=False)
+parser.add_argument('-n', '--namelists', help="path to the directory with namelist csv files", required=False)
 parser.add_argument('-a', '--author', help="mod author", required=False)
 parser.add_argument('-m', '--mod_name', help="name to use for the generated mod", required=False)
 parser.add_argument('-M', '--multiprocess', default=False, help='activate multiprocessing mode', action='store_true')

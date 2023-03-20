@@ -22,7 +22,11 @@ from easynmt import EasyNMT
 
 from src.namelist_mod_gen.constants import constants as c
 
-loglevel = os.getenv('LOG_LEVEL').upper()
+try:
+    loglevel = os.getenv('LOG_LEVEL').upper()
+except AttributeError:
+    loglevel = 'INFO'
+
 handler = colorlog.StreamHandler()
 handler.setFormatter(colorlog.ColoredFormatter('%(log_color)s[%(asctime)s][%(levelname)s][%(name)s]: %(message)s'))
 file_handler = logging.FileHandler(
