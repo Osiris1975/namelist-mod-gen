@@ -5,9 +5,17 @@
 
 	ship_names = {
 
+        generic = {
+            {{ sn_generic }}
+        }
+
 		corvette = {
 			{{ sn_corvette }}
 		}
+
+        frigate = {
+            {{ sn_frigate }}
+        }
 
 		destroyer = {
 			{{ sn_destroyer }}
@@ -47,18 +55,22 @@
 		constructor = {
 			{{ sn_constructor }}
 		}
+
 		colonizer = {
 			{{ sn_colonizer }}
 		}
 		sponsored_colonizer = {
 		{{ sn_sponsored_colonizer }}
 		}
+
 		science = {
 			{{ sn_science }}
 		}
+
 		explorationship = {
 			{{ sn_exploration_ship }}
 		}
+
 		transport = {
 			{{ sn_transport }}
 		}

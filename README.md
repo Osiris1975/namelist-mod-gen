@@ -23,48 +23,72 @@ will be dictated by interest outside of the author's usage.
 * Creates namelists from one or more CSV files and produces a single mod for all the namelists. 
 * Has resolved the %SEQ% issue introduced with Stellaris 3.6.0
 * Write a blank csv template to fill out.
+* Basic localization.
 
 ### Planned Features
 
-* NSC Support
 * Write a CSV from a given namelist text file. 
+* Translated localization.
 
 ### Installing Python
 
 The tool is written in Python and therefore requires Python on your computer. See the [Python Getting Started Page](https://www.python.org/about/gettingstarted/).
 
+### Installing Poetry
+
+This tool uses [Poetry](https://python-poetry.org/docs/) for dependency management and packaging. See these [installation instructions](https://python-poetry.org/docs/#installation).
+
+### Setting up Namelist Mod Gen
+
+Once Poetry is installed, namelist-mod-gen can bet setup with the following command:
+
+`poetry install`
+
+This will install any dependencies and setup a virtual environment to run the tool.
+
 ### Running the Tool
 
-``` 
-usage: namelist_generator.py -c [NAMELIST_FILE]
+To print the basic usage, execute the following:
 
-A tool for creating Stellaris namelist mods from a CSV file
+`./namelist_mod_gen.py --help`
 
-options:
-  -h, --help            show this help message and exit
-  -c NAMELISTS, --namelists NAMELISTS
-                        path to the directory with namelist csv files (default: None)
-  -a AUTHOR, --author AUTHOR
-                        mod author (default: None)
-  -m MOD_NAME, --mod_name MOD_NAME
-                        name to use for the generated mod (default: None)
-  -d DUMP_CSV_TEMPLATE, --dump_csv_template DUMP_CSV_TEMPLATE
-                        dump a blank csv with namelist headers with the specified name (default: None)
+or 
 
-```
+`poetry run python src/namelist_mod_gen/namelist_mod_gen.py --help`
+
+#### Generating a CSV Template
+
+The tool will generate a new CSV template that can be loaded into Google Sheets or Excel to populate a namelist with the following command:
+
+`./namelist_mod_gen.py -d <your_csv_template.csv>`
+
+or 
+
+`poetry run python src/namelist_mod_gen/namelist_mod_gen.py -d  <your_csv_template.csv>`
+
+#### Generating the Namelist Mod Files
+
+To generate namelist mod files, execute the following:
+
+`./namelist_mod_gen.py -c </path/to/csv/directory> -m <mod_name> -a <author_name>`
+
+`-n/--namelists`: This specifies the full path to the directory that contains the CSV files to convert into namelists.
+There are some CSV example files in `examples/input_csvs/osiris_namelists`
+
+`-m/--mod_name`: This specifies the mod name that will be used in naming files.
+
+`-a/--author`: This specifies the creator of the namelist and is also used in specifying file names.  
+
 
 ## Current Limitations and Issues
 
 These are the known limitations and issues. Some may be addressed in the future.
 
 * Does not create .mod files, you will have to do this yourself.
-* Only creates English localization files.
-* Hasn't been tested with sequential names other than $ORD$ yet. 
+* Creates untranslated localization files. Translated ones are in the works. 
 
 
 For issues, visit the [issues page](https://github.com/Osiris1975/namelist-mod-gen/issues) in this repository.
-
-
 
 ## Getting Help 
 

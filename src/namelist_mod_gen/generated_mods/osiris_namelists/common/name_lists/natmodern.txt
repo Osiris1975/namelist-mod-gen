@@ -1,0 +1,279 @@
+﻿### Nature-Modern (ONL)
+### Created by osiris
+
+osiris_natmodern = {
+
+	ship_names = {
+
+        generic = {
+            "Gazelle" "Oryx" "Pigeon" "Dove" "Sparrow" "Robin" "Blue Jay" "Hummingbird" "Pelican" "Stork" "Flamingo" "Crane" "Ostrich" "Emu" "Kiwi" "Penguin" "Canary" "Finch" "Budgerigar" "Cockatiel" "Quail" "Grouse" "Pheasant" "Cormorant" "Heron" "Spoonbill" "Ibis" "Albatross" "Seagull" "Tern" "Kingfisher" "Woodpecker" "Wren" "Swallow" "Thrush" "Raven" "Ram" "Mustang" "Stallion" "Antelope" "Sea Lion" "Walrus" "Greyhound" "Springbok" "Swift" "Swallow" "Zebra" "Whale" "Dire Wolf" "Gray Wolf" "Sabretooth" "Smiladon" "Megantereon" "Pantera" "Dinofelis" "Archaeopteryx"
+        }
+
+		corvette = {
+			"Tarantula" "Black Widow" "Mosquito" "Scarab" "Wasp" "Hornet" "Yellowjacket" "Centipede" "Lanternfly" "Moth" "Scorpion" "Locust" "Jellyfish" "Octopus" "Mongoose" "Weasel" "Praying Mantis" "Dragonfly" "Hornworm" "Cricket" "Kaydid" "Grasshopper" "Cockroach" "Fire Ant" "Ant" "Gecko" "Iguana" "Gila Monster" "Skink" "Uromastyx" "Chuckwalla" "Chameleon" "Skink" "Bat" "Vole" "Ferret" "Hedgehog" "Shrew" "Martens" "Wolverine" "Gazelle" "Wolf" "Coyote" "Carribou" "Arctic Fox"
+		}
+
+        frigate = {
+            "Locust" "Carribou" "Mongoose" "Skink" "Fire Ant" "Jellyfish" "Chuckwalla" "Centipede" "Martens" "Gazelle" "Ant" "Coyote" "Moth" "Mosquito" "Octopus" "Yellowjacket" "Scarab" "Tarantula" "Dragonfly" "Wolverine" "Gila Monster" "Vole" "Uromastyx" "Cricket" "Grasshopper" "Skink" "Gecko" "Ferret" "Weasel" "Kaydid" "Hedgehog" "Lanternfly" "Chameleon" "Arctic Fox" "Scorpion" "Wasp" "Cockroach" "Wolf" "Bat" "Hornworm" "Praying Mantis" "Iguana" "Hornet" "Black Widow" "Shrew"
+        }
+
+		destroyer = {
+			"Shrew" "Uromastyx" "Chameleon" "Fire Ant" "Mongoose" "Arctic Fox" "Dragonfly" "Coyote" "Black Widow" "Ant" "Grasshopper" "Locust" "Wolf" "Lanternfly" "Gazelle" "Yellowjacket" "Tarantula" "Carribou" "Weasel" "Hornet" "Moth" "Centipede" "Vole" "Skink" "Praying Mantis" "Iguana" "Scarab" "Hedgehog" "Martens" "Cockroach" "Scorpion" "Skink" "Jellyfish" "Gila Monster" "Mosquito" "Kaydid" "Octopus" "Gecko" "Chuckwalla" "Hornworm" "Wasp" "Ferret" "Cricket" "Bat" "Wolverine"
+		}
+
+		cruiser = {
+			"Rattlesnake" "Crowned Eagle" "Moray" "Black Mamba" "Kestrel" "Vulture" "Marlin" "Steppe Eagle" "Krait" "Hawk" "Golden Eagle" "Owl" "Barracuda" "Harpy Eagle" "Cobra" "Falcon" "Lionfish" "Anaconda" "Caracara" "Stingray" "Osprey" "Eagle" "Bushmaster" "Bateleur" "Python" "Boa" "Kite" "King Cobra" "Merlin" "Buzzard" "Harrier" "Copperhead" "Martial Eagle" "Pit Viper" "Tigerfish" "Snakehead" "Swordfish" "Viper" "Kite" "Sparrowhawk" "Bald Eagle" "Goshawk" "Piranha" "Death Adder" "Seriema" "Chimaera" "Peregrine"
+		}
+		StrikeCruiser = {
+			"Buzzard" "Caracara" "Osprey" "Kite" "Hawk" "Owl" "Falcon" "Krait" "Viper" "Piranha" "Seriema" "Crowned Eagle" "Stingray" "Kestrel" "Swordfish" "Black Mamba" "Anaconda" "Merlin" "Golden Eagle" "Copperhead" "Kite" "Bushmaster" "Harrier" "Steppe Eagle" "Boa" "Chimaera" "Bald Eagle" "Lionfish" "Goshawk" "Barracuda" "Death Adder" "Martial Eagle" "Bateleur" "Snakehead" "Tigerfish" "Marlin" "Rattlesnake" "Cobra" "Eagle" "Python" "Sparrowhawk" "Pit Viper" "King Cobra" "Moray" "Harpy Eagle" "Vulture" "Peregrine"
+		}
+		Battlecruiser = {
+			"Falcon" "Steppe Eagle" "Death Adder" "Sparrowhawk" "Eagle" "Marlin" "Vulture" "Chimaera" "Kite" "Buzzard" "Moray" "Golden Eagle" "Boa" "Stingray" "Pit Viper" "Snakehead" "Lionfish" "Kestrel" "Python" "Piranha" "Owl" "Seriema" "Anaconda" "Harpy Eagle" "Bald Eagle" "Merlin" "Bushmaster" "Krait" "Kite" "Copperhead" "Martial Eagle" "Viper" "Goshawk" "Bateleur" "King Cobra" "Black Mamba" "Tigerfish" "Crowned Eagle" "Cobra" "Swordfish" "Rattlesnake" "Caracara" "Harrier" "Barracuda" "Osprey" "Hawk" "Peregrine" "Velociraptor"
+		}
+		battleship = {
+			"Crocodile" "Orca" "Hammerhead" "Bobcat" "Thresher" "Wobbegong" "Komodo" "Ocelot" "Alligator" "Margay" "Caracal" "Mako" "Cougar" "Great White" "Kodiak" "Servals" "Grizzly" "Blacktip" "Lion" "Leopard" "Tiger" "Cheetah" "Puma" "Jaguar" "Sevengill" "Sixgill" "Eurasian lynx" "Rhino" "Buffalo" "Warthog" "Tyranosaur" "Megalodon"
+		}
+		Carrier = {
+			"Servals" "Alligator" "Cougar" "Jaguar" "Margay" "Orca" "Cheetah" "Ocelot" "Wobbegong" "Blacktip" "Mako" "Rhino" "Sevengill" "Warthog" "Puma" "Eurasian lynx" "Crocodile" "Buffalo" "Bobcat" "Great White" "Kodiak" "Hammerhead" "Caracal" "Grizzly" "Leopard" "Lion" "Tiger" "Komodo" "Thresher" "Sixgill"
+		}
+		Dreadnought = {
+			"Thresher" "Cheetah" "Ocelot" "Crocodile" "Leopard" "Alligator" "Great White" "Sevengill" "Blacktip" "Bobcat" "Margay" "Hammerhead" "Buffalo" "Caracal" "Eurasian lynx" "Grizzly" "Lion" "Orca" "Puma" "Warthog" "Kodiak" "Servals" "Mako" "Cougar" "Jaguar" "Tiger" "Wobbegong" "Rhino" "Sixgill" "Komodo"
+		}
+		titan = {
+			"Puma" "Ocelot" "Servals" "Sevengill" "Kodiak" "Great White" "Crocodile" "Warthog" "Margay" "Jaguar" "Grizzly" "Alligator" "Wobbegong" "Leopard" "Rhino" "Bobcat" "Thresher" "Blacktip" "Eurasian lynx" "Tiger" "Hammerhead" "Orca" "Komodo" "Mako" "Caracal" "Sixgill" "Cheetah" "Cougar" "Lion" "Buffalo"
+		}
+		Flagship = {
+			"Cyclone" "Typhoon" "Avalanche" "Thunderstorm" "Tsunami" "Blizzard" "Tornado" "Hurricane"
+		}
+		colossus = {
+			"Hurricane" "Typhoon" "Cyclone" "Avalanche" "Blizzard" "Tornado" "Tsunami" "Thunderstorm"
+		}
+		juggernaut = {
+			"Cyclone" "Avalanche" "Typhoon" "Tsunami" "Hurricane" "Tornado" "Blizzard" "Thunderstorm"
+		}
+
+		constructor = {
+			"Beaver" "Otter" "Termite" "Weaver" "Mailee" "Orb-Weaver" "Prairee Dog" "Acromyrmex" "Atta" "Caddisfly"
+		}
+
+		colonizer = {
+			"Wildebeest" "Ant" "Termite" "Bat" "Penguin" "Flamingo" "Prarie Dog" "Meerkat" "Swan" "Zebra"
+		}
+		sponsored_colonizer = {
+		
+		}
+
+		science = {
+			"Dolphin" "Bonobo" "Octopus" "Raven"
+		}
+
+		explorationship = {
+			"Dolphin" "Humpback" "Beluga" "Pilot" "Narwhal" "Bowhead" "Squirrel" "Chipmunk" "Hamster" "Gerbil"
+		}
+
+		transport = {
+			
+		}
+
+		military_station_small = {
+			
+		}
+
+		military_station_medium = {
+			
+		}
+
+		military_station_large = {
+			
+		}
+
+		ion_cannon = {
+			"Spitting Cobra" "Archerfish"
+		}
+
+		xl_cannon = {
+			"Spitting Cobra" "Archerfish"
+		}
+	}
+
+	fleet_names = {
+		random_names = {
+			
+		}
+		sequential_name = OSIRIS_NATMODERN_FLEETNAMES_ORD
+	}
+
+	army_names = {
+
+		machine_defense = {
+			sequential_name = OSIRIS_NATMODERN_MACHINEDEFENSE_ORD
+		}
+
+		machine_assault_1 = {
+			sequential_name = OSIRIS_NATMODERN_MACHINEASSAULT1_ORD
+		}
+
+		machine_assault_2 = {
+			sequential_name = OSIRIS_NATMODERN_MACHINEASSAULT2_ORD
+		}
+
+		machine_assault_3 = {
+			sequential_name = OSIRIS_NATMODERN_MACHINEASSAULT3_ORD
+		}
+
+		defense_army = {
+			sequential_name = OSIRIS_NATMODERN_DEFENSEARMY_ORD
+		}
+
+		assault_army = {
+			sequential_name = OSIRIS_NATMODERN_ASSAULTARMY_ORD
+		}
+
+		slave_army = {
+			sequential_name = OSIRIS_NATMODERN_SLAVEARMY_ORD
+		}
+
+		clone_army = {
+			sequential_name = OSIRIS_NATMODERN_CLONEARMY_ORD
+		}
+
+		undead_army = {
+			sequential_name = 
+		}
+
+		robotic_army = {
+			sequential_name = OSIRIS_NATMODERN_ROBOTICARMY_ORD
+		}
+
+		robotic_defense_army = {
+			sequential_name = OSIRIS_NATMODERN_ROBOTICDEFENSEARMY_ORD
+		}
+
+		psionic_army = {
+			sequential_name = OSIRIS_NATMODERN_PSIONICARMY_ORD
+		}
+
+		xenomorph_army = {
+			sequential_name = OSIRIS_NATMODERN_XENOMORPHARMY_ORD
+		}
+
+		gene_warrior_army = {
+			sequential_name = OSIRIS_NATMODERN_GENEWARRIORARMY_ORD
+		}
+
+		occupation_army = {
+			sequential_name = OSIRIS_NATMODERN_OCCUPATIONARMY_ORD
+		}
+
+		robotic_occupation_army = {
+			sequential_name = OSIRIS_NATMODERN_ROBOTICOCCUPATIONARMY_ORD
+		}
+
+		primitive_army = {
+			sequential_name = OSIRIS_NATMODERN_PRIMITIVEARMY_ORD
+		}
+		industrial_army = {
+			sequential_name = OSIRIS_NATMODERN_INDUSTRIALARMY_ORD
+		}
+		postatomic_army = {
+			sequential_name = OSIRIS_NATMODERN_POSTATOMICARMY_ORD
+		}
+	}
+
+	planet_names = {
+
+		generic = {
+			names = {
+				"Tokyo" "Delhi" "Shanghai" "Sao Paulo" "Mumbai" "Beijing" "Osaka" "Cairo" "Dhaka" "Karachi" "Chongqing" "Istanbul" "Lahore" "Buenos Aires" "Kinshasa" "Tianjin" "Moscow" "Guangzhou" "Shenzhen" "Jakarta" "New York City" "Paris" "Bangalore" "Lima" "Chennai" "Bogota" "Bangkok" "Hyderabad" "London" "Ho Chi Minh City" "Hong Kong" "Lahore" "Ahmedabad" "Kuala Lumpur" "Kolkata" "Surat" "Yangon" "Riyadh" "Singapore" "Anhui"
+			}
+		}
+
+		pc_desert = {
+			names = {
+				"Riyadh" "Karachi" "Baghdad" "Tehran" "Dubai" "Dammam" "Jeddah" "Casablanca" "Alexandria" "Algiers" "Amman" "Medina" "Damascus" "Rabat" "Muscat" "Sana'a" "Khartoum" "Lahore" "Aleppo"
+			}
+		}
+
+		pc_tropical = {
+			 names = {
+				"Jakarta" "Manila" "Sao Paulo" "Mumbai" "Delhi" "Dhaka" "Karachi" "Lagos" "Kolkata" "Kinshasa" "Lima" "Bangkok" "Ho Chi Minh City" "Chennai" "Bangalore" "Hyderabad" "Rio de Janeiro" "Nairobi" "Ahmedabad" "Surat"
+			}
+		}
+
+		pc_arid = {
+			names = {
+				"Riyadh" "Lima" "Jeddah" "Mecca" "Tehran" "Mashhad" "Medina" "Sana'a" "Dubai" "Baghdad" "Kuwait City" "Amman" "Muscat" "Doha" "Almaty" "Aden" "Tabriz" "Abha" "Najran" "Taif"
+			}
+		}
+
+		pc_continental = {
+			names = {
+				"Tokyo" "Seoul" "Shanghai" "Beijing" "Istanbul" "Moscow" "Madrid" "Tehran" "Barcelona" "Rome" "Naples" "Buenos Aires" "São Paulo" "Santiago" "Madrid" "Melbourne" "Sydney" "Brisbane" "Perth" "Auckland"
+			}
+		}
+
+		pc_gaia = {
+			names = {
+				"Atlantis" "Asgard" "Avalon" "El Dorado" "Shambhala" "Hy-Brasil" "Xanadu" "Agartha" "Tir Na Nog" "Penglai" "Eden" "Elysium" "Shangri-La" "Valhalla" "Hyperborea" "Tír Tairngire" "Irem of the Pillars" "Olympus" "Cockaigne"
+			}
+		}
+
+		pc_ocean = {
+			names = {
+				"Jakarta" "Tokyo" "Manila" "Taipei" "Hanoi" "Singapore" "Hong Kong" "Saint Petersburg" "Sapporo" "Batam" "Penang" "Nagoya" "Busan" "Honolulu" "Phnom Penh" "Palma" "Reykjavik" "Nassau" "Batumi" "Cebu City"
+			}
+		}
+
+		pc_tundra = {
+			names = {
+				"Murmansk" "Norilsk" "Vorkuta" "Naryan-Mar" "Salekhard" "Dudinka" "Novy Urengoy" "Apatity" "Usinsk" "Tiksi" "Anadyr" "Magadan" "Yakutsk" "Pevek" "Chersky" "Khatanga" "Tazovsky" "Verkhoyansk" "Batagay" "Zyryanka"
+			}
+		}
+
+		pc_arctic = {
+			names = {
+				"Murmansk" "Norilsk" "Vorkuta" "Salekhard" "Severodvinsk" "Yakutsk" "Archangelsk" "Hammerfest" "Tromsø" "Kirkenes" "Arkhangelskoye" "Whitehorse" "Naryan-Mar" "Apatity" "Tiksi" "Narvik" "Muravlenko" "Sisimiut" "Kandalaksha" "Barrow"
+			}
+		}
+
+		pc_savannah = {
+			names = {
+				"Lagos" "Accra" "Abidjan" "Nairobi" "Kumasi" "Dar es Salaam" "Dakar" "Lusaka" "Conakry" "Brazzaville" "Bamako" "Ouagadougou" "Douala" "Yaounde" "Lubumbashi" "Niamey" "Lome" "Harare" "Maputo" "Windhoek"
+			}
+		}
+
+		pc_alpine = {
+			names = {
+				"Munich" "Milan" "Zurich" "Vienna" "Turin" "Geneva" "Innsbruck" "Grenoble" "Bolzano" "Salzburg" "Ljubljana" "Bern" "Linz" "Padua" "Trento" "Klagenfurt" "Aosta" "Chambéry" "Bregenz" "Udine"
+			}
+		}
+
+	}
+
+	character_names = {
+
+		names1 = {
+			first_names_male = {
+				"Leo" "Noah" "Ethan" "Samuel" "Oscar" "Adam" "Xavier" "Kai" "Luca" "Natan" "Isaac" "Ronan" "Tyler" "Zain" "Gabriel" "Mateo" "David" "Ivan" "Brandon" "Tristan" "Dylan" "Timothy" "Anthony" "Luke" "Miguel" "Julian" "Kenji" "Xavier" "August" "Jaxson" "Marcus" "Yusuf" "James" "Nikolai" "Aarav" "Luis" "Evan" "Soren" "Theo" "Jasper" "Sean" "Malcolm" "Alex" "Ezra" "Arlo" "Wesley" "Luca" "Finn" "Caleb" "Cole" "Elias" "Ivan" "Hugo" "Idris" "Damian" "Cody" "Aaron" "Micah" "Victor" "Nolan" "Emiliano" "Dario" "Rowan" "Keenan" "Alejandro" "Thiago" "Owen" "Emilio" "Cyrus" "Dominic" "Kieran" "Leon" "Shiloh" "Edgar" "Maximilian" "Rafael" "Kaden" "Jasper" "Xander" "Alaric" "Zephyr" "Atticus" "Mathias" "Arthur" "Phoenix" "Flynn" "Ellis" "Amari" "Jaden" "Callum" "Jack" "Finnegan" "Aaron" "Xavier" "Oscar" "Ethan" "Beckett" "Eamon" "Lorenzo" "Jonah"
+			}
+			first_names_female = {
+				"Mia" "Sofia" "Charlotte" "Emma" "Amelia" "Isabella" "Luna" "Aurora" "Scarlett" "Lily" "Eva" "Freya" "Jasmine" "Jade" "Maya" "Emilia" "Aria" "Chloe" "Penelope" "Ava" "Adelaide" "Grace" "Harper" "Hazel" "Elena" "Alice" "Esme" "Olivia" "Celeste" "Zara" "Gaia" "Athena" "Layla" "Bella" "Daphne" "Elsie" "Clementine" "Amara" "Norah" "Vida" "Leila" "Anika" "Ingrid" "Sadie" "Audrey" "Noelle" "Marley" "Juniper" "Eloise" "Lila" "Ada" "Mila" "Luciana" "Livia" "Isla" "Ivy" "Emery" "Elsie" "Clara" "Ivy" "Eden" "Anaya" "Thea" "Lyra" "Maeve" "Ayla" "Delilah" "Araceli" "Fatima" "Celeste" "Tiana" "Amalia" "Frida" "Avril" "Lilith" "Liana" "Zara" "Soraya" "Alessia" "Calliope" "Alejandra" "Safiya" "Darcy" "Sariyah" "Analia" "Tatiana" "Fia" "Dahlia" "Marianna" "Kaida" "Milani" "Freya" "Farrah" "Nalani" "Paloma" "Giselle" "Inara" "Esme" "Amara" "Thalia"
+			}
+			second_names = {
+				"Smith" "Johnson" "Lee" "Kim" "Garcia" "Martinez" "Jones" "Nguyen" "Davis" "Rodriguez" "Miller" "Patel" "Gonzalez" "Wilson" "Anderson" "Thomas" "Jackson" "White" "Harris" "Martin" "Thompson" "Ali" "Moore" "Young" "Ahmed" "Wright" "Singh" "Scott" "Green" "Baker" "Adams" "Nelson" "Carter" "Mitchell" "Huang" "Roberts" "Turner" "Phillips" "Campbell" "Kim" "Parker" "Evans" "Edwards" "Collins" "Stewart" "Sanchez" "Morris" "Rogers" "Reed" "Cooper" "Bailey" "Ortiz" "Gomez" "Murray" "Freeman" "Wells" "Webb" "Simpson" "Stevens" "Tucker" "Porter" "Hunter" "Hicks" "Crawford" "Henry" "Boyd" "Mason" "Ramirez" "Dixon" "Palmer" "Steele" "Harrington" "Wyatt" "Sharp" "Lane" "Douglas" "Black" "Santiago" "Burgess" "Stanley" "Walters" "Horton" "Salazar" "Hubbard" "Moran" "French" "Cline" "Ingram" "Steele" "Pratt" "May" "Buckley" "Franco" "Mercer" "Shea" "Kent" "Hester" "Glenn" "Murphy" "McNeil"
+			}
+
+			regnal_first_names_male = {
+				
+			}
+
+			regnal_first_names_female = {
+				
+
+			}
+			regnal_second_names = {
+				
+			}
+		}
+	}
+}
