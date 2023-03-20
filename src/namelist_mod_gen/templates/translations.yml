@@ -1,0 +1,3 @@
+l_{{ lang }}:
+{% for k, v in dict_item.items() %} {{ k }}:0 {{ v }}
+{% endfor %}
