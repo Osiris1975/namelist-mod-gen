@@ -10,11 +10,12 @@ NL_LOC_TEMPLATE = 'translations.yml'
 temp.append('generated_mods')
 MOD_OUTPUT_DIR = os.path.join('/', *temp)
 
-ORD_TYPES = {
+SUB_TOKENS = {
     "C": "SEQ",
     "O": "ORD",
     "R": "R",
-    "ORD": "ORD"
+    "ORD": "ORD",
+    "(ONL)": "(ONL)"
 }
 
 ORD_EXAMPLES = {
@@ -39,23 +40,18 @@ LANGUAGES = {
 LANG_TRANS_MAP = {
     'en': ["alibaba", "baidu", "caiyun", "google", "iciba", "iflytek", "itranslate", "lingvanex",
            "niutrans", "papago", "reverso", "sogou", "tencent", "translateCom", "yandex", "youdao"],
-    'pt': ["google", "niutrans", "papago", "reverso", "tencent", "translateCom"],
-    'fr': ["alibaba", "baidu", "caiyun", "google", "iciba", "iflytek", "itranslate",
-           "niutrans", "papago", "reverso", "tencent", "translateCom", "yandex"],
-    'de': ["baidu", "google", "iciba", "iflytek", "itranslate",
-           "niutrans", "papago", "reverso", "sogou", "tencent", "translateCom", "yandex"],
-    'pl': ["baidu", "google", "iciba", "iflytek", "itranslate","niutrans", "reverso", "translateCom", "yandex"],
-    'ru': ["alibaba", "baidu", "caiyun", "google", "iciba", "iflytek", "itranslate", "lingvanex",
-           "niutrans", "papago", "reverso", "sogou", "tencent", "translateCom", "yandex", "youdao"],
-    'es': ["alibaba", "baidu", "caiyun", "google", "iciba", "iflytek", "itranslate", "lingvanex",
-           "niutrans", "papago", "reverso", "sogou", "tencent", "translateCom", "yandex", "youdao"],
-    'zh-CN': ["alibaba", "baidu", "caiyun", "google", "iciba", "iflytek", "itranslate", "lingvanex",
-              "niutrans", "papago", "reverso", "sogou", "tencent", "translateCom", "yandex",
+    'pt': ["google", "niutrans", "reverso", "tencent", "translateCom"],
+    'fr': ["alibaba", "caiyun", "google", "iflytek", "niutrans", "reverso", "tencent", "translateCom"],
+    'de': ["google", "iflytek", "niutrans", "reverso", "sogou", "tencent", "translateCom"],
+    'pl': ["google", "iflytek", "niutrans", "reverso", "translateCom"],
+    'ru': ["alibaba", "caiyun", "google", "iflytek", "niutrans", "papago", "reverso", "sogou", "tencent",
+           "translateCom", "youdao"],
+    'es': ["alibaba", "caiyun", "google", "iflytek", "itranslate", "niutrans", "reverso", "sogou", "tencent",
+           "translateCom", "youdao"],
+    'zh-CN': ["alibaba", "caiyun", "google", "iflytek", "niutrans", "reverso", "sogou", "tencent", "translateCom",
               "youdao"],
-    'ja': ["baidu", "google", "iciba", "iflytek", "itranslate", "niutrans", "papago", "reverso", "sogou",
-           "translateCom", "yandex"],
-    'ko': ["baidu", "google", "iciba", "iflytek", "itranslate",
-           "papago", "reverso", "sogou", "translateCom", "yandex", "youdao"]
+    'ja': ["google", "iflytek", "itranslate", "niutrans", "papago", "reverso", "sogou", "translateCom"],
+    'ko': ["baidu", "google", "iciba", "iflytek", "itranslate", "papago", "reverso", "sogou", "translateCom", "youdao"]
 }
 
 NOTITLE_FIELDS = [

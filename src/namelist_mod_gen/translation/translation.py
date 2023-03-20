@@ -47,8 +47,8 @@ def insert(txt, translation, lang_code, translators_string, is_translated, is_sa
         con = sqlite3.connect("translations.db")
         cur = con.cursor()
         long_lang = c.LANGUAGES[lang_code]
-        src_text = f"\042{txt.replace('$', '_')}\042"
-        trans_text = f"\042{translation.replace('$', '_')}\042"
+        src_text = f"\042{txt}\042"
+        trans_text = f"\042{translation}\042"
         translators_string = f"\042{translators_string}\042"
         query = f"INSERT OR IGNORE INTO {long_lang} (english, {long_lang}, translators, is_translated, is_same) VALUES({src_text}, {trans_text}, {translators_string}, {is_translated}, {is_same});"
         logger.debug(f'Insert Query: {query}')
@@ -82,6 +82,7 @@ def validate_translation(trans_array, original_txt):
 def clean(txt):
     try:
         s = regex.sub(r'[^a-zA-Z0-9_,\'\.\$\s\p{script=Latin}()-]\'', '', txt).rstrip('.')
+        s = s.replace("'S", "'s")
         return s
     except Exception as e:
         logger.error(f'Error cleaning text: {txt}: {e}')
@@ -124,16 +125,16 @@ def random_api_translation(txt, lang_code):
                 skipped_translators.append(translator)
             except Exception as e:
                 logger.error(
-                    f'Translation exception: Text:{txt} | Translator: {translator} | ToLang: {lang_code} | Error: {e}')
+                        f'Random API Mode Translation Failed | Original: {txt} | ToLang: {lang_code} | Exception: {e}')
             finally:
                 active_pool.remove(translator)
                 if len(active_pool) == 0:
                     active_pool = get_active_pool(lang_code)
 
-        translated = validate_translation(trans_array, txt)
+        translation = validate_translation(trans_array, txt)
         translators_string = ','.join(translators)
-        logger.info(f'Translation of {txt} completed with {translator}: {translated}.')
-        insert(txt, translated, lang_code, translators_string, True, True)
+        logger.info(f'Translation of {txt} to {lang_code} completed with {translator}: {translated}.')
+        insert(txt, translation.title(), lang_code, translators_string, True, True)
 
     if translated:
         return translated
@@ -145,7 +146,7 @@ def mymemory_translation(txt, lang_code):
     response = requests.get(url)
     if response.status_code == http.HTTPStatus.OK:
         translation = response.json()['responseData']['translatedText']
-        insert(txt, translation, lang_code, 'mymemory', True, True)
+        insert(txt, translation.title(), lang_code, 'mymemory', True, True)
         return translation
     else:
         skipped_methods.append('mmt')
@@ -156,7 +157,7 @@ def deepl_translation(txt, lang_code):
     try:
         translation = dl_translator.translate_text(txt, target_lang=to_dl_code(lang_code),
                                                    preserve_formatting=True).text
-        insert(txt, translation, lang_code, 'deepl', True, True)
+        insert(txt, translation.title(), lang_code, 'deepl', True, True)
         return translation
     except Exception as e:
         logger.error(f'Translation with deepl failed: {e}')
@@ -166,7 +167,7 @@ def deepl_translation(txt, lang_code):
 def easy_nmt_translation(txt, lang_code):
     try:
         translation = ez_nmt_model.translate(txt, source_lang='en', target_lang=lang_code)
-        insert(txt, translation, lang_code, 'easy_nmt', True, True)
+        insert(txt, translation.title(), lang_code, 'easy_nmt', True, True)
         return translation
 
     except requests.exceptions.HTTPError as e:
@@ -176,7 +177,7 @@ def easy_nmt_translation(txt, lang_code):
 def gtrans_translation(txt, lang_code):
     try:
         translation = g_trans.translate(txt, src='en', dest=lang_code).text
-        insert(txt, translation, lang_code, 'gtrans', True, True)
+        insert(txt, translation.title(), lang_code, 'gtrans', True, True)
         return translation
     except Exception as e:
         logger.error(f'Translation with gtrans failed: {e}')
@@ -198,6 +199,11 @@ def resolve_token_placement(txt):
         token = regex.search(r'\$\w+\$$', txt)
         if token:
             response['token'] = token.group()
+            response['loc'] = 2
+        token = regex.search(r'\(\w+\)', txt)
+        if token:
+            response['token'] = token.group()
+            response['detokenized_txt'] = txt.replace(response['token'], '').title()
             response['loc'] = 2
         return response
     except Exception as e:
@@ -223,43 +229,51 @@ def translate(key, txt, lang_code):
     txt_dict = resolve_token_placement(txt)
     # check local DB first
     txt = txt_dict['detokenized_txt']
+    tr_method = None
     translated = check_in_db(txt_dict['detokenized_txt'], lang_code)
     if translated:
-        logger.info(f'\n[------------------ {txt.upper()} FOUND IN DB ------------------]')
+        tr_method = 'db'
+        logger.debug(f'\n[------------------ {txt.upper()} FOUND IN DB ------------------]')
 
     if not translated and 'gtrans' not in skipped_methods:
-        logger.info(
+        logger.debug(
             f'\n[------------------TRANSLATING WITH GTRANS MODE: {txt.upper()} TO {lang_code.upper()}------------------]')
         translated = gtrans_translation(txt_dict['detokenized_txt'], lang_code)
+        tr_method = 'gtrans'
 
     if not translated and 'mmt' not in skipped_methods:
-        logger.info(
+        logger.debug(
             f'\n[------------------TRANSLATING WITH MMT MODE: {txt.upper()} TO {lang_code.upper()}------------------]')
         translated = mymemory_translation(txt_dict['detokenized_txt'], lang_code)
+        tr_method = 'mmt'
 
     if not translated and 'deepl' not in skipped_methods:
         deepl_lang_code = to_dl_code(lang_code)
-        logger.info(
+        logger.debug(
             f'\n[------------------TRANSLATING WITH DEEPL MODE: {txt.upper()} TO {lang_code.upper()}------------------]')
         translated = deepl_translation(txt_dict['detokenized_txt'], deepl_lang_code)
+        tr_method = 'deepl'
 
     if not translated and lang_code not in c.OPUS_UNSUPPORTED:
-        logger.info(
+        logger.debug(
             f'\n[------------------TRANSLATING WITH EASY-NMT MODE: {txt.upper()} TO {lang_code.upper()}------------------]')
         translated = easy_nmt_translation(txt, lang_code)
+        tr_method = 'easy-nmt'
 
     if not translated:
-        logger.info(
+        logger.debug(
             f'\n[------------------TRANSLATING WITH RANDOM API MODE: {txt.upper()} TO {lang_code.upper()}------------------]')
         translated = random_api_translation(txt, lang_code)
+        tr_method = 'random-api'
 
-    retokenized = retokenize(translated, txt_dict)
+    retokenized = retokenize(translated.title(), txt_dict)
     cleaned = clean(retokenized)
-    logger.info(f'Translation succeeded: {txt}')
+    logger.info(f'Translation succeeded | Original: {txt} | Translation: {cleaned} | ToLang: {lang_code} | TrMethod: {tr_method}')
     return key, cleaned
 
 
 def _translate(thr_input):
+
     response = translate(thr_input['key'], thr_input['txt'], thr_input['lang_code'])
     thr_input['queue'].put(response)
 
@@ -277,6 +291,7 @@ def translate_dict(indict, to_lang_code, translate):
                 "queue": my_queue
             }
             thread_inputs.append(thr_input)
+        #TODO: Need to handle issue where sometimes waiter.acquire never acquires
         with ThreadPool() as pool:
             pool.map(_translate, thread_inputs, chunksize=10)
 

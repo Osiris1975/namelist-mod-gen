@@ -4,7 +4,6 @@ import argparse
 import csv
 import cProfile
 import pstats
-import io
 from pstats import SortKey
 import datetime
 import io
@@ -24,7 +23,6 @@ from jinja2 import Environment, FileSystemLoader
 
 from constants import constants as c
 from translation.translation import translate_dict, translate
-import googletrans as gt
 
 ob = cProfile.Profile()
 
@@ -104,7 +102,7 @@ def create_localized_namelist_listing(input, author, root_loc_dir):
             else:
                 title = info['title']
             def_dict[nl] = {
-                'title': title.title().replace('(onl)', '(ONL)').replace('(Onl)', '(ONL)')
+                'title': title.replace('(onl)', '(ONL)').replace('(Onl)', '(ONL)')
             }
 
         nl_def_file = os.path.join(root_loc_dir, lang, f"name_lists/{author.lower()}_namelist_l_{lang}.yml")
