@@ -2,15 +2,11 @@
 
 import argparse
 import csv
-import cProfile
-import pstats
-from pstats import SortKey
 import datetime
 import io
 import logging
 import os
 import re
-import shutil
 import sqlite3
 import sys
 from multiprocessing import Pool
@@ -23,6 +19,7 @@ from jinja2 import Environment, FileSystemLoader
 
 from constants import constants as c
 from translation.translation import translate_dict, translate
+from validation.validation import validate
 
 try:
     loglevel = os.getenv('LOG_LEVEL').upper()
@@ -47,11 +44,6 @@ template_env = Environment(loader=template_loader)
 create_table_connection = sqlite3.connect("translations.db", timeout=15)
 
 process_dirs = []
-
-
-def failure_cleanup():
-    for p in process_dirs:
-        shutil.rmtree(p)
 
 
 def make_mod_directories(mod_name):
@@ -98,7 +90,7 @@ def create_localized_namelist_listing(input, author, root_loc_dir):
         def_dict = dict()
         for nl, info in input.items():
             if code != 'en':
-                title = translate(None, info['title'], code)[1]
+                title = translate(None, info['title'], code, 0, )[1]
             else:
                 title = info['title']
             def_dict[nl] = {
@@ -143,8 +135,17 @@ def create_mod(args):
         cur = create_table_connection.cursor()
         for lang in c.LANGUAGES.values():
             if lang != 'english':
-                query = f"CREATE TABLE IF NOT EXISTS {lang} (english varchar, {lang} varchar, translators varchar, is_translated boolean, is_same boolean, UNIQUE(english))"
-                cur.execute(query)
+                # run some initial queries
+                queries = [
+                    f"CREATE TABLE IF NOT EXISTS {lang} (english varchar, {lang} varchar, translators varchar, is_translated boolean, is_same boolean, UNIQUE(english))",
+                    f"delete from {lang} where {lang} like '%(%';",
+                    f"delete from {lang} where {lang} like '%:%';",
+                    f"delete from {lang} where length({lang}) > 50;"
+                ]
+                for q in queries:
+                    cur.execute(q)
+
+
         create_table_connection.close()
     mod_dirs = make_mod_directories(args.mod_name)
     csv_files = abs_file_paths(args.namelists)
@@ -232,15 +233,22 @@ def csv_to_dicts(namelists, author):
         for row in reader:
             for k, v in row.items():
                 if k in namelist_dict.keys() and len(v) > 0:
-                    # qv = (f'\"{v}\"' if 'namelist' not in k else v)
                     namelist_dict[k].append(clean(v))
 
+    errors = []
+    for v in namelist_dict.values():
+        if len(v) > 0:
+            errors.extend(validate(v[0]))
+
     namelist_id = namelist_dict['namelist_id'][0]
+    if len(errors) > 0:
+        errors_string = '\n'.join(errors)
+        logger.critical(f'Namelist {namelist_id} has incompatible names: {errors_string}')
+        sys.exit(1)
     for k, v in namelist_dict.items():
         if k not in c.UNKEYED_FIELDS:
             values = create_seq_key_dict(k, v, author, namelist_id)
             namelist_dict[k] = values
-
     return namelist_dict
 
 
@@ -265,14 +273,6 @@ def csv_template(args):
         logger.info(f'Blank CSV template written to {file_dest}')
 
 
-def profile_output():
-    ob.disable()
-    sec = io.StringIO()
-    sortby = SortKey.CUMULATIVE
-    ps = pstats.Stats(ob, stream=sec).sort_stats(sortby)
-    ps.print_stats()
-
-
 def main():
     args = parser.parse_args()
     logger.warning(f'TRANSLATION ENABLED: This can take a long time...')
@@ -293,11 +293,11 @@ parser = argparse.ArgumentParser(
 parser.add_argument('-n', '--namelists', help="path to the directory with namelist csv files", required=False)
 parser.add_argument('-a', '--author', help="mod author", required=False)
 parser.add_argument('-m', '--mod_name', help="name to use for the generated mod", required=False)
-parser.add_argument('-M', '--multiprocess', default=False, help='experimental: activate multiprocessing mode', action='store_true')
+parser.add_argument('-M', '--multiprocess', default=False, help='experimental: activate multiprocessing mode',
+                    action='store_true')
 parser.add_argument('-t', '--translate', default=False, help='activate namelist translation', action='store_true')
 parser.add_argument('-d', '--dump_csv_template', help='dump a blank csv with namelist headers with the specified name',
                     required=False)
 
 if __name__ == "__main__":
     sys.exit(main())
-

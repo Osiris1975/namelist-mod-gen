@@ -6,8 +6,6 @@ import os
 import random
 import sqlite3
 import time
-from collections import Counter
-from difflib import get_close_matches
 from multiprocessing.pool import ThreadPool
 from queue import Queue
 from random import choice
@@ -21,6 +19,7 @@ import translators as ts
 from easynmt import EasyNMT
 
 from src.namelist_mod_gen.constants import constants as c
+from src.namelist_mod_gen.validation.validation import validate_translation, validate
 
 try:
     loglevel = os.getenv('LOG_LEVEL').upper()
@@ -63,24 +62,6 @@ def insert(txt, translation, lang_code, translators_string, is_translated, is_sa
             f'\n[------------------{translation.upper()} INSERTED INTO DB FOR {lang_code.upper()}------------------]')
     except Exception as e:
         logger.error(f'Failed to insert {txt}:{translation} into DB: {e}')
-
-
-def validate_translation(trans_array, original_txt):
-    matches = get_close_matches(original_txt, trans_array)
-    if len(matches) > 0:
-        return matches[0]
-    occurence_count = Counter(trans_array)
-    counts = sorted(occurence_count.values())
-    ct_array = [len(occurence_count.most_common(1)[0][0].split(' ')), len(original_txt.split(' '))]
-    ct_array.sort()
-    if counts[-1] > 1 and ct_array[1] - ct_array[0] < 2:
-        return occurence_count.most_common(1)[0][0]
-    if len(trans_array) == 0:
-        logger.error(
-            f'Could not find a best match for {original_txt} from list: {trans_array}. Using original text.')
-        return original_txt
-    else:
-        return validate_translation(trans_array[:-1], trans_array[0])
 
 
 def clean(txt):
@@ -272,6 +253,11 @@ def translate(key, txt, lang_code, writer, reader):
             f'All translation methods failed to translate {txt_dict["detokenized_txt"]} to {lang_code}'
         )
         translated = txt_dict['detokenized_txt']
+
+    if len(validate(translated)) > 0:
+        logger.warning(f'{translated} is a namelist incompatible translation({tr_method}). Using original value.')
+        translated = txt
+
     retokenized = retokenize(translated.title(), txt_dict)
     cleaned = clean(retokenized)
     logger.info(
@@ -310,10 +296,7 @@ def translate_dict(indict, to_lang_code, translate):
             thread_inputs.append(thr_input)
         # TODO: Need to handle issue where sometimes waiter.acquire never acquires
         with ThreadPool(c.THREAD_CONCURRENCY) as pool:
-            results = pool.map(_translate, thread_inputs, chunksize=10)
-
-        for r in results:
-            print(r)
+            pool.map(_translate, thread_inputs)
 
         while my_queue.qsize() > 0:
             logger.debug(f"Queue length is {my_queue.qsize()}")
