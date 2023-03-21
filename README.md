@@ -24,11 +24,11 @@ will be dictated by interest outside of the author's usage.
 * Has resolved the %SEQ% issue introduced with Stellaris 3.6.0
 * Write a blank csv template to fill out.
 * Basic localization.
+* Optional translation of localization. 
 
 ### Planned Features
 
 * Write a CSV from a given namelist text file. 
-* Translated localization.
 
 ### Installing Python
 
@@ -77,15 +77,34 @@ There are some CSV example files in `examples/input_csvs/osiris_namelists`
 
 `-m/--mod_name`: This specifies the mod name that will be used in naming files.
 
+`-M/--multiprocess`: Run in multiprocessing mode. This is experimental.
+
 `-a/--author`: This specifies the creator of the namelist and is also used in specifying file names.  
 
+`-t/--translate`: Runs the translation algorithm. See the next section below.
+
+#### Translation Mode
+
+When specifying `-t`, namelist-mod-gen will translate all the names provided in the CSV file to the languages supported
+by Stellaris. Depending on the size and number of namelists used, this can take a very long time (many hours) 
+the first time the words are translated.
+
+One reason this takes as long as it does is because of the number of API requests to various translation services 
+that are made, and because in some cases the tool will generate a list of translations and pick the most common one
+to get better accuracy. It does use a multi-threaded approach to try and improve translation time. If a word fails
+to be translated, the tool will use the original english version for the localization file.
+
+Once words are translated, they are stored in an SQLite database so subsequent runs will only translate new words and
+phrases. 
+
+In the future I hope to streamline the translation process and make it faster. 
 
 ## Current Limitations and Issues
 
 These are the known limitations and issues. Some may be addressed in the future.
 
 * Does not create .mod files, you will have to do this yourself.
-* Creates untranslated localization files. Translated ones are in the works. 
+* Translation is still developmental and can sometimes experience thread lock, meaning the application will freeze. A workaround is to end the process and restart and it should pick up where it left off.
 
 
 For issues, visit the [issues page](https://github.com/Osiris1975/namelist-mod-gen/issues) in this repository.

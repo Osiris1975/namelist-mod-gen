@@ -24,8 +24,6 @@ from jinja2 import Environment, FileSystemLoader
 from constants import constants as c
 from translation.translation import translate_dict, translate
 
-ob = cProfile.Profile()
-
 try:
     loglevel = os.getenv('LOG_LEVEL').upper()
 except AttributeError:
@@ -46,8 +44,7 @@ logger.addHandler(file_handler)
 template_loader = FileSystemLoader(searchpath=c.TEMPLATES_DIR)
 template_env = Environment(loader=template_loader)
 
-con = sqlite3.connect("translations.db", timeout=15)
-cur = con.cursor()
+create_table_connection = sqlite3.connect("translations.db", timeout=15)
 
 process_dirs = []
 
@@ -130,12 +127,7 @@ def create_localized_translations(loc_inputs, translate):
     if not os.path.exists(ord_loc_file):
         loc_dict = make_loc_dict(nl_dict)
         if lang != 'english':
-            try:
-                loc_dict = translate_dict(loc_dict, lang_code, translate)
-            except Exception as e:
-                logger.critical(f'Translation failure: {e}')
-                con.close()
-                sys.exit(1)
+            loc_dict = translate_dict(loc_dict, lang_code, translate)
         with io.open(ord_loc_file, 'w', encoding='utf-8-sig') as file:
             quotified = {k: f'\"{v}\"' for k, v in loc_dict.items()}
             namelist_loc_template = template_env.get_template(c.NL_LOC_TEMPLATE)
@@ -147,6 +139,13 @@ def create_localized_translations(loc_inputs, translate):
 
 
 def create_mod(args):
+    if args.translate:
+        cur = create_table_connection.cursor()
+        for lang in c.LANGUAGES.values():
+            if lang != 'english':
+                query = f"CREATE TABLE IF NOT EXISTS {lang} (english varchar, {lang} varchar, translators varchar, is_translated boolean, is_same boolean, UNIQUE(english))"
+                cur.execute(query)
+        create_table_connection.close()
     mod_dirs = make_mod_directories(args.mod_name)
     csv_files = abs_file_paths(args.namelists)
     namelist_info = dict()
@@ -276,39 +275,29 @@ def profile_output():
 
 def main():
     args = parser.parse_args()
+    logger.warning(f'TRANSLATION ENABLED: This can take a long time...')
     if args.dump_csv_template:
         csv_template(args)
     else:
-        if args.profile:
-            ob.enable()
         st = datetime.datetime.now()
         create_mod(args)
-        con.close()
         et = datetime.datetime.now()
         elapsed_time = et - st
         logger.info(f'NAMELIST MOD GENERATION COMPLETED IN {elapsed_time}.')
-        if args.profile:
-            profile_output()
 
 
 parser = argparse.ArgumentParser(
-    description='A tool for creating Stellaris namelist mods from a CSV file',
+    description='A tool for creating optionally translated Stellaris namelist mods from a CSV file',
     usage='namelist_generator.py -c [NAMELIST_FILE]',
     formatter_class=argparse.ArgumentDefaultsHelpFormatter)
 parser.add_argument('-n', '--namelists', help="path to the directory with namelist csv files", required=False)
 parser.add_argument('-a', '--author', help="mod author", required=False)
 parser.add_argument('-m', '--mod_name', help="name to use for the generated mod", required=False)
-parser.add_argument('-M', '--multiprocess', default=False, help='activate multiprocessing mode', action='store_true')
+parser.add_argument('-M', '--multiprocess', default=False, help='experimental: activate multiprocessing mode', action='store_true')
 parser.add_argument('-t', '--translate', default=False, help='activate namelist translation', action='store_true')
-parser.add_argument('-p', '--profile', default=False, help='activate performance profiling', action='store_true')
 parser.add_argument('-d', '--dump_csv_template', help='dump a blank csv with namelist headers with the specified name',
                     required=False)
 
 if __name__ == "__main__":
-    try:
-        sys.exit(main())
-    except Exception as e:
-        con.close()
-        file_handler.close()
-        failure_cleanup()
-        logger.error(f"Process failed with {e}")
+    sys.exit(main())
+

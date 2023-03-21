@@ -79,6 +79,7 @@ DL_CODES = {
     'pt': 'PT-BR',
     'zh-CN': 'ZH'
 }
-THREAD_CONCURRENCY = 50
+# Increasing this above this number risks encountering deadlock
+THREAD_CONCURRENCY = 25
 
 OPUS_UNSUPPORTED = ['ja', 'pt', 'pl', 'zh-CN', 'ko']
