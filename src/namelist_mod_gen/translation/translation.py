@@ -129,7 +129,8 @@ def mymemory_translation(txt, lang_code, writer):
     response = requests.get(url)
     if response.status_code == http.HTTPStatus.OK:
         translation = response.json()['responseData']['translatedText']
-        insert(txt, translation.title(), lang_code, 'mmt', True, True, writer)
+        if writer:
+            insert(txt, translation.title(), lang_code, 'mmt', True, True, writer)
         return translation
     else:
         skipped_methods.append('mmt')
@@ -331,12 +332,12 @@ def check_in_db(txt, to_lang, reader):
 
 try:
     dl_translator = deepl.Translator(os.getenv('DEEPL_AUTH_KEY'))
-    deepl_translation('test', 'es')
+    dl_translator.translate_text('test', target_lang='es')
     dl_langs = dl_translator.get_target_languages()
 except Exception as e:
     skipped_methods.append('deepl')
 
 try:
-    mymemory_translation('test', lang_code='es')
+    mymemory_translation(txt='test', lang_code='es', writer=None)
 except Exception as e:
     skipped_methods.append('mmt')

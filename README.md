@@ -83,7 +83,26 @@ There are some CSV example files in `examples/input_csvs/osiris_namelists`
 
 `-t/--translate`: Runs the translation algorithm. See the next section below.
 
-#### Translation Mode
+### Getting a DeepL Auth Key for DeepL Translation
+
+In order for the tool to perform translations using DeepL, you will have to get an authentication key from their website.
+A free option is available that allows 500,000 characters per month to be translated. 
+
+Visit this link to sign up for an account:
+[Deepl Website](https://www.deepl.com/translator)
+
+Once you have an account you can find the authentication key at the bottom of the account summary page:
+[Account Summary Page](https://www.deepl.com/account/summary)
+
+The mod-gen tool expects to find this as an environment variable named `DEEPL_AUTH_KEY`. To set the environment variable, follow the links
+below for your operating system:
+
+[MacOS/Linux Environment Variable Instructions](https://tecadmin.net/setting-up-the-environment-variables-in-macos/)
+[Windows Environment Variable Instructions](https://docs.oracle.com/en/database/oracle/machine-learning/oml4r/1.5.1/oread/creating-and-modifying-environment-variables-on-windows.html)
+
+If this variable is not set, translation will still work, but it won't use DeepL as one of the sources for translation.
+
+### Translation Mode
 
 When specifying `-t`, namelist-mod-gen will translate all the names provided in the CSV file to the languages supported
 by Stellaris. Depending on the size and number of namelists used, this can take a very long time (many hours) 
