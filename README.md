@@ -3,9 +3,13 @@
 This repository encompasses work to create a Stellaris namelist mod generator tool to facilitate the creation of 
 Stellaris namelists and includes the first mod created with this too, Osiris's Namelist Mod.
 
-The generator is a Python-based command line tool. It requires a csv file of names which it translates into the txt
-and yml files in the proper directory structure. It doesn't completely generate the mod for you, but does the heavy 
-lifting. See the Issues and Limitations section below for what it can't do for you. 
+For information on the mod itself, check out the listings on Steam or Paradox Plaza (this version is only updated on major releases):
+
+[Osiris's Namelists for Stellaris @ Steam](https://steamcommunity.com/sharedfiles/filedetails/?id=2936596940)
+
+[Osiris's Namelists for Stellaris @ Paradox Plaza](https://forum.paradoxplaza.com/forum/threads/osiriss-namelists-for-stellaris.1570100/)
+
+For information on the generator tool that made this mod, keep reading.
 
 ## Contributing Namelists to Osiris's Mod
 
@@ -13,6 +17,13 @@ The easiest way to contribute a namelist to the mod is to fill out the github is
 
 [Osiris's Namelist Mod Contribution](https://github.com/Osiris1975/namelist-mod-gen/issues/new?assignees=Osiris1975&labels=contribution&template=osiris-s-namelist-contribution.md&title=)
 
+
+
+## Namelist Generator Tool
+
+The generator is a Python-based command line tool. It requires a csv file of names which it translates into the txt
+and yml files in the proper directory structure. It doesn't completely generate the mod for you, but does the heavy 
+lifting. See the Issues and Limitations section below for what it can't do for you. 
 
 ## Features
 
