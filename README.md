@@ -13,10 +13,6 @@ The easiest way to contribute a namelist to the mod is to fill out the github is
 
 [Osiris's Namelist Mod Contribution](https://github.com/Osiris1975/namelist-mod-gen/issues/new?assignees=Osiris1975&labels=contribution&template=osiris-s-namelist-contribution.md&title=)
 
-## Creating Your Own Namelist Mod With the Generator Tool
-
-Disclaimer: This tool is still under active development and extremely raw. The pace of development and improvements
-will be dictated by interest outside of the author's usage.
 
 ## Features
 
@@ -30,7 +26,7 @@ will be dictated by interest outside of the author's usage.
 
 * Write a CSV from a given namelist text file to allow other existing mods to update to the most recent format and perform either basic or translated localization on their mods automatically.
 
-## Getting Started
+## Getting Started with Creating your own Namelist Mod 
 
 Follow the steps below to create your own namelist mod.
 
