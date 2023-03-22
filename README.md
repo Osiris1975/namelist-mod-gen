@@ -18,7 +18,7 @@ The easiest way to contribute a namelist to the mod is to fill out the github is
 Disclaimer: This tool is still under active development and extremely raw. The pace of development and improvements
 will be dictated by interest outside of the author's usage.
 
-### Features
+## Features
 
 * Creates namelists from one or more CSV files and produces a single mod for all the namelists. 
 * Has resolved the %SEQ% issue introduced with Stellaris 3.6.0
@@ -26,9 +26,13 @@ will be dictated by interest outside of the author's usage.
 * Basic localization.
 * Optional translation of localization. 
 
-### Planned Features
+## Planned Features
 
-* Write a CSV from a given namelist text file. 
+* Write a CSV from a given namelist text file to allow other existing mods to update to the most recent format and perform either basic or translated localization on their mods automatically.
+
+## Getting Started
+
+Follow the steps below to create your own namelist mod.
 
 ### Installing Python
 
@@ -90,7 +94,7 @@ by Stellaris. Depending on the size and number of namelists used, this can take 
 the first time the words are translated.
 
 One reason this takes as long as it does is because of the number of API requests to various translation services 
-that are made, and because in some cases the tool will generate a list of translations and pick the most common one
+that are made, and in some cases the tool will generate a list of translations for a single word and pick the most common one
 to get better accuracy. It does use a multi-threaded approach to try and improve translation time. If a word fails
 to be translated, the tool will use the original english version for the localization file.
 
@@ -103,9 +107,9 @@ In the future I hope to streamline the translation process and make it faster.
 
 These are the known limitations and issues. Some may be addressed in the future.
 
-* Does not create .mod files, you will have to do this yourself.
-* Translation is still developmental and can sometimes experience thread lock, meaning the application will freeze. A workaround is to end the process and restart and it should pick up where it left off.
-
+* Does not currently create mod descriptor files.
+* Translation is still developmental. 
+* Sometimes translators, especially machine learning ones, return nonsensical translations.
 
 For issues, visit the [issues page](https://github.com/Osiris1975/namelist-mod-gen/issues) in this repository.
 

@@ -151,7 +151,6 @@ def create_mod(args):
     csv_files = abs_file_paths(args.namelists)
     namelist_info = dict()
     for f in csv_files:
-        st = datetime.datetime.now()
         if 'DS_Store' in f:
             continue
         nl_dict = csv_to_dicts(f, args.author.lower())
@@ -195,9 +194,6 @@ def create_mod(args):
                 create_localized_translations(i, args.translate)
 
         # generate namelist description file for each language
-        et = datetime.datetime.now()
-        elapsed_time = et - st
-        logger.info(f'NAMELIST {f} COMPLETED IN {elapsed_time}.')
 
     loc_split = loc_dir.split('/')
     root_loc_dir = os.path.join('/', *loc_split[0:-2])

@@ -294,8 +294,7 @@ def translate_dict(indict, to_lang_code, translate):
                 "queue": my_queue
             }
             thread_inputs.append(thr_input)
-        # TODO: Need to handle issue where sometimes waiter.acquire never acquires
-        with ThreadPool(c.THREAD_CONCURRENCY) as pool:
+        with ThreadPool() as pool:
             pool.map(_translate, thread_inputs)
 
         while my_queue.qsize() > 0:
