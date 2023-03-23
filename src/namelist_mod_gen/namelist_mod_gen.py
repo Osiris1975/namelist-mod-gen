@@ -84,13 +84,13 @@ def make_loc_dict(indict):
     return loc_dict
 
 
-def create_localized_namelist_listing(input, author, root_loc_dir, translate):
+def create_localized_namelist_listing(input, author, root_loc_dir, do_translate):
     nl_def_template = template_env.get_template(c.NL_DEF_TEMPLATE)
 
     for code, lang in c.LANGUAGES.items():
         def_dict = dict()
         for nl, info in input.items():
-            if code != 'en' and translate:
+            if code != 'en' and do_translate:
                 title = translate(None, info['title'], code, reader=create_table_connection, writer=create_table_connection, begin=False)[1]
             else:
                 title = info['title']
