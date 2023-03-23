@@ -84,13 +84,13 @@ def make_loc_dict(indict):
     return loc_dict
 
 
-def create_localized_namelist_listing(input, author, root_loc_dir):
+def create_localized_namelist_listing(input, author, root_loc_dir, translate):
     nl_def_template = template_env.get_template(c.NL_DEF_TEMPLATE)
 
     for code, lang in c.LANGUAGES.items():
         def_dict = dict()
         for nl, info in input.items():
-            if code != 'en':
+            if code != 'en' and translate:
                 title = translate(None, info['title'], code, reader=create_table_connection, writer=create_table_connection, begin=False)[1]
             else:
                 title = info['title']
@@ -204,7 +204,7 @@ def create_mod(args):
 
     loc_split = ld.split('/')
     root_loc_dir = os.path.join('/', *loc_split[0:-2])
-    # create_localized_namelist_listing(namelist_info, args.author, root_loc_dir)
+    create_localized_namelist_listing(namelist_info, args.author, root_loc_dir, args.translate)
 
 
 def create_seq_key_dict(key, values, author, namelist_id):
