@@ -204,7 +204,7 @@ def create_mod(args):
 
     loc_split = ld.split('/')
     root_loc_dir = os.path.join('/', *loc_split[0:-2])
-    create_localized_namelist_listing(namelist_info, args.author, root_loc_dir)
+    # create_localized_namelist_listing(namelist_info, args.author, root_loc_dir)
 
 
 def create_seq_key_dict(key, values, author, namelist_id):

@@ -43,6 +43,27 @@ g_trans = googletrans.Translator()
 ez_nmt_model = EasyNMT('opus-mt')
 
 
+def update(txt, translation, lang_code, translators_string, mode, namelist_category, writer, begin=True):
+    try:
+        cur = writer.cursor()
+        long_lang = c.LANGUAGES[lang_code]
+        src_text = f"\042{txt}\042"
+        trans_text = f"\042{translation}\042"
+        translators_string = f"\042{translators_string}\042"
+        mode = f"\042{mode}\042"
+        cat = f"\042{namelist_category}\042"
+        query = f"UPDATE {long_lang} set translation = {trans_text}, translators = {translators_string}, translator_mode = {mode}, namelist_category = {cat}, translation_date = CURRENT_TIMESTAMP where english = {src_text};"
+        logger.debug(f'Insert Query: {query}')
+        if begin:
+            cur.execute("BEGIN")
+        cur.execute(query)
+        writer.commit()
+        logger.info(
+            f'\n[------------------{translation.upper()} INSERTED INTO DB FOR {lang_code.upper()}------------------]')
+    except Exception as e:
+        logger.error(f'Failed to insert {txt}:{translation} into DB: {e}')
+
+
 def insert(txt, translation, lang_code, translators_string, mode, namelist_category, writer, begin=True):
     try:
         cur = writer.cursor()
@@ -51,7 +72,8 @@ def insert(txt, translation, lang_code, translators_string, mode, namelist_categ
         trans_text = f"\042{translation}\042"
         translators_string = f"\042{translators_string}\042"
         mode = f"\042{mode}\042"
-        query = f"INSERT OR IGNORE INTO {long_lang} (english, translation, translators, translator_mode, translation_date) VALUES({src_text}, {trans_text}, {translators_string}, {mode}, CURRENT_TIMESTAMP);"
+        cat = f"\042{namelist_category}\042"
+        query = f"INSERT OR IGNORE INTO {long_lang} (english, translation, translators, translator_mode, namelist_category, translation_date) VALUES({src_text}, {trans_text}, {translators_string}, {mode}, {cat}, CURRENT_TIMESTAMP);"
         logger.debug(f'Insert Query: {query}')
         if begin:
             cur.execute("BEGIN")
@@ -280,6 +302,27 @@ def translate_dict(indict, to_lang_code, translate):
         cur.execute(f'select * from {c.LANGUAGES[to_lang_code]}')
         result = cur.fetchall()
         lang_dict = {dict(r)['english']: dict(r) for r in result}
+        category = ''
+        for k, v in lang_dict.items():
+            for k2 in indict.keys():
+                if '_CN_' in k2:
+                    category = 'cn'
+                elif '_AN_' in k2:
+                    category = 'an'
+                elif '_PN_' in k2:
+                    category = 'pn'
+                elif '_SN_' in k2:
+                    category = 'sn'
+                elif '_FN_' in k2:
+                    category = 'fn'
+                else:
+                    print(k)
+                break
+            update(v['english'], v['translation'], to_lang_code, v['translators'], 'legacy', category,
+                   writer=table_reader)
+
+        # def update(txt, translation, lang_code, translators_string, mode, namelist_category, writer, begin=True):
+
         translated_dict = dict()
 
         my_queue = Queue()
