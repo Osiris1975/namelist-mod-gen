@@ -90,7 +90,7 @@ def create_localized_namelist_listing(input, author, root_loc_dir):
         def_dict = dict()
         for nl, info in input.items():
             if code != 'en':
-                title = translate(None, info['title'], code, 0, )[1]
+                title = translate(None, info['title'], code, reader=create_table_connection, writer=create_table_connection, begin=False)[1]
             else:
                 title = info['title']
             def_dict[nl] = {
@@ -132,21 +132,19 @@ def create_localized_translations(loc_inputs, translate):
 
 def create_mod(args):
     if args.translate:
-        cur = create_table_connection.cursor()
-        for lang in c.LANGUAGES.values():
-            if lang != 'english':
-                # run some initial queries
-                queries = [
-                    f"CREATE TABLE IF NOT EXISTS {lang} (english varchar, {lang} varchar, translators varchar, is_translated boolean, is_same boolean, UNIQUE(english))",
-                    f"delete from {lang} where {lang} like '%(%';",
-                    f"delete from {lang} where {lang} like '%:%';",
-                    f"delete from {lang} where length({lang}) > 50;"
-                ]
-                for q in queries:
-                    cur.execute(q)
-
-
-        create_table_connection.close()
+        # cur = create_table_connection.cursor()
+        # for lang in c.LANGUAGES.values():
+        #     if lang != 'english':
+        #         # run some initial queries
+        #         queries = [
+        #             f"CREATE TABLE IF NOT EXISTS {lang} (english varchar, {lang} varchar, translators varchar, is_translated boolean, is_same boolean, UNIQUE(english))",
+        #             f"delete from {lang} where {lang} like '%(%';",
+        #             f"delete from {lang} where {lang} like '%:%';",
+        #             f"delete from {lang} where length({lang}) > 50;"
+        #         ]
+        #         for q in queries:
+        #             cur.execute(q)
+        pass
     mod_dirs = make_mod_directories(args.mod_name)
     csv_files = abs_file_paths(args.namelists)
     namelist_info = dict()
