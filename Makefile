@@ -3,7 +3,7 @@ PYEXE?=python3
 
 .PHONY: mod_deployable
 mod_deployable: clean
-	zip -r deployables/osiris_namelists_v3.0.0.zip generated_mods/osiris_namelists -x "*.DS_Store"
+	zip -r deployables/osiris_namelists_v5.0.0.zip generated_mods/osiris_namelists -x "*.DS_Store"
 
 .PHONY: build_osiris
 build_osiris:

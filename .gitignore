@@ -129,7 +129,6 @@ dmypy.json
 .pyre/
 .idea
 /deployables/
-/generated_mods/
 /src/namelist_mod_gen/translations.db
 /secrets.py
 /src/namelist_mod_gen/translations.db-shm

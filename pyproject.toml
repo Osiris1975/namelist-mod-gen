@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "namelist-mod-gen"
-version = "0.0.1"
+version = "1.0.0"
 description = "a tool for generating stellaris namelist mods"
 authors = ["Osiris1975 <amr@aaleil.com>"]
 readme = "README.md"
