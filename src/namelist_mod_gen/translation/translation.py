@@ -302,26 +302,6 @@ def translate_dict(indict, to_lang_code, translate):
         cur.execute(f'select * from {c.LANGUAGES[to_lang_code]}')
         result = cur.fetchall()
         lang_dict = {dict(r)['english']: dict(r) for r in result}
-        category = ''
-        for k, v in lang_dict.items():
-            for k2 in indict.keys():
-                if '_CN_' in k2:
-                    category = 'cn'
-                elif '_AN_' in k2:
-                    category = 'an'
-                elif '_PN_' in k2:
-                    category = 'pn'
-                elif '_SN_' in k2:
-                    category = 'sn'
-                elif '_FN_' in k2:
-                    category = 'fn'
-                else:
-                    print(k)
-                break
-            update(v['english'], v['translation'], to_lang_code, v['translators'], 'legacy', category,
-                   writer=table_reader)
-
-        # def update(txt, translation, lang_code, translators_string, mode, namelist_category, writer, begin=True):
 
         translated_dict = dict()
 
