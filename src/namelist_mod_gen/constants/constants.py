@@ -26,7 +26,7 @@ ORD_EXAMPLES = {
 }
 LANGUAGES = {
     'en': 'english',
-    'pt': 'braz_por',
+    # 'pt': 'braz_por',
     'fr': 'french',
     'de': 'german',
     'pl': 'polish',
