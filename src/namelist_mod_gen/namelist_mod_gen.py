@@ -7,6 +7,7 @@ import io
 import logging
 import os
 import re
+import shutil
 import sqlite3
 import sys
 from multiprocessing import Pool
@@ -110,7 +111,12 @@ def create_localized_namelist_listing(input, author, root_loc_dir):
             logger.error(f'Failed to create {nl_def_file}: {e}')
 
 
+def create_localized_translations_mapped(inputs):
+    create_localized_translations(inputs, True)
+
+
 def create_localized_translations(loc_inputs, translate):
+    logger.info(f"PROCESSING NAMELIST {loc_inputs['data']['namelist_title'][0]}")
     loc_dir = loc_inputs['dir']
     nl_dict = loc_inputs['data']
     lang = loc_dir.split('/')[-2]
@@ -148,6 +154,7 @@ def create_mod(args):
     mod_dirs = make_mod_directories(args.mod_name)
     csv_files = abs_file_paths(args.namelists)
     namelist_info = dict()
+    ld = ''
     for f in csv_files:
         if 'DS_Store' in f:
             continue
@@ -160,6 +167,7 @@ def create_mod(args):
 
         # Create output file names and skip if all three exist:
         name_list_file = os.path.join(mod_dirs["namelist"], f"{nl_dict['namelist_id'][0]}.txt")
+
         if not os.path.exists(name_list_file):
             # Generate namelist file for each list
             with io.open(name_list_file, 'w', encoding='utf-8-sig') as file:
@@ -171,29 +179,30 @@ def create_mod(args):
 
         # Generate translated localisation files for each name list
         inputs = []
+
         for loc_dir in mod_dirs['localisation']:
             input = {
                 'dir': loc_dir,
                 'data': nl_dict,
                 'meta': namelist_info,
-                'author': args.author
+                'author': args.author,
+                'translate': True
             }
             inputs.append(input)
+            ld = loc_dir
 
         if args.multiprocess:
-            pool = Pool(os.cpu_count() - 1)
-            pool.map_async(create_localized_translations, inputs)
-            pool.close()
-            pool.join()
-            print('All tasks are done', flush=True)
-            logger.info(f'------------------ALL TASKS DONE------------------')
+            with Pool(os.cpu_count() - 1) as pool:
+                pool.map(create_localized_translations_mapped, inputs)
+                pool.join()
+                logger.info(f'------------------ALL TASKS DONE------------------')
         else:
             for i in inputs:
                 create_localized_translations(i, args.translate)
 
         # generate namelist description file for each language
 
-    loc_split = loc_dir.split('/')
+    loc_split = ld.split('/')
     root_loc_dir = os.path.join('/', *loc_split[0:-2])
     create_localized_namelist_listing(namelist_info, args.author, root_loc_dir)
 

@@ -2,7 +2,7 @@ WORKSPACE?=${shell pwd}
 PYEXE?=python3
 
 .PHONY: mod_deployable
-mod_deployable: clean
+mod_deployable:
 	zip -r deployables/osiris_namelists_v5.0.0.zip generated_mods/osiris_namelists -x "*.DS_Store"
 
 .PHONY: build_osiris
@@ -14,4 +14,4 @@ clean:
 	rm -f deployables/osiris_namelists.zip
 	rm -rf generated_mods/osiris_namelists
 
-release: clean build_osiris mod_deployable
+release: build_osiris mod_deployable

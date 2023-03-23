@@ -86,10 +86,6 @@ def get_active_pool(lang_code):
     return [t for t in active_pool if t not in skipped_translators]
 
 
-def rand_wait():
-    time.sleep(random.randint(0, 10))
-
-
 def random_api_translation(txt, lang_code, writer, begin):
     translation = None
     active_pool = get_active_pool(lang_code)
@@ -98,7 +94,6 @@ def random_api_translation(txt, lang_code, writer, begin):
     for translator in active_pool:
         logger.debug(f'Current translator pool {active_pool}')
         while len(trans_array) != 5:
-            rand_wait()
             translator = choice(active_pool)
             try:
                 translation = clean(
@@ -267,13 +262,12 @@ def translate(key, txt, lang_code, writer, reader, begin):
 
 
 def _translate(thr_input):
-    rand_wait()
     reader = sqlite3.connect('translations.db', timeout=15, isolation_level=None)
     writer = sqlite3.connect('translations.db', timeout=15, isolation_level=None)
     try:
         reader.execute('pragma journal_mode=wal;')
         writer.execute('pragma journal_mode=wal;')
-        response = translate(thr_input['key'], thr_input['txt'], thr_input['lang_code'], writer, reader)
+        response = translate(thr_input['key'], thr_input['txt'], thr_input['lang_code'], writer, reader, True)
         thr_input['queue'].put(response)
     except Exception as e:
         logger.error(f'Translation thread failure: {e}')
@@ -282,19 +276,31 @@ def _translate(thr_input):
         # writer.close()
         pass
 
+
 def translate_dict(indict, to_lang_code, translate):
     if translate:
+        table_reader = sqlite3.connect('translations.db', timeout=15, isolation_level=None)
+        table_reader.row_factory = sqlite3.Row
+        cur = table_reader.cursor()
+        cur.execute(f'select * from {c.LANGUAGES[to_lang_code]}')
+        result = cur.fetchall()
+        lang_dict = {dict(r)['english']: dict(r) for r in result}
         translated_dict = dict()
+
         my_queue = Queue()
         thread_inputs = []
         for k, v in indict.items():
-            thr_input = {
-                "key": k,
-                "txt": v,
-                "lang_code": to_lang_code,
-                "queue": my_queue
-            }
-            thread_inputs.append(thr_input)
+            if v in lang_dict.keys():
+                translated_dict[k] = v
+            else:
+                thr_input = {
+                    "key": k,
+                    "txt": v,
+                    "lang_code": to_lang_code,
+                    "queue": my_queue,
+                    "lang_dict": lang_dict
+                }
+                thread_inputs.append(thr_input)
         with ThreadPool() as pool:
             pool.map(_translate, thread_inputs)
 
