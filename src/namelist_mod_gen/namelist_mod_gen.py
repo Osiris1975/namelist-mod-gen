@@ -249,7 +249,7 @@ def csv_to_dicts(namelists, author):
         logger.critical(f'Namelist {namelist_id} has incompatible names: {errors_string}')
         sys.exit(1)
     for k, v in namelist_dict.items():
-        if k not in c.UNKEYED_FIELDS:
+        if k not in c.UNKEYED_FIELDS and len(v) > 0:
             values = create_seq_key_dict(k, v, author, namelist_id)
             namelist_dict[k] = values
     return namelist_dict
