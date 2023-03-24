@@ -1,13 +1,12 @@
-import nmg_logging
 import tempfile
 import unittest
-
+import logging
 from namelist_mod_gen.nmg_logging.logger import Logger
 
 
 class TestLogger(unittest.TestCase):
     def setUp(self) -> None:
-        self.logger = Logger(name='unit-testing', level=nmg_logging.DEBUG)
+        self.logger = Logger(name='unit-testing', level=logging.DEBUG)
 
     def test_logger(self):
         print('\n')
