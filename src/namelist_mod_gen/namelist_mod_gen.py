@@ -170,6 +170,10 @@ def create_mod(args):
             with io.open(name_list_file, 'w', encoding='utf-8-sig') as file:
                 namelist_template = template_env.get_template(c.NAMELIST_TEMPLATE)
                 render_dict = {k: " ".join(v) for k, v, in nl_dict.items()}
+                for k,v in render_dict.items():
+                    if 'second_names' in k:
+                        render_dict[k] = '\"\"'
+
                 name_list = namelist_template.render(render_dict)
                 file.write(name_list)
                 logger.info(f'Namelist file written to {name_list_file}')
