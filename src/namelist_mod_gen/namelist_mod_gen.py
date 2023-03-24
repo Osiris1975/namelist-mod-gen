@@ -75,10 +75,7 @@ def make_loc_dict(indict):
         if type(v) == dict:
             for k2, v2 in v.items():
                 if type(v2) == list:
-                    if len(v2) == 0:
-                        loc_dict[k2] = ""
-                    else:
-                        loc_dict[k2] = v2[0]
+                    loc_dict[k2] = v2[0]
                 else:
                     loc_dict[k2] = v2
     return loc_dict
