@@ -1,8 +1,11 @@
+import datetime
 import os
 
 SRC_ROOT_DIR = os.path.dirname(os.path.abspath(__file__)).replace('constants', '')
-temp = SRC_ROOT_DIR.split('/')[0:-3]
+temp = SRC_ROOT_DIR.split('/')[0:-2]
 PROJECT_DIR = os.path.join('/', *temp)
+DB_PATH = os.path.join(PROJECT_DIR, 'db', 'translations.db')
+LOG_DIR = f"{PROJECT_DIR}/logs/{datetime.datetime.now().strftime('%d.%m.%Y_%H.%M.%S')}.main.log"
 TEMPLATES_DIR = os.path.join(SRC_ROOT_DIR, 'templates')
 NAMELIST_TEMPLATE = 'namelist.txt'
 NL_DEF_TEMPLATE = 'definitions.yml'
@@ -25,17 +28,28 @@ ORD_EXAMPLES = {
     "$ORD$": "First"
 }
 LANGUAGES = {
-    'en': 'english',
-    # 'pt': 'braz_por',
+    'pt': 'braz_por',
     'fr': 'french',
     'de': 'german',
     'pl': 'polish',
     'ru': 'russian',
     'es': 'spanish',
-    'zh-CN': 'simp_chinese',
+    'zh': 'simp_chinese',
     'ja': 'japanese',
     'ko': 'korean'
 }
+
+ARGOS_LANGUAGES = [
+    'Portuguese',
+    'French',
+    'German',
+    'Polish',
+    'Russian',
+    'Spanish',
+    'Chinese',
+    'Japanese',
+    'Korean'
+]
 
 LANG_TRANS_MAP = {
     'en': ["alibaba", "baidu", "caiyun", "google", "iciba", "iflytek", "itranslate", "lingvanex",

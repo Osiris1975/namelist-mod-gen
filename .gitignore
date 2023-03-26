@@ -127,12 +127,8 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+
+# User additions
 .idea
 /deployables/
-/src/namelist_mod_gen/translations.db
-/secrets.py
-/src/namelist_mod_gen/translations.db-shm
-/src/namelist_mod_gen/translations.db-wal
-/translations.db
-/db/translations.db
-/examples/input_csvs/osiris_namelists/Recoverit Installer.app/
+/db
