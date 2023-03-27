@@ -9,8 +9,8 @@ log = logging.getLogger('NMG')
 def write_common_name_lists(name_lists, parallel_process=False):
     """
     Proxy function for writing the namelist common files iteratively or with multiprocessing.
-    :param name_lists: a dictionary of namelists containing namelist_id, namelist_data, jinja2 templating object,
-    destionation directory for common namelist files, and overwrite directive.
+    :param name_lists: a dictionary of name lists containing namelist_id, namelist_data, jinja2 templating object,
+    destination directory for common namelist files, and overwrite directive.
     :param parallel_process: Boolean indicating whether to use multithreading for this step.
     :return:
     """
