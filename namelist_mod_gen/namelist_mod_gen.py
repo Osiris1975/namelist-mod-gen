@@ -16,7 +16,7 @@ from validation.validation import pi_validate
 parser = argparse.ArgumentParser()
 parent_parser = argparse.ArgumentParser(
     description='A tool for creating optionally translated Stellaris namelist mods from a CSV file',
-    usage='namelist_generator.py -c [NAMELIST_FILE]',
+    usage='namelist_generator.py -n [NAMELIST_FILE]',
     formatter_class=argparse.ArgumentDefaultsHelpFormatter)
 sub = parser.add_subparsers(dest='cmd')
 
