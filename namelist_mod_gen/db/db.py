@@ -82,9 +82,9 @@ class Connection:
             return Russian
         elif language_name == 'spanish':
             return Spanish
-        elif language_name == 'chinese':
+        elif language_name == 'simp_chinese':
             return Chinese
-        elif language_name == 'portuguese':
+        elif language_name == 'braz_por':
             return Portuguese
         else:
             raise ValueError(f"Unsupported language: {language_name}")

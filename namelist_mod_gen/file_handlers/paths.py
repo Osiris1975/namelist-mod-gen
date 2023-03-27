@@ -35,12 +35,12 @@ def make_mod_directories(mod_name, root_dir):
     :return:
     """
     dirs = {
-        "namelist": os.path.join(root_dir, mod_name, 'common', 'name_lists'),
+        "common": os.path.join(root_dir, mod_name, 'common', 'name_lists'),
         "localisation": [os.path.join(root_dir, mod_name, 'localisation', lang, 'name_lists') for lang in
                          c.LANGUAGES.values()]
     }
-    if not os.path.exists(dirs["namelist"]):
-        os.makedirs(dirs["namelist"])
+    if not os.path.exists(dirs["common"]):
+        os.makedirs(dirs["common"])
 
     for d in dirs['localisation']:
         if not os.path.exists(d):

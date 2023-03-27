@@ -4,7 +4,7 @@ from datetime import datetime
 from sqlalchemy import inspect
 
 from constants.constants import LANGUAGES
-from namelist_mod_gen.db.sql_alchemy_connection import Connection, French
+from namelist_mod_gen.db.db import Connection, French
 
 
 class TestDatabase(unittest.TestCase):
