@@ -6,32 +6,48 @@ from multiprocess.pool import ThreadPool
 log = logging.getLogger('NMG')
 
 
-def write_common_name_lists(name_lists, multiprocess=False):
+def write_common_name_lists(name_lists, parallel_process=False):
     """
     Proxy function for writing the namelist common files iteratively or with multiprocessing.
     :param name_lists: a dictionary of namelists containing namelist_id, namelist_data, jinja2 templating object,
     destionation directory for common namelist files, and overwrite directive.
-    :param multiprocess: Boolean indicating whether to use multithreading for this step.
+    :param parallel_process: Boolean indicating whether to use multithreading for this step.
     :return:
     """
+    inputs_name_lists = []
+    for namelist_id, namelist_data in name_lists['namelists'].items():
+        name_list = {
+            'id': namelist_id,
+            'data': namelist_data,
+            'dest_dir': name_lists['directories']['common'],
+            'title': ''.join(namelist_data['data']['namelist_title']),
+            'template': name_lists['namelist_template'],
+            'overwrite': name_lists['overwrite'],
+        }
+        inputs_name_lists.append(name_list)
 
-    if multiprocess:
+    if parallel_process:
         with ThreadPool() as pool:
-            pool.map(_write_common_namelist, name_lists)
+            pool.map(_write_common_namelist, inputs_name_lists)
     else:
-        for namelist_id, namelist_data in name_lists['namelists'].items():
-            name_list = {
-                'id': namelist_id,
-                'data': namelist_data,
-                'dest_dir': name_lists['directories']['common'],
-                'title': ''.join(namelist_data['data']['namelist_title']),
-                'template': name_lists['namelist_template'],
-                'overwrite': name_lists['overwrite'],
-            }
+        for name_list in inputs_name_lists:
             _write_common_namelist(name_list)
 
 
 def _write_common_namelist(name_list):
+    """
+    Converts a namelist dictionary to a namelist file.
+    :param name_list: A dictionary containing the following:
+                name_list = {
+                'id': ID of the namelist,
+                'data': A dictionary mapping the namelist keys and values,
+                'dest_dir': the directory to write the namelist files to,
+                'title': The title of the namelist,
+                'template': jinja templating object,
+                'overwrite': name_lists['overwrite'],
+            }
+    :return:
+    """
     nl_output_path = os.path.join(name_list['dest_dir'], f"{name_list['id']}.txt")
 
     if name_list['overwrite']:

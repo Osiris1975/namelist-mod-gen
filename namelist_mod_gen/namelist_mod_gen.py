@@ -10,7 +10,6 @@ from db.db import Connection
 from file_handlers.csv import csv_template, csv_to_dicts
 from file_handlers.paths import nl_csv_files, make_mod_directories
 from gen.generate import write_common_name_lists
-from localisation.localisation import localize_namelists
 from nmg_logging.logger import Logger
 from validation.validation import pi_validate
 
@@ -28,7 +27,8 @@ namelist = sub.add_parser(name='mod',
 namelist.add_argument('-n', '--namelists', help="path to the directory with namelist csv files", required=False)
 namelist.add_argument('-a', '--author', help="mod author", required=False)
 namelist.add_argument('-m', '--mod_name', help="name to use for the generated mod", required=False)
-namelist.add_argument('-M', '--multiprocess', default=False, help='experimental: activate multiprocessing mode',
+namelist.add_argument('-p', '--parallel', default=False,
+                      help='experimental: activate parallel processing mode to speed up mod generation',
                       action='store_true')
 namelist.add_argument('-t', '--translate', default=False, help='activate namelist translation', action='store_true')
 namelist.add_argument('-o', '--overwrite', default=False, help='overwrite existing namelist files',
@@ -76,7 +76,7 @@ def execute_mod(args, db):
         'overwrite': args.overwrite
     }
 
-    results = write_common_name_lists(name_lists=namelist_master)
+    results = write_common_name_lists(name_lists=namelist_master, parallel_process=args.parallel)
 
     # Prepare for localization
     mod_localisation_dirs = mod_dirs['localisation']
