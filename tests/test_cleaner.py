@@ -1,3 +1,5 @@
+# Generated with help from ChatGPT
+
 import unittest
 
 from namelist_mod_gen.clean.cleaner import clean_input_text

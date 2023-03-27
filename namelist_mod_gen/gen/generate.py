@@ -1,6 +1,7 @@
 import io
 import logging
 import os
+import traceback
 
 from multiprocess.pool import ThreadPool
 log = logging.getLogger('NMG')
@@ -14,24 +15,30 @@ def write_common_name_lists(name_lists, parallel_process=False):
     :param parallel_process: Boolean indicating whether to use multithreading for this step.
     :return:
     """
-    inputs_name_lists = []
-    for namelist_id, namelist_data in name_lists['namelists'].items():
-        name_list = {
-            'id': namelist_id,
-            'data': namelist_data,
-            'dest_dir': name_lists['directories']['common'],
-            'title': ''.join(namelist_data['data']['namelist_title']),
-            'template': name_lists['namelist_template'],
-            'overwrite': name_lists['overwrite'],
-        }
-        inputs_name_lists.append(name_list)
+    try:
+        if 'namelists' not in name_lists:
+            log.error('Input dictionary does not contain "namelists" key')
+        inputs_name_lists = []
+        for namelist_id, namelist_data in name_lists['namelists'].items():
+            name_list = {
+                'id': namelist_id,
+                'data': namelist_data,
+                'dest_dir': name_lists['directories']['common'],
+                'title': ''.join(namelist_data['data']['namelist_title']),
+                'template': name_lists['namelist_template'],
+                'overwrite': name_lists['overwrite'],
+            }
+            inputs_name_lists.append(name_list)
 
-    if parallel_process:
-        with ThreadPool() as pool:
-            pool.map(_write_common_namelist, inputs_name_lists)
-    else:
-        for name_list in inputs_name_lists:
-            _write_common_namelist(name_list)
+        if parallel_process:
+            with ThreadPool() as pool:
+                pool.map(_write_common_namelist, inputs_name_lists)
+        else:
+            for name_list in inputs_name_lists:
+                _write_common_namelist(name_list)
+    except Exception as e:
+        log.error(f"Error writing common namelists: {e}")
+        log.debug(traceback.format_exc())
 
 
 def _write_common_namelist(name_list):
@@ -54,8 +61,10 @@ def _write_common_namelist(name_list):
         try:
             log.warning(f'Overwrite selected for {name_list["title"]}. Removing {nl_output_path}')
             os.remove(nl_output_path)
-        except FileNotFoundError:
-            log.debug(f'File {nl_output_path} not found.')
+        except FileNotFoundError as e:
+            log.error(f'Error occurred while deleting file {nl_output_path}: {e}')
+            log.debug(traceback.format_exc())
+
     render_dict = {k: " ".join(v) for k, v, in name_list['data'].items()}
     for k, v in render_dict.items():
         if 'second_names' in k and len(v) == 0:
@@ -65,4 +74,3 @@ def _write_common_namelist(name_list):
         name_list = name_list['template'].render(render_dict)
         file.write(name_list)
         log.info(f'Namelist file written to {nl_output_path}')
-

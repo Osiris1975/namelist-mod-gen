@@ -1,4 +1,4 @@
-import colorlog
+# Generated with help from ChatGPT
 import logging
 import tempfile
 import unittest

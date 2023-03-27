@@ -76,7 +76,7 @@ def execute_mod(args, db):
         'overwrite': args.overwrite
     }
 
-    results = write_common_name_lists(name_lists=namelist_master, parallel_process=args.parallel)
+    write_common_name_lists(name_lists=namelist_master, parallel_process=args.parallel)
 
     # Prepare for localization
     mod_localisation_dirs = mod_dirs['localisation']
