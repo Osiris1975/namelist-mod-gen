@@ -9,7 +9,8 @@ import constants.constants as c
 from db.db import Connection
 from file_handlers.csv import csv_template, csv_to_dicts
 from file_handlers.paths import nl_csv_files, make_mod_directories
-from gen.generate import generate, write_common_namelist
+from file_handlers.writers import write_common_namelist
+from gen.generate import generate
 from localisation.localisation import localise_namelist
 from nmg_logging.logger import Logger
 from validation.validation import pi_validate
@@ -17,7 +18,7 @@ from validation.validation import pi_validate
 parser = argparse.ArgumentParser()
 parent_parser = argparse.ArgumentParser(
     description='A tool for creating optionally translated Stellaris namelist mods from a CSV file',
-    usage='namelist_generator.py -n [NAMELIST_FILE]',
+    usage='namelist_generator.py [MODE:mod or csv] [path/to/output/dir] -n [/path/to/csv/dir] [OPTIONAL_ARGS]',
     formatter_class=argparse.ArgumentDefaultsHelpFormatter)
 sub = parser.add_subparsers(dest='cmd')
 
@@ -25,6 +26,7 @@ namelist = sub.add_parser(name='mod',
                           description='Produce namelists from an a directory containing csv files',
                           usage='tbd',
                           formatter_class=argparse.ArgumentDefaultsHelpFormatter)
+namelist.add_argument('mod_output_dir', help='Full path to the mod output directory')
 namelist.add_argument('-n', '--namelists', help="path to the directory with namelist csv files", required=False)
 namelist.add_argument('-a', '--author', help="mod author", required=False)
 namelist.add_argument('-m', '--mod_name', help="name to use for the generated mod", required=False)
@@ -67,13 +69,13 @@ def execute_mod(args, db):
         sys.exit(1)
 
     # Create the mod directory structure to write files to
-    mod_dirs = make_mod_directories(args.mod_name, c.MOD_OUTPUT_DIR)
+    mod_dirs = make_mod_directories(args.mod_name, args.mod_output_dir)
 
     # This should be the input to all downstream functions
     namelist_master = {
         'directories': mod_dirs,
         'namelist_template': template_env.get_template(c.NAMELIST_TEMPLATE),
-        'localisation_template':  template_env.get_template(c.NL_LOC_TEMPLATE),
+        'localisation_template': template_env.get_template(c.NL_LOC_TEMPLATE),
         'namelists': {''.join(nl['namelist_id']): {'data': nl} for nl in namelist_sources},
         'overwrite': args.overwrite
     }

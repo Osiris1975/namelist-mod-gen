@@ -7,41 +7,6 @@ from multiprocess.pool import ThreadPool
 log = logging.getLogger('NMG')
 
 
-def write_common_namelist(name_list):
-    """
-    Converts a namelist dictionary to a namelist file.
-    :param name_list: A dictionary containing the following:
-                name_list = {
-                'id': ID of the namelist,
-                'data': A dictionary mapping the namelist keys and values,
-                'dest_dir': the directory to write the namelist files to,
-                'title': The title of the namelist,
-                'template': jinja templating object,
-                'overwrite': a bool indicating to overwrite existing files,
-            }
-    :return:
-    """
-    nl_output_path = os.path.join(name_list['directories']['common'], f"{name_list['id']}.txt")
-
-    if name_list['overwrite']:
-        try:
-            log.warning(f'Overwrite selected for {name_list["title"]}. Removing {nl_output_path}')
-            os.remove(nl_output_path)
-        except FileNotFoundError as e:
-            log.error(f'Error occurred while deleting file {nl_output_path}: {e}')
-            log.debug(traceback.format_exc())
-
-    render_dict = {k: " ".join(v) for k, v, in name_list['data'].items()}
-    for k, v in render_dict.items():
-        if 'second_names' in k and len(v) == 0:
-            render_dict[k] = '\"\"'
-
-    with io.open(nl_output_path, 'w', encoding='utf-8-sig') as file:
-        name_list = name_list['namelist_template'].render(render_dict)
-        file.write(name_list)
-        log.info(f'Namelist file written to {nl_output_path}')
-
-
 def generate(func, name_lists, parallel_process):
     """
     A generic/partial function for executing functions with a common input and processing flow.

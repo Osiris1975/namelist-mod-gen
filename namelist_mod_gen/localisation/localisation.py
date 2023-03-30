@@ -1,22 +1,15 @@
 import copy
-import io
-import os
 import logging
+import os
 
 import constants.constants as c
+from file_handlers.writers import write_template
 
 log = logging.getLogger('NMG')
 
 
 def quotify(txt_dict):
     return {k: f'\"{v}\"' for k, v in txt_dict.items()}
-
-
-def write_template(source_data, dest_file, template, lang):
-    with io.open(dest_file, 'w', encoding='utf-8-sig') as file:
-        nl_loc = template.render(dict_item=source_data, lang=lang)
-        file.write(nl_loc)
-        log.info(f'Namelist localisation file written to {dest_file}')
 
 
 def localise_namelist(name_list):

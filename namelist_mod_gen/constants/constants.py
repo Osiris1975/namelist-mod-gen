@@ -10,8 +10,6 @@ TEMPLATES_DIR = os.path.join(SRC_ROOT_DIR, 'templates')
 NAMELIST_TEMPLATE = 'namelist.txt'
 NL_DEF_TEMPLATE = 'definitions.yml'
 NL_LOC_TEMPLATE = 'translations.yml'
-temp.append('generated_mods')
-MOD_OUTPUT_DIR = os.path.join('/', *temp)
 
 SUB_TOKENS = {
     "C": "SEQ",
