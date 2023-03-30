@@ -4,7 +4,7 @@ from unittest.mock import MagicMock, create_autospec
 
 import pytest
 
-from gen.generate import write_common_name_lists, _write_common_namelist
+from execution.execute import write_common_name_lists, _write_common_namelist
 
 
 @pytest.fixture

@@ -6,12 +6,11 @@ import sys
 from jinja2 import Environment, FileSystemLoader
 
 import constants.constants as c
-from db.db import Connection
 from file_handlers.csv import csv_template, csv_to_dicts
 from file_handlers.paths import nl_csv_files, make_mod_directories
 from file_handlers.writers import write_common_namelist
-from gen.generate import generate
-from localisation.localisation import localise_namelist
+from execution.execute import executor
+from localisation.localisation import localise_namelist, localise_descriptor
 from nmg_logging.logger import Logger
 from validation.validation import pi_validate
 
@@ -74,39 +73,22 @@ def execute_mod(args, db):
     # This should be the input to all downstream functions
     namelist_master = {
         'directories': mod_dirs,
-        'namelist_template': template_env.get_template(c.NAMELIST_TEMPLATE),
-        'localisation_template': template_env.get_template(c.NL_LOC_TEMPLATE),
+        'template': template_env.get_template(c.NAMELIST_TEMPLATE),
         'namelists': {''.join(nl['namelist_id']): {'data': nl} for nl in namelist_sources},
         'overwrite': args.overwrite
     }
 
-    # Write the common namelist files using tne master dictionary
-    generate(func=write_common_namelist, name_lists=namelist_master, parallel_process=args.parallel)
+    # Write the common namelist files using the master dictionary
+    executor(func=write_common_namelist, namelists=namelist_master, parallel_process=args.parallel)
 
     # Write the basic localisation files using the master dictionary
-    generate(func=localise_namelist, name_lists=namelist_master, parallel_process=args.parallel)
-    print()
-    # Translation for the localization files
-    # for nl in namelist_sources:
-    #     loc_input = {
-    #         'language_dicts': language_dicts,
-    #         'namelist_data': nl,  # the namelist data
-    #         'loc_dirs': mod_dirs['localisation']
-    #     }
-    #     loc_inputs.append(loc_input)
-    #
-    #
-    #
-    # inputs = []
-    # for loc_dir in mod_localisation_dirs:
-    #     input = {
-    #         'dir': loc_dir,
-    #         'data': '',
-    #         'meta': '',
-    #         'author': args.author,
-    #         'translate': True
-    #     }
-    #     inputs.append(input)
+    namelist_master['template'] = template_env.get_template(c.NAMELIST_LOC_TEMPLATE)
+    executor(func=localise_namelist, namelists=namelist_master, parallel_process=args.parallel)
+
+    # Write the localisation descriptor files using the master dictionary
+    namelist_master['template'] = template_env.get_template(c.NAMELIST_DEF_TEMPLATE)
+    namelist_master['author'] = args.author
+    executor(func=localise_descriptor, namelists=namelist_master, parallel_process=args.parallel)
 
 
 def execute_csv(args):
@@ -121,8 +103,6 @@ def main():
     args = parser.parse_args()
     log.info(f'Started in {args.cmd} mode at{st}')
     if args.cmd == 'mod':
-        if args.translate:
-            db = Connection(c.DB_PATH)
         execute_mod(args, c.DB_PATH)
     if args.cmd == 'csv':
         execute_csv(args)

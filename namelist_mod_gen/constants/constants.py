@@ -8,8 +8,8 @@ DB_PATH = os.path.join(PROJECT_DIR, 'db', 'translations.db')
 LOG_DIR = f"{PROJECT_DIR}/logs/{datetime.datetime.now().strftime('%d.%m.%Y_%H.%M.%S')}.main.log"
 TEMPLATES_DIR = os.path.join(SRC_ROOT_DIR, 'templates')
 NAMELIST_TEMPLATE = 'namelist.txt'
-NL_DEF_TEMPLATE = 'definitions.yml'
-NL_LOC_TEMPLATE = 'translations.yml'
+NAMELIST_DEF_TEMPLATE = 'descriptors.yml'
+NAMELIST_LOC_TEMPLATE = 'localisation.yml'
 
 SUB_TOKENS = {
     "C": "SEQ",

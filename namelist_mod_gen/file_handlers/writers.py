@@ -6,14 +6,14 @@ import traceback
 log = logging.getLogger('NMG')
 
 
-def write_template(source_data, dest_file, template, lang):
-    with io.open(dest_file, 'w', encoding='utf-8-sig') as file:
+def write_template(source_data, dest_file, template, lang, encoding):
+    with io.open(dest_file, 'w', encoding=encoding) as file:
         if lang:
-            nl_loc = template.render(dict_item=source_data, lang=lang)
+            rendered = template.render(dict_item=source_data, lang=lang)
         else:
-            nl_loc = template.render(dict_item=source_data)
-        file.write(nl_loc)
-        log.info(f'Namelist localisation file written to {dest_file}')
+            rendered = template.render(dict_item=source_data)
+        file.write(rendered)
+        log.info(f'Namelist mod file written to {dest_file}')
 
 
 def write_common_namelist(name_list):
@@ -49,8 +49,5 @@ def write_common_namelist(name_list):
         if 'second_names' in k and len(v) == 0:
             render_dict[k] = '\"\"'
 
-    write_template(render_dict, dest_file, name_list['namelist_template'], None)
-    with io.open(dest_file, 'w', encoding='utf-8-sig') as file:
-        name_list = name_list['namelist_template'].render(render_dict)
-        file.write(name_list)
-        log.info(f'Namelist file written to {dest_file}')
+    write_template(render_dict, dest_file, name_list['template'], None, 'utf-8-sig')
+

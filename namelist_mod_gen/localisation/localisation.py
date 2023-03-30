@@ -12,18 +12,44 @@ def quotify(txt_dict):
     return {k: f'\"{v}\"' for k, v in txt_dict.items()}
 
 
-def localise_namelist(name_list):
-    loc_dict = make_loc_dict(name_list['data'])
+def localise_namelist(namelist):
+    loc_dict = make_loc_dict(namelist['data'])
     quotified = quotify(loc_dict)
     lang_copy = copy.copy(c.LANGUAGES)
     langs = list(lang_copy.values())
-    for loc_dir in name_list['directories']['localisation']:
+    for loc_dir in namelist['directories']['localisation']:
         for lang in langs:
-            dest_file = os.path.join(loc_dir, f"name_list_{name_list['id'].upper()}_l_{lang}.yml")
+            dest_file = os.path.join(loc_dir, f"name_list_{namelist['id'].upper()}_l_{lang}.yml")
             if lang in loc_dir:
-                write_template(quotified, dest_file, name_list['localisation_template'], lang)
+                write_template(
+                    source_data=quotified,
+                    dest_file=dest_file,
+                    template=namelist['template'],
+                    lang=lang,
+                    encoding='utf-8-sig'
+                )
                 langs.remove(lang)
                 break
+
+
+def localise_descriptor(namelist):
+
+    titles = {k: v['data']['namelist_title'][0] for k, v in namelist['all'].items()}
+    for k, v in namelist['all'].items():
+        titles[k] = v['data']['namelist_title'][0]
+
+    for loc_dir in namelist['directories']['localisation']:
+        lang = loc_dir.split(os.sep)[-2]
+        dest_file = f"{namelist['author'].lower()}_namelist_l_{lang}.yml"
+        dest_file = os.path.join(loc_dir, dest_file)
+
+        write_template(
+            source_data=titles,
+            dest_file=dest_file,
+            template=namelist['template'],
+            lang=lang,
+            encoding='utf-8'
+        )
 
 
 def make_loc_dict(namelist):
