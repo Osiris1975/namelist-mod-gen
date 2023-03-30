@@ -1,40 +1,33 @@
 import io
+import os
 import logging
-
-from jinja2 import Environment, FileSystemLoader
+import traceback
 
 import constants.constants as c
+from multiprocess.pool import ThreadPool
 
-logger = logging.getLogger('NMG')
+log = logging.getLogger('NMG')
 
-template_loader = FileSystemLoader(searchpath=c.TEMPLATES_DIR)
-template_env = Environment(loader=template_loader)
-
-
-def localize_namelist(namelist):
-    """
-    :param namelist:
-    :return:
-    """
-    print(namelist)
-    quotified = {k: f'\"{v}\"' for k, v in namelist.items()}
-    with io.open(ord_loc_file, 'w', encoding='utf-8-sig') as file:
-        quotified = {k: f'\"{v}\"' for k, v in loc_dict.items()}
-        namelist_loc_template = template_env.get_template(c.NL_LOC_TEMPLATE)
-        nl_loc = namelist_loc_template.render(dict_item=quotified, lang=lang)
-        file.write(nl_loc)
-        logger.info(f'Namelist localisation file written to {ord_loc_file}')
+#TODO: Resume fixing this
+def localise_namelist(name_list):
+    loc_dict = make_loc_dict(name_list['data'])
+    quotified = {k: f'\"{v}\"' for k, v in loc_dict.items()}
+    for loc_dir in name_list['directories']['localisation']:
+        for lang in c.LANGUAGES.values():
+            localisation_file = os.path.join(loc_dir, f"name_list_{name_list['id'].upper()}_l_{lang}.yml")
+            with io.open(localisation_file, 'w', encoding='utf-8-sig') as file:
+                nl_loc = name_list['localisation_template'].render(dict_item=quotified, lang=lang)
+                file.write(nl_loc)
+                log.info(f'Namelist localisation file written to {localisation_file}')
 
 
-def localize_namelists(namelists, localisation_dirs):
-    """
-
-    :param namelists:
-    :param translate:
-    :return:
-    """
-    inputs = []
-    for ld in localisation_dirs:
-        pass
-    for nl in namelists:
-        localize_namelist(nl)
+def make_loc_dict(namelist):
+    loc_dict = dict()
+    for k, v in namelist.items():
+        if type(v) == dict:
+            for k2, v2 in v.items():
+                if type(v2) == list:
+                    loc_dict[k2] = v2[0]
+                else:
+                    loc_dict[k2] = v2
+    return loc_dict

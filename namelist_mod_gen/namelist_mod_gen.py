@@ -9,7 +9,8 @@ import constants.constants as c
 from db.db import Connection
 from file_handlers.csv import csv_template, csv_to_dicts
 from file_handlers.paths import nl_csv_files, make_mod_directories
-from gen.generate import write_common_name_lists
+from gen.generate import generate, write_common_namelist
+from localisation.localisation import localise_namelist
 from nmg_logging.logger import Logger
 from validation.validation import pi_validate
 
@@ -72,20 +73,17 @@ def execute_mod(args, db):
     namelist_master = {
         'directories': mod_dirs,
         'namelist_template': template_env.get_template(c.NAMELIST_TEMPLATE),
+        'localisation_template':  template_env.get_template(c.NL_LOC_TEMPLATE),
         'namelists': {''.join(nl['namelist_id']): {'data': nl} for nl in namelist_sources},
         'overwrite': args.overwrite
     }
 
-    write_common_name_lists(name_lists=namelist_master, parallel_process=args.parallel)
+    # Write the common namelist files using tne master dictionary
+    generate(func=write_common_namelist, name_lists=namelist_master, parallel_process=args.parallel)
 
-    # Prepare for localization
-    mod_localisation_dirs = mod_dirs['localisation']
-    loc_inputs = []
-    language_dicts = {lang: None for lang in c.LANGUAGES.values()}
-
-    # for lang in c.LANGUAGES.values():
-    #     language_dicts[lang] = db.get_language_dict(lang)
-
+    # Write the basic localisation files using the master dictionary
+    generate(func=localise_namelist, name_lists=namelist_master, parallel_process=args.parallel)
+    print()
     # Translation for the localization files
     # for nl in namelist_sources:
     #     loc_input = {

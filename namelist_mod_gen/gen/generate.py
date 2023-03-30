@@ -7,41 +7,7 @@ from multiprocess.pool import ThreadPool
 log = logging.getLogger('NMG')
 
 
-def write_common_name_lists(name_lists, parallel_process=False):
-    """
-    Proxy function for writing the namelist common files iteratively or with multiprocessing.
-    :param name_lists: a dictionary of name lists containing namelist_id, namelist_data, jinja2 templating object,
-    destination directory for common namelist files, and overwrite directive.
-    :param parallel_process: Boolean indicating whether to use multithreading for this step.
-    :return:
-    """
-    try:
-        if 'namelists' not in name_lists:
-            log.error('Input dictionary does not contain "namelists" key')
-        inputs_name_lists = []
-        for namelist_id, namelist_data in name_lists['namelists'].items():
-            name_list = {
-                'id': namelist_id,
-                'data': namelist_data,
-                'dest_dir': name_lists['directories']['common'],
-                'title': ''.join(namelist_data['data']['namelist_title']),
-                'template': name_lists['namelist_template'],
-                'overwrite': name_lists['overwrite'],
-            }
-            inputs_name_lists.append(name_list)
-
-        if parallel_process:
-            with ThreadPool() as pool:
-                pool.map(_write_common_namelist, inputs_name_lists)
-        else:
-            for name_list in inputs_name_lists:
-                _write_common_namelist(name_list)
-    except Exception as e:
-        log.error(f"Error writing common namelists: {e}")
-        log.debug(traceback.format_exc())
-
-
-def _write_common_namelist(name_list):
+def write_common_namelist(name_list):
     """
     Converts a namelist dictionary to a namelist file.
     :param name_list: A dictionary containing the following:
@@ -55,7 +21,7 @@ def _write_common_namelist(name_list):
             }
     :return:
     """
-    nl_output_path = os.path.join(name_list['dest_dir'], f"{name_list['id']}.txt")
+    nl_output_path = os.path.join(name_list['directories']['common'], f"{name_list['id']}.txt")
 
     if name_list['overwrite']:
         try:
@@ -71,6 +37,41 @@ def _write_common_namelist(name_list):
             render_dict[k] = '\"\"'
 
     with io.open(nl_output_path, 'w', encoding='utf-8-sig') as file:
-        name_list = name_list['template'].render(render_dict)
+        name_list = name_list['namelist_template'].render(render_dict)
         file.write(name_list)
         log.info(f'Namelist file written to {nl_output_path}')
+
+
+def generate(func, name_lists, parallel_process):
+    """
+    A generic/partial function for executing functions with a common input and processing flow.
+    :param func: The function to execute inside generate
+    :param name_lists: the namelist master dictionary
+    :param parallel_process: boolean indicating if parallel processing should be used
+    :return:
+    """
+    try:
+        if 'namelists' not in name_lists:
+            log.error('Input dictionary does not contain "namelists" key')
+        inputs_name_lists = []
+        for namelist_id, namelist_data in name_lists['namelists'].items():
+            name_list = {
+                'id': namelist_id,
+                'data': namelist_data['data'],
+                'directories': name_lists['directories'],
+                'title': ''.join(namelist_data['data']['namelist_title']),
+                'namelist_template': name_lists['namelist_template'],
+                'localisation_template': name_lists['localisation_template'],
+                'overwrite': name_lists['overwrite'],
+            }
+            inputs_name_lists.append(name_list)
+
+        if parallel_process:
+            with ThreadPool() as pool:
+                pool.map(func, inputs_name_lists)
+        else:
+            for name_list in inputs_name_lists:
+                func(name_list)
+    except Exception as e:
+        log.error(f"Error writing namelist file: {e}")
+        log.debug(traceback.format_exc())
