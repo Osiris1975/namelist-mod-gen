@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "namelist-mod-gen"
-version = "1.0.0"
+version = "1.0.1"
 description = "a tool for generating stellaris namelist mods"
 authors = ["Osiris1975 <amr@aaleil.com>"]
 readme = "README.md"
@@ -16,13 +16,11 @@ regex = "^2022.10.31"
 requests = "^2.28.2"
 translators = "^5.6.3"
 deepl = "^1.14.0"
+googletrans = "^3.1.0a0"
+easynmt = "^2.0.2"
 sqlalchemy = "^2.0.7"
 pytest = "^7.2.2"
 
-[tool.poetry.group.dev.dependencies]
-Jinja2 = "^3.1.2"
-jinja2schema = "^0.1.4"
-pathlib = "^1.0.1"
 
 [build-system]
 requires = ["poetry-core"]

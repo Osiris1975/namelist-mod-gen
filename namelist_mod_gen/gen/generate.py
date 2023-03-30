@@ -17,7 +17,7 @@ def write_common_namelist(name_list):
                 'dest_dir': the directory to write the namelist files to,
                 'title': The title of the namelist,
                 'template': jinja templating object,
-                'overwrite': name_lists['overwrite'],
+                'overwrite': a bool indicating to overwrite existing files,
             }
     :return:
     """
