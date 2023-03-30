@@ -7,7 +7,6 @@ import io
 import logging
 import os
 import re
-import shutil
 import sqlite3
 import sys
 from multiprocessing import Pool
@@ -18,7 +17,7 @@ import colorlog
 import jinja2schema
 from jinja2 import Environment, FileSystemLoader
 
-from constants import constants as c
+from src.namelist_mod_gen.constants import constants as c
 from translation.translation import translate_dict, translate
 from validation.validation import validate
 
