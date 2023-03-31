@@ -13,6 +13,7 @@ from execution.execute import executor
 from localisation.localisation import localise_namelist, localise_descriptor
 from nmg_logging.logger import Logger
 from validation.validation import pi_validate
+from clean.cleaner import clean_input_text
 
 parser = argparse.ArgumentParser()
 parent_parser = argparse.ArgumentParser(

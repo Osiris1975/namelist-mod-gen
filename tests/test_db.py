@@ -3,10 +3,8 @@
 import unittest
 from datetime import datetime
 
+from namelist_mod_gen.db.db import Connection, Translation
 from sqlalchemy import inspect
-
-from constants.constants import LANGUAGES
-from namelist_mod_gen.db.db import Connection, French
 
 
 class TestDatabase(unittest.TestCase):
@@ -18,19 +16,19 @@ class TestDatabase(unittest.TestCase):
 
     def test_create_tables(self):
         inspector = inspect(self.connection.engine)
-        for language in LANGUAGES.values():
-            self.assertTrue(inspector.has_table(language))
+        self.assertTrue(inspector.has_table('translations'))
 
     def test_add_row(self):
         with self.connection.session_scope() as session:
-            self.connection.add_row(French, english='hello', translation='bonjour', translators='translator1',
+            self.connection.add_row(localisation_key='loc_key 1', english='hello', translation='bonjour',
+                                    translators='translator1', language='french',
                                     translator_mode='mode1', namelist_category='category1',
                                     translation_date=datetime.now())
-            result = session.query(French).filter_by(english='hello').first()
-            self.assertEqual(result.translation, 'bonjour')
+            self.assertEqual(session.query(Translation).first().translation, 'bonjour')
 
     def test_get_language_dict(self):
-        self.connection.add_row(French, english='hello', translation='bonjour', translators='translator1',
+        self.connection.add_row(localisation_key='loc_key 1', english='hello', translation='bonjour',
+                                translators='translator1', language='french',
                                 translator_mode='mode1', namelist_category='category1',
                                 translation_date=datetime.now())
         french_dict = self.connection.get_language_dict('french')
