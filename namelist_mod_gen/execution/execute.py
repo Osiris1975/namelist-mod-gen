@@ -25,14 +25,13 @@ def executor(func, namelists, parallel_process):
                 'directories': namelists['directories'],
                 'title': ''.join(namelist_data['data']['namelist_title']),
                 'template': namelists['template'],
-                'overwrite': namelists['overwrite']
+                'overwrite': namelists['overwrite'],
+                'namelists': namelists['namelists']
             }
             if 'author' in namelists.keys():
                 namelist['author'] = namelists['author']
             inputs_name_lists.append(namelist)
 
-        for i in inputs_name_lists:
-            i['all'] = namelists['namelists']
         if parallel_process:
             with ThreadPool() as pool:
                 pool.map(func, inputs_name_lists)

@@ -82,6 +82,10 @@ def execute_mod(args, db):
     # Write the common namelist files using the master dictionary
     executor(func=write_common_namelist, namelists=namelist_master, parallel_process=args.parallel)
 
+    # # TODO: Can start translating here
+    # if args.translate:
+    #     executor(func=)
+
     # Write the basic localisation files using the master dictionary
     namelist_master['template'] = template_env.get_template(c.NAMELIST_LOC_TEMPLATE)
     executor(func=localise_namelist, namelists=namelist_master, parallel_process=args.parallel)
