@@ -14,6 +14,7 @@ def executor(func, namelists, parallel_process):
     :param parallel_process: boolean indicating if parallel processing should be used
     :return:
     """
+    log.info(f'Executor executing {func.__name__}')
     try:
         if 'namelists' not in namelists:
             log.error('Input dictionary does not contain "namelists" key')
@@ -33,8 +34,11 @@ def executor(func, namelists, parallel_process):
             inputs_name_lists.append(namelist)
 
         if parallel_process:
-            with ThreadPool() as pool:
-                pool.map(func, inputs_name_lists)
+            if func.__name__ == "translate":
+                func(inputs_name_lists)
+            else:
+                with ThreadPool() as pool:
+                    pool.map(func, inputs_name_lists)
         else:
             for namelist in inputs_name_lists:
                 func(namelist)

@@ -13,7 +13,8 @@ from execution.execute import executor
 from localisation.localisation import localise_namelist, localise_descriptor
 from nmg_logging.logger import Logger
 from validation.validation import pi_validate
-from clean.cleaner import clean_input_text
+from translation.translate import translate
+from db.db import Connection
 
 parser = argparse.ArgumentParser()
 parent_parser = argparse.ArgumentParser(
@@ -47,7 +48,7 @@ csv.add_argument('-d', '--dump', help='dump a blank csv with namelist headers wi
 csv.add_argument('-c', '--convert', help='Convert a mod in the given directory into a CSV file.', required=False)
 
 
-def execute_mod(args, db):
+def execute_mod(args):
     # Gather CSV files from directory
     csv_files = nl_csv_files(args.namelists)
 
@@ -72,6 +73,7 @@ def execute_mod(args, db):
     mod_dirs = make_mod_directories(args.mod_name, args.mod_output_dir)
 
     # This should be the input to all downstream functions
+
     namelist_master = {
         'directories': mod_dirs,
         'template': template_env.get_template(c.NAMELIST_TEMPLATE),
@@ -82,9 +84,9 @@ def execute_mod(args, db):
     # Write the common namelist files using the master dictionary
     executor(func=write_common_namelist, namelists=namelist_master, parallel_process=args.parallel)
 
-    # # TODO: Can start translating here
-    # if args.translate:
-    #     executor(func=)
+    # TODO: Can start translating here
+    if args.translate:
+        executor(func=translate, namelists=namelist_master, parallel_process=args.parallel)
 
     # Write the basic localisation files using the master dictionary
     namelist_master['template'] = template_env.get_template(c.NAMELIST_LOC_TEMPLATE)
@@ -108,7 +110,7 @@ def main():
     args = parser.parse_args()
     log.info(f'Started in {args.cmd} mode at{st}')
     if args.cmd == 'mod':
-        execute_mod(args, c.DB_PATH)
+        execute_mod(args)
     if args.cmd == 'csv':
         execute_csv(args)
     et = datetime.datetime.now()

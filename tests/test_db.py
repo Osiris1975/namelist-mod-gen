@@ -19,7 +19,7 @@ class TestDatabase(unittest.TestCase):
         self.assertTrue(inspector.has_table('translations'))
 
     def test_add_row(self):
-        with self.connection.session_scope() as session:
+        with self.connection.session() as session:
             self.connection.add_row(localisation_key='loc_key 1', english='hello', translation='bonjour',
                                     translators='translator1', language='french',
                                     translator_mode='mode1', namelist_category='category1',

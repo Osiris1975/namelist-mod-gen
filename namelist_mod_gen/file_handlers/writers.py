@@ -1,4 +1,3 @@
-import copy
 import io
 import logging
 import os
@@ -28,7 +27,7 @@ def write_common_namelist(name_list):
             log.warning(f'Overwrite selected for {name_list["title"]}. Removing {dest_file}')
             os.remove(dest_file)
         except FileNotFoundError as e:
-            log.error(f'Error occurred while deleting file {dest_file}: {e}')
+            log.warning(f'Error occurred while deleting file {dest_file}: {e}')
             log.debug(traceback.format_exc())
     else:
         if os.path.exists(dest_file):

@@ -34,7 +34,7 @@ def localise_namelist(namelist):
 
 def localise_descriptor(namelist):
 
-    titles = {k: v['data']['namelist_title'][0] for k, v in namelist['data'].items()}
+    titles = {k: v['data']['namelist_title'][0] for k, v in namelist['namelists'].items()}
     for k, v in namelist['namelists'].items():
         titles[k] = v['data']['namelist_title'][0]
 
