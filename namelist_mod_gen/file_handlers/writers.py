@@ -1,19 +1,10 @@
+import copy
 import io
 import logging
 import os
 import traceback
 
 log = logging.getLogger('NMG')
-
-
-def write_template(source_data, dest_file, template, lang, encoding):
-    with io.open(dest_file, 'w', encoding=encoding) as file:
-        if lang:
-            rendered = template.render(dict_item=source_data, lang=lang)
-        else:
-            rendered = template.render(dict_item=source_data)
-        file.write(rendered)
-        log.info(f'Namelist mod file written to {dest_file}')
 
 
 def write_common_namelist(name_list):
@@ -31,7 +22,7 @@ def write_common_namelist(name_list):
     :return:
     """
     dest_file = os.path.join(name_list['directories']['common'], f"{name_list['id']}.txt")
-
+    template = name_list['template']
     if name_list['overwrite']:
         try:
             log.warning(f'Overwrite selected for {name_list["title"]}. Removing {dest_file}')
@@ -49,5 +40,20 @@ def write_common_namelist(name_list):
         if 'second_names' in k and len(v) == 0:
             render_dict[k] = '\"\"'
 
-    write_template(render_dict, dest_file, name_list['template'], None, 'utf-8-sig')
+    write_template(
+        dest_file=dest_file,
+        render_dict=render_dict,
+        template=template,
+        encoding='utf-8-sig',
+        lang=None
+    )
 
+
+def write_template(dest_file, render_dict, template, encoding, lang=None):
+    with io.open(dest_file, 'w', encoding=encoding) as file:
+        if lang:
+            name_list = template.render(dict_item=render_dict, lang=lang)
+        else:
+            name_list = template.render(render_dict)
+        file.write(name_list)
+        log.info(f'Namelist file written to {dest_file}')

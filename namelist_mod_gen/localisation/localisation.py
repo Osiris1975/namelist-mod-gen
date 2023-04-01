@@ -22,7 +22,7 @@ def localise_namelist(namelist):
             dest_file = os.path.join(loc_dir, f"name_list_{namelist['id'].upper()}_l_{lang}.yml")
             if lang in loc_dir:
                 write_template(
-                    source_data=quotified,
+                    render_dict=quotified,
                     dest_file=dest_file,
                     template=namelist['template'],
                     lang=lang,
@@ -34,7 +34,7 @@ def localise_namelist(namelist):
 
 def localise_descriptor(namelist):
 
-    titles = {k: v['data']['namelist_title'][0] for k, v in namelist['namelists'].items()}
+    titles = {k: v['data']['namelist_title'][0] for k, v in namelist['data'].items()}
     for k, v in namelist['namelists'].items():
         titles[k] = v['data']['namelist_title'][0]
 
@@ -44,7 +44,7 @@ def localise_descriptor(namelist):
         dest_file = os.path.join(loc_dir, dest_file)
 
         write_template(
-            source_data=titles,
+            render_dict=titles,
             dest_file=dest_file,
             template=namelist['template'],
             lang=lang,

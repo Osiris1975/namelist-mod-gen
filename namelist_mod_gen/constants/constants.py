@@ -37,6 +37,18 @@ LANGUAGES = {
     'ko': 'korean'
 }
 
+TABLE_LANGUAGES = {
+    'portuguese',
+    'french',
+    'german',
+    'polish',
+    'russian',
+    'spanish',
+    'chinese',
+    'japanese',
+    'korean'
+}
+
 ARGOS_LANGUAGES = [
     'Portuguese',
     'French',
