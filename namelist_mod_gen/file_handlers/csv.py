@@ -41,7 +41,7 @@ def create_keyed_dict(key, values, author, namelist_id):
         for v in values:
             value_key = f'{author}_{namelist_id}_{key}_{v}'
             value_key = regex.sub('[^0-9a-zA-Z]+', '_', value_key).upper()
-            vdict[value_key] = v
+            vdict[value_key] = [v]
         return vdict
     else:
         value_key = regex.sub('[^0-9a-zA-Z]+', '_', key).upper()

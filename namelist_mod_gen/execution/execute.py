@@ -33,15 +33,17 @@ def executor(func, namelists, parallel_process):
                 namelist['author'] = namelists['author']
             inputs_name_lists.append(namelist)
 
+        result = None
         if parallel_process:
             if func.__name__ == "translate":
-                func(inputs_name_lists)
+                result = func(inputs_name_lists)
             else:
                 with ThreadPool() as pool:
-                    pool.map(func, inputs_name_lists)
+                    result = pool.map(func, inputs_name_lists)
         else:
             for namelist in inputs_name_lists:
-                func(namelist)
+                result = func(namelist)
+        return result
     except Exception as e:
         log.error(f"Error writing namelist file: {e}")
         log.debug(traceback.format_exc())

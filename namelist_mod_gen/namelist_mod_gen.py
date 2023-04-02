@@ -86,7 +86,7 @@ def execute_mod(args):
 
     # TODO: Can start translating here
     if args.translate:
-        executor(func=translate, namelists=namelist_master, parallel_process=args.parallel)
+        namelist_master['translations'] = executor(func=translate, namelists=namelist_master, parallel_process=args.parallel)
 
     # Write the basic localisation files using the master dictionary
     namelist_master['template'] = template_env.get_template(c.NAMELIST_LOC_TEMPLATE)

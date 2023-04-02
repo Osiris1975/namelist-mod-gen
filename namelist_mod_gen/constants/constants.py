@@ -82,8 +82,8 @@ NOTITLE_FIELDS = [
     'namelist_title', 'namelist_author', 'namelist_id'
 ]
 
-NO_TRANSLATE_FIELD_FRAGMENTS = [
-    '_author', '_id', '_army', 'an_machine', 'fn_fleet'
+NO_TRANSLATE_FIELDS = [
+    'namelist_author', 'namelist_id',
 ]
 
 UNKEYED_FIELDS = ['namelist_id', 'id', 'namelist_author', 'namelist_title']
