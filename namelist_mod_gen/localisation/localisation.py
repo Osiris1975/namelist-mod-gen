@@ -1,9 +1,10 @@
-import copy
 import logging
 import os
+import traceback as tb
 
 import constants.constants as c
 from file_handlers.writers import write_template
+from translation.translate import Translator
 
 log = logging.getLogger('NMG')
 
@@ -13,27 +14,38 @@ def quotify(txt_dict):
 
 
 def localise_namelist(namelist):
-    loc_dict = make_loc_dict(namelist['data'])
-    quotified = quotify(loc_dict)
-    lang_copy = copy.copy(c.LANGUAGES)
-    langs = list(lang_copy.values())
-    for loc_dir in namelist['directories']['localisation']:
-        for lang in langs:
-            dest_file = os.path.join(loc_dir, f"name_list_{namelist['id'].upper()}_l_{lang}.yml")
-            if lang in loc_dir:
-                write_template(
-                    render_dict=quotified,
-                    dest_file=dest_file,
-                    template=namelist['template'],
-                    lang=lang,
-                    encoding='utf-8-sig'
-                )
-                langs.remove(lang)
+    for lang in c.TABLE_LANGUAGES.keys():
+        loc_dict = make_loc_dict(namelist['data'])
+        if namelist['translate']:
+            try:
+                t = Translator(loc_dict, lang)
+                # while True:
+                loc_dict = t.translate_namelist()
+                # if t.done():
+                #     break
+                # else:
+                #     time.sleep(5)
+            except Exception as e:
+                log.error(f'Translation problem: {e}: {tb.format_exc()}')
+
+        quotified = quotify(loc_dict)
+        loc_dir = None
+        for d in namelist['directories']['localisation']:
+            if c.PARADOX_LANGUAGES[lang] in d:
+                loc_dir = d
                 break
+
+        dest_file = os.path.join(loc_dir, f"name_list_{namelist['id'].upper()}_l_{lang}.yml")
+        write_template(
+            render_dict=quotified,
+            dest_file=dest_file,
+            template=namelist['template'],
+            lang=lang,
+            encoding='utf-8-sig'
+        )
 
 
 def localise_descriptor(namelist):
-
     titles = {k: v['data']['namelist_title'][0] for k, v in namelist['namelists'].items()}
     for k, v in namelist['namelists'].items():
         titles[k] = v['data']['namelist_title'][0]

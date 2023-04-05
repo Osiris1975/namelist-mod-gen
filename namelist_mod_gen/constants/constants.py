@@ -1,15 +1,29 @@
 import datetime
 import os
 
+# Path constants
 SRC_ROOT_DIR = os.path.dirname(os.path.abspath(__file__)).replace('constants', '')
 temp = SRC_ROOT_DIR.split('/')[0:-2]
 PROJECT_DIR = os.path.join('/', *temp)
-DB_PATH = os.path.join(PROJECT_DIR, 'db', 'translations.db')
 LOG_DIR = f"{PROJECT_DIR}/logs/{datetime.datetime.now().strftime('%d.%m.%Y_%H.%M.%S')}.main.log"
 TEMPLATES_DIR = os.path.join(SRC_ROOT_DIR, 'templates')
 NAMELIST_TEMPLATE = 'namelist.txt'
 NAMELIST_DEF_TEMPLATE = 'descriptors.yml'
 NAMELIST_LOC_TEMPLATE = 'localisation.yml'
+
+# Concurrency 'constants'
+THREAD_CONCURRENCY = 50
+
+# DB Constants
+# DB_PATH = os.path.join(PROJECT_DIR, 'db', 'translations_new.db')
+DB_PATH = 'postgresql+psycopg2://nmg@localhost:5432/translations'
+DB_POOL_TIMEOUT = 600
+DB_MAX_OVERFLOW = 30
+DB_POOL_SIZE = THREAD_CONCURRENCY
+
+# Text & Language Constants
+
+OPUS_UNSUPPORTED = ['ja', 'pt', 'pl', 'zh-CN', 'ko']
 
 SUB_TOKENS = {
     "C": "SEQ",
@@ -25,41 +39,43 @@ ORD_EXAMPLES = {
     "$R$": "IV",
     "$ORD$": "First"
 }
+
 LANGUAGES = {
-    'pt': 'braz_por',
+    'en': 'english',
+    'pt': 'portuguese',
     'fr': 'french',
     'de': 'german',
     'pl': 'polish',
     'ru': 'russian',
     'es': 'spanish',
-    'zh': 'simp_chinese',
+    'zh': 'chinese',
     'ja': 'japanese',
     'ko': 'korean'
 }
 
 TABLE_LANGUAGES = {
-    'portuguese',
-    'french',
-    'german',
-    'polish',
-    'russian',
-    'spanish',
-    'chinese',
-    'japanese',
-    'korean'
+    'portuguese': 'pt',
+    'french': 'fr',
+    'german': 'de',
+    'polish': 'pl',
+    'russian': 'ru',
+    'spanish': 'es',
+    'chinese': 'zh',
+    'japanese': 'ja',
+    'korean': 'ko'
 }
 
-ARGOS_LANGUAGES = [
-    'Portuguese',
-    'French',
-    'German',
-    'Polish',
-    'Russian',
-    'Spanish',
-    'Chinese',
-    'Japanese',
-    'Korean'
-]
+PARADOX_LANGUAGES = {
+    'portuguese': 'braz_por',
+    'chinese': 'simp_chinese',
+    'french': 'french',
+    'german': 'german',
+    'polish': 'polish',
+    'russian': 'russian',
+    'spanish': 'spanish',
+    'japanese': 'japanese',
+    'korean': 'korean'
+}
 
 LANG_TRANS_MAP = {
     'en': ["alibaba", "baidu", "caiyun", "google", "iciba", "iflytek", "itranslate", "lingvanex",
@@ -78,6 +94,13 @@ LANG_TRANS_MAP = {
     'ko': ["baidu", "google", "iciba", "iflytek", "itranslate", "papago", "reverso", "sogou", "translateCom", "youdao"]
 }
 
+NAMELIST_CATEGORY_TAGS = {
+    '_AN_': 'army',
+    '_CN_': 'character',
+    '_FN_': 'fleet',
+    '_PN_': 'planet',
+    '_SN_': 'ship'
+}
 NOTITLE_FIELDS = [
     'namelist_title', 'namelist_author', 'namelist_id'
 ]
@@ -103,7 +126,3 @@ DL_CODES = {
     'pt': 'PT-BR',
     'zh-CN': 'ZH'
 }
-# Increasing this above this number risks encountering deadlock
-THREAD_CONCURRENCY = 50
-
-OPUS_UNSUPPORTED = ['ja', 'pt', 'pl', 'zh-CN', 'ko']

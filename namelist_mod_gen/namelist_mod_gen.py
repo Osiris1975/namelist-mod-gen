@@ -6,15 +6,13 @@ import sys
 from jinja2 import Environment, FileSystemLoader
 
 import constants.constants as c
+from execution.execute import executor
 from file_handlers.csv import csv_template, csv_to_dicts
 from file_handlers.paths import nl_csv_files, make_mod_directories
 from file_handlers.writers import write_common_namelist
-from execution.execute import executor
 from localisation.localisation import localise_namelist, localise_descriptor
 from nmg_logging.logger import Logger
 from validation.validation import pi_validate
-from translation.translate import translate
-from db.db import Connection
 
 parser = argparse.ArgumentParser()
 parent_parser = argparse.ArgumentParser(
@@ -78,24 +76,25 @@ def execute_mod(args):
         'directories': mod_dirs,
         'template': template_env.get_template(c.NAMELIST_TEMPLATE),
         'namelists': {''.join(nl['namelist_id']): {'data': nl} for nl in namelist_sources},
-        'overwrite': args.overwrite
+        'overwrite': args.overwrite,
+        'translate': args.translate
     }
 
     # Write the common namelist files using the master dictionary
-    executor(func=write_common_namelist, namelists=namelist_master, parallel_process=args.parallel)
+    executor(func=write_common_namelist, namelists_master=namelist_master, parallel_process=args.parallel)
 
-    # TODO: Can start translating here
-    if args.translate:
-        namelist_master['translations'] = executor(func=translate, namelists=namelist_master, parallel_process=args.parallel)
+    # # TODO: Can start translating here
+    # if args.translate:
+    #     namelist_master['translations'] = executor(func=translate, namelists_master=namelist_master, parallel_process=args.parallel)
 
     # Write the basic localisation files using the master dictionary
     namelist_master['template'] = template_env.get_template(c.NAMELIST_LOC_TEMPLATE)
-    executor(func=localise_namelist, namelists=namelist_master, parallel_process=args.parallel)
+    executor(func=localise_namelist, namelists_master=namelist_master, parallel_process=args.parallel)
 
     # Write the localisation descriptor files using the master dictionary
     namelist_master['template'] = template_env.get_template(c.NAMELIST_DEF_TEMPLATE)
     namelist_master['author'] = args.author
-    executor(func=localise_descriptor, namelists=namelist_master, parallel_process=args.parallel)
+    executor(func=localise_descriptor, namelists_master=namelist_master, parallel_process=args.parallel)
 
 
 def execute_csv(args):

@@ -24,7 +24,7 @@ class TestDatabase(unittest.TestCase):
                                     translators='translator1', language='french',
                                     translator_mode='mode1', namelist_category='category1',
                                     translation_date=datetime.now())
-            self.assertEqual(session.query(Translation).first().translation, 'bonjour')
+            self.assertEqual(session.query(Translation).first().translators, 'bonjour')
 
     def test_get_language_dict(self):
         self.connection.add_row(localisation_key='loc_key 1', english='hello', translation='bonjour',
