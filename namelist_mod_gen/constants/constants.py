@@ -5,21 +5,22 @@ import os
 SRC_ROOT_DIR = os.path.dirname(os.path.abspath(__file__)).replace('constants', '')
 temp = SRC_ROOT_DIR.split('/')[0:-2]
 PROJECT_DIR = os.path.join('/', *temp)
-LOG_DIR = f"{PROJECT_DIR}/logs/{datetime.datetime.now().strftime('%d.%m.%Y_%H.%M.%S')}.main.log"
+LOG_DIR = f"{PROJECT_DIR}/logs/{datetime.date.today().strftime('%d.%m.%Y')}.main.log"
 TEMPLATES_DIR = os.path.join(SRC_ROOT_DIR, 'templates')
 NAMELIST_TEMPLATE = 'namelist.txt'
 NAMELIST_DEF_TEMPLATE = 'descriptors.yml'
 NAMELIST_LOC_TEMPLATE = 'localisation.yml'
 
-# Concurrency 'constants'
-THREAD_CONCURRENCY = 50
+# Ratelimiting constants
+RL_CALLS = 100
+RL_PERIOD = 1
 
 # DB Constants
 # DB_PATH = os.path.join(PROJECT_DIR, 'db', 'translations_new.db')
 DB_PATH = 'postgresql+psycopg2://nmg@localhost:5432/translations'
 DB_POOL_TIMEOUT = 600
-DB_MAX_OVERFLOW = 30
-DB_POOL_SIZE = THREAD_CONCURRENCY
+DB_MAX_OVERFLOW = 12
+DB_POOL_SIZE = 64
 
 # Text & Language Constants
 
@@ -74,7 +75,8 @@ PARADOX_LANGUAGES = {
     'russian': 'russian',
     'spanish': 'spanish',
     'japanese': 'japanese',
-    'korean': 'korean'
+    'korean': 'korean',
+    'english': 'english'
 }
 
 LANG_TRANS_MAP = {
@@ -126,3 +128,4 @@ DL_CODES = {
     'pt': 'PT-BR',
     'zh-CN': 'ZH'
 }
+

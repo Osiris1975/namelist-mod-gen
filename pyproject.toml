@@ -20,6 +20,7 @@ googletrans = "^3.1.0a0"
 easynmt = "^2.0.2"
 sqlalchemy = "^2.0.7"
 pytest = "^7.2.2"
+ratelimiter = "^1.2.0.post0"
 
 
 [build-system]

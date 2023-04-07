@@ -1,10 +1,8 @@
 import logging
 
-from sqlalchemy import Column, create_engine, DateTime, String, Integer, UniqueConstraint
-from sqlalchemy.dialects.sqlite import insert
-from sqlalchemy.orm import sessionmaker, declarative_base, scoped_session
-
 import constants.constants as c
+from sqlalchemy import Column, create_engine, DateTime, String, Integer, UniqueConstraint
+from sqlalchemy.orm import sessionmaker, declarative_base, scoped_session
 
 Base = declarative_base()
 
@@ -22,7 +20,7 @@ class Translation(Base):
     translator_mode = Column(String)
     namelist_category = Column(String)
     translation_date = Column(DateTime)
-    __table_args__ = (UniqueConstraint('localisation_key', 'translated', 'language'), )
+    __table_args__ = (UniqueConstraint('localisation_key', 'translated', 'language'),)
 
 
 class Connection(object):
@@ -47,7 +45,7 @@ class Connection(object):
         result = {}
         with self.session() as session:
             for t in session.query(Translation).filter(Translation.language == language):
-                result[t.english] = t.translators
+                result[t.english] = t.translated
         return result
 
     def add_many(self, objects, translators, translator_mode, language, translation_date):
@@ -69,6 +67,11 @@ class Connection(object):
 
     def add_row(self, localisation_key, language, english, translation, translators, translator_mode, namelist_category,
                 translation_date, replace=False):
+        instance = self.session.query(Translation).filter_by(localisation_key=localisation_key, translated=translation,
+                                                             language=language).first()
+        if instance and not replace:
+            log.warning(f'Record with primary keys already exists: {localisation_key, translation, language}')
+            return None
         row = Translation(localisation_key=localisation_key, english=english, translated=translation,
                           translators=translators, language=language,
                           translator_mode=translator_mode, namelist_category=namelist_category,
@@ -76,22 +79,7 @@ class Connection(object):
         row_dict = {key: value for key, value in row.__dict__.items() if
                     key in Translation.__table__.columns.keys()}
         if replace:
-            insert_stmt = insert(Translation).values(localisation_key=localisation_key, english=english,
-                                                     translated=translation, translators=translators,
-                                                     language=language, translator_mode=translator_mode,
-                                                     namelist_category=namelist_category,
-                                                     translation_date=translation_date)
-            do_update_stmt = insert_stmt.on_conflict_do_update(
-                index_elements=[Translation.english, Translation.language, Translation.localisation_key],
-                set_={
-                    Translation.translated: insert_stmt.excluded.translators,
-                    Translation.translators: insert_stmt.excluded.translators,
-                    Translation.translator_mode: insert_stmt.excluded.translator_mode,
-                    Translation.namelist_category: insert_stmt.excluded.namelist_category,
-                    Translation.translation_date: insert_stmt.excluded.translation_date
-                }
-            )
-            self.session.execute(do_update_stmt)
+            self.session.merge(row)
         else:
             self.session.add(row)
         self.session.commit()
