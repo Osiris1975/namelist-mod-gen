@@ -11,6 +11,10 @@ NAMELIST_TEMPLATE = 'namelist.txt'
 NAMELIST_DEF_TEMPLATE = 'descriptors.yml'
 NAMELIST_LOC_TEMPLATE = 'localisation.yml'
 
+# Concurrencu
+
+MAX_WORKERS = 100
+
 # Ratelimiting constants
 RL_CALLS = 1000
 RL_PERIOD = 1

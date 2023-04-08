@@ -14,6 +14,7 @@ from file_handlers.writers import write_common_namelist
 from localisation.localisation import localise_namelist, localise_descriptor
 from nmg_logging.logger import Logger
 from validation.validation import pi_validate
+from translation.translate import check_api_availability
 
 parser = argparse.ArgumentParser()
 parent_parser = argparse.ArgumentParser(
@@ -47,8 +48,9 @@ csv.add_argument('-d', '--dump', help='dump a blank csv with namelist headers wi
 csv.add_argument('-c', '--convert', help='Convert a mod in the given directory into a CSV file.', required=False)
 
 
-def execute_mod(args):
+def execute_mod(**kwargs):
     # Gather CSV files from directory
+    args = kwargs['args']
     csv_files = nl_csv_files(args.namelists)
 
     # CSV File Handler ingests the csv files and converts them to dictionaries
@@ -84,12 +86,11 @@ def execute_mod(args):
     # Write the common namelist files using the master dictionary
     executor(func=write_common_namelist, namelists_master=namelist_master, parallel_process=args.parallel)
 
-    # # TODO: Can start translating here
-    # if args.translate:
-    #     namelist_master['translations'] = executor(func=translate, namelists_master=namelist_master, parallel_process=args.parallel)
-
     # Write the basic localisation files using the master dictionary
     namelist_master['template'] = template_env.get_template(c.NAMELIST_LOC_TEMPLATE)
+
+    if args.translate:
+        namelist_master['available_apis'] = kwargs['available_apis']
     executor(func=localise_namelist, namelists_master=namelist_master, parallel_process=args.parallel)
 
     # Write the localisation descriptor files using the master dictionary
@@ -109,8 +110,11 @@ def main():
     st = datetime.datetime.now()
     args = parser.parse_args()
     log.info(f'Started in {args.cmd} mode at{st}')
+    available_apis = None
+    if args.translate:
+        available_apis = check_api_availability()
     if args.cmd == 'mod':
-        execute_mod(args)
+        execute_mod(args=args, available_apis=available_apis)
     if args.cmd == 'csv':
         execute_csv(args)
     et = datetime.datetime.now()

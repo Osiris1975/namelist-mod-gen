@@ -28,7 +28,7 @@ def localise_namelist(namelist):
         loc_dict = make_loc_dict(namelist['data'])
         if namelist['translate'] and lang != 'english':
             try:
-                t = Translator(loc_dict, lang, namelist['id'])
+                t = Translator(loc_dict, lang, namelist['id'], namelist['available_apis'])
                 t.run()
                 loc_dict = t.translated_dict
 
@@ -37,7 +37,8 @@ def localise_namelist(namelist):
 
         if not loc_dict:
             log.critical(f'Localisation dictionary should not be empty for {namelist["id"]} after {lang} translation.')
-            raise ValueError(f'Localisation dictionary should not be empty for {namelist["id"]} after {lang} translation.')
+            raise ValueError(
+                f'Localisation dictionary should not be empty for {namelist["id"]} after {lang} translation.')
         quotified = quotify(loc_dict)
 
         write_template(
@@ -51,11 +52,20 @@ def localise_namelist(namelist):
 
 def localise_descriptor(namelist):
     titles = {k: v['data']['namelist_title'][0] for k, v in namelist['namelists'].items()}
-    for k, v in namelist['namelists'].items():
-        titles[k] = v['data']['namelist_title'][0]
+    if namelist['translate']:
+        for lang in c.TABLE_LANGUAGES:
+            t = Translator(
+                namelist=titles,
+                lang=lang,
+                namelist_id=f'titles_{namelist["id"]}',
+                available_apis=namelist['available_apis']
+            )
+            t.run()
+            titles = t.translated_dict
 
     for loc_dir in namelist['directories']['localisation']:
         lang = loc_dir.split(os.sep)[-2]
+
         dest_file = f"{namelist['author'].lower()}_namelist_l_{lang}.yml"
         dest_file = os.path.join(loc_dir, dest_file)
 

@@ -16,6 +16,7 @@ def executor(func, namelists_master, parallel_process):
     """
     log.info(f'Executor executing {func.__name__}')
     try:
+        namelist = None
         if 'namelists' not in namelists_master:
             log.error('Input dictionary does not contain "namelists" key')
         inputs_name_lists = []
@@ -28,10 +29,12 @@ def executor(func, namelists_master, parallel_process):
                 'template': namelists_master['template'],
                 'overwrite': namelists_master['overwrite'],
                 'translate': namelists_master['translate'],
-                'namelists': namelists_master['namelists']
+                'namelists': namelists_master['namelists'],
             }
             if 'author' in namelists_master.keys():
                 namelist['author'] = namelists_master['author']
+            if 'available_apis' in namelists_master.keys():
+                namelist['available_apis'] = namelists_master['available_apis']
             inputs_name_lists.append(namelist)
 
         result = None
