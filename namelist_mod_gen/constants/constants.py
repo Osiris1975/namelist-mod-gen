@@ -12,7 +12,7 @@ NAMELIST_DEF_TEMPLATE = 'descriptors.yml'
 NAMELIST_LOC_TEMPLATE = 'localisation.yml'
 
 # Ratelimiting constants
-RL_CALLS = 100
+RL_CALLS = 1000
 RL_PERIOD = 1
 
 # DB Constants
@@ -24,7 +24,17 @@ DB_POOL_SIZE = 64
 
 # Text & Language Constants
 
-OPUS_UNSUPPORTED = ['ja', 'pt', 'pl', 'zh-CN', 'ko']
+OPUS_MODELS = {
+    'portuguese': 'opus-mt',
+    'french': 'opus-mt',
+    'german': 'opus-mt',
+    'polish': 'm2m_100_418M',
+    'russian': 'opus-mt',
+    'spanish': 'opus-mt',
+    'chinese': 'opus-mt',
+    'japanese': 'opus-mt',
+    'korean': 'm2m_100_418M'
+}
 
 SUB_TOKENS = {
     "C": "SEQ",

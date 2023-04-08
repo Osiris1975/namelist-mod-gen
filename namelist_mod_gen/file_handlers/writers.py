@@ -52,13 +52,10 @@ def write_template(dest_file, render_dict, template, encoding, lang=None):
 
 def ok_to_overwrite(namelist, dest_file):
     if namelist['overwrite']:
-        try:
-            log.warning(f'Overwrite selected for {namelist["title"]}. Removing {dest_file}')
+        log.warning(f'Overwrite selected for {namelist["title"]}. Removing {dest_file}')
+        if os.path.exists(dest_file):
             os.remove(dest_file)
-            return True
-        except FileNotFoundError as e:
-            log.warning(f'Error occurred while deleting file {dest_file}: {e}')
-            log.debug(traceback.format_exc())
+        return True
     else:
         if os.path.exists(dest_file):
             log.warning(f'Overwrite not selected for {namelist["title"]}. Skipping writing of {dest_file}')

@@ -28,9 +28,7 @@ def executor(func, namelists_master, parallel_process):
                 'template': namelists_master['template'],
                 'overwrite': namelists_master['overwrite'],
                 'translate': namelists_master['translate'],
-                'namelists': namelists_master['namelists'],
-                'available_translators': namelists_master['available_translators']
-
+                'namelists': namelists_master['namelists']
             }
             if 'author' in namelists_master.keys():
                 namelist['author'] = namelists_master['author']

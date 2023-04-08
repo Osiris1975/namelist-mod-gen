@@ -1,6 +1,7 @@
 import argparse
 import datetime
 import os
+import signal
 import sys
 
 from jinja2 import Environment, FileSystemLoader
@@ -13,7 +14,6 @@ from file_handlers.writers import write_common_namelist
 from localisation.localisation import localise_namelist, localise_descriptor
 from nmg_logging.logger import Logger
 from validation.validation import pi_validate
-from translation.translate import Translator
 
 parser = argparse.ArgumentParser()
 parent_parser = argparse.ArgumentParser(
@@ -84,12 +84,11 @@ def execute_mod(args):
     # Write the common namelist files using the master dictionary
     executor(func=write_common_namelist, namelists_master=namelist_master, parallel_process=args.parallel)
 
+    # # TODO: Can start translating here
+    # if args.translate:
+    #     namelist_master['translations'] = executor(func=translate, namelists_master=namelist_master, parallel_process=args.parallel)
+
     # Write the basic localisation files using the master dictionary
-    if args.translate:
-        translator_check = Translator(
-            namelist=[], lang='french', namelist_id='test', funcs=None
-        )
-        namelist_master['available_translators'] = translator_check.filter_funcs()
     namelist_master['template'] = template_env.get_template(c.NAMELIST_LOC_TEMPLATE)
     executor(func=localise_namelist, namelists_master=namelist_master, parallel_process=args.parallel)
 
@@ -133,6 +132,10 @@ if __name__ == "__main__":
     logger = Logger('NMG', level=loglevel)
     logger.add_file_handler(c.LOG_DIR)
     log = logger.get_logger()
-    sys.exit(main())
+    try:
+        sys.exit(main())
+    except Exception as e:
+        log.critical(f'NMG failed: {e}')
+        os.killpg(os.getpid(), signal.SIGTERM)
 
 # TODO: Go through functions where I'm passing dictionaries and consider using kwargs instead
