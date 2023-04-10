@@ -45,7 +45,7 @@ class Connection(object):
         result = {}
         with self.session() as session:
             for t in session.query(Translation).filter(Translation.language == language):
-                result[t.english] = t.translated
+                result[t.localisation_key] = t.translated
         return result
 
     def add_many(self, objects, translators, translator_mode, language, translation_date):

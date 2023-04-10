@@ -12,13 +12,14 @@ NAMELIST_DEF_TEMPLATE = 'descriptors.yml'
 NAMELIST_LOC_TEMPLATE = 'localisation.yml'
 
 # Concurrencu
-
 MAX_WORKERS = 100
 
 # Ratelimiting constants
-RL_CALLS = 1000
-RL_PERIOD = 1
-
+RATE_LIMIT_INTERVAL = 1
+RATE_LIMIT_CALLS = 100
+RATE_LIMIT_RETRIES = 8
+RATE_LIMIT_JITTER = 3
+MAX_RUNS = 2
 # DB Constants
 # DB_PATH = os.path.join(PROJECT_DIR, 'db', 'translations_new.db')
 DB_PATH = 'postgresql+psycopg2://nmg@localhost:5432/translations'
@@ -28,7 +29,7 @@ DB_POOL_SIZE = 64
 
 # Text & Language Constants
 
-OPUS_MODELS = {
+MT_MODELS = {
     'portuguese': 'opus-mt',
     'french': 'opus-mt',
     'german': 'opus-mt',
@@ -142,4 +143,3 @@ DL_CODES = {
     'pt': 'PT-BR',
     'zh-CN': 'ZH'
 }
-

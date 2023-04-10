@@ -7,7 +7,10 @@ import colorlog
 class Logger(object):
     loggers = set()
 
-    def __init__(self, name, format="s%(asctime)s | %(levelname)s | %(filename)s | %(message)s", level=logging.INFO,
+    def __init__(self,
+                 name,
+                 format="s%(asctime)s | %(levelname)s | %(filename)s | %(funcName)s() | %(threadName)s | %(message)s",
+                 level=logging.INFO,
                  colors=True):
         try:
             # Construct Logger

@@ -51,29 +51,29 @@ def localise_namelist(namelist):
 
 
 def localise_descriptor(namelist):
-    titles = {k: v['data']['namelist_title'][0] for k, v in namelist['namelists'].items()}
-    if namelist['translate']:
-        for lang in c.TABLE_LANGUAGES:
+    for loc_dir in namelist['directories']['localisation']:
+        dir_lang = loc_dir.split(os.sep)[-2]
+        trans_lang = dir_lang.replace('braz_por', 'portuguese').replace('simp_chinese', 'chinese')
+        titles = {k: v['data']['namelist_title'][0] for k, v in namelist['namelists'].items()}
+
+        if namelist['translate'] and dir_lang != 'english':
             t = Translator(
                 namelist=titles,
-                lang=lang,
+                lang=trans_lang,
                 namelist_id=f'titles_{namelist["id"]}',
                 available_apis=namelist['available_apis']
             )
             t.run()
             titles = t.translated_dict
 
-    for loc_dir in namelist['directories']['localisation']:
-        lang = loc_dir.split(os.sep)[-2]
-
-        dest_file = f"{namelist['author'].lower()}_namelist_l_{lang}.yml"
+        dest_file = f"{namelist['author'].lower()}_namelist_l_{dir_lang}.yml"
         dest_file = os.path.join(loc_dir, dest_file)
 
         write_template(
             render_dict=titles,
             dest_file=dest_file,
             template=namelist['template'],
-            lang=lang,
+            lang=dir_lang,
             encoding='utf-8'
         )
 

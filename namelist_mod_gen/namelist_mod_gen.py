@@ -13,8 +13,8 @@ from file_handlers.paths import nl_csv_files, make_mod_directories
 from file_handlers.writers import write_common_namelist
 from localisation.localisation import localise_namelist, localise_descriptor
 from nmg_logging.logger import Logger
-from validation.validation import pi_validate
 from translation.translate import check_api_availability
+from validation.validation import pi_validate
 
 parser = argparse.ArgumentParser()
 parent_parser = argparse.ArgumentParser(
@@ -67,8 +67,9 @@ def execute_mod(**kwargs):
 
     if len(errors) > 0:
         errors_string = "\n".join(errors)
-        log.critical(f'Provided namelists have errors:{errors_string}')
-        sys.exit(1)
+        log.critical(f'Provided namelists have errors:\n{errors_string}')
+        # TODO: Uncomment exiting after confirming that the characters checked aren't allowed
+        # sys.exit(1)
 
     # Create the mod directory structure to write files to
     mod_dirs = make_mod_directories(args.mod_name, args.mod_output_dir)

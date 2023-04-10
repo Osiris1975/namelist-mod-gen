@@ -2,17 +2,19 @@ import copy
 import datetime
 import http
 import logging
-import multiprocessing as mp
 import os
-import sys
 import traceback as tb
 import warnings
 from concurrent.futures import ThreadPoolExecutor
+from queue import Queue
+from threading import Lock
 
 import deepl
 import googletrans
+import httpcore
 import requests
 from easynmt import EasyNMT
+from ratelimit import limits, sleep_and_retry
 from sqlalchemy.exc import IntegrityError
 
 import constants.constants as c
@@ -27,12 +29,13 @@ db = Connection(db_path=c.DB_PATH, pool_size=c.DB_POOL_SIZE, max_overflow=c.DB_M
 
 log = logging.getLogger('NMG')
 
+skipped_translators = set()
+
 
 class Translator(object):
     def __init__(self, namelist, lang, namelist_id, available_apis):
         self.id = namelist_id
         self.namelist_length = len(namelist)
-        # TODO: Need to get usable_funcs populated properly
         available_funcs = [self.db_translate]
         available_funcs.extend([getattr(self, name) for name in available_apis])
         available_funcs.append(self.mt_easynmt)
@@ -40,59 +43,78 @@ class Translator(object):
         self.lang = lang
         self.lang_code = c.TABLE_LANGUAGES[lang]
         self.namelist = copy.copy(namelist)
-        m = mp.Manager()
-        self.translated = m.Queue()
-        self.untranslated = m.Queue()
+        self.translated = Queue()
+        self.untranslated = Queue()
         self.is_done = False
-        self.gtrans = googletrans.Translator()
         self.deepl = deepl.Translator(os.getenv('DEEPL_AUTH_KEY'))
         self.lang_table = db.get_language_dict(self.lang)
         self.translated_dict = dict()
+        self.counter = 0
+        self.lock = Lock()
+        self.runs = 0
 
     def run(self):
-        # seed untranslated queue with all namelist loc_key, text pairs
-        for loc_key, text in self.namelist.items():
-            self.untranslated.put((loc_key, text))
+        self.runs += 1
+        while self.runs != c.MAX_RUNS:
+            # seed untranslated queue with all namelist loc_key, text pairs
+            for loc_key, text in self.namelist.items():
+                self.untranslated.put((loc_key, text))
 
-        # iterate over usable functions and peform cascading translation
-        results = None
-        for func in self.usable_funcs:
-            try:
-                log.info(f'Beginning translation of {self.id} to {self.lang} with {func.__name__}')
-                log.debug(f'Texts requiring translation for lang({self.lang_code}): {self.namelist_length}')
-                results = func()
-                self.update_queues(results)
-                if len(results) == self.namelist_length:
+            # iterate over usable functions and perform cascading translation
+            for func in self.usable_funcs:
+                try:
+                    log.info(f'{func.__name__}() | Beginning translation of {self.id} to {self.lang}')
+                    log.debug(
+                        f'{func.__name__}() | Texts requiring translation for lang({self.lang_code}): {self.namelist_length}')
+                    if func.__name__ not in skipped_translators:
+                        func()
+                    else:
+                        continue
                     log.info(
-                        f'Translation complete! ID:{self.id} | Lang: {self.lang_code} | Translated texts: {self.namelist_length}')
-                    return self.queue_to_dict()
-                log.info(
-                    f'{func.__name__} for {self.id} partially completed: Translated: {self.translated.qsize()} | Remaining {self.untranslated.qsize()}')
-            except IntegrityError as e:
-                if 'UniqueViolation' in str(e):
-                    log.warning(f'Translated text already exists: {e}')
-                    log.debug(tb.format_exc())
-                else:
-                    log.error(f'Unexpected database error: {e}')
-            except Exception as e:
-                log.error(f'Unexpected error occurred: {e}')
-                log.error(tb.format_exc())
-                continue
-        if len(results) != self.namelist_length:
-            log.error(
-                f'Translation methods exhausted with {self.translated.qsize()} translations remaining. Exiting...')
-            sys.exit(1)
+                        f'{func.__name__}() | Queue State | ID: {self.id} | Lang: {self.lang_code}) | Translated: {self.translated.qsize()} | Untranslated {self.untranslated.qsize()}')
+                    if self.done():
+                        log.info(
+                            f'Translation complete! ID:{self.id} | Lang: {self.lang_code} | Num Translated: {self.namelist_length}')
+                        return self.queue_to_dict()
+
+                except IntegrityError as e:
+                    if 'UniqueViolation' in str(e):
+                        log.warning(f'Translated text already exists: {e}')
+                        log.debug(tb.format_exc())
+                    else:
+                        log.error(f'Unexpected database error: {e}')
+                except Exception as e:
+                    log.error(f'Unexpected error occurred: {e}')
+                    log.error(tb.format_exc())
+                    if func.__name__ not in skipped_translators:
+                        skipped_translators.add(func.__name__)
+                    continue
+            if self.translated.qsize() != self.namelist_length:
+                log.error(
+                    f'{self.runs} incomplete: translation methods exhausted with {self.untranslated.qsize()} translations remaining. Retrying run...')
+        # Translations didn't complete, but we'll put the english words back in so text will exist at least.
+        while self.untranslated.qsize() > 0:
+            result = self.untranslated.get()
+            self.translated.put(result)
+        return self.queue_to_dict()
+
+    def increment(self):
+        with self.lock:
+            self.counter += 1
+
+    def done(self):
+        with self.lock:
+            return self.counter == self.namelist_length
 
     def queue_to_dict(self):
         while self.translated.qsize() > 0:
-            log.debug(f"Queue length is {self.translated.qsize()}")
+            log.debug(f"Converting translation queue to dict. Queue length is {self.translated.qsize()}")
             try:
                 result = self.translated.get()
                 self.translated_dict[result[0]] = result[1]
             except Exception as e:
                 log.critical(f'Problem processing translation queue: {e}')
         log.debug(f'Finished processing translation queue: {self.translated.qsize()} ')
-        return self.translated
 
     def get_remaining(self):
         inputs = []
@@ -100,31 +122,8 @@ class Translator(object):
             inputs.append(self.untranslated.get())
         return inputs
 
-    def update_queues(self, results):
-        log.debug(
-            f'Update Queues Begin: Translated length: {self.translated.qsize()} | Untranslated length: {self.untranslated.qsize()}')
-        for loc_key, tl_dict in results:
-            if tl_dict.get('translation'):
-                self.translated.put((loc_key, retokenize(tl_dict)))
-            else:
-                self.untranslated.put((loc_key, tl_dict['original_txt']))
-
-        log.debug(
-            f'Update Queues End: Translated length: {self.translated.qsize()} | Untranslated length: {self.untranslated.qsize()}')
-
-    def done(self):
-        tq_size = self.translated.qsize()
-        uq_size = self.untranslated.qsize()
-        sum_qsize = tq_size + uq_size
-        eq_nl_size = sum_qsize == self.namelist_length
-        log.info(
-            f'Done Check:{eq_nl_size}: TQ Size({tq_size}) + UQ Size({uq_size}) = {sum_qsize}: NL Size: {self.namelist_length}')
-        self.is_done = self.translated.qsize() == self.namelist_length and self.untranslated.qsize() == 0
-        return self.is_done
-
-    # TODO: If chunked translations is implemented this may be useful.
-    # def insert_many(self, objects, translators, translator_mode, language, date):
-    #     db.add_many(objects, translators, translator_mode, language, date)
+    def insert_many(self, objects, translators, translator_mode, language, date):
+        db.add_many(objects, translators, translator_mode, language, date)
 
     def insert_one(self, loc_key, detokenized, translators, translator_mode):
         category = None
@@ -144,43 +143,68 @@ class Translator(object):
 
     def db_translate(self):
         log.info(f'Getting {self.lang} translations from database')
-        with ThreadPoolExecutor(max_workers=c.MAX_WORKERS) as executor:
+        with ThreadPoolExecutor(max_workers=c.MAX_WORKERS,
+                                thread_name_prefix=f'db_translate_{self.id}_{self.lang_code}') as executor:
             results = list(executor.map(self._do_db_translate, self.get_remaining()))
         return results
 
     def _do_db_translate(self, loc_kv):
         detokenized = detokenize(loc_kv[1])
         try:
-            response = detokenized['translation'] = self.lang_table[detokenized['detokenized_txt']]
+            response = detokenized['translation'] = self.lang_table[loc_kv[0]]
             detokenized['translation'] = clean_input_text(response).title()
-            self.translated.put(loc_kv[0], retokenize(detokenized))
-        except KeyError:
-            log.debug(f'{detokenized["original_txt"]} not found in table for {self.lang}')
+            self.translated.put((loc_kv[0], retokenize(detokenized)))
+            self.increment()
+        except Exception as e:
+            log.warning(f'dbtrans: Unable to translate {loc_kv[0]}:{loc_kv[1]}: {e}. Returning it to the queue.')
+            log.debug(f'Untranslated={self.untranslated.qsize()}')
             self.untranslated.put(loc_kv)
-        detokenized['translation'] = clean_input_text(response).title()
-        return loc_kv[0], detokenized
+            log.debug(f'Untranslated={self.untranslated.qsize()}')
 
     def api_gtrans(self):
         log.info(f'Attempting translation with googletrans')
-        with ThreadPoolExecutor(max_workers=c.MAX_WORKERS) as executor:
+        with ThreadPoolExecutor(max_workers=c.MAX_WORKERS,
+                                thread_name_prefix=f'api_gtrans_{self.id}_{self.lang_code}') as executor:
             results = list(executor.map(self._do_gtrans, self.get_remaining()))
         return results
 
+    @sleep_and_retry
+    @limits(calls=c.RATE_LIMIT_CALLS, period=c.RATE_LIMIT_INTERVAL)
     def _do_gtrans(self, loc_kv):
-        detokenized = detokenize(loc_kv[1])
-        response = self.gtrans.translate(detokenized['detokenized_txt'], src='en',
-                                         dest=self.lang_code.replace('zh', 'zh-CN'))
-        detokenized['translation'] = clean_input_text(response.text).title()
-        self.translated.put(loc_kv[0], retokenize(detokenized))
-        log.debug(
-            f'Translation(gtrans:{self.lang_code}) result: {detokenized["detokenized_txt"]} -> {detokenized["translation"]}')
-        if detokenized['translation'] not in self.lang_table.values() and loc_kv[0] != 'TEST_KEY':
-            self.insert_one(loc_key=loc_kv[0], detokenized=detokenized, translators='gtrans', translator_mode='api')
-        return loc_kv[0], detokenized
+        try:
+            if 'api_gtrans' in skipped_translators:
+                log.warning(
+                    f'api_gtrans is now skipped. Returning {loc_kv[0]}:{loc_kv[1]} to queue.')
+                self.untranslated.put(loc_kv)
+            detokenized = detokenize(loc_kv[1])
+            gtrans = googletrans.Translator()
+            response = gtrans.translate(detokenized['detokenized_txt'], src='en',
+                                        dest=self.lang_code.replace('zh', 'zh-CN'))
+
+            detokenized['translation'] = clean_input_text(response.text).title()
+            log.debug(
+                f'Queue state after translating {detokenized["translation"]}({self.lang_code}) for {self.id} : Translated: {self.translated.qsize()} | Untranslated {self.untranslated.qsize()}')
+            self.translated.put((loc_kv[0], retokenize(detokenized)))
+            self.increment()
+            if detokenized['translation'] not in self.lang_table.values() and loc_kv[0] != 'TEST_KEY':
+                log.debug(
+                    f'Attempting db insertion of {detokenized["detokenized_txt"]} -> {detokenized["translation"]}')
+                self.insert_one(loc_key=loc_kv[0], detokenized=detokenized, translators='gtrans', translator_mode='api')
+            log.debug(
+                f'Translation(gtrans:{self.lang_code}) result: {detokenized["detokenized_txt"]} -> {detokenized["translation"]}')
+        except httpcore.ReadError as e:
+            log.error(f'Unable to translate {loc_kv[0]}:{loc_kv[1]} after run {self.runs}: {e}, retrying...')
+            log.debug(tb.format_exc())
+
+        except Exception as e:
+            log.error(f'Unable to translate {loc_kv[0]}:{loc_kv[1]}after run {self.runs}: {e}, retrying...')
+            log.debug(tb.format_exc())
 
     def api_deepl(self):
         log.info(f'Attempting translation with deepl')
-        with ThreadPoolExecutor(max_workers=c.MAX_WORKERS) as executor:
+        with ThreadPoolExecutor(
+                max_workers=c.MAX_WORKERS,
+                thread_name_prefix=f'api_deepl_{self.id}_{self.lang_code}') as executor:
             results = list(executor.map(self._do_deepl, self.get_remaining()))
         return results
 
@@ -190,79 +214,72 @@ class Translator(object):
         return self.lang_code
 
     def _do_deepl(self, loc_kv):
-        detokenized = detokenize(loc_kv[1])
-        response = self.deepl.translate_text(detokenized['detokenized_txt'], source_lang='en',
-                                             target_lang=self.to_dl_code())
-        detokenized['translation'] = clean_input_text(response.text).title()
-        self.translated.put(loc_kv[0], retokenize(detokenized))
-        log.debug(
-            f'Translation(deepl:{self.lang_code}) result: {detokenized["detokenized_txt"]} -> {detokenized["translation"]}')
-        if detokenized['translation'] not in self.lang_table.values() and loc_kv[0] != 'TEST_KEY':
-            self.insert_one(loc_key=loc_kv[0], detokenized=detokenized, translators='deepl', translator_mode='api')
-        return loc_kv[0], detokenized
+        try:
+            detokenized = detokenize(loc_kv[1])
+            response = self.deepl.translate_text(detokenized['detokenized_txt'], source_lang='en',
+                                                 target_lang=self.to_dl_code())
+            detokenized['translation'] = clean_input_text(response.text).title()
+            self.translated.put(loc_kv[0], retokenize(detokenized))
+            self.increment()
+            log.debug(
+                f'Translation(deepl:{self.lang_code}) result: {detokenized["detokenized_txt"]} -> {detokenized["translation"]}')
+            if detokenized['translation'] not in self.lang_table.values() and loc_kv[0] != 'TEST_KEY':
+                self.insert_one(loc_key=loc_kv[0], detokenized=detokenized, translators='deepl', translator_mode='api')
+            return loc_kv[0], detokenized
+        except Exception as e:
+            log.warning(f'Unable to translate {loc_kv[0]}:{loc_kv[1]}: {e}. Returning it to the queue.')
+            log.debug(tb.format_exc())
+            self.untranslated.put(loc_kv)
 
     def api_mmt(self):
         log.info(f'Attempting translation with mmt')
-        with ThreadPoolExecutor(max_workers=c.MAX_WORKERS) as executor:
+        with ThreadPoolExecutor(max_workers=c.MAX_WORKERS,
+                                thread_name_prefix=f'api_mmt_{self.id}_{self.lang_code}') as executor:
             results = list(executor.map(self._do_mmt, self.get_remaining()))
         return results
 
     def _do_mmt(self, loc_kv):
-        detokenized = detokenize(loc_kv[1])
-        url = f'https://api.mymemory.translated.net/get?q={detokenized["detokenized_txt"]}&langpair=en|{self.lang_code}'
-        response = requests.get(url)
-        if response.status_code == http.HTTPStatus.TOO_MANY_REQUESTS:
-            content = response.json()
-            log.warning(f'Daily request quota used up for MMT: {content["responseDetails"]}')
-            return
-        if response.status_code == http.HTTPStatus.OK and loc_kv[0] != 'TEST_KEY':
-            detokenized['translation'] = clean_input_text(response.json()['responseData']['translatedText']).title()
-            self.insert_one(loc_key=loc_kv[0], detokenized=detokenized, translators='mmt', translator_mode='api')
-            self.translated.put(loc_kv[0], retokenize(detokenized))
-        log.debug(
-            f'Translation(mmt:{self.lang_code}) result: {detokenized["detokenized_txt"]} -> {detokenized["translation"]}')
-        return loc_kv[0], detokenized
+        try:
+            detokenized = detokenize(loc_kv[1])
+            url = f'https://api.mymemory.translated.net/get?q={detokenized["detokenized_txt"]}&langpair=en|{self.lang_code}'
+            response = requests.get(url)
+            if response.status_code == http.HTTPStatus.TOO_MANY_REQUESTS:
+                content = response.json()
+                log.warning(f'Daily request quota used up for MMT: {content["responseDetails"]}')
+                return
+            if response.status_code == http.HTTPStatus.OK and loc_kv[0] != 'TEST_KEY':
+                detokenized['translation'] = clean_input_text(response.json()['responseData']['translatedText']).title()
+                self.insert_one(loc_key=loc_kv[0], detokenized=detokenized, translators='mmt', translator_mode='api')
+                self.translated.put(loc_kv[0], retokenize(detokenized))
+                self.increment()
+            log.debug(
+                f'Translation(mmt:{self.lang_code}) result: {detokenized["detokenized_txt"]} -> {detokenized["translation"]}')
+            return loc_kv[0], detokenized
+        except Exception as e:
+            log.warning(f'Unable to translate {loc_kv[0]}:{loc_kv[1]}: {e}. Returning it to the queue.')
+            log.debug(tb.format_exc())
+            self.untranslated.put(loc_kv)
 
     def mt_easynmt(self):
-        keys = []
-        vals = []
         remaining = self.get_remaining()
-        keys = [i[0] for i in remaining]
-        detokenized = [detokenize(i[1]) for i in remaining]
-        for_translation = [i['detokenized_txt'] for i in detokenized]
-        easynmt = EasyNMT(c.OPUS_MODELS[self.lang])
-        log.info(f'Remaining {len(for_translation)} untranslated items for {self.id} will be translated with easynmt')
-        response = easynmt.translate(for_translation, source_lang='en', target_lang=self.lang_code)
-        print()
-        # try:
-        #     response = easynmt.translate(detokenized['detokenized_txt'], source_lang='en',
-        #                                  target_lang=lang_code)
-        # except Exception as e:
-        #     log.error(f'Problem using easnmt translation: {e}')
-        #     return loc_kv[0], detokenized
+        try:
+            detokenized = [detokenize(i[1]) for i in remaining]
+            for_translation = [i['detokenized_txt'] for i in detokenized]
+            easynmt = EasyNMT(c.MT_MODELS[self.lang])
+            log.info(
+                f'Remaining {len(for_translation)} untranslated items for {self.id} will be translated with easynmt')
+            response = easynmt.translate(for_translation, source_lang='en', target_lang=self.lang_code)
+            for r in remaining:
+                detokenized['translation']: retokenize(clean_input_text(response.pop()).title())
+                self.translated.put((r[0], detokenized))
+                self.insert_one(loc_key=r[0], detokenized=detokenized, translators='mmt', translator_mode='api')
+                self.increment()
 
-        # results = list(executor.map(_do_easynmt_wrapper,
-        #                             [(self.lang, self.lang_code, loc_kv) for loc_kv in self.get_remaining()]))
-        return
-
-
-#
-# def _do_easynmt_wrapper(args):
-#     lang, lang_code, loc_kv = args
-#     easynmt = EasyNMT(c.OPUS_MODELS[lang])
-#     detokenized = detokenize(loc_kv[1])
-#
-#     try:
-#         response = easynmt.translate(detokenized['detokenized_txt'], source_lang='en',
-#                                      target_lang=lang_code)
-#     except Exception as e:
-#         log.error(f'Problem using easnmt translation: {e}')
-#         return loc_kv[0], detokenized
-#
-#     detokenized['translation'] = clean_input_text(response).title()
-#     log.debug(
-#         f'Translation(easynmt:{lang_code}) result: {detokenized["detokenized_txt"]} -> {detokenized["translation"]}')
-#     return loc_kv[0], detokenized
+        except Exception as e:
+            for loc_kv in remaining:
+                log.warning(f'Unable to translate {loc_kv[0]}:{loc_kv[1]}: {e}. Returning it to the queue.')
+                log.debug(tb.format_exc())
+                self.untranslated.put(loc_kv)
 
 
 def check_api_availability():
@@ -282,7 +299,8 @@ def check_api_availability():
         available.append('api_mmt')
         log.info(f'MyMemory API available for use')
     else:
-        log.warning(f'MyMemory API not available for use in this run so we won\'t use it')
+        msg = mmt_response.json()['responseDetails']
+        log.warning(f'MyMemory API not available for use in this run so we won\'t use it: {msg}')
     dl = deepl.Translator(os.getenv('DEEPL_AUTH_KEY'))
     try:
         dl.translate_text(test_phrase, source_lang='en', target_lang=test_lang)
