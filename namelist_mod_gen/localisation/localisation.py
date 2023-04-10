@@ -21,7 +21,7 @@ def localise_namelist(namelist):
                 loc_dir = d
                 break
 
-        dest_file = os.path.join(loc_dir, f"name_list_{namelist['id'].upper()}_l_{lang}.yml")
+        dest_file = os.path.join(loc_dir, f"name_list_{namelist['id'].upper()}_l_{c.PARADOX_LANGUAGES[lang]}.yml")
         if not ok_to_overwrite(namelist, dest_file):
             continue
 
