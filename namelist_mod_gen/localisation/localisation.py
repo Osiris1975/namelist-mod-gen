@@ -40,12 +40,11 @@ def localise_namelist(namelist):
             raise ValueError(
                 f'Localisation dictionary should not be empty for {namelist["id"]} after {lang} translation.')
         quotified = quotify(loc_dict)
-
         write_template(
             render_dict=quotified,
             dest_file=dest_file,
             template=namelist['template'],
-            lang=lang,
+            lang=c.PARADOX_LANGUAGES[lang],
             encoding='utf-8-sig'
         )
 
