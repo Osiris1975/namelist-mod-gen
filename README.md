@@ -1,5 +1,7 @@
 # Osiris's Namelist Mod Generator & Osiris's Namelist Mod
 
+NOTE: DOCUMENTATION IS OUT OF DATE AS OF 4/10/2023! WILL BE UPDATED SOON WITH TRANSLATION INSTRUCTIONS!
+
 This repository encompasses work to create a Stellaris namelist mod generator tool to facilitate the creation of 
 Stellaris namelists and includes the first mod created with this too, Osiris's Namelist Mod.
 
