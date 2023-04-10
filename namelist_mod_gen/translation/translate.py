@@ -71,7 +71,7 @@ class Translator(object):
                     else:
                         continue
                     log.info(
-                        f'{func.__name__}() | Queue State | ID: {self.id} | Lang: {self.lang_code}) | Translated: {self.translated.qsize()} | Untranslated {self.untranslated.qsize()}')
+                        f'{func.__name__}() | Queue State | ID: {self.id} | Lang: {self.lang_code} | Translated: {self.translated.qsize()} | Untranslated {self.untranslated.qsize()}')
                     if self.done():
                         log.info(
                             f'Translation complete! ID:{self.id} | Lang: {self.lang_code} | Num Translated: {self.namelist_length}')
@@ -156,7 +156,7 @@ class Translator(object):
             self.translated.put((loc_kv[0], retokenize(detokenized)))
             self.increment()
         except Exception as e:
-            log.warning(f'dbtrans: Unable to translate {loc_kv[0]}:{loc_kv[1]}: {e}. Returning it to the queue.')
+            log.warning(f'dbtrans: Unable to translate {loc_kv[0]} : {loc_kv[1]} : {self.lang_code}: {e}. Returning it to the queue.')
             log.debug(f'Untranslated={self.untranslated.qsize()}')
             self.untranslated.put(loc_kv)
             log.debug(f'Untranslated={self.untranslated.qsize()}')
@@ -186,7 +186,7 @@ class Translator(object):
                 f'Queue state after translating {detokenized["translation"]}({self.lang_code}) for {self.id} : Translated: {self.translated.qsize()} | Untranslated {self.untranslated.qsize()}')
             self.translated.put((loc_kv[0], retokenize(detokenized)))
             self.increment()
-            if detokenized['translation'] not in self.lang_table.values() and loc_kv[0] != 'TEST_KEY':
+            if loc_kv[0] not in self.lang_table.keys() and loc_kv[0] != 'TEST_KEY':
                 log.debug(
                     f'Attempting db insertion of {detokenized["detokenized_txt"]} -> {detokenized["translation"]}')
                 self.insert_one(loc_key=loc_kv[0], detokenized=detokenized, translators='gtrans', translator_mode='api')
@@ -223,7 +223,7 @@ class Translator(object):
             self.increment()
             log.debug(
                 f'Translation(deepl:{self.lang_code}) result: {detokenized["detokenized_txt"]} -> {detokenized["translation"]}')
-            if detokenized['translation'] not in self.lang_table.values() and loc_kv[0] != 'TEST_KEY':
+            if loc_kv[0] not in self.lang_table.keys() and loc_kv[0] != 'TEST_KEY':
                 self.insert_one(loc_key=loc_kv[0], detokenized=detokenized, translators='deepl', translator_mode='api')
             return loc_kv[0], detokenized
         except Exception as e:

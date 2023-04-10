@@ -74,6 +74,7 @@ def localise_descriptor(namelist):
             dest_file=dest_file,
             template=namelist['template'],
             lang=dir_lang,
+            author=namelist['author'],
             encoding='utf-8'
         )
 

@@ -40,12 +40,12 @@ def write_common_namelist(namelist):
     )
 
 
-def write_template(dest_file, render_dict, template, encoding, lang=None):
+def write_template(dest_file, render_dict, template, encoding, author=None, lang=None):
     with io.open(dest_file, 'w', encoding=encoding) as file:
         if lang:
-            name_list = template.render(dict_item=render_dict, lang=lang)
+            name_list = template.render(dict_item=render_dict, lang=lang, author=author)
         else:
-            name_list = template.render(render_dict)
+            name_list = template.render(render_dict, author=author)
         file.write(name_list)
         log.info(f'Namelist file written to {dest_file}')
 

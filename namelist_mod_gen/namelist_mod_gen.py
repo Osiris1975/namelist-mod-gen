@@ -56,20 +56,18 @@ def execute_mod(**kwargs):
     # CSV File Handler ingests the csv files and converts them to dictionaries
     namelist_sources = [csv_to_dicts(f, args.author) for f in csv_files]
 
-    # Check for errors
     errors = []
     for nd in namelist_sources:
         for k, v in nd.items():
             if type(v) == list:
-                [errors.extend(pi_validate(i)) for i in v if len(v) > 0]
+                [errors.extend(pi_validate(i, nd['namelist_title'][0])) for i in v if len(v) > 0]
             if type(v) == dict:
-                [errors.extend(pi_validate(i[0])) for i in v.values() if len(v) > 0]
+                [errors.extend(pi_validate(i[0], nd['namelist_title'][0])) for i in v.values() if len(v) > 0]
 
     if len(errors) > 0:
         errors_string = "\n".join(errors)
         log.critical(f'Provided namelists have errors:\n{errors_string}')
-        # TODO: Uncomment exiting after confirming that the characters checked aren't allowed
-        # sys.exit(1)
+        sys.exit(1)
 
     # Create the mod directory structure to write files to
     mod_dirs = make_mod_directories(args.mod_name, args.mod_output_dir)
