@@ -37,6 +37,8 @@ namelist.add_argument('-p', '--parallel', default=False,
 namelist.add_argument('-t', '--translate', default=False, help='activate namelist translation', action='store_true')
 namelist.add_argument('-o', '--overwrite', default=False, help='overwrite existing namelist files',
                       action='store_true')
+namelist.add_argument('-i', '--ignore_validation_errors', default=False, help='overwrite existing namelist files',
+                      action='store_true')
 
 csv = sub.add_parser(name='csv',
                      description='Create a CSV template or convert an existing namelist mod to CSV',
@@ -67,7 +69,11 @@ def execute_mod(**kwargs):
     if len(errors) > 0:
         errors_string = "\n".join(errors)
         log.critical(f'Provided namelists have errors:\n{errors_string}')
-        sys.exit(1)
+        if args.ignore_validation_errors:
+            log.warning(f'Reported errors ignored, this may cause namelist errors in game!')
+        else:
+            log.critical(f'Fix the errors above and rerun NMG or use -i/--ignore_validation_errors to process anyway.')
+            sys.exit(1)
 
     # Create the mod directory structure to write files to
     mod_dirs = make_mod_directories(args.mod_name, args.mod_output_dir)
