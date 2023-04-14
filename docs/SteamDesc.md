@@ -1,4 +1,4 @@
-[h1]Osiris's Namelist Mod V5.1 (NSC Compatible)[/h1]
+[h1]Osiris's Namelist Mod V6.0 (NSC Compatible)[/h1]
 [h3]If you like this mod, please rate/like/favorite![/h3]
 [h3]compatível com português - compatible français - deutsch kompatibel - 日本語対応 - 한국어 호환 - kompatybilny z językiem polskim - русский совместимый - 兼容的 - Español compatible[/h3]
 
