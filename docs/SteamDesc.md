@@ -1,21 +1,28 @@
-[h1]Osiris's Namelist Mod V4.0.0 (NSC Compatible)[/h1]
+[h1]Osiris's Namelist Mod V5.1 (NSC Compatible)[/h1]
 [h3]If you like this mod, please rate/like/favorite![/h3]
+[h3]compatível com português - compatible français - deutsch kompatibel - 日本語対応 - 한국어 호환 - kompatybilny z językiem polskim - русский совместимый - 兼容的 - Español compatible[/h3]
 
+[hr][/hr]
+[h1]New in V6.0[/h1]
+- [b]Native American Namelist[/b]: Based on various indingenous cultures from the Americas.
+- [b]Culture-esque Namelist[/b]: Names from Ian M. Bank's Culture Series. I added more names that followed the naming patterns from the novels and used those and the originals to prompt ChatGPT for similar ones. 
+- [b]Chinese Namelist[/b]: Names based on Chinese culture using mythology, prominent figures, cities, and geography as inspiration.
+- Full translated versions of all namelists.
 
-Tired of your fleets and armies with missing names dues to hte %SEQ% bug since the 3.6.0 Orion patch? Want to get your space Ancient Egyptian or Ancient Greek on in full namified glory? 
+[hr][/hr]
+[h1]Description[/h1]
 
-For the more modern pallete, Osiris has namelists to suit as well.
+Citizens of the world, rejoice! Fully translated versions of Osiris's Namelists for Stellaris are here! No more namelist FOMO for non-English speakers. These fully up-to-date mod brings you namelists inspired by ancient and modern history as well as popular science-fiction franchises, all powered by happy  and ever-lasting alliance between human creativity and modern AI and language processing!
 
 Are you an NSC2 player feeling like you Strike Cruisers and Dreadnoughts are being left out of namelists? Don't worry, we've got you covered.
 
-Curious what a namelist generated completely by [b]ChatGPT[/b] would look like? 
+Curious what a namelist generated completely by [b]ChatGPT[/b] would look like? Then you've come to the right place! This mod has all that and MORE!
 
-Then you've come to the right place! This mod has all that and MORE!
 
 [hr][/hr]
 [h1]About the Namelists[/h1]
 
-The currently available namelists and their respective themes are as follows (use the link below for full details on themes):
+The currently available namelists and their respective themes are as follows:
 
 - [b]American[/b]: American presidents, military leaders, landmarks, real fighter jets and naval vessels, and cities. 
 - [b]Ancient Egyptian[/b]: Ancient Egyptian deities, cities, landmarks, pharaohs, and weaponry.
@@ -23,9 +30,12 @@ The currently available namelists and their respective themes are as follows (us
 - [b]Ancient Roman[/b]: Like the greeks, but with Roman words. Two versions, one with ship names in English and one with them in Latin for that authentic feel.
 - [b]Arabian[/b]: Modern and medieval Arabian cities, landmarks and leaders using transliterated terminology.
 - [b]AstroSci[/b]: Planets, constellations, cities, scientific principles, Nobel laureates.
+- [b]Chinese Namelist[/b]: Names based on Chinese culture using mythology, prominent figures, cities, and geography as inspiration.
 - [b]ChatGPT[/b]: Names that ChatGPT generated when asked to generate cool sci-fi names for things. Cringy or cool? You decide!
+- [b]Culture-esque Namelist[/b]: Names from Ian M. Bank's Culture Series. I added more names that followed the naming patterns from the novels and used those and the originals to prompt ChatGPT for similar ones.
 - [b]Medieval[/b]: Medieval weapons, cities, castles, knights and historical figures.
 - [b]MedModern[/b]: Hybrid between ship names from the Medieval namelist and UNE-style human names for everything else.
+- [b]Native American Namelist[/b]: Based on various indingenous cultures from the Americas.
 - [b]NatModern[/b]: Hybrid between ship names from the Natural World namelist and UNE-style human names for everything else.
 - [b]Natural World[/b]: Names based on weather, animals and geological features of the natural world.
 - [b]Western Alliance[/b]: Names based on heads-of-state, landmarks, cities, and real warplanes and naval vessels from the Western Hemisphere and Western Europe.
@@ -34,21 +44,8 @@ The currently available namelists and their respective themes are as follows (us
 - [b]Star Trek[/b]: Names based on the the Star Trek franchise. As there weren't enough names, ChatGPT was used to generate additional similar names.
 - [b]Battlestar Gallactica[/b]: Names based on the BSG franchise. As there weren't enough names, ChatGPT was used to generate additional similar names.
 - [b]UNE[/b]: Names based on a Unified Earth, using United Nations leaders as leaders. 
-
-
-Future namelists and features planned or in development:
-- [b]Chinese[/b]: Names based on Chinese history and culture.
-- [b]Japanese[/b]: Names based on Japanese history and culture.
-- [b]Mongolian[/b]: Names to suit Ghenghis Khan himself.
-- [b]Native American[/b]: Names based on Native American culture.
-- [b]Sci Fi Novels[/b]: Names based on Sci-Fi novel series such as The Culture, The Expanse, and Revelation Space series. ChatGPT will be used to fill out these lists.
-- [b]Sci-Fi Franchise Mashup[/b]: Names from other sci-fi franchises that wouldn't provide enough names on their own.
-- Updated versions of unmaintained namelists (with attribution and permission of original mod creators).
 - [b]Translated versions of each namelist for each supported language[/b] (This is automated, your mileage may vary). 
 
-For full details on the namelist themes and contents, go here:
-
- [u][url=https://docs.google.com/spreadsheets/d/e/2PACX-1vSwK7tAOLRflzxfqE248c-4h7NL4CKV-Sk-VS76Jl6VmxP7N9Y98Ow7jIfoF4afgZlj7K0Mu7HlrrCV/pubhtml#]Naming Conventions Google Sheet[/url][/u].
 
 [hr][/hr]
 [h1]Get Involved[/h1]
