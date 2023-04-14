@@ -46,7 +46,6 @@ class Translator(object):
         self.translated = Queue()
         self.untranslated = Queue()
         self.is_done = False
-        self.deepl = deepl.Translator(os.getenv('DEEPL_AUTH_KEY'))
         self.lang_table = db.get_language_dict(self.lang)
         self.translated_dict = dict()
         self.counter = 0
@@ -301,8 +300,8 @@ def check_api_availability():
     else:
         msg = mmt_response.json()['responseDetails']
         log.warning(f'MyMemory API not available for use in this run so we won\'t use it: {msg}')
-    dl = deepl.Translator(os.getenv('DEEPL_AUTH_KEY'))
     try:
+        dl = deepl.Translator(os.getenv('DEEPL_AUTH_KEY'))
         dl.translate_text(test_phrase, source_lang='en', target_lang=test_lang)
         available.append('api_deepl')
         log.info(f'Deepl API available for use')
