@@ -1,11 +1,11 @@
-# Osiris's Namelist Mod Generator & Osiris's Namelist Mod
-
-NOTE: DOCUMENTATION IS OUT OF DATE AS OF 4/10/2023! WILL BE UPDATED SOON WITH TRANSLATION INSTRUCTIONS!
+# Osiris's Namelist Mod Generator (namelist-mod-gen)
 
 This repository encompasses work to create a Stellaris namelist mod generator tool to facilitate the creation of 
-Stellaris namelists and includes the first mod created with this too, Osiris's Namelist Mod.
+Stellaris namelists. 
 
-For information on the mod itself, check out the listings on Steam or Paradox Plaza (this version is only updated on major releases):
+For an example of a namelist mod created with this tool see the following links:
+
+[Osiris's Namelists for Stellaris @ GitHub](https://steamcommunity.com/sharedfiles/filedetails/?id=2936596940)
 
 [Osiris's Namelists for Stellaris @ Steam](https://steamcommunity.com/sharedfiles/filedetails/?id=2936596940)
 
@@ -13,17 +13,10 @@ For information on the mod itself, check out the listings on Steam or Paradox Pl
 
 For information on the generator tool that made this mod, keep reading.
 
-## Contributing Namelists to Osiris's Mod
-
-The easiest way to contribute a namelist to the mod is to fill out the github issue for submitting namelists here:
-
-[Osiris's Namelist Mod Contribution](https://github.com/Osiris1975/namelist-mod-gen/issues/new?assignees=Osiris1975&labels=contribution&template=osiris-s-namelist-contribution.md&title=)
-
-
 
 ## Namelist Generator Tool
 
-The generator is a Python-based command line tool. It requires a csv file of names which it translates into the txt
+The generator is a Python-based command line tool. It requires a csv file of names which it converts into the txt
 and yml files in the proper directory structure. It doesn't completely generate the mod for you, but does the heavy 
 lifting. See the Issues and Limitations section below for what it can't do for you. 
 
@@ -35,9 +28,8 @@ lifting. See the Issues and Limitations section below for what it can't do for y
 * Basic localization.
 * Optional translation of localization. 
 
-## Planned Features
 
-* Write a CSV from a given namelist text file to allow other existing mods to update to the most recent format and perform either basic or translated localization on their mods automatically.
+
 
 ## Getting Started with Creating your own Namelist Mod 
 
@@ -53,7 +45,7 @@ This tool uses [Poetry](https://python-poetry.org/docs/) for dependency manageme
 
 ### Setting up Namelist Mod Gen
 
-Once Poetry is installed, namelist-mod-gen can bet setup with the following command:
+Once Poetry is installed, namelist-mod-gen(NMG) can bet setup with the following command:
 
 `poetry install`
 
@@ -73,30 +65,67 @@ or
 
 The tool will generate a new CSV template that can be loaded into Google Sheets or Excel to populate a namelist with the following command:
 
-`./namelist_mod_gen.py -d <your_csv_template.csv>`
+```text
+<root_directory>/namelist_mod_gen/namelist_mod_gen.py csv -d <desired_template_name.csv>
+```
 
 or 
 
-`poetry run python src/namelist_mod_gen/namelist_mod_gen.py -d  <your_csv_template.csv>`
+```
+poetry run python namelist_mod_gen/namelist_mod_gen.py csv -d  <desired_template_name.csv>
+``` 
 
-#### Generating the Namelist Mod Files
+#### Generating Untranslated Namelist Mod Files
 
-To generate namelist mod files, execute the following:
+The fastest and most basic usage of NMG is to generate a mod from a directory of CSV files without translation. This can be done with the following command:
 
-`./namelist_mod_gen.py -c </path/to/csv/directory> -m <mod_name> -a <author_name>`
+```text
+<root_directory>/namelist_mod_gen/namelist_mod_gen.py mod -n </path/to/namelist/csv/dir/> -a <author_name> -m <mod_name>
+```
 
-`-n/--namelists`: This specifies the full path to the directory that contains the CSV files to convert into namelists.
-There are some CSV example files in `examples/input_csvs/osiris_namelists`
+or 
 
-`-m/--mod_name`: This specifies the mod name that will be used in naming files.
+```text
+poetry run python namelist_mod_gen/namelist_mod_gen.py mod -n </path/to/namelist/csv/dir/> -a <author_name> -m <mod_name>
+``` 
 
-`-M/--multiprocess`: Run in multiprocessing mode. This is experimental.
+This will build the mod directory structure, convert the CSV file into namelist files for each localisation, creating 
+all files in the original english language for all language directories. This is the basic requirement for namelists
+to appear for users of the mod from non-English locales. 
 
-`-a/--author`: This specifies the creator of the namelist and is also used in specifying file names.  
+### Generating Translated Namelists
 
-`-t/--translate`: Runs the translation algorithm. See the next section below.
+In order to translate namelists at no cost, NMG uses a multi-tiered cascading strategy with steps that 
+execute in order as follows:
 
-### Getting a DeepL Auth Key for DeepL Translation
+1. First, it checks a database for previously translated names to use for a given namelist.
+2. Any remaining untranslated names for a particular namelist are then translated using Google's API. Most often this is enough to translate an entire namelist.
+3. Should there be any more untranslated names, it then uses [MyMemory's API](https://mymemory.translated.net/). This service's free tier is capped at 5000 characters per day.
+4. If any names still remain, the [Deepl Translation API](https://www.deepl.com/translator) is used. This service is capped at 500,000 characters per month and requires registration. Note you DO NOT have to use this. If the API key isn't present in the environment, this mode of translation will be skipped.
+5. Any remaining untranslated texts are translated using [EasyNMT](https://github.com/UKPLab/EasyNMT), a machine-learning based translation tool. 
+
+There are future plans to allow the order of these translations to be fully customizable as well as allow custom translators to be used. This work
+is already in the design stage and will be created as a separate module from NMG that it will import.
+
+### Translation Database Setup
+
+NMG stores translated names in a postgres database in order to cache them for future use. If you do not have postgres
+installed, see the following links for help:
+
+[MacOS Homebrew Postgres Install Tutorial](https://wiki.postgresql.org/wiki/Homebrew) - Recommended method.
+[MacOS Install Tutorial](https://www.postgresqltutorial.com/postgresql-getting-started/install-postgresql-macos/)
+[Windows Install Tutorial](https://www.postgresqltutorial.com/postgresql-getting-started/install-postgresql/)
+
+Once postgres is installed, we need to create a user and initialize a database. Run the following commands:
+
+```text
+>createuser nmg
+>createdb translations -O nmg
+```
+This will create the user NMG uses as well as the database to store translations.
+
+
+### Getting a DeepL Auth Key for DeepL Translation (optional)
 
 In order for the tool to perform translations using DeepL, you will have to get an authentication key from their website.
 A free option is available that allows 500,000 characters per month to be translated. 
@@ -117,19 +146,43 @@ If this variable is not set, translation will still work, but it won't use DeepL
 
 ### Translation Mode
 
-When specifying `-t`, namelist-mod-gen will translate all the names provided in the CSV file to the languages supported
-by Stellaris. Depending on the size and number of namelists used, this can take a very long time (many hours) 
-the first time the words are translated.
+To generate translated namelists, run NMG as follows, adding `-t` or `--translate` to the earlier command:
 
-One reason this takes as long as it does is because of the number of API requests to various translation services 
-that are made, and in some cases the tool will generate a list of translations for a single word and pick the most common one
-to get better accuracy. It does use a multi-threaded approach to try and improve translation time. If a word fails
-to be translated, the tool will use the original english version for the localization file.
+```text
+<root_directory>/namelist_mod_gen/namelist_mod_gen.py mod -n </path/to/namelist/csv/dir/> -a <author_name> -m <mod_name> -t
+```
 
-Once words are translated, they are stored in an SQLite database so subsequent runs will only translate new words and
-phrases. 
+or 
 
-In the future I hope to streamline the translation process and make it faster. 
+```text
+poetry run python namelist_mod_gen/namelist_mod_gen.py mod -n </path/to/namelist/csv/dir/> -a <author_name> -m <mod_name> -t
+``` 
+
+For an example of output generated by NMG using translation, visit the [Github repo for Osiris's Namelists for Stellaris](https://github.com/Osiris1975/osiris-namelists).
+
+
+### NMG Command Line Options
+
+There are a number of other command line options not explicitly introduced so far in this README. The full list of options can be seen with the following command:
+```text
+<root_directory>/namelist_mod_gen/namelist_mod_gen.py --help
+```
+
+or 
+
+```text
+poetry run python namelist_mod_gen/namelist_mod_gen.py --help
+``` 
+This will list the modes that NMG can run in. To get options for each mode, invoke the mode with a `--help` command, for example:
+```text
+<root_directory>/namelist_mod_gen/namelist_mod_gen.py mod --help
+```
+
+Details regarding the usage of each option will be printed.
+
+
+
+
 
 ## Current Limitations and Issues
 
@@ -140,6 +193,13 @@ These are the known limitations and issues. Some may be addressed in the future.
 * Sometimes translators, especially machine learning ones, return nonsensical translations.
 
 For issues, visit the [issues page](https://github.com/Osiris1975/namelist-mod-gen/issues) in this repository.
+
+## Contributing Namelists to Osiris's Mod
+
+The easiest way to contribute a namelist to the mod is to fill out the github issue for submitting namelists here:
+
+[Osiris's Namelist Mod Contribution](https://github.com/Osiris1975/namelist-mod-gen/issues/new?assignees=Osiris1975&labels=contribution&template=osiris-s-namelist-contribution.md&title=)
+
 
 ## Getting Help 
 
