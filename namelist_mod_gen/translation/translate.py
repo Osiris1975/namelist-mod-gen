@@ -46,7 +46,6 @@ class Translator(object):
         self.translated = Queue()
         self.untranslated = Queue()
         self.is_done = False
-        self.deepl = deepl.Translator(os.getenv('DEEPL_AUTH_KEY'))
         self.lang_table = db.get_language_dict(self.lang)
         self.translated_dict = dict()
         self.counter = 0
