@@ -12,6 +12,6 @@ def pi_validate(txt, namelist):
     if has_invalid_character:
         errors.append(
             f"{namelist}: \"{txt}\" has invalid namelist characters. These characters are not allowed: „ “ ‚ ‘ ” ’ … —")
-    if len(txt) > 50:
-        errors.append(f"{namelist}: \"{txt}\" is too long. Namelist characters should not exceed 50 characters")
+    if len(txt) > 30:
+        errors.append(f"{namelist}: \"{txt}\" exceeds some in-game text box limits and may be truncated.")
     return errors

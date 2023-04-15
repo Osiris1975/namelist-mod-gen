@@ -300,8 +300,8 @@ def check_api_availability():
     else:
         msg = mmt_response.json()['responseDetails']
         log.warning(f'MyMemory API not available for use in this run so we won\'t use it: {msg}')
-    dl = deepl.Translator(os.getenv('DEEPL_AUTH_KEY'))
     try:
+        dl = deepl.Translator(os.getenv('DEEPL_AUTH_KEY'))
         dl.translate_text(test_phrase, source_lang='en', target_lang=test_lang)
         available.append('api_deepl')
         log.info(f'Deepl API available for use')

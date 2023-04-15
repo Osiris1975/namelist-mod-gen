@@ -19,23 +19,28 @@ from validation.validation import pi_validate
 parser = argparse.ArgumentParser()
 parent_parser = argparse.ArgumentParser(
     description='A tool for creating optionally translated Stellaris namelist mods from a CSV file',
-    usage='namelist_generator.py [MODE:mod or csv] [path/to/output/dir] -n [/path/to/csv/dir] [OPTIONAL_ARGS]',
+    usage='namelist_mod_gen.py [MODE:mod or csv] <mode options: run namelist_mod_gen.py [MODE] --help for mode specific documentation.',
     formatter_class=argparse.ArgumentDefaultsHelpFormatter)
 sub = parser.add_subparsers(dest='cmd')
 
 namelist = sub.add_parser(name='mod',
                           description='Produce namelists from an a directory containing csv files',
-                          usage='tbd',
+                          usage='namelist_generator.py mod </path/to/desired/output/directory> -n </path/to/input/csv/directory> -m <mod_name> -a <author>',
                           formatter_class=argparse.ArgumentDefaultsHelpFormatter)
 namelist.add_argument('mod_output_dir', help='Full path to the mod output directory')
-namelist.add_argument('-n', '--namelists', help="path to the directory with namelist csv files", required=False)
-namelist.add_argument('-a', '--author', help="mod author", required=False)
-namelist.add_argument('-m', '--mod_name', help="name to use for the generated mod", required=False)
-namelist.add_argument('-p', '--parallel', default=False,
-                      help='experimental: activate parallel processing mode to speed up mod generation',
+namelist.add_argument('-n', '--namelists', help="path to the directory with namelist csv files", required=True)
+namelist.add_argument('-a', '--author', help="mod author. Must be all lowercase. Use underscores instead of spaces.",
+                      required=True)
+namelist.add_argument('-m', '--mod_name',
+                      help="name to use for the generated mod. Must be all lowercase. Use underscores instead of spaces.",
+                      required=True)
+namelist.add_argument('-p', '--parallel', default=False, required=False, help=argparse.SUPPRESS, action='store_true')
+namelist.add_argument('-t', '--translate', default=False, required=False, help='activate namelist translation',
                       action='store_true')
-namelist.add_argument('-t', '--translate', default=False, help='activate namelist translation', action='store_true')
-namelist.add_argument('-o', '--overwrite', default=False, help='overwrite existing namelist files',
+namelist.add_argument('-o', '--overwrite', default=False, required=False, help='overwrite existing namelist files',
+                      action='store_true')
+namelist.add_argument('-i', '--ignore_validation_errors', required=False, default=False,
+                      help='If CSV validation errors are found, NMG will report them as warnings and continue execution.',
                       action='store_true')
 
 csv = sub.add_parser(name='csv',
@@ -45,7 +50,7 @@ csv = sub.add_parser(name='csv',
 
 csv.add_argument('-d', '--dump', help='dump a blank csv with namelist headers with the specified name',
                  required=False)
-csv.add_argument('-c', '--convert', help='Convert a mod in the given directory into a CSV file.', required=False)
+csv.add_argument('-c', '--convert', help=argparse.SUPPRESS, required=False)
 
 
 def execute_mod(**kwargs):
@@ -67,7 +72,11 @@ def execute_mod(**kwargs):
     if len(errors) > 0:
         errors_string = "\n".join(errors)
         log.critical(f'Provided namelists have errors:\n{errors_string}')
-        sys.exit(1)
+        if args.ignore_validation_errors:
+            log.warning(f'Reported errors ignored, this may cause namelist errors in game!')
+        else:
+            log.critical(f'Fix the errors above and rerun NMG or use -i/--ignore_validation_errors to process anyway.')
+            sys.exit(1)
 
     # Create the mod directory structure to write files to
     mod_dirs = make_mod_directories(args.mod_name, args.mod_output_dir)
