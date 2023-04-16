@@ -8,7 +8,7 @@ from jinja2 import Environment, FileSystemLoader
 
 import constants.constants as c
 from execution.execute import executor
-from file_handlers.csv import csv_template, csv_to_dicts
+from file_handlers.csv import create_template, csv_to_dicts
 from file_handlers.paths import nl_csv_files, make_mod_directories
 from file_handlers.writers import write_common_namelist
 from localisation.localisation import localise_namelist, localise_descriptor
@@ -106,11 +106,15 @@ def execute_mod(**kwargs):
     executor(func=localise_descriptor, namelists_master=namelist_master)
 
 
-def execute_csv(args):
-    if args.dump:
-        file_dest = f'{args.dump.rstrip(".csv")}.csv'
-        csv_template(file_dest)
-        log.info(f'Template csv file written to {file_dest}')
+def execute_csv(**kwargs):
+    """
+    Executes the commands specified in the csv mode subparser. The following keyword args are legal for execute_csv:
+    :param dump: absolute path to location where CSV file should be dumped.
+    :return:
+    """
+    args = kwargs.get('args')
+    if 'dump' in args:
+        create_template(args.dump)
 
 
 def main():
@@ -118,12 +122,12 @@ def main():
     args = parser.parse_args()
     log.info(f'Started in {args.cmd} mode at{st}')
     available_apis = None
-    if args.translate:
+    if 'translate' in args:
         available_apis = check_api_availability()
     if args.cmd == 'mod':
         execute_mod(args=args, available_apis=available_apis)
     if args.cmd == 'csv':
-        execute_csv(args)
+        execute_csv(args=args)
     et = datetime.datetime.now()
     elapsed_time = et - st
     log.info(f'Completed processing in {args.cmd} mode in {elapsed_time}')
@@ -148,5 +152,3 @@ if __name__ == "__main__":
     except Exception as e:
         log.critical(f'NMG failed: {e}')
         os.killpg(os.getpid(), signal.SIGTERM)
-
-# TODO: Go through functions where I'm passing dictionaries and consider using kwargs instead

@@ -1,4 +1,5 @@
 import csv
+import logging
 import os
 from pathlib import Path
 
@@ -7,6 +8,8 @@ import regex
 
 import constants.constants as c
 from clean.cleaner import clean_input_text
+
+log = logging.getLogger('NMG')
 
 
 def csv_to_dicts(namelist_file, author):
@@ -65,3 +68,18 @@ def _get_template_variables():
     objects.sort()
     meta_list.extend(objects)
     return meta_list
+
+
+def create_template(dest_file):
+    """
+
+    :param dest_file:
+    :return:
+    """
+    try:
+        if not dest_file.endswith('csv'):
+            dest_file = f'dest_file{".csv"}'
+        csv_template(dest_file)
+        log.info(f'Template csv file written to {dest_file}')
+    except Exception as e:
+        log.critical(f'Template creation failed: {e}')
