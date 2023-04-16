@@ -54,6 +54,10 @@ def localise_descriptor(namelist):
         dir_lang = loc_dir.split(os.sep)[-2]
         trans_lang = dir_lang.replace('braz_por', 'portuguese').replace('simp_chinese', 'chinese')
         titles = {k: v['data']['namelist_title'][0] for k, v in namelist['namelists'].items()}
+        dest_file = f"{namelist['author'].lower()}_namelist_l_{dir_lang}.yml"
+        dest_file = os.path.join(loc_dir, dest_file)
+        if not ok_to_overwrite(namelist, dest_file):
+            return
 
         if namelist['translate'] and dir_lang != 'english':
             t = Translator(
@@ -65,8 +69,7 @@ def localise_descriptor(namelist):
             t.run()
             titles = t.translated_dict
 
-        dest_file = f"{namelist['author'].lower()}_namelist_l_{dir_lang}.yml"
-        dest_file = os.path.join(loc_dir, dest_file)
+
 
         write_template(
             render_dict=titles,

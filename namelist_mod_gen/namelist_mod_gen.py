@@ -34,7 +34,6 @@ namelist.add_argument('-a', '--author', help="mod author. Must be all lowercase.
 namelist.add_argument('-m', '--mod_name',
                       help="name to use for the generated mod. Must be all lowercase. Use underscores instead of spaces.",
                       required=True)
-namelist.add_argument('-p', '--parallel', default=False, required=False, help=argparse.SUPPRESS, action='store_true')
 namelist.add_argument('-t', '--translate', default=False, required=False, help='activate namelist translation',
                       action='store_true')
 namelist.add_argument('-o', '--overwrite', default=False, required=False, help='overwrite existing namelist files',
@@ -92,19 +91,19 @@ def execute_mod(**kwargs):
     }
 
     # Write the common namelist files using the master dictionary
-    executor(func=write_common_namelist, namelists_master=namelist_master, parallel_process=args.parallel)
+    executor(func=write_common_namelist, namelists_master=namelist_master)
 
     # Write the basic localisation files using the master dictionary
     namelist_master['template'] = template_env.get_template(c.NAMELIST_LOC_TEMPLATE)
 
     if args.translate:
         namelist_master['available_apis'] = kwargs['available_apis']
-    executor(func=localise_namelist, namelists_master=namelist_master, parallel_process=args.parallel)
+    executor(func=localise_namelist, namelists_master=namelist_master)
 
     # Write the localisation descriptor files using the master dictionary
     namelist_master['template'] = template_env.get_template(c.NAMELIST_DEF_TEMPLATE)
     namelist_master['author'] = args.author
-    executor(func=localise_descriptor, namelists_master=namelist_master, parallel_process=args.parallel)
+    executor(func=localise_descriptor, namelists_master=namelist_master)
 
 
 def execute_csv(args):
