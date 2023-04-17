@@ -1,4 +1,3 @@
-import copy
 import datetime
 import http
 import logging
@@ -33,16 +32,28 @@ skipped_translators = set()
 
 
 class Translator(object):
-    def __init__(self, namelist, lang, namelist_id, available_apis):
-        self.id = namelist_id
-        self.namelist_length = len(namelist)
+    """
+    A class that iterates over a series of translation functions to generate translations from a dictionaru of keys
+    whose values are to be translated.
+    """
+
+    def __init__(self, **kwargs):
+        """
+        :param namelist: Dict of reference_keys whose values are a text to be translated.
+        :param lang: The full language name (not language code).
+        :param namelist_id:The namelist identifier the namelist is associated with. Used for logging.
+        :param available_apis: API functions to use for translation. Will be inserted in between db translation and
+        machine translation methods.
+        """
+        self.id = kwargs.get('namelist_id')
+        self.namelist = kwargs.get('namelist')
+        self.namelist_length = len(self.namelist)
         available_funcs = [self.db_translate]
-        available_funcs.extend([getattr(self, name) for name in available_apis])
+        available_funcs.extend([getattr(self, name) for name in kwargs.get('available_apis')])
         available_funcs.append(self.mt_easynmt)
-        self.usable_funcs = available_funcs
-        self.lang = lang
-        self.lang_code = c.TABLE_LANGUAGES[lang]
-        self.namelist = copy.copy(namelist)
+        self.funcs = available_funcs
+        self.lang = kwargs.get('lang')
+        self.lang_code = c.TABLE_LANGUAGES[self.lang]
         self.translated = Queue()
         self.untranslated = Queue()
         self.is_done = False
@@ -51,16 +62,22 @@ class Translator(object):
         self.counter = 0
         self.lock = Lock()
         self.runs = 0
+        self.max_runs = kwargs.get('max_runs', c.MAX_RUNS)
 
     def run(self):
-        self.runs += 1
-        while self.runs != c.MAX_RUNS:
+        """
+        Executes the translation functions in order, and will execute the loop over the function list until
+        self.max_runs is met.
+        :return: a dictionary of translated items. If there are untranslated words remaining after all runs. the
+        original text will be returned as the value for the reference key.
+        """
+        while self.runs != self.max_runs:
             # seed untranslated queue with all namelist loc_key, text pairs
             for loc_key, text in self.namelist.items():
                 self.untranslated.put((loc_key, text))
 
             # iterate over usable functions and perform cascading translation
-            for func in self.usable_funcs:
+            for func in self.funcs:
                 try:
                     log.info(f'{func.__name__}() | Beginning translation of {self.id} to {self.lang}')
                     log.debug(
@@ -91,6 +108,8 @@ class Translator(object):
             if self.translated.qsize() != self.namelist_length:
                 log.error(
                     f'{self.runs} incomplete: translation methods exhausted with {self.untranslated.qsize()} translations remaining. Retrying run...')
+            self.runs += 1
+
         # Translations didn't complete, but we'll put the english words back in so text will exist at least.
         while self.untranslated.qsize() > 0:
             result = self.untranslated.get()
@@ -98,14 +117,28 @@ class Translator(object):
         return self.queue_to_dict()
 
     def increment(self):
+        """
+        Increments the counter the tracks the number of translated texts. Lock probably not necessary byt using it
+        to be on the safe side.
+        :return:
+        """
         with self.lock:
             self.counter += 1
 
     def done(self):
+        """
+        Returns true if the ref_key:text pairs are done being translated.
+        :return:
+        """
         with self.lock:
             return self.counter == self.namelist_length
 
     def queue_to_dict(self):
+        """
+        Processes the translation queue into a dict using the same reference keys that were passed in but with
+        translated texts instead of the original english ones.
+        :return:
+        """
         while self.translated.qsize() > 0:
             log.debug(f"Converting translation queue to dict. Queue length is {self.translated.qsize()}")
             try:
@@ -116,16 +149,28 @@ class Translator(object):
         log.debug(f'Finished processing translation queue: {self.translated.qsize()} ')
 
     def get_remaining(self):
+        """
+        Process the untranslated queue into a list of untranslated terms that can be passed on to the next translation
+        function in self.funcs.
+        :return:
+        """
         inputs = []
         while self.untranslated.qsize() > 0:
             inputs.append(self.untranslated.get())
         return inputs
 
-    def insert_many(self, objects, translators, translator_mode, language, date):
-        db.add_many(objects, translators, translator_mode, language, date)
-
-    def insert_one(self, loc_key, detokenized, translators, translator_mode):
+    def insert_one(self, **kwargs):
+        """
+        Insert a translated text into the database.
+        :param loc_key: the localisation key that references the translated text.
+        :param detokenized: the 'detokenized' dict that carries the translated text and meta information.
+        :param translators: the translator(s) used to perform the translation.
+        :param translator_mode: api or mt(machine translation) mode.
+        :return:
+        """
         category = None
+        loc_key = kwargs.get('loc_key')
+        detokenized = kwargs.get('detokenized')
         for k, v in c.NAMELIST_CATEGORY_TAGS.items():
             if k in loc_key:
                 category = v
@@ -134,13 +179,17 @@ class Translator(object):
             language=self.lang,
             english=detokenized['detokenized_txt'],
             translation=detokenized['translation'],
-            translators=translators,
-            translator_mode=translator_mode,
+            translators=kwargs.get('translators'),
+            translator_mode=kwargs.get('translator_mode'),
             namelist_category=category,
             translation_date=datetime.datetime.now()
         )
 
     def db_translate(self):
+        """
+        Multithreaded execution of db requests to retrieve previously translated texts.
+        :return: List of translated texts.
+        """
         log.info(f'Getting {self.lang} translations from database')
         with ThreadPoolExecutor(max_workers=c.MAX_WORKERS,
                                 thread_name_prefix=f'db_translate_{self.id}_{self.lang_code}') as executor:
@@ -155,12 +204,17 @@ class Translator(object):
             self.translated.put((loc_kv[0], retokenize(detokenized)))
             self.increment()
         except Exception as e:
-            log.warning(f'dbtrans: Unable to translate {loc_kv[0]} : {loc_kv[1]} : {self.lang_code}: {e}. Returning it to the queue.')
+            log.warning(
+                f'dbtrans: Unable to translate {loc_kv[0]} : {loc_kv[1]} : {self.lang_code}: {e}. Returning it to the queue.')
             log.debug(f'Untranslated={self.untranslated.qsize()}')
             self.untranslated.put(loc_kv)
             log.debug(f'Untranslated={self.untranslated.qsize()}')
 
     def api_gtrans(self):
+        """
+        Multithreaded execution of googletrans to translate any remaining untranslated texts.
+        :return: List of translated texts.
+        """
         log.info(f'Attempting translation with googletrans')
         with ThreadPoolExecutor(max_workers=c.MAX_WORKERS,
                                 thread_name_prefix=f'api_gtrans_{self.id}_{self.lang_code}') as executor:
@@ -200,6 +254,10 @@ class Translator(object):
             log.debug(tb.format_exc())
 
     def api_deepl(self):
+        """
+        Multithreaded execution of deepl to translate any remaining untranslated texts.
+        :return: List of translated texts.
+        """
         log.info(f'Attempting translation with deepl')
         with ThreadPoolExecutor(
                 max_workers=c.MAX_WORKERS,
@@ -215,8 +273,9 @@ class Translator(object):
     def _do_deepl(self, loc_kv):
         try:
             detokenized = detokenize(loc_kv[1])
-            response = self.deepl.translate_text(detokenized['detokenized_txt'], source_lang='en',
-                                                 target_lang=self.to_dl_code())
+            dl = deepl.Translator(os.getenv('DEEPL_AUTH_KEY'))
+            response = dl.translate_text(detokenized['detokenized_txt'], source_lang='en',
+                                            target_lang=self.to_dl_code())
             detokenized['translation'] = clean_input_text(response.text).title()
             self.translated.put(loc_kv[0], retokenize(detokenized))
             self.increment()
@@ -231,6 +290,10 @@ class Translator(object):
             self.untranslated.put(loc_kv)
 
     def api_mmt(self):
+        """
+        Multithreaded execution of MyMemory translation to translate any remaining untranslated texts.
+        :return: List of translated texts.
+        """
         log.info(f'Attempting translation with mmt')
         with ThreadPoolExecutor(max_workers=c.MAX_WORKERS,
                                 thread_name_prefix=f'api_mmt_{self.id}_{self.lang_code}') as executor:
@@ -260,6 +323,10 @@ class Translator(object):
             self.untranslated.put(loc_kv)
 
     def mt_easynmt(self):
+        """
+        Execution of easynmt to translate any remaining untranslated texts. Parallelism is handled by easynmt internally.
+        :return: List of translated texts.
+        """
         remaining = self.get_remaining()
         try:
             detokenized = [detokenize(i[1]) for i in remaining]
@@ -282,6 +349,10 @@ class Translator(object):
 
 
 def check_api_availability():
+    """
+    Checks the availability of certain APIs to ensure that they can be used in the function list.
+    :return:
+    """
     available = []
     test_phrase = 'hello_world'
     test_lang = 'es'

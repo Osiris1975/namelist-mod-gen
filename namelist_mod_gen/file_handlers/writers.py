@@ -40,17 +40,37 @@ def write_common_namelist(namelist):
     )
 
 
-def write_template(dest_file, render_dict, template, encoding, author=None, lang=None):
-    with io.open(dest_file, 'w', encoding=encoding) as file:
-        if lang:
-            name_list = template.render(dict_item=render_dict, lang=lang, author=author)
+def write_template(**kwargs):
+    """
+    Writes the jinaj2 template. The acceptable keyword args that may be used are as follows:
+    :param dest_file: path where the file should be written
+    :param render_dict: dictionary for use in template rendering
+    :param template: the template to be rendered
+    :param encoding: type of encoding to use (ex: utf-8)
+    :param author: author of the file being written
+    :param lang: language the associated render dict is in
+    :return:
+    """
+    template = kwargs.get('template')
+    dest_file = kwargs.get('dest_file')
+    render_dict = kwargs.get('render_dict')
+    author = kwargs.get('author')
+    with io.open(dest_file, 'w', encoding=kwargs.get('encoding')) as file:
+        if kwargs.get('lang'):
+            name_list = template.render(dict_item=render_dict, lang=kwargs.get('lang'), author=author)
         else:
-            name_list = template.render(render_dict, author=author)
+            name_list = template.render(dict_item=render_dict, author=author)
         file.write(name_list)
         log.info(f'Namelist file written to {dest_file}')
 
 
 def ok_to_overwrite(namelist, dest_file):
+    """
+    Check if it's ok to overwite pre-existing files for a given namelist.
+    :param namelist: The name of the namelist. Used solely for logging.
+    :param dest_file: the destination of the file.
+    :return: Boolean
+    """
     if namelist['overwrite']:
         log.warning(f'Overwrite selected for {namelist["title"]}. Removing {dest_file}')
         if os.path.exists(dest_file):

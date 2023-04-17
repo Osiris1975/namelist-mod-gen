@@ -10,8 +10,8 @@ logger = logging.getLogger('NMG')
 
 def nl_csv_files(directory):
     """
-    Given a directoru, yield csv files from it.
-    :param directory:
+    Given a directory, yield csv files from it.
+    :param directory: location where the csv files are stored.
     :return:
     """
     for dirpath, _, filenames in os.walk(directory):

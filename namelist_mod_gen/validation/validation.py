@@ -1,9 +1,10 @@
 import regex
 
 
-def pi_validate(txt, namelist):
+def pi_validate(txt, text):
     """
     Validate input text for use in Paradox Interactive games.
+    :param text: text from namelist to validate
     :param txt: text to validate
     :return: list of errors in the string
     """
@@ -11,7 +12,7 @@ def pi_validate(txt, namelist):
     has_invalid_character = regex.search(r"[„“‚‘”’…—]", txt)
     if has_invalid_character:
         errors.append(
-            f"{namelist}: \"{txt}\" has invalid namelist characters. These characters are not allowed: „ “ ‚ ‘ ” ’ … —")
+            f"{text}: \"{txt}\" has invalid namelist characters. These characters are not allowed: „ “ ‚ ‘ ” ’ … —")
     if len(txt) > 30:
-        errors.append(f"{namelist}: \"{txt}\" exceeds some in-game text box limits and may be truncated.")
+        errors.append(f"{text}: \"{txt}\" exceeds some in-game text box limits and may be truncated.")
     return errors
