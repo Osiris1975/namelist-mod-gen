@@ -28,7 +28,12 @@ def localise_namelist(namelist):
         loc_dict = make_loc_dict(namelist['data'])
         if namelist['translate'] and lang != 'english':
             try:
-                t = Translator(loc_dict, lang, namelist['id'], namelist['available_apis'])
+                t = Translator(
+                    namelist=loc_dict,
+                    lang=lang,
+                    namelist_id=namelist['id'],
+                    available_apis=namelist['available_apis']
+                )
                 t.run()
                 loc_dict = t.translated_dict
 

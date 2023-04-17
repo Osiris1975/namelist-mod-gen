@@ -1,4 +1,5 @@
 import csv
+import logging
 import os
 from pathlib import Path
 
@@ -7,6 +8,8 @@ import regex
 
 import constants.constants as c
 from clean.cleaner import clean_input_text
+
+log = logging.getLogger('NMG')
 
 
 def csv_to_dicts(namelist_file, author):
@@ -36,6 +39,14 @@ def csv_to_dicts(namelist_file, author):
 
 
 def create_keyed_dict(key, values, author, namelist_id):
+    """
+    Builds key value pairs using a generated reference key and values associated with it.
+    :param key: The namelist-level key, or category, as specified in the CSV file. Analagous to a column in the CSV.
+    :param values: The values associated with the namelist category.
+    :param author: author of the namelist, for use in building a reference key.
+    :param namelist_id: The ID of the namelist to be used in building a reference key.
+    :return:
+    """
     if len(values) > 1:
         vdict = dict()
         for v in values:
@@ -49,6 +60,11 @@ def create_keyed_dict(key, values, author, namelist_id):
 
 
 def csv_template(dest):
+    """
+    Dumps a CSV template that can be populated and used as input for the tool.
+    :param dest: The location to dump the CSV template to.
+    :return:
+    """
     fields = _get_template_variables()
     with open(dest, 'w', newline='\n') as file:
         writer = csv.writer(file)
@@ -65,3 +81,18 @@ def _get_template_variables():
     objects.sort()
     meta_list.extend(objects)
     return meta_list
+
+
+def create_template(dest_file):
+    """
+    Proxy function for csv_template function.
+    :param dest_file:
+    :return:
+    """
+    try:
+        if not dest_file.endswith('csv'):
+            dest_file = f'{dest_file}.csv'
+        csv_template(dest_file)
+        log.info(f'Template csv file written to {dest_file}')
+    except Exception as e:
+        log.critical(f'Template creation failed: {e}')
