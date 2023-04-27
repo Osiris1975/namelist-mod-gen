@@ -59,7 +59,7 @@ def write_template(**kwargs):
         if kwargs.get('lang'):
             name_list = template.render(dict_item=render_dict, lang=kwargs.get('lang'), author=author)
         else:
-            name_list = template.render(dict_item=render_dict, author=author)
+            name_list = template.render(render_dict, author=author)
         file.write(name_list)
         log.info(f'Namelist file written to {dest_file}')
 
