@@ -6,6 +6,7 @@ import tempfile
 import unittest
 
 from namelist_mod_gen.file_handlers.paths import nl_csv_files, make_mod_directories
+from namelist_mod_gen.file_handlers.txt import read_namelist_txt
 
 
 class TestCsvFiles(unittest.TestCase):
@@ -48,3 +49,13 @@ class TestCsvFiles(unittest.TestCase):
                     self.assertTrue(os.path.exists(dir_path))
             else:
                 self.assertTrue(os.path.exists(v))
+
+
+class TestTxt(unittest.TestCase):
+    def test_read_namelist(self):
+        """
+        In test cases, the key should be the test case and the value the expected case
+        :return:
+        """
+        test_file = 'fixtures/txt/test_us_namelist.txt'
+        read_namelist_txt(test_file)
