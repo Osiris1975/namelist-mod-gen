@@ -75,6 +75,10 @@
 			{{ sn_transport }}
 		}
 
+        headquarters = {
+			{{ sn_headquarters }}
+        }
+
 		military_station_small = {
 			{{ sn_military_station_small }}
 		}

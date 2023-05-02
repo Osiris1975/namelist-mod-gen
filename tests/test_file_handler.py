@@ -6,7 +6,8 @@ import tempfile
 import unittest
 
 from namelist_mod_gen.file_handlers.paths import nl_csv_files, make_mod_directories
-from namelist_mod_gen.file_handlers.txt import read_namelist_txt
+from namelist_mod_gen.file_handlers.txt import namelist_txt_to_dict
+from namelist_mod_gen.file_handlers.writers import write_csv_from_dict
 
 
 class TestCsvFiles(unittest.TestCase):
@@ -58,4 +59,6 @@ class TestTxt(unittest.TestCase):
         :return:
         """
         test_file = 'fixtures/txt/test_us_namelist.txt'
-        read_namelist_txt(test_file)
+        csv_out = 'output/test_us_namelist.csv'
+        nld = namelist_txt_to_dict(test_file, 'test_author', 'Test NL', 'test_nl')
+        write_csv_from_dict(csv_out, nld)

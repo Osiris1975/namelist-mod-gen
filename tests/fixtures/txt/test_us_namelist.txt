@@ -352,14 +352,11 @@ GUSNamelistNSC = {
 
 	}
 	fleet_names = {
-		random_names = {
-			
-		}
 		sequential_name = "Task Force %C%"
 	}
 	
 	army_names = {
-		generic = { 
+		an_generic = {
 			sequential_name = "%O% Army"
 		}
 
@@ -418,7 +415,7 @@ GUSNamelistNSC = {
 
 	planet_names = {
 
-		generic = {
+		pc_generic = {
 			names = {
 				Equatoria Duality "Twilight Horizons" Eternity Columbia Paradise Heaven Honey Spring Freedom Liberty Lush Floston Perfection Mayflower Santa
 				"Sweet Home" Glory Serenity Destiny Valentia "Crimson Green" Sousa "Pursuit of Happiness" "New Yellowstone" "Life Springs" Cotorra "Youth Springs"
@@ -509,10 +506,6 @@ GUSNamelistNSC = {
 	
 	### CHARACTERS
 
-	character_names = {
-
-		names1 = {
-			weight = 40
 			first_names_male = {
 				John Brian Peter James William Jacob Christopher Joshua Michael Ethan Joseph Matthew Anthony Daniel Samuel Kevin
 				David Logan Carter Andrew Henry Nicholas Gavin Owen Jack Wyatt Wayne Walter Charles Louis Merritt Earl Alfred Vernon
@@ -669,7 +662,4 @@ GUSNamelistNSC = {
 			regnal_second_names = {
 				Washington Jefferson Franklin Revere Johnson Adams Madison Williamson Fitzsimmon Hamilton Bartlett Hoover Kennedy
 			}
-		}
-		
-	}
 }

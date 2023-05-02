@@ -1,7 +1,7 @@
 import io
 import logging
 import os
-import traceback
+import pandas as pd
 
 log = logging.getLogger('NMG')
 
@@ -82,3 +82,18 @@ def ok_to_overwrite(namelist, dest_file):
             return False
         else:
             return True
+
+
+def write_csv_from_dict(csv_output, data):
+    longest_val = 0
+    for k, v in data.items():
+        if len(v) > longest_val:
+            longest_val = len(v)
+
+    for k, v in data.items():
+        if len(v) < longest_val:
+            num_to_append = longest_val - len(v)
+            v.extend([""] * num_to_append)
+
+    data_df = pd.DataFrame.from_dict(data)
+    data_df.to_csv(csv_output)
