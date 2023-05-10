@@ -42,9 +42,9 @@ MT_MODELS = {
 }
 
 SUB_TOKENS = {
-    "C": "SEQ",
-    "O": "ORD",
-    "R": "R",
+    "%C%": "$C$",
+    "%O%": "$ORD$",
+    "%R%": "$R$",
     "ORD": "ORD",
     "(ONL)": "(ONL)"
 }
