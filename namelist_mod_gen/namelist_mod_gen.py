@@ -10,7 +10,7 @@ import constants.constants as c
 from execution.execute import executor
 from file_handlers.csv import create_template, csv_to_dicts
 from file_handlers.paths import nl_csv_files, make_mod_directories
-from file_handlers.txt import namelist_txt_to_dict
+from file_handlers.csv import namelist_txt_to_dict
 from file_handlers.writers import write_common_namelist, write_csv_from_dict
 from localisation.localisation import localise_namelist, localise_descriptor
 from nmg_logging.logger import Logger
