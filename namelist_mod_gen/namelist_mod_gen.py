@@ -10,7 +10,8 @@ import constants.constants as c
 from execution.execute import executor
 from file_handlers.csv import create_template, csv_to_dicts
 from file_handlers.paths import nl_csv_files, make_mod_directories
-from file_handlers.writers import write_common_namelist
+from file_handlers.csv import namelist_txt_to_dict
+from file_handlers.writers import write_common_namelist, write_csv_from_dict
 from localisation.localisation import localise_namelist, localise_descriptor
 from nmg_logging.logger import Logger
 from translation.translate import check_api_availability
@@ -49,7 +50,18 @@ csv = sub.add_parser(name='csv',
 
 csv.add_argument('-d', '--dump', help='dump a blank csv with namelist headers with the specified name',
                  required=False)
-csv.add_argument('-c', '--convert', help=argparse.SUPPRESS, required=False)
+csv.add_argument('-c', '--convert', help='given a mod txt file, convert it to a csv for use in NMG', required=False)
+csv.add_argument('-a', '--author', help="mod author. Must be all lowercase. Use underscores instead of spaces.",
+                 required=True)
+csv.add_argument('-i', '--id',
+                 help="ID to use for the generated mod. Must be all lowercase. Use underscores instead of spaces.",
+                 required=True)
+csv.add_argument('-t', '--title',
+                 help="Readable title for namelist, enclosed in quotes.",
+                 required=True)
+csv.add_argument('-o', '--output_file',
+                 help="Full path to the desired output file, ending in .csv",
+                 required=True)
 
 
 def execute_mod(**kwargs):
@@ -106,6 +118,13 @@ def execute_mod(**kwargs):
     executor(func=localise_descriptor, namelists_master=namelist_master)
 
 
+def convert_txt(**kwargs):
+    input_file = kwargs.get('convert')
+    csv_out = kwargs.get('output_file')
+    nld = namelist_txt_to_dict(input_file, kwargs.get('author'), kwargs.get('title'), kwargs.get('id'))
+    write_csv_from_dict(csv_out, nld)
+
+
 def execute_csv(**kwargs):
     """
     Executes the commands specified in the csv mode subparser. The following keyword args are legal for execute_csv:
@@ -115,6 +134,8 @@ def execute_csv(**kwargs):
     args = kwargs.get('args')
     if 'dump' in args:
         create_template(args.dump)
+    if 'convert in args':
+        convert_txt(args.convert, )
 
 
 def main():
