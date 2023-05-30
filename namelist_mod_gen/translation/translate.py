@@ -357,7 +357,8 @@ def check_api_availability():
     test_phrase = 'hello_world'
     test_lang = 'es'
 
-    gtrans_response = googletrans.Translator().translate(text=test_phrase, dest=test_lang)
+    # gtrans_response = googletrans.Translator().translate(text=test_phrase, src='en', dest=test_lang)
+    gtrans_response = None
     if gtrans_response:
         available.append('api_gtrans')
         log.info(f'Google API available for use')
