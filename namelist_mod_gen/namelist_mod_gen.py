@@ -118,11 +118,9 @@ def execute_mod(**kwargs):
     executor(func=localise_descriptor, namelists_master=namelist_master)
 
 
-def convert_txt(**kwargs):
-    input_file = kwargs.get('convert')
-    csv_out = kwargs.get('output_file')
-    nld = namelist_txt_to_dict(input_file, kwargs.get('author'), kwargs.get('title'), kwargs.get('id'))
-    write_csv_from_dict(csv_out, nld)
+def convert_txt(args):
+    nld = namelist_txt_to_dict(args.convert, args.author, args.title, args.id)
+    write_csv_from_dict(args.output_file, nld)
 
 
 def execute_csv(**kwargs):
@@ -132,10 +130,10 @@ def execute_csv(**kwargs):
     :return:
     """
     args = kwargs.get('args')
-    if 'dump' in args:
+    if args.dump:
         create_template(args.dump)
-    if 'convert in args':
-        convert_txt(args.convert, )
+    if args.convert:
+        convert_txt(args)
 
 
 def main():

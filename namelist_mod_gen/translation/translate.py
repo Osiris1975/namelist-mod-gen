@@ -15,6 +15,7 @@ import requests
 from easynmt import EasyNMT
 from ratelimit import limits, sleep_and_retry
 from sqlalchemy.exc import IntegrityError
+from google.cloud import translate_v2 as gtranslate
 
 import constants.constants as c
 from clean.cleaner import clean_input_text
@@ -63,6 +64,7 @@ class Translator(object):
         self.lock = Lock()
         self.runs = 0
         self.max_runs = kwargs.get('max_runs', c.MAX_RUNS)
+        self.gt_client = gtranslate.Client()
 
     def run(self):
         """
@@ -229,12 +231,12 @@ class Translator(object):
                 log.warning(
                     f'api_gtrans is now skipped. Returning {loc_kv[0]}:{loc_kv[1]} to queue.')
                 self.untranslated.put(loc_kv)
+                return
             detokenized = detokenize(loc_kv[1])
-            gtrans = googletrans.Translator()
-            response = gtrans.translate(detokenized['detokenized_txt'], src='en',
-                                        dest=self.lang_code.replace('zh', 'zh-CN'))
+            response = self.gt_client.translate(detokenized['detokenized_txt'], source_language='en',
+                                                target_language=self.lang_code.replace('zh', 'zh-CN'))
 
-            detokenized['translation'] = clean_input_text(response.text).title()
+            detokenized['translation'] = clean_input_text(response['translatedText']).title()
             log.debug(
                 f'Queue state after translating {detokenized["translation"]}({self.lang_code}) for {self.id} : Translated: {self.translated.qsize()} | Untranslated {self.untranslated.qsize()}')
             self.translated.put((loc_kv[0], retokenize(detokenized)))
@@ -272,10 +274,15 @@ class Translator(object):
 
     def _do_deepl(self, loc_kv):
         try:
+            if 'api_deepl' in skipped_translators:
+                log.warning(
+                    f'api_gtrans is now skipped. Returning {loc_kv[0]}:{loc_kv[1]} to queue.')
+                self.untranslated.put(loc_kv)
+                return
             detokenized = detokenize(loc_kv[1])
             dl = deepl.Translator(os.getenv('DEEPL_AUTH_KEY'))
             response = dl.translate_text(detokenized['detokenized_txt'], source_lang='en',
-                                            target_lang=self.to_dl_code())
+                                         target_lang=self.to_dl_code())
             detokenized['translation'] = clean_input_text(response.text).title()
             self.translated.put(loc_kv[0], retokenize(detokenized))
             self.increment()
@@ -287,6 +294,7 @@ class Translator(object):
         except Exception as e:
             log.warning(f'Unable to translate {loc_kv[0]}:{loc_kv[1]}: {e}. Returning it to the queue.')
             log.debug(tb.format_exc())
+            skipped_translators.add('api_deepl')
             self.untranslated.put(loc_kv)
 
     def api_mmt(self):
@@ -302,12 +310,19 @@ class Translator(object):
 
     def _do_mmt(self, loc_kv):
         try:
+            if 'api_mmt' in skipped_translators:
+                log.warning(
+                    f'api_gtrans is now skipped. Returning {loc_kv[0]}:{loc_kv[1]} to queue.')
+                self.untranslated.put(loc_kv)
+                return
             detokenized = detokenize(loc_kv[1])
             url = f'https://api.mymemory.translated.net/get?q={detokenized["detokenized_txt"]}&langpair=en|{self.lang_code}'
             response = requests.get(url)
             if response.status_code == http.HTTPStatus.TOO_MANY_REQUESTS:
                 content = response.json()
                 log.warning(f'Daily request quota used up for MMT: {content["responseDetails"]}')
+                self.untranslated.put(loc_kv)
+                skipped_translators.add('_api_mmt')
                 return
             if response.status_code == http.HTTPStatus.OK and loc_kv[0] != 'TEST_KEY':
                 detokenized['translation'] = clean_input_text(response.json()['responseData']['translatedText']).title()
@@ -321,6 +336,7 @@ class Translator(object):
             log.warning(f'Unable to translate {loc_kv[0]}:{loc_kv[1]}: {e}. Returning it to the queue.')
             log.debug(tb.format_exc())
             self.untranslated.put(loc_kv)
+            skipped_translators.add('_api_mmt')
 
     def mt_easynmt(self):
         """
@@ -354,16 +370,9 @@ def check_api_availability():
     :return:
     """
     available = []
-    test_phrase = 'hello_world'
+    test_phrase = 'Hello, World!'
     test_lang = 'es'
 
-    # gtrans_response = googletrans.Translator().translate(text=test_phrase, src='en', dest=test_lang)
-    gtrans_response = None
-    if gtrans_response:
-        available.append('api_gtrans')
-        log.info(f'Google API available for use')
-    else:
-        log.warning(f'Google API not available for use in this run so we won\'t use it')
     url = f'https://api.mymemory.translated.net/get?q={test_phrase}&langpair=en|{test_lang}'
     mmt_response = requests.get(url)
     if mmt_response.status_code == http.HTTPStatus.OK:
@@ -379,4 +388,14 @@ def check_api_availability():
         log.info(f'Deepl API available for use')
     except Exception as e:
         log.warning(f'Deepl API not available for use in this run so we won\'t use it ({e})')
+
+    test_client = gtranslate.Client()
+    gtrans_response = test_client.translate(test_phrase, target_language=test_lang)
+    if gtrans_response:
+        log.debug(f'Test succeeded: {gtrans_response["translatedText"]}')
+        available.append('api_gtrans')
+        log.info(f'Google API available for use')
+    else:
+        log.warning(f'Google API not available for use in this run so we won\'t use it')
+
     return available

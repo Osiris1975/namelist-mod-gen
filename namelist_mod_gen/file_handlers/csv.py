@@ -122,6 +122,7 @@ def namelist_txt_to_dict(namelist_file, author, title, namelist_id):
     namelist_dict['namelist_id'] = [namelist_id]
     namelist_fields = _get_template_variables()
     for field in namelist_fields:
+        log.debug(f"Populating {field} from txt file")
         if 'namelist' in field:
             continue
         pattern_suffix = r"\s*=\s*{\s*([^}]+)\s*}"
@@ -132,13 +133,13 @@ def namelist_txt_to_dict(namelist_file, author, title, namelist_id):
             uncategorized_field = "Strikecruiser"
         if uncategorized_field == "exploration_ship":
             uncategorized_field = "explorationship"
-        if "pn_" in field:
+        if field.startswith('pn_'):
             uncategorized_field = f"pc_{field.split('_')[1]}"
             pattern_suffix = r"\s*=\s*{[^}]+names\s*=\s*{\s*([^}]+)\s*}\s*}"
         pattern_string = f"\s+{uncategorized_field}{pattern_suffix}"
         pattern = regex.compile(pattern_string, regex.IGNORECASE)
         match = pattern.search(contents)
-        if 'an_' in field:
+        if field.startswith("an_"):
             if match:
                 match_string = match.group(0).replace("\t", " ").replace("\n", " ")
                 names = regex.search(r'=\s*\{\s*(?:\w+\s*=)?\s*(".*?")\s*\}', match_string)
@@ -146,7 +147,7 @@ def namelist_txt_to_dict(namelist_file, author, title, namelist_id):
             else:
                 namelist_dict[field] = []
 
-        if 'sn_' in field:
+        if field.startswith('sn_'):
             if match:
                 match_string = match.group(0).replace("\t", " ").replace("\n", " ")
                 names = regex.search(r'{(.*)}', match_string)
@@ -154,7 +155,7 @@ def namelist_txt_to_dict(namelist_file, author, title, namelist_id):
             else:
                 namelist_dict[field] = []
 
-        if 'cn_' in field:
+        if field.startswith('cn_'):
             if match:
                 match_string = match.group(0).replace("\t", " ").replace("\n", " ")
                 names = regex.search(r'{(.*)}', match_string, flags=regex.DOTALL)
@@ -162,7 +163,7 @@ def namelist_txt_to_dict(namelist_file, author, title, namelist_id):
                 namelist_dict[field] = update_name(names.group(1), True)
             else:
                 namelist_dict[field] = []
-        if 'pn_' in field:
+        if field.startswith('pn_'):
             if match:
                 match_string = match.group(0).replace("\t", " ").replace("\n", " ")
                 names = regex.search(r'names\s*=\s*{(.+?)\s*(?=})', match_string, flags=regex.DOTALL)
@@ -170,12 +171,16 @@ def namelist_txt_to_dict(namelist_file, author, title, namelist_id):
                 namelist_dict[field] = update_name(names.group(1), True)
             else:
                 namelist_dict[field] = []
-        if 'fn_' in field:
+        if field.startswith('fn_'):
             if match:
                 match_string = match.group(0).replace("\t", " ").replace("\n", " ")
-                names = regex.search(r'sequential_name\s*=\s*"(.+?)"\s*}', match_string, flags=regex.DOTALL)
-
-                namelist_dict[field] = update_name(names.group(1))
+                if 'random_names' in match_string:
+                    pattern = r'random_names\s*=\s*"(.+?)"\s*}'
+                else:
+                    pattern = r'sequential_name\s*=\s*"(.+?)"\s*}'
+                names = regex.search(pattern, match_string, flags=regex.DOTALL)
+                if names:
+                    namelist_dict[field] = update_name(names.group(1))
             else:
                 namelist_dict[field] = []
     return namelist_dict
